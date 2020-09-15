@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+	<id value="measures"/>
+	<url value="http://hl7.eu/fhir/ig/xeh/StructureDefinition/measures"/>
+	<version value="0.0.1"/>
+	<name value="Measures"/>
+	<title value="Measures [LM] (Gatekeeper)"/>
+	<status value="draft"/>
+	<experimental value="true"/>
+	<description value="Logical Model representing the list of measures exchanged by devices in GateKeeper pilots&#xD;&#xA;This is a Proof of Concept."/>
+	<fhirVersion value="4.0.1"/>
+	<mapping>
+		<identity value="fhir-gk"/>
+		<uri value="http://hl7.eu/fhir/ig/xeh"/>
+		<name value="Gatekeeper HL7 FHIR Profiles"/>
+	</mapping>
+	<kind value="logical"/>
+	<abstract value="true"/>
+	<type value="measures"/>
+	<baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
+	<derivation value="specialization"/>
+	<differential>
+		<element id="measures">
+			<path value="measures"/>
+			<short value="measures"/>
+			<definition value="Logical Model representing the list of measures exchanged by devices in GateKeeper pilots&#xD;&#xA;This is a Proof of Concept."/>
+			<min value="0"/>
+			<max value="*"/>
+			<mapping>
+				<identity value="fhir-gk"/>
+				<map value="not-mapped"/>
+			</mapping>
+		</element>
+		<element id="measures.oxygenSaturation">
+			<path value="measures.oxygenSaturation"/>
+			<short value="Oxygen Saturation"/>
+			<definition value="Oxygen Saturation"/>
+			<min value="0"/>
+			<max value="*"/>
+			<type>
+				<code value="http://hl7.eu/fhir/ig/xeh/StructureDefinition/oxygenSaturation"/>
+			</type>
+			<mapping>
+				<identity value="fhir-gk"/>
+				<map value="Observation.conformsTo('http://hl7.eu/fhir/ig/xeh/StructureDefinition/oxygensat')"/>
+			</mapping>
+		</element>
+		<element id="measures.bodyTemperature">
+			<path value="measures.bodyTemperature"/>
+			<short value="Body Temperature"/>
+			<definition value="Body Temperature"/>
+			<min value="0"/>
+			<max value="*"/>
+			<type>
+				<code value="http://hl7.eu/fhir/ig/xeh/StructureDefinition/bodyTemperature"/>
+			</type>
+			<mapping>
+				<identity value="fhir-gk"/>
+				<map value="Observation.conformsTo('http://hl7.eu/fhir/ig/xeh/StructureDefinition/bodytemp')"/>
+			</mapping>
+		</element>
+		<element id="measures.bloodGlucose">
+			<path value="measures.bloodGlucose"/>
+			<short value="Blood Glucose"/>
+			<definition value="Blood Glucose"/>
+			<min value="0"/>
+			<max value="*"/>
+			<type>
+				<code value="http://hl7.eu/fhir/ig/xeh/StructureDefinition/bloodGlucose"/>
+			</type>
+			<mapping>
+				<identity value="fhir-gk"/>
+				<map value="Observation.conformsTo('http://hl7.eu/fhir/ig/xeh/StructureDefinition/bodytemp')"/>
+			</mapping>
+		</element>
+		<element id="measures.bloodPressure">
+			<path value="measures.bloodPressure"/>
+			<short value="Blood Pressure"/>
+			<definition value="Blood Pressure"/>
+			<min value="0"/>
+			<max value="*"/>
+			<type>
+				<code value="http://hl7.eu/fhir/ig/xeh/StructureDefinition/bloodPressure"/>
+			</type>
+			<mapping>
+				<identity value="fhir-gk"/>
+				<map value="Observation.conformsTo('http://hl7.eu/fhir/ig/xeh/StructureDefinition/bodytemp')"/>
+			</mapping>
+		</element>
+		<element id="measures.heartRate">
+			<path value="measures.heartRate"/>
+			<short value="Heart Rate"/>
+			<definition value="Heart Rate"/>
+			<min value="0"/>
+			<max value="*"/>
+			<type>
+				<code value="http://hl7.eu/fhir/ig/xeh/StructureDefinition/heartRate"/>
+			</type>
+			<mapping>
+				<identity value="fhir-gk"/>
+				<map value="Observation.conformsTo('http://hl7.eu/fhir/ig/xeh/StructureDefinition/bodytemp')"/>
+			</mapping>
+		</element>
+	</differential>
+</StructureDefinition>

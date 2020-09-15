@@ -1,0 +1,11 @@
+== Suppressed Messages ==
+
+# No schematrons available for Logical Models
+The link 'StructureDefinition-bloodGlucose.sch' for "Schematron" cannot be resolved
+The link 'StructureDefinition-bloodPressure.sch' for "Schematron" cannot be resolved
+The link 'StructureDefinition-bodyTemperature.sch' for "Schematron" cannot be resolved
+The link 'StructureDefinition-heartRate.sch' for "Schematron" cannot be resolved
+The link 'StructureDefinition-measures.sch' for "Schematron" cannot be resolved
+The link 'StructureDefinition-oxygenSaturation.sch' for "Schematron" cannot be resolved
+The link 'StructureDefinition-wellBeing.sch' for "Schematron" cannot be resolved
+

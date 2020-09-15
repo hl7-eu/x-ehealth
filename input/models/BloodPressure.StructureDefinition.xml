@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../../fhir-all-xsd/structuredefinition.xsd">
+	<id value="bloodPressure"/>
+	<url value="http://hl7.eu/fhir/ig/xeh/StructureDefinition/bloodPressure"/>
+	<name value="BloodPressure"/>
+	<title value="Blood Pressure"/>
+	<status value="draft"/>
+	<description value="Logical Models describing the information collected for measuring blood pressure ."/>
+	<mapping>
+		<identity value="gk"/>
+		<uri value="http://hl7.eu/fhir/ig/xeh"/>
+		<name value="FAIR4Health FHIR Profiles"/>
+	</mapping>
+	<kind value="logical"/>
+	<abstract value="true"/>
+	<type value="bloodPressure"/>
+	<baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
+	<derivation value="specialization"/>
+	<differential>
+		<element id="bloodPressure">
+			<path value="bloodPressure"/>
+			<short value="bloodPressure GK Attributes"/>
+			<definition value="Non-exhaustive, collection of data used for administration, identification, assurance of identity and preferences within a bloodPressure summary."/>
+			<min value="0"/>
+			<max value="*"/>
+			<mapping>
+				<identity value="gk"/>
+				<map value="Observation.conformsTo('http://hl7.org/fhir/StructureDefinition/bp')"/>
+			</mapping>
+		</element>
+		<element id="bloodPressure.measureDateTime">
+			<path value="bloodPressure.measureDateTime"/>
+			<short value="Measure date time"/>
+			<definition value="Measure date time"/>
+			<min value="0"/>
+			<max value="1"/>
+			<type>
+				<code value="dateTime"/>
+			</type>
+			<mapping>
+				<identity value="gk"/>
+				<map value="Observation.conformsTo('http://hl7.org/fhir/StructureDefinition/bp').effectiveDateTime"/>
+			</mapping>
+		</element>
+		<element id="bloodPressure.systolicPressure">
+			<path value="bloodPressure.systolicPressure"/>
+			<short value="Systolic pressure mmHg"/>
+			<definition value="Systolic pressure mmHg"/>
+			<min value="1"/>
+			<max value="1"/>
+			<type>
+				<code value="positiveInt"/>
+			</type>
+			<mapping>
+				<identity value="gk"/>
+				<map value="Observation.conformsTo('http://hl7.org/fhir/StructureDefinition/bp').component.where(code = '8480-6').valueQuantity.where(code = 'mm[Hg]').value"/>
+			</mapping>
+		</element>
+		<element id="bloodPressure.diastolicPressure">
+			<path value="bloodPressure.diastolicPressure"/>
+			<short value="Diastolic pressure mmHg"/>
+			<definition value="Systolic pressure mmHg"/>
+			<min value="1"/>
+			<max value="1"/>
+			<type>
+				<code value="positiveInt"/>
+			</type>
+			<mapping>
+				<identity value="gk"/>
+				<map value="Observation.conformsTo('http://hl7.org/fhir/StructureDefinition/bp').component.where(code = '8462-4').valueQuantity.where(code = 'mm[Hg]').value"/>
+			</mapping>
+		</element>
+	</differential>
+</StructureDefinition>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+	<id value="heartRate"/>
+	<url value="http://hl7.eu/fhir/ig/xeh/StructureDefinition/heartRate"/>
+	<version value="0.0.1"/>
+	<name value="HeartRate"/>
+	<title value="Heart Rate [LM] (Gatekeeper)"/>
+	<status value="draft"/>
+	<experimental value="true"/>
+	<description value="Logical Model representing the Heart Rate measurement Model&#xD;&#xA;This is a Proof of Concept."/>
+	<fhirVersion value="4.0.1"/>
+	<mapping>
+		<identity value="fhir-gk"/>
+		<uri value="http://hl7.eu/fhir/ig/xeh"/>
+		<name value="Gatekeeper HL7 FHIR Profiles"/>
+	</mapping>
+	<kind value="logical"/>
+	<abstract value="true"/>
+	<type value="heartRate"/>
+	<baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
+	<derivation value="specialization"/>
+	<differential>
+		<element id="heartRate">
+			<path value="heartRate"/>
+			<short value="Heart Rate"/>
+			<definition value="Heart Rate data set"/>
+			<min value="0"/>
+			<max value="*"/>
+		<mapping>
+				<identity value="fhir-gk"/>
+				<map value="Observation.conformsTo('http://hl7.eu/fhir/ig/xeh/StructureDefinition/oxygensat')"/>
+			</mapping>
+		</element>
+		<element id="heartRate.deviceIdentifier">
+			<path value="heartRate.deviceIdentifier"/>
+			<short value="Measuring device identifier"/>
+			<definition value="Measuring device identifier"/>
+			<min value="0"/>
+			<max value="*"/>
+			<type>
+				<code value="Identifier"/>
+			</type>
+			<mapping>
+				<identity value="fhir-gk"/>
+				<map value="Observation.device.identifier"/>
+			</mapping>
+		</element>
+		<element id="heartRate.dateTime">
+			<path value="heartRate.dateTime"/>
+			<short value="Measure date time"/>
+			<definition value="Measure date time"/>
+			<min value="0"/>
+			<max value="*"/>
+			<type>
+				<code value="dateTime"/>
+				<code value="Period"/>
+			</type>
+			<mapping>
+				<identity value="fhir-gk"/>
+				<map value="Observation.effective[x]"/>
+			</mapping>
+		</element>
+		<element id="heartRate.type">
+			<path value="heartRate.type"/>
+			<short value="Heart Rate type of measure"/>
+			<definition value="Heart Rate type of measure. For example, maximum heart rate (HRmax); Resting heart rate;.."/>
+			<min value="0"/>
+			<max value="*"/>
+			<type>
+				<code value="CodeableConcept"/>
+			</type>
+			<mapping>
+				<identity value="fhir-gk"/>
+				<map value="Observation.code"/>
+			</mapping>
+		</element>
+		<element id="heartRate.value">
+			<path value="heartRate.value"/>
+			<short value="Measured Heart Rate (quantity)"/>
+			<definition value="Measured Heart Rate (quantity) [Hz]"/>
+			<min value="0"/>
+			<max value="*"/>
+			<type>
+				<code value="Quantity"/>
+			</type>
+			<mapping>
+				<identity value="fhir-gk"/>
+				<map value="Observation.valueQuantity"/>
+			</mapping>
+		</element>
+	</differential>
+</StructureDefinition>
