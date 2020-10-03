@@ -26,7 +26,7 @@
 		<coding>
 			<!-- This is the code for universal -->
 			<system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
-			<code value="001"/>
+			<code value="150"/>
 			<!-- Change to this if the IG is country-specific
       <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
       <code value="001"/>
@@ -45,14 +45,14 @@
 		<version value="current"/>
 	</dependsOn>
 	<definition>	
-		<resource>
+<!-- 		<resource>
 			<reference>
 				<reference value="Patient/pat-1"/>
 			</reference>
 			<name value="Patient: patient example"/>
 			<description value="Patient: patient example"/>
 			<exampleCanonical value="http://hl7.eu/fhir/ig/xeh/StructureDefinition/Patient-eu-gk"/>
-		</resource>
+		</resource> -->
 		<!-- You don't need to define any groupings.  The IGPublisher will define them for you.  You only need to do so if your IG is 'special' and it's
       inappropriate to use the defaults.  Feel free to provide feedback about the defaults... -->
 		<page>

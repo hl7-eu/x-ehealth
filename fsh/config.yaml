@@ -10,7 +10,7 @@
 # │  supported properties, see:                                                                    │
 # │  http://build.fhir.org/ig/HL7/fhir-shorthand/branches/beta/sushi.html#ig-development           │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-id: gatekeeper
+id: xehealth
 canonical: http://hl7.eu/fhir/ig/xeh
 version: 0.1.0
 name: X-eHealthImplementationGuide
