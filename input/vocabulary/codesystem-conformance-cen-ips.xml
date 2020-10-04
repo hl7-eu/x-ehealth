@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSystem xmlns="http://hl7.org/fhir">
+	<id value="conformance-cen-ips"/>
+	<text>
+		<status value="generated"/>
+		<div xmlns="http://www.w3.org/1999/xhtml">Requirement Descriptors for CEN International Patient Summary (IPS) Document, Section types and data</div>
+	</text>
+	<url value="http://hl7.eu/fhir/ig/xeh/CodeSystem/conformance-cen-ips"/>
+	<name value="Conformance"/>
+	<title value="EN 17269 Conformance"/>
+	<status value="draft"/>
+	<experimental value="false"/>
+	<description value="Requirement Descriptors for CEN International Patient Summary (IPS) Document, Section types and data."/>
+	<caseSensitive value="true"/>
+	<valueSet value="http://hl7.eu/fhir/ig/xeh/ValueSet/conformance-cen-ips"/>
+	<content value="complete"/>
+	<concept>
+		<code value="M"/>
+		<display value="Mandatory (exceptions not allowed)"/>
+		<definition value="A mandatory element shall always be present and - where applicable - shall be valorised with valid values. No exceptions or empty/null values are allowed in this case.
+If it refers to a composite element (e.g. a section, a list; a label concept) the presence of the included elements is determined by the conformance rules of these sub-elements.
+Recipient shall understand mandatory elements.
+If a ‘mandatory’ element is missing then the document is no longer a conformant IPS.
+A derived model (that includes also implementable specifications) shall maintain an equivalent conformance strength."/>
+	</concept>
+	<concept>
+		<code value="R"/>
+		<display value="Required (exceptions allowed)"/>
+		<definition value="A required element shall always be present and - where applicable - should be valorised with valid values. Exceptions or empty/null values are allowed in this case.
+If it refers to a composite element (e.g. a section, a list; a label concept a complex data type) the presence of the included elements is determined by the conformance rules of these sub-elements.
+Recipient shall understand required elements.
+If a ‘required’ element is missing then the document is no longer a conformant IPS.
+A derived model (that includes also implementable specifications) shall maintain an equivalent conformance strength; or may further constrain it (e.g. from ‘R’ to ‘M’)."/>
+	</concept>
+	<concept>
+		<code value="RK"/>
+		<display value="Required, if known"/>
+		<definition value="A “Required if known” element is one that should be provided.
+If there is information available, the element must be present and - where applicable - valorised with valid values.
+If there is no information available, the element may be omitted, may be left empty, or may be valorised with exceptional or null values depending on the implementation.
+If it refers to a composite element (e.g. a section, a list, a label concept, a complex data type) the presence of the included elements is determined by the conformance rules of these sub-elements.
+Recipient shall understand required elements.
+A derived model (that includes also implementable specifications) shall maintain an equivalent conformance strength; or may further constrain it (e.g. from ‘RK’ to ‘R’)."/>
+	</concept>
+	<concept>
+		<code value="C"/>
+		<display value="Conditional (has associated condition predicates)"/>
+		<definition value="Depending on predicate conditions the element may assume different conformance strengths (e.g. O, R, RK) or not being present.
+A predicate can be simple (for example: «element A exists»; «attribute b = value1») or complex (for example: «element C exists» AND «the attribute x of element D = value2).
+A conditional element may be evaluated on a single condition (if predicate A then ‘Required’ else ‘Optional’) or on multiple conditions (e.g. if predicate A then ‘Required’; if predicate B then ‘Optional’; else ‘Not Present’).
+The resulting conformance strength (M, R, RK, O, ...) is determined by the conditions.
+If it refers to a composite element (e.g. a section, a list, a label concept, a complex data type) the presence of the included elements is determined by the combination of the predicate conditions of this element and the conformance rules of its sub-elements. For example:
+1.	no exception is raised if a required sub-element is missing, when the parent is correctly omitted.
+2.	an exception is raised if a required sub-element is missing, when the parent is present.
+Derived models or implementable specifications shall maintain an equivalent conformance strength; but it is allowed to modify the conformance strength if the predicate condition permits.
+Recipient shall understand conditional elements, when required. For example, a conditional element that could be optional or not present could be omitted by a derived model and ignored by a recipient. Or, a condition for which a conditional element become required doesn’t apply to a jurisdiction, in that case a jurisdictional specification could omit that element and recipient could ignore it.
+Depending on the conditions, exception is or is not raised if the data are missing."/>
+	</concept>
+	<concept>
+		<code value="O"/>
+		<display value="Optional"/>
+		<definition value="This data element can be omitted from a derived model, including from implementations.
+Recipient may ignore optional elements.
+If it refers to a composite element (e.g. a section, a list, a label concept, a complex data type) the presence of the included elements is determined by the presence of this element and the conformance rules of its sub-elements. For example, no exception is raised if a required sub-element is missing, when the parent is omitted.
+The reason for specifying the optional data elements is to ensure that both sender and recipient use the appropriate semantic interpretation of these elements.
+No exception is raised if the data are missing."/>
+	</concept>
+</CodeSystem>
