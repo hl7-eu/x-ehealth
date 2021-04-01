@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "conformance-cen-ips",
   "url": "http://hl7.eu/fhir/ig/xeh/StructureDefinition/conformance-cen-ips",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "name": "Conformance",
   "title": "Conformance attribute",
   "status": "draft",

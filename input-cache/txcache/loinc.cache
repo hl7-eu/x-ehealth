@@ -1,26 +1,6 @@
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
-  "code" : "34133-9"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "Summary of episode note",
-  "severity" : null,
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "60591-5"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "Patient summary Document",
-  "severity" : null,
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
   "code" : "10160-0"
 }, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
@@ -205,6 +185,116 @@ v: {
 }, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
   "display" : "Medication administered Narrative",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "34133-9"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Summary of episode note",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "60591-5"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Patient summary Document",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "11329-0"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "History general Narrative - Reported",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "46241-6"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Hospital admission diagnosis Narrative - Reported",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "46239-0"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Chief complaint+Reason for visit Narrative",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "$loincCode"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "Start index out of bounds (-52) (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "10157-6"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "History of family member diseases Narrative",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "11535-2"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Hospital discharge Dx Narrative",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "11493-4(exactly)"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code \"11493-4(exactly)\" is not valid in the system http://loinc.org; The code provided (http://loinc.org#11493-4(exactly)) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "75310-3"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Health concerns Document",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "11493-4"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Hospital discharge studies summary Narrative",
   "severity" : null,
   "error" : ""
 }

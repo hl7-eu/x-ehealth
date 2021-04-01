@@ -8,7 +8,7 @@
          <p>The official URL for this implementation guide is: </p>
          <pre>http://hl7.eu/fhir/ig/xeh/ImplementationGuide/hl7.eu.fhir.xeh</pre>
          <div>
-            <p>A brief description of what MyIG is about (probably the same text as in your readme)</p>
+            <p>x-eHealth FHIR Implementation Guide</p>
          </div>
       </div>
    </text>
@@ -18,7 +18,7 @@
    <title value="x-eHealth FHIR Implementation Guide"/>
    <status value="draft"/>
    <experimental value="false"/>
-   <date value="2020-10-03T20:50:26+02:00"/>
+   <date value="2021-04-01T13:45:16+02:00"/>
    <publisher value="x-eHealth Project"/>
    <contact>
       <telecom>
@@ -26,7 +26,7 @@
          <value value="http://www.x-eHealth-project.eu"/>
       </telecom>
    </contact>
-   <description value="A brief description of what MyIG is about (probably the same text as in your readme)"/>
+   <description value="x-eHealth FHIR Implementation Guide"/>
    <jurisdiction>
       <coding>
          <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
@@ -54,30 +54,31 @@
 
       <grouping id="_str_profile">
          <name value="Structures: Resource Profiles"/>
-         <description value="These define constraints on FHIR resources that need to be complied with by conformant implementations"/>
+         <description value="These define constraints on FHIR resources for systems conforming to this implementation guide"/>
       </grouping>
 
       <grouping id="_str_extension">
          <name value="Structures: Extension Definitions"/>
-         <description value="These define constraints on FHIR data types that need to be complied with by conformant implementations"/>
+         <description value="These define constraints on FHIR data types for systems conforming to this implementation guide"/>
       </grouping>
       <grouping id="_term_valueset">
          <name value="Terminology: Value Sets"/>
-         <description value="These define sets of codes used by systems conforming with this implementation guide"/>
+         <description value="These define sets of codes used by systems conforming to this implementation guide"/>
       </grouping>
       <grouping id="_term_codesystem">
          <name value="Terminology: Code Systems"/>
-         <description value="These define new code systems used by systems conforming with this implementation guide"/>
+         <description value="These define new code systems used by systems conforming to this implementation guide"/>
       </grouping>
 
 
 
 
 
-      <grouping id="_other">
-         <name value="Other"/>
-         <description value="These are resources that are used within this implementation guide that do not fit into one of the other categories"/>
-      </grouping>
+
+
+
+
+
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
             <valueString value="StructureDefinition:extension"/>
@@ -105,19 +106,6 @@
          <name value="Label Concept (EN 17269)"/>
          <description value="The term ‘Label Concept’ is used to describe data model elements that play the role of container and usually have complex structures, for instance they may contain clinical statements or participants.  Label Concepts also facilitate recursive definitions.  For example, the result of an assessment can be an assessment."/>
          <groupingId value="_str_logicalmodel"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="List"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="List-List-dt-cen-ips.html"/>
-         </extension>
-         <reference>
-            <reference value="List/List-dt-cen-ips"/>
-         </reference>
-         <name value="CEN IPS datatypes"/>
-         <groupingId value="_other"/>
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -157,8 +145,22 @@
          <reference>
             <reference value="StructureDefinition/Composition-hcer-xeh"/>
          </reference>
-         <name value="Encounter Report (X-eHealth)"/>
-         <description value="Clinical document used to represent a generic Encounter Report (HCER) data set. The HCER dataset is a minimal and non-exhaustive dataset, specialty-agnostic, condition-independent, but readily usable by clinicians for the cross-border care of a patient."/>
+         <name value="Hospital Discharge Report (X-eHealth)"/>
+         <description value="Clinical document used to represent a Hospital Discharge Report (HDR) for the scope of the XeHealth project."/>
+         <groupingId value="_str_profile"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:resource"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-Composition-HDR-xeh.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/Composition-HDR-xeh"/>
+         </reference>
+         <name value="Hospital Discharge Report (X-eHealth)"/>
+         <description value="Clinical document used to represent a Hospital Discharge Report (HDR) for the scope of the XeHealth project."/>
          <groupingId value="_str_profile"/>
       </resource>
       <resource>
@@ -339,6 +341,21 @@
             <generation value="markdown"/>
          </page>
          <page>
+            <nameUrl value="models.html"/>
+            <title value="Logical Models"/>
+            <generation value="markdown"/>
+         </page>
+         <page>
+            <nameUrl value="profiles.html"/>
+            <title value="FHIR Profiles"/>
+            <generation value="markdown"/>
+         </page>
+         <page>
+            <nameUrl value="terminologies.html"/>
+            <title value="Terminologies"/>
+            <generation value="markdown"/>
+         </page>
+         <page>
             <nameUrl value="downloads.html"/>
             <title value="Useful Downloads"/>
             <generation value="html"/>
@@ -369,7 +386,12 @@
             </page>
             <page>
                <nameUrl value="StructureDefinition-Composition-hcer-xeh.html"/>
-               <title value="Encounter Report (X-eHealth)"/>
+               <title value="Hospital Discharge Report (X-eHealth)"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-Composition-HDR-xeh.html"/>
+               <title value="Hospital Discharge Report (X-eHealth)"/>
                <generation value="generated"/>
             </page>
             <page>
@@ -435,11 +457,6 @@
             <page>
                <nameUrl value="CodeSystem-conformance-cen-ips.html"/>
                <title value="EN 17269 Conformance"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="List-List-dt-cen-ips.html"/>
-               <title value="CEN IPS datatypes"/>
                <generation value="generated"/>
             </page>
          </page>
