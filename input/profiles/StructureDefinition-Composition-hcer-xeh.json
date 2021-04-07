@@ -1,0 +1,1438 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "Composition-hcer-xeh",
+  "url": "http://hl7.eu/fhir/ig/xeh/StructureDefinition/Composition-hcer-xeh",
+  "version": "0.0.1",
+  "name": "CompositionHdrXehealth",
+  "title": "Hospital Discharge Report (X-eHealth)",
+  "status": "active",
+  "publisher": "X-eHealth Project",
+  "description": "Clinical document used to represent a Hospital Discharge Report (HDR) for the scope of the XeHealth project.",
+  "copyright": "X-eHealth Project",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "workflow",
+      "uri": "http://hl7.org/fhir/workflow",
+      "name": "Workflow Pattern"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "cda",
+      "uri": "http://hl7.org/v3/cda",
+      "name": "CDA (R2)"
+    },
+    {
+      "identity": "fhirdocumentreference",
+      "uri": "http://hl7.org/fhir/documentreference",
+      "name": "FHIR DocumentReference"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/fivews",
+      "name": "FiveWs Pattern Mapping"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "Composition",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/clinicaldocument",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Composition",
+        "path": "Composition",
+        "short": "Hospital Discharge Report composition",
+        "definition": "Hospital Discharge Report composition. \r\nA composition is a set of healthcare-related information that is assembled together into a single logical document that provides a single coherent statement of meaning, establishes its own context and that has clinical attestation with regard to who is making the statement. \r\nWhile a Composition defines the structure, it does not actually contain the content: rather the full content of a document is contained in a Bundle, of which the Composition is the first resource contained.",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.text",
+        "path": "Composition.text",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.identifier",
+        "path": "Composition.identifier",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.status",
+        "path": "Composition.status",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.type",
+        "path": "Composition.type",
+        "short": "Kind of composition (\"Hospital Discharge Report\")",
+        "definition": "Specifies that this composition refer to a Hospital Discharge Report",
+        "type": [
+          {
+            "code": "CodeableConcept",
+            "profile": [
+              "http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"
+            ]
+          }
+        ],
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "34133-9",
+              "system": "http://loinc.org"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.subject",
+        "path": "Composition.subject",
+        "definition": "Who or what the composition is about. \r\nIn general a composition can be about a person, (patient or healthcare practitioner), a device (e.g. a machine) or even a group of subjects (such as a document about a herd of livestock, or a set of patients that share a common exposure).\r\nFor the hdr the subject is always the patient.",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.eu/fhir/ig/xeh/StructureDefinition/Patient-eu-xeh"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.encounter",
+        "path": "Composition.encounter",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.date",
+        "path": "Composition.date",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.author",
+        "path": "Composition.author",
+        "short": "Who and/or what authored the Encounter Report",
+        "definition": "Identifies who is responsible for the information in the Encounter Report, not necessarily who typed it in.\r\n\r\nThe type of author(s) contribute to determine the \"nature\"of the Patient Summary: e.g. a \"human-curated\" Encounter Report Vs. an \"automatically generated\" Encounter Report.",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.author.reference",
+        "path": "Composition.author.reference",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.title",
+        "path": "Composition.title",
+        "short": "Hospital Discharge Report",
+        "definition": "Official human-readable label for the composition.\r\n\r\nFor this document should be \"Hospital Discharge Report\" or any equivalent translation",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.confidentiality",
+        "path": "Composition.confidentiality",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.attester",
+        "path": "Composition.attester",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.attester.mode",
+        "path": "Composition.attester.mode",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.attester.time",
+        "path": "Composition.attester.time",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.attester.party",
+        "path": "Composition.attester.party",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.attester.party.reference",
+        "path": "Composition.attester.party.reference",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.custodian",
+        "path": "Composition.custodian",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.custodian.reference",
+        "path": "Composition.custodian.reference",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.relatesTo",
+        "path": "Composition.relatesTo",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.relatesTo.code",
+        "path": "Composition.relatesTo.code",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.relatesTo.target[x]",
+        "path": "Composition.relatesTo.target[x]",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section",
+        "path": "Composition.section",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "code"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "short": "Sections composing the Hospital Discharge Report",
+        "definition": "The root of the sections that make up the Hospital Discharge Report composition.",
+        "min": 2,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionMedications",
+        "path": "Composition.section",
+        "sliceName": "sectionMedications",
+        "short": "Hospital Discharge Report Medication Summary Section",
+        "definition": "The medication summary section contains a description of the patient's medications relevant for the scope of the patient summary.\r\nThe actual content could depend on the jurisdiction, it could report:\r\n- the currently active medications; \r\n- the current and past medications considered relevant by the authoring GP; \r\n- the patient prescriptions or dispensations automatically extracted by a regional or a national EHR.\r\n\r\nIn all those cases however medications are documented in the Patient Summary as medication statements.\r\nThis section requires either an entry indicating the subject is known not to be on any medications; either an entry indicating that no information is available about medications; or entries summarizing the subject's medications.",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionMedications.title",
+        "path": "Composition.section.title",
+        "short": "Medication Summary section",
+        "definition": "The label for this particular section.  This will be part of the rendered content for the document, and is often used to build a table of contents.\r\n\r\nMedication Summary",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionMedications.code",
+        "path": "Composition.section.code",
+        "min": 1,
+        "type": [
+          {
+            "code": "CodeableConcept",
+            "profile": [
+              "http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"
+            ]
+          }
+        ],
+        "fixedCodeableConcept": {
+          "coding": [
+            {
+              "code": "10160-0",
+              "system": "http://loinc.org"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionMedications.text",
+        "path": "Composition.section.text",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionMedications.entry",
+        "path": "Composition.section.entry",
+        "short": "Medications relevant for the scope of the patient summary",
+        "definition": "This list the medications relevant for the scope of the patient summary or it is used to indicate that the subject is known not to be on any relevant medication; either that no information is available about medications.",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionMedications.emptyReason",
+        "path": "Composition.section.emptyReason",
+        "max": "0",
+        "mustSupport": false
+      },
+      {
+        "id": "Composition.section:sectionMedications.section",
+        "path": "Composition.section.section",
+        "max": "0",
+        "mustSupport": false
+      },
+      {
+        "id": "Composition.section:sectionAllergies",
+        "path": "Composition.section",
+        "sliceName": "sectionAllergies",
+        "short": "HCER Allergies and Intolerances Section",
+        "definition": "This section documents the relevant allergies or intolerances (conditions) for that patient, describing the kind of reaction (e.g. rash, anaphylaxis,..); preferably the agents that cause it; and optionally the criticality and the certainty of the allergy.\r\nAt a minimum, it should list currently active and any relevant historical allergies and adverse reactions.\r\nIf no information about allergies is available, or if no allergies are known this should be clearly documented in the section.",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionAllergies.title",
+        "path": "Composition.section.title",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionAllergies.code",
+        "path": "Composition.section.code",
+        "min": 1,
+        "type": [
+          {
+            "code": "CodeableConcept",
+            "profile": [
+              "http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"
+            ]
+          }
+        ],
+        "fixedCodeableConcept": {
+          "coding": [
+            {
+              "code": "48765-2",
+              "system": "http://loinc.org"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionAllergies.text",
+        "path": "Composition.section.text",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionAllergies.entry",
+        "path": "Composition.section.entry",
+        "short": "Relevant allergies or intolerances (conditions) for that patient.",
+        "definition": "It lists the relevant allergies or intolerances (conditions) for that patient, describing the kind of reaction (e.g. rash, anaphylaxis,..); preferably the agents that cause it; and optionally the criticality and the certainty of the allergy.\r\nAt a minimum, it should list currently active and any relevant historical allergies and adverse reactions.\r\n This entry shall be used to document that no information about allergies is available, or that no allergies are known .",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionAllergies.emptyReason",
+        "path": "Composition.section.emptyReason",
+        "max": "0",
+        "mustSupport": false
+      },
+      {
+        "id": "Composition.section:sectionAllergies.section",
+        "path": "Composition.section.section",
+        "max": "0",
+        "mustSupport": false
+      },
+      {
+        "id": "Composition.section:sectionProblems",
+        "path": "Composition.section",
+        "sliceName": "sectionProblems",
+        "short": "HCER Problems Section",
+        "definition": "The HCER problem section lists and describes clinical problems or conditions currently being monitored for the patient.",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionProblems.title",
+        "path": "Composition.section.title",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionProblems.code",
+        "path": "Composition.section.code",
+        "min": 1,
+        "type": [
+          {
+            "code": "CodeableConcept",
+            "profile": [
+              "http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"
+            ]
+          }
+        ],
+        "fixedCodeableConcept": {
+          "coding": [
+            {
+              "code": "11450-4",
+              "system": "http://loinc.org"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionProblems.text",
+        "path": "Composition.section.text",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionProblems.entry",
+        "path": "Composition.section.entry",
+        "short": "Clinical problems or conditions currently being monitored for the patient.",
+        "definition": "It lists and describes clinical problems or conditions currently being monitored for the patient.  This entry shall be used to document that no information about problems is available, or that no relevant problems are known.",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionProblems.emptyReason",
+        "path": "Composition.section.emptyReason",
+        "max": "0",
+        "mustSupport": false
+      },
+      {
+        "id": "Composition.section:sectionProblems.section",
+        "path": "Composition.section.section",
+        "max": "0",
+        "mustSupport": false
+      },
+      {
+        "id": "Composition.section:sectionProceduresHx",
+        "path": "Composition.section",
+        "sliceName": "sectionProceduresHx",
+        "short": "HCER History of Procedures Section",
+        "definition": "The History of Procedures Section contains a description of the patient past procedures that are pertinent to the scope of this document.\r\nProcedures may refer for example to:\r\n1. Invasive Diagnostic procedure:e.g. Cardiac catheterization; (the results of these procedure are documented in the results section)\r\n2. Therapeutic procedure: e.g. dialysis;\r\n3. Surgical procedure: e.g. appendectomy",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionProceduresHx.title",
+        "path": "Composition.section.title",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionProceduresHx.code",
+        "path": "Composition.section.code",
+        "min": 1,
+        "type": [
+          {
+            "code": "CodeableConcept",
+            "profile": [
+              "http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"
+            ]
+          }
+        ],
+        "fixedCodeableConcept": {
+          "coding": [
+            {
+              "code": "47519-4",
+              "system": "http://loinc.org"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionProceduresHx.text",
+        "path": "Composition.section.text",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionProceduresHx.entry",
+        "path": "Composition.section.entry",
+        "short": "Patient past procedures pertinent to the scope of this document.",
+        "definition": "It lists the patient past procedures that are pertinent to the scope of this document.\r\nProcedures may refer for example to:\r\n1. Invasive Diagnostic procedure:e.g. Cardiac catheterization; (the results of these procedure are documented in the results section)\r\n2. Therapeutic procedure: e.g. dialysis;\r\n3. Surgical procedure: e.g. appendectomy. This entry shall be used to document that no information about past procedures is available, or that no relevant past procedures are known.",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionProceduresHx.emptyReason",
+        "path": "Composition.section.emptyReason",
+        "max": "0",
+        "mustSupport": false
+      },
+      {
+        "id": "Composition.section:sectionProceduresHx.section",
+        "path": "Composition.section.section",
+        "max": "0",
+        "mustSupport": false
+      },
+      {
+        "id": "Composition.section:sectionImmunizations",
+        "path": "Composition.section",
+        "sliceName": "sectionImmunizations",
+        "short": "HCER Immunizations Section",
+        "definition": "The Immunizations Section defines a patient's current immunization status and pertinent immunization history.\r\nThe primary use case for the Immunization Section is to enable communication of a patient's immunization status.\r\nThe section includes current immunization status, and may contain the entire immunization history that is relevant to the period of time being summarized.",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionImmunizations.title",
+        "path": "Composition.section.title",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionImmunizations.code",
+        "path": "Composition.section.code",
+        "min": 1,
+        "type": [
+          {
+            "code": "CodeableConcept",
+            "profile": [
+              "http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"
+            ]
+          }
+        ],
+        "fixedCodeableConcept": {
+          "coding": [
+            {
+              "code": "11369-6",
+              "system": "http://loinc.org"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionImmunizations.text",
+        "path": "Composition.section.text",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionImmunizations.entry",
+        "path": "Composition.section.entry",
+        "short": "Patient's immunization status and pertinent history.",
+        "definition": "It defines the patient's current immunization status and pertinent immunization history.\r\nThe primary use case for the Immunization Section is to enable communication of a patient's immunization status.\r\nIt may contain the entire immunization history that is relevant to the period of time being summarized. This entry shall be used to document that no information about immunizations is available, or that no immunizations are known.",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionImmunizations.emptyReason",
+        "path": "Composition.section.emptyReason",
+        "max": "0",
+        "mustSupport": false
+      },
+      {
+        "id": "Composition.section:sectionImmunizations.section",
+        "path": "Composition.section.section",
+        "max": "0",
+        "mustSupport": false
+      },
+      {
+        "id": "Composition.section:sectionMedicalDevices",
+        "path": "Composition.section",
+        "sliceName": "sectionMedicalDevices",
+        "short": "HCER Medical Devices Section",
+        "definition": "The medical devices section contains narrative text and coded entries describing the patient history of medical device use.",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionMedicalDevices.title",
+        "path": "Composition.section.title",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionMedicalDevices.code",
+        "path": "Composition.section.code",
+        "min": 1,
+        "type": [
+          {
+            "code": "CodeableConcept",
+            "profile": [
+              "http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"
+            ]
+          }
+        ],
+        "fixedCodeableConcept": {
+          "coding": [
+            {
+              "code": "46264-8",
+              "system": "http://loinc.org"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionMedicalDevices.text",
+        "path": "Composition.section.text",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionMedicalDevices.entry",
+        "path": "Composition.section.entry",
+        "short": "Patient history of medical device use.",
+        "definition": "It describes the patient history of medical device use. This entry shall be used to document that no information about medical device use is available, or that no relevant medical device use is known.",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionMedicalDevices.emptyReason",
+        "path": "Composition.section.emptyReason",
+        "max": "0",
+        "mustSupport": false
+      },
+      {
+        "id": "Composition.section:sectionMedicalDevices.section",
+        "path": "Composition.section.section",
+        "max": "0",
+        "mustSupport": false
+      },
+      {
+        "id": "Composition.section:sectionResults",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name",
+            "valueString": "Results Section"
+          }
+        ],
+        "path": "Composition.section",
+        "sliceName": "sectionResults",
+        "short": "IPS Results Section",
+        "definition": "This section assembles relevant observation results collected on the patient or produced on in-vitro biologic specimens collected from the patient. Some of these results may be laboratory results, others may be anatomic pathology results, others, radiology results, and others, clinical results.",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionResults.title",
+        "path": "Composition.section.title",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionResults.code",
+        "path": "Composition.section.code",
+        "min": 1,
+        "type": [
+          {
+            "code": "CodeableConcept",
+            "profile": [
+              "http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"
+            ]
+          }
+        ],
+        "fixedCodeableConcept": {
+          "coding": [
+            {
+              "code": "30954-2",
+              "system": "http://loinc.org"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionResults.text",
+        "path": "Composition.section.text",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionResults.entry",
+        "path": "Composition.section.entry",
+        "short": "Relevant observation results collected on the patient or produced on in-vitro biologic specimens collected from the patient.",
+        "definition": "Relevant observation results collected on the patient or produced on in-vitro biologic specimens collected from the patient. Some of these results may be laboratory results, others may be anatomic pathology results, others, radiology results, and others, clinical results.",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionResults.emptyReason",
+        "path": "Composition.section.emptyReason",
+        "max": "0",
+        "mustSupport": false
+      },
+      {
+        "id": "Composition.section:sectionResults.section",
+        "path": "Composition.section.section",
+        "max": "0",
+        "mustSupport": false
+      },
+      {
+        "id": "Composition.section:sectionVitalSigns",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name",
+            "valueString": "Vital Signs Section"
+          }
+        ],
+        "path": "Composition.section",
+        "sliceName": "sectionVitalSigns",
+        "label": "Vital signs",
+        "short": "IPS Vital Signs Section",
+        "definition": "The Vital signs section includes blood pressure, body temperature, heart rate, and respiratory rate. It may also include other clinical findings, such as height, weight, body mass index, head circumference, and pulse oximetry. In particular, notable vital signs or physical findings such as the most recent, maximum and/or minimum, baseline, or relevant trends may be included",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionVitalSigns.title",
+        "path": "Composition.section.title",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionVitalSigns.code",
+        "path": "Composition.section.code",
+        "min": 1,
+        "type": [
+          {
+            "code": "CodeableConcept",
+            "profile": [
+              "http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"
+            ]
+          }
+        ],
+        "fixedCodeableConcept": {
+          "coding": [
+            {
+              "code": "8716-3",
+              "system": "http://loinc.org"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionVitalSigns.text",
+        "path": "Composition.section.text",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionVitalSigns.entry",
+        "path": "Composition.section.entry",
+        "short": "Notable vital signs or physical findings.",
+        "definition": "Notable vital signs or physical findings as: blood pressure, body temperature, heart rate, and respiratory rate. It may also include other clinical findings, such as height, weight, body mass index, head circumference, and pulse oximetry. In particular, notable vital signs or physical findings such as the most recent, maximum and/or minimum, baseline, or relevant trends may be included",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionVitalSigns.emptyReason",
+        "path": "Composition.section.emptyReason",
+        "max": "0",
+        "mustSupport": false
+      },
+      {
+        "id": "Composition.section:sectionVitalSigns.section",
+        "path": "Composition.section.section",
+        "max": "0",
+        "mustSupport": false
+      },
+      {
+        "id": "Composition.section:sectionPastIllnessHx",
+        "path": "Composition.section",
+        "sliceName": "sectionPastIllnessHx",
+        "short": "HCER History of Past Illness Section",
+        "definition": "The History of Past Illness section contains a narrative description and coded entries of the conditions the patient suffered in the past",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionPastIllnessHx.title",
+        "path": "Composition.section.title",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionPastIllnessHx.code",
+        "path": "Composition.section.code",
+        "min": 1,
+        "type": [
+          {
+            "code": "CodeableConcept",
+            "profile": [
+              "http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"
+            ]
+          }
+        ],
+        "fixedCodeableConcept": {
+          "coding": [
+            {
+              "code": "11348-0",
+              "system": "http://loinc.org"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionPastIllnessHx.text",
+        "path": "Composition.section.text",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionPastIllnessHx.entry",
+        "path": "Composition.section.entry",
+        "short": "Conditions the patient suffered in the past.",
+        "definition": "It contains a description of the conditions the patient suffered in the past.",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionPastIllnessHx.emptyReason",
+        "path": "Composition.section.emptyReason",
+        "max": "0",
+        "mustSupport": false
+      },
+      {
+        "id": "Composition.section:sectionPastIllnessHx.section",
+        "path": "Composition.section.section",
+        "max": "0",
+        "mustSupport": false
+      },
+      {
+        "id": "Composition.section:sectionFunctionalStatus",
+        "path": "Composition.section",
+        "sliceName": "sectionFunctionalStatus",
+        "short": "IPS Functional Status",
+        "definition": "The functional status section shall contain a narrative description of capability of the patient to perform acts of daily living, including possible needs of the patient to be continuously assessed by third parties. The invalidity status may in fact influence decisions about how to administer treatments.\r\nProfiles to express disabilities and functional assessments will be specified by future versions of this guide.",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionFunctionalStatus.title",
+        "path": "Composition.section.title",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionFunctionalStatus.code",
+        "path": "Composition.section.code",
+        "min": 1,
+        "type": [
+          {
+            "code": "CodeableConcept",
+            "profile": [
+              "http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"
+            ]
+          }
+        ],
+        "fixedCodeableConcept": {
+          "coding": [
+            {
+              "code": "47420-5",
+              "system": "http://loinc.org"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionFunctionalStatus.text",
+        "path": "Composition.section.text",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionFunctionalStatus.entry",
+        "path": "Composition.section.entry",
+        "short": "Optional entry used to represent disabilities and functional assessments",
+        "definition": "It describes capabilities of the patient to perform acts of daily living, including possible needs of the patient to be continuously assessed by third parties. The invalidity status may in fact influence decisions about how to administer treatments.\r\nProfiles to express disabilities and functional assessments will be specified by future versions of this guide.",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionFunctionalStatus.emptyReason",
+        "path": "Composition.section.emptyReason",
+        "max": "0",
+        "mustSupport": false
+      },
+      {
+        "id": "Composition.section:sectionFunctionalStatus.section",
+        "path": "Composition.section.section",
+        "max": "0",
+        "mustSupport": false
+      },
+      {
+        "id": "Composition.section:sectionPlanOfCare",
+        "path": "Composition.section",
+        "sliceName": "sectionPlanOfCare",
+        "short": "IPS Plan of Care Section",
+        "definition": "The plan of care section contains a narrative description of the expectations for care including proposals, goals, and order requests for monitoring, tracking, or improving the condition of the patient.",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionPlanOfCare.title",
+        "path": "Composition.section.title",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionPlanOfCare.code",
+        "path": "Composition.section.code",
+        "min": 1,
+        "type": [
+          {
+            "code": "CodeableConcept",
+            "profile": [
+              "http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"
+            ]
+          }
+        ],
+        "fixedCodeableConcept": {
+          "coding": [
+            {
+              "code": "18776-5",
+              "system": "http://loinc.org"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionPlanOfCare.text",
+        "path": "Composition.section.text",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionPlanOfCare.emptyReason",
+        "path": "Composition.section.emptyReason",
+        "max": "0",
+        "mustSupport": false
+      },
+      {
+        "id": "Composition.section:sectionPlanOfCare.section",
+        "path": "Composition.section.section",
+        "max": "0",
+        "mustSupport": false
+      },
+      {
+        "id": "Composition.section:sectionSocialHistory",
+        "path": "Composition.section",
+        "sliceName": "sectionSocialHistory",
+        "short": "HCER Social History Section",
+        "definition": "The social history section contains a description of the person’s Health related “lifestyle factors\" or \"lifestyle observations\" (e.g. smoke habits; alcohol consumption; diets, risky habits.)",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionSocialHistory.title",
+        "path": "Composition.section.title",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionSocialHistory.code",
+        "path": "Composition.section.code",
+        "min": 1,
+        "type": [
+          {
+            "code": "CodeableConcept",
+            "profile": [
+              "http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"
+            ]
+          }
+        ],
+        "fixedCodeableConcept": {
+          "coding": [
+            {
+              "code": "29762-2",
+              "system": "http://loinc.org"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionSocialHistory.text",
+        "path": "Composition.section.text",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionSocialHistory.entry",
+        "path": "Composition.section.entry",
+        "short": "Health related \"lifestyle factors\" or \"lifestyle observations\" (e.g. smoke habits; alcohol consumption; diets, risky habits.)",
+        "definition": "Description of the person’s Health related “lifestyle factors\" or \"lifestyle observations\" (e.g. smoke habits; alcohol consumption; diets, risky habits.)",
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionSocialHistory.emptyReason",
+        "path": "Composition.section.emptyReason",
+        "max": "0",
+        "mustSupport": false
+      },
+      {
+        "id": "Composition.section:sectionSocialHistory.section",
+        "path": "Composition.section.section",
+        "max": "0",
+        "mustSupport": false
+      },
+      {
+        "id": "Composition.section:sectionPregnancyHx",
+        "path": "Composition.section",
+        "sliceName": "sectionPregnancyHx",
+        "short": "IPS History of Pregnancy Section",
+        "definition": "The history of pregnancy section shall contain information about whether the patient is currently pregnant or not.\r\nIt may contain addition summarizing information about the outcome of earlier pregnancies.",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionPregnancyHx.title",
+        "path": "Composition.section.title",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionPregnancyHx.code",
+        "path": "Composition.section.code",
+        "min": 1,
+        "type": [
+          {
+            "code": "CodeableConcept",
+            "profile": [
+              "http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"
+            ]
+          }
+        ],
+        "fixedCodeableConcept": {
+          "coding": [
+            {
+              "code": "10162-6",
+              "system": "http://loinc.org"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionPregnancyHx.text",
+        "path": "Composition.section.text",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionPregnancyHx.entry",
+        "path": "Composition.section.entry",
+        "short": "Current pregnancy status and, optionally, information about the outcome of earlier pregnancies.",
+        "definition": "It contains information about whether the patient is currently pregnant or not.\r\nIt may contain addition summarizing information about the outcome of earlier pregnancies.",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionPregnancyHx.emptyReason",
+        "path": "Composition.section.emptyReason",
+        "max": "0",
+        "mustSupport": false
+      },
+      {
+        "id": "Composition.section:sectionPregnancyHx.section",
+        "path": "Composition.section.section",
+        "max": "0",
+        "mustSupport": false
+      },
+      {
+        "id": "Composition.section:sectionAdvanceDirectives",
+        "path": "Composition.section",
+        "sliceName": "sectionAdvanceDirectives",
+        "short": "IPS Advance Directives Section",
+        "definition": "The advance directives section contains a narrative description of patient's advance directive.",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionAdvanceDirectives.title",
+        "path": "Composition.section.title",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionAdvanceDirectives.code",
+        "path": "Composition.section.code",
+        "min": 1,
+        "type": [
+          {
+            "code": "CodeableConcept",
+            "profile": [
+              "http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"
+            ]
+          }
+        ],
+        "fixedCodeableConcept": {
+          "coding": [
+            {
+              "code": "42348-3",
+              "system": "http://loinc.org"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionAdvanceDirectives.text",
+        "path": "Composition.section.text",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionAdvanceDirectives.entry",
+        "path": "Composition.section.entry",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionAdvanceDirectives.emptyReason",
+        "path": "Composition.section.emptyReason",
+        "max": "0",
+        "mustSupport": false
+      },
+      {
+        "id": "Composition.section:sectionAdvanceDirectives.section",
+        "path": "Composition.section.section",
+        "max": "0",
+        "mustSupport": false
+      },
+      {
+        "id": "Composition.section:sectionEncounters",
+        "path": "Composition.section",
+        "sliceName": "sectionEncounters",
+        "short": "Encounters sections",
+        "definition": "This section lists and describes any healthcare encounters pertinent to the patient’s current health status or historical health history. An encounter is an interaction, regardless of the setting, between a patient and a practitioner who is vested with primary responsibility for diagnosing, evaluating, or treating the patient’s condition. It may include visits, appointments, or non-face-to-face interactions. It is also a contact between a patient and a practitioner who has primary responsibility (exercising independent judgment) for assessing and treating the patient at a given contact.“ (from C-CDA specifications).",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionEncounters.title",
+        "path": "Composition.section.title",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionEncounters.code",
+        "path": "Composition.section.code",
+        "min": 1,
+        "fixedCodeableConcept": {
+          "coding": [
+            {
+              "code": "46240-8",
+              "system": "http://loinc.org"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionEncounters.text",
+        "path": "Composition.section.text",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionEncounters.entry",
+        "path": "Composition.section.entry",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionEncounters.emptyReason",
+        "path": "Composition.section.emptyReason",
+        "max": "0",
+        "mustSupport": false
+      },
+      {
+        "id": "Composition.section:sectionEncounters.section",
+        "path": "Composition.section.section",
+        "max": "0",
+        "mustSupport": false
+      },
+      {
+        "id": "Composition.section:sectionAdmissionMedications",
+        "path": "Composition.section",
+        "sliceName": "sectionAdmissionMedications",
+        "short": "Admission Medications",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionAdmissionMedications.title",
+        "path": "Composition.section.title",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionAdmissionMedications.code",
+        "path": "Composition.section.code",
+        "min": 1,
+        "type": [
+          {
+            "code": "CodeableConcept",
+            "profile": [
+              "http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"
+            ]
+          }
+        ],
+        "fixedCodeableConcept": {
+          "coding": [
+            {
+              "code": "42346-7",
+              "system": "http://loinc.org"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionAdmissionMedications.text",
+        "path": "Composition.section.text",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionAdmissionMedications.entry",
+        "path": "Composition.section.entry",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionAdmissionMedications.emptyReason",
+        "path": "Composition.section.emptyReason",
+        "max": "0",
+        "mustSupport": false
+      },
+      {
+        "id": "Composition.section:sectionAdmissionMedications.section",
+        "path": "Composition.section.section",
+        "max": "0",
+        "mustSupport": false
+      },
+      {
+        "id": "Composition.section:sectionHospitalCourse",
+        "path": "Composition.section",
+        "sliceName": "sectionHospitalCourse",
+        "short": "Hospital course",
+        "definition": "Hospital course describes the sequence of events from admission to discharge in a hospital facility.",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionHospitalCourse.code",
+        "path": "Composition.section.code",
+        "min": 1,
+        "type": [
+          {
+            "code": "CodeableConcept",
+            "profile": [
+              "http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"
+            ]
+          }
+        ],
+        "fixedCodeableConcept": {
+          "coding": [
+            {
+              "code": "8648-8",
+              "system": "http://loinc.org"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionHospitalCourse.text",
+        "path": "Composition.section.text",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionHospitalCourse.section",
+        "path": "Composition.section.section",
+        "max": "0",
+        "mustSupport": false
+      },
+      {
+        "id": "Composition.section:sectionProcedure",
+        "path": "Composition.section",
+        "sliceName": "sectionProcedure",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionProcedure.code",
+        "path": "Composition.section.code",
+        "min": 1,
+        "type": [
+          {
+            "code": "CodeableConcept",
+            "profile": [
+              "http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"
+            ]
+          }
+        ],
+        "fixedCodeableConcept": {
+          "coding": [
+            {
+              "code": "29554-3",
+              "system": "http://loinc.org"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionProcedure.text",
+        "path": "Composition.section.text",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionProcedure.entry",
+        "path": "Composition.section.entry",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionProcedure.emptyReason",
+        "path": "Composition.section.emptyReason",
+        "max": "0",
+        "mustSupport": false
+      },
+      {
+        "id": "Composition.section:sectionProcedure.section",
+        "path": "Composition.section.section",
+        "max": "0",
+        "mustSupport": false
+      },
+      {
+        "id": "Composition.section:sectionMedicationsAdministered",
+        "path": "Composition.section",
+        "sliceName": "sectionMedicationsAdministered",
+        "short": "Admission Medications",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionMedicationsAdministered.title",
+        "path": "Composition.section.title",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionMedicationsAdministered.code",
+        "path": "Composition.section.code",
+        "min": 1,
+        "type": [
+          {
+            "code": "CodeableConcept",
+            "profile": [
+              "http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"
+            ]
+          }
+        ],
+        "fixedCodeableConcept": {
+          "coding": [
+            {
+              "code": "29549-3",
+              "system": "http://loinc.org"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionMedicationsAdministered.text",
+        "path": "Composition.section.text",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionMedicationsAdministered.entry",
+        "path": "Composition.section.entry",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionMedicationsAdministered.emptyReason",
+        "path": "Composition.section.emptyReason",
+        "max": "0",
+        "mustSupport": false
+      },
+      {
+        "id": "Composition.section:sectionMedicationsAdministered.section",
+        "path": "Composition.section.section",
+        "max": "0",
+        "mustSupport": false
+      },
+      {
+        "id": "Composition.section:sectionDischargeMedications",
+        "path": "Composition.section",
+        "sliceName": "sectionDischargeMedications",
+        "short": "Admission Medications",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionDischargeMedications.title",
+        "path": "Composition.section.title",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionDischargeMedications.code",
+        "path": "Composition.section.code",
+        "min": 1,
+        "type": [
+          {
+            "code": "CodeableConcept",
+            "profile": [
+              "http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"
+            ]
+          }
+        ],
+        "fixedCodeableConcept": {
+          "coding": [
+            {
+              "code": "42346-7",
+              "system": "http://loinc.org"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionDischargeMedications.text",
+        "path": "Composition.section.text",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionDischargeMedications.entry",
+        "path": "Composition.section.entry",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionDischargeMedications.emptyReason",
+        "path": "Composition.section.emptyReason",
+        "max": "0",
+        "mustSupport": false
+      },
+      {
+        "id": "Composition.section:sectionDischargeMedications.section",
+        "path": "Composition.section.section",
+        "max": "0",
+        "mustSupport": false
+      }
+    ]
+  }
+}
