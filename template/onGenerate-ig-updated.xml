@@ -8,67 +8,49 @@
          <p>The official URL for this implementation guide is: </p>
          <pre>http://hl7.eu/fhir/ig/xeh/ImplementationGuide/hl7.eu.fhir.xeh</pre>
          <div>
-            <p>x-eHealth FHIR Implementation Guide</p>
+            <p>This guide collects the HL7 FHIR artefacts defined by the European project X-eHealth for supporting the European EHR eXchange Format.</p>
          </div>
       </div>
    </text>
    <url value="http://hl7.eu/fhir/ig/xeh/ImplementationGuide/hl7.eu.fhir.xeh"/>
    <version value="0.0.1"/>
    <name value="XeHealthImplementationGuide"/>
-   <title value="x-eHealth FHIR Implementation Guide"/>
+   <title value="X-eHealth Implementation Guide"/>
    <status value="draft"/>
-   <experimental value="false"/>
-   <date value="2021-04-07T15:45:12+02:00"/>
-   <publisher value="x-eHealth Project"/>
+   <date value="2021-09-25T13:12:28+02:00"/>
    <contact>
+      <name value="X-eHealth project"/>
       <telecom>
          <system value="url"/>
-         <value value="http://www.x-eHealth-project.eu"/>
+         <value value="http://x-eHealth-project.eu"/>
       </telecom>
    </contact>
-   <description value="x-eHealth FHIR Implementation Guide"/>
-   <jurisdiction>
-      <coding>
-         <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
-         <code value="150"/>
-      </coding>
-   </jurisdiction>
+   <description value="This guide collects the HL7 FHIR artefacts defined by the European project X-eHealth for supporting the European EHR eXchange Format."/>
    <packageId value="hl7.eu.fhir.xeh"/>
    <license value="CC0-1.0"/>
    <fhirVersion value="4.0.1"/>
-   <dependsOn>
+   <dependsOn id="hl7_fhir_uv_ips">
       <uri value="http://hl7.org/fhir/uv/ips/ImplementationGuide/hl7.fhir.uv.ips"/>
       <packageId value="hl7.fhir.uv.ips"/>
-      <version value="current"/>
+      <version value="dev"/>
    </dependsOn>
    <definition>
 
 
 
 
-      <grouping id="_str_logicalmodel">
-         <name value="Structures: Logical Models"/>
-         <description value="These define data models that represent the domain covered by this implementation guide in more business-friendly terms than the underlying FHIR resources."/>
-      </grouping>
 
 
-      <grouping id="_str_profile">
+
+      <grouping id="-str-profile">
          <name value="Structures: Resource Profiles"/>
          <description value="These define constraints on FHIR resources for systems conforming to this implementation guide"/>
       </grouping>
 
-      <grouping id="_str_extension">
+      <grouping id="-str-extension">
          <name value="Structures: Extension Definitions"/>
          <description value="These define constraints on FHIR data types for systems conforming to this implementation guide"/>
       </grouping>
-      <grouping id="_term_valueset">
-         <name value="Terminology: Value Sets"/>
-         <description value="These define sets of codes used by systems conforming to this implementation guide"/>
-      </grouping>
-      <grouping id="_term_codesystem">
-         <name value="Terminology: Code Systems"/>
-         <description value="These define new code systems used by systems conforming to this implementation guide"/>
-      </grouping>
 
 
 
@@ -79,76 +61,8 @@
 
 
 
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="StructureDefinition:extension"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="StructureDefinition-conformance-cen-ips.html"/>
-         </extension>
-         <reference>
-            <reference value="StructureDefinition/conformance-cen-ips"/>
-         </reference>
-         <name value="Conformance attribute"/>
-         <description value="This attribute captures the level of requirement (mandatory, required, required if known, optional, conditional) for each specified element"/>
-         <groupingId value="_str_extension"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="StructureDefinition:logical:abstract"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="StructureDefinition-LabelConcept.html"/>
-         </extension>
-         <reference>
-            <reference value="StructureDefinition/LabelConcept"/>
-         </reference>
-         <name value="Label Concept (EN 17269)"/>
-         <description value="The term ‘Label Concept’ is used to describe data model elements that play the role of container and usually have complex structures, for instance they may contain clinical statements or participants.  Label Concepts also facilitate recursive definitions.  For example, the result of an assessment can be an assessment."/>
-         <groupingId value="_str_logicalmodel"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="StructureDefinition:logical:abstract"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="StructureDefinition-Patient.html"/>
-         </extension>
-         <reference>
-            <reference value="StructureDefinition/Patient"/>
-         </reference>
-         <name value="Patient (EN 17269)"/>
-         <description value="Minimal set of Patient data used by the X-eHealth project."/>
-         <groupingId value="_str_logicalmodel"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="StructureDefinition:logical:abstract"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="StructureDefinition-PersonName.html"/>
-         </extension>
-         <reference>
-            <reference value="StructureDefinition/PersonName"/>
-         </reference>
-         <name value="Person Name (EN 17269)"/>
-         <description value="A name for a person constituted by a sequence of name parts, such as given name or family name, prefix, suffix. NOTE:  Variants such as ‘preferred name’ or ‘alias’ are implicit in the Person Name data type. For example, when the name of a person is provided, that name should be provided as a list of parts such as given name or family name, prefix, suffix; when more than one part is given it should be allowed to distinguish among their usage (e.g. official name; maiden name); more representations should be recorded when the name is not alphabetic; and so on. All these proprieties are summarized indicating that the Person Name is related to the ISO EN.PN datatype without repeating all of these characteristics."/>
-         <groupingId value="_str_logicalmodel"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="StructureDefinition:resource"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="StructureDefinition-Composition-hcer-xeh.html"/>
-         </extension>
-         <reference>
-            <reference value="StructureDefinition/Composition-hcer-xeh"/>
-         </reference>
-         <name value="Hospital Discharge Report (X-eHealth)"/>
-         <description value="Clinical document used to represent a Hospital Discharge Report (HDR) for the scope of the XeHealth project."/>
-         <groupingId value="_str_profile"/>
-      </resource>
+
+
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
             <valueString value="StructureDefinition:resource"/>
@@ -161,21 +75,38 @@
          </reference>
          <name value="Hospital Discharge Report (X-eHealth)"/>
          <description value="Clinical document used to represent a Hospital Discharge Report (HDR) for the scope of the XeHealth project."/>
-         <groupingId value="_str_profile"/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-profile"/>
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
             <valueString value="StructureDefinition:resource"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="StructureDefinition-Composition-ips-xeh.html"/>
+            <valueUri value="StructureDefinition-Composition-eu-xeh.html"/>
          </extension>
          <reference>
-            <reference value="StructureDefinition/Composition-ips-xeh"/>
+            <reference value="StructureDefinition/Composition-eu-xeh"/>
          </reference>
-         <name value="IPS (X-eHealth)"/>
-         <description value="Clinical document used to represent the International Patient Summary (IPS) data set. &#xD;&#xA;An International Patient Summary (IPS) document is an electronic health record extract containing essential healthcare information about a subject of care. &#xD;&#xA;The IPS dataset is minimal and non-exhaustive; specialty-agnostic and condition-independent; but still clinically relevant. As specified in EN 17269 and ISO/DIS 27269, it is designed for supporting the use case scenario for ‘unplanned, cross border care’, but it is not limited to it. It is intended to be international, i.e., to provide generic solutions for global application beyond a particular region or country.&#xD;&#xA;&#xD;&#xA;This profile is based on the ClinicalDocument profile."/>
-         <groupingId value="_str_profile"/>
+         <name value="Clinical Document (X-eHealth)"/>
+         <description value="Generic Clinical Document profile for the X-eHealth project."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-profile"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:resource"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-Condition-eu-xeh.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/Condition-eu-xeh"/>
+         </reference>
+         <name value="Condition (X-eHealth)"/>
+         <description value="This profile defines how to represent Condition in FHIR for the purpose of the X-eHealth project."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-profile"/>
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -189,21 +120,8 @@
          </reference>
          <name value="DiagnosticReport (X-eHealth)"/>
          <description value="This profile constrains the DiagnosticReport resource to represent diagnostic test and procedure reports in a X-eHealth Project"/>
-         <groupingId value="_str_profile"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="StructureDefinition:resource"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="StructureDefinition-Observation-results-eu-xeh.html"/>
-         </extension>
-         <reference>
-            <reference value="StructureDefinition/Observation-results-eu-xeh"/>
-         </reference>
-         <name value="Observation Results: laboratory (X-eHealth)"/>
-         <description value="This profile constrains the Observation resource to represent various types of results and associated observations in a patient summary. This is the base profile from which the other results profiles are derived."/>
-         <groupingId value="_str_profile"/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-profile"/>
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -217,7 +135,8 @@
          </reference>
          <name value="Observation Results: laboratory (X-eHealth)"/>
          <description value="This profile constrains the Observation resource to represent results produced by laboratory tests or panels/studies for the X-eHealth project."/>
-         <groupingId value="_str_profile"/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-profile"/>
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -231,7 +150,8 @@
          </reference>
          <name value="Observation Results: pathology (X-eHealth)"/>
          <description value="This profile constrains the Observation resource to represent results produced by pathology studies for the X-eHealth project."/>
-         <groupingId value="_str_profile"/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-profile"/>
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -245,7 +165,23 @@
          </reference>
          <name value="Observation Results: radiology (X-eHealth)"/>
          <description value="This profile constrains the Observation resource to represent results produced by pathology studies for the X-eHealth project."/>
-         <groupingId value="_str_profile"/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-profile"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:resource"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-Observation-results-eu-xeh.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/Observation-results-eu-xeh"/>
+         </reference>
+         <name value="Observation Results: laboratory (X-eHealth)"/>
+         <description value="This profile constrains the Observation resource to represent various types of results and associated observations in a patient summary. This is the base profile from which the other results profiles are derived."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-profile"/>
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -259,7 +195,8 @@
          </reference>
          <name value="Organization (X-eHealth)"/>
          <description value="This profile defines how to represent Organizations in FHIR for the purpose of the X-eHealth project."/>
-         <groupingId value="_str_profile"/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-profile"/>
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -273,21 +210,8 @@
          </reference>
          <name value="Patient (X-eHealth)"/>
          <description value="Information about an individual receiving health care services"/>
-         <groupingId value="_str_profile"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="StructureDefinition:resource"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="StructureDefinition-Practitioner-eu-xeh.html"/>
-         </extension>
-         <reference>
-            <reference value="StructureDefinition/Practitioner-eu-xeh"/>
-         </reference>
-         <name value="Practitioner (X-eHealth)"/>
-         <description value="This profile defines how to represent Practitioners in FHIR for the purpose of the X-eHealth project."/>
-         <groupingId value="_str_profile"/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-profile"/>
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -301,35 +225,38 @@
          </reference>
          <name value="PractitionerRole (X-eHealth)"/>
          <description value="This profile defines how to represent Practitioners (with thier roles) in FHIR for the purpose of the X-eHealth project."/>
-         <groupingId value="_str_profile"/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-profile"/>
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="CodeSystem"/>
+            <valueString value="StructureDefinition:resource"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="CodeSystem-conformance-cen-ips.html"/>
+            <valueUri value="StructureDefinition-Practitioner-eu-xeh.html"/>
          </extension>
          <reference>
-            <reference value="CodeSystem/conformance-cen-ips"/>
+            <reference value="StructureDefinition/Practitioner-eu-xeh"/>
          </reference>
-         <name value="EN 17269 Conformance"/>
-         <description value="Requirement Descriptors for CEN International Patient Summary (IPS) Document, Section types and data."/>
-         <groupingId value="_term_codesystem"/>
+         <name value="Practitioner (X-eHealth)"/>
+         <description value="This profile defines how to represent Practitioners in FHIR for the purpose of the X-eHealth project."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-profile"/>
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="ValueSet"/>
+            <valueString value="StructureDefinition:extension"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="ValueSet-conformance-cen-ips.html"/>
+            <valueUri value="StructureDefinition-conformance-cen-ips.html"/>
          </extension>
          <reference>
-            <reference value="ValueSet/conformance-cen-ips"/>
+            <reference value="StructureDefinition/conformance-cen-ips"/>
          </reference>
-         <name value="Conformance (CEN IPS)"/>
-         <description value="Requirement Descriptors for CEN International Patient Summary (IPS) Document, Section types and data"/>
-         <groupingId value="_term_valueset"/>
+         <name value="Conformance attribute"/>
+         <description value="This attribute captures the level of requirement (mandatory, required, required if known, optional, conditional) for each specified element"/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-extension"/>
       </resource>
       <page>
          <nameUrl value="toc.html"/>
@@ -337,17 +264,37 @@
          <generation value="html"/>
          <page>
             <nameUrl value="index.html"/>
-            <title value="x-eHealth IG Home Page"/>
+            <title value="Home"/>
             <generation value="markdown"/>
          </page>
          <page>
+            <nameUrl value="background.html"/>
+            <title value="Background"/>
+            <generation value="html"/>
+         </page>
+         <page>
+            <nameUrl value="changes.html"/>
+            <title value="Changes"/>
+            <generation value="html"/>
+         </page>
+         <page>
+            <nameUrl value="downloads.html"/>
+            <title value="Downloads"/>
+            <generation value="html"/>
+         </page>
+         <page>
             <nameUrl value="models.html"/>
-            <title value="Logical Models"/>
+            <title value="Models"/>
             <generation value="markdown"/>
          </page>
          <page>
             <nameUrl value="profiles.html"/>
-            <title value="FHIR Profiles"/>
+            <title value="Profiles"/>
+            <generation value="markdown"/>
+         </page>
+         <page>
+            <nameUrl value="spec.html"/>
+            <title value="Spec"/>
             <generation value="markdown"/>
          </page>
          <page>
@@ -356,57 +303,27 @@
             <generation value="markdown"/>
          </page>
          <page>
-            <nameUrl value="downloads.html"/>
-            <title value="Useful Downloads"/>
-            <generation value="html"/>
-         </page>
-         <page>
-            <nameUrl value="changes.html"/>
-            <title value="IG Change History"/>
-            <generation value="html"/>
-         </page>
-         <page>
             <nameUrl value="artifacts.html"/>
             <title value="Artifacts Summary"/>
             <generation value="html"/>
-            <page>
-               <nameUrl value="StructureDefinition-LabelConcept.html"/>
-               <title value="Label Concept (EN 17269)"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="StructureDefinition-Patient.html"/>
-               <title value="Patient (EN 17269)"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="StructureDefinition-PersonName.html"/>
-               <title value="Person Name (EN 17269)"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="StructureDefinition-Composition-hcer-xeh.html"/>
-               <title value="Hospital Discharge Report (X-eHealth)"/>
-               <generation value="generated"/>
-            </page>
             <page>
                <nameUrl value="StructureDefinition-Composition-HDR-xeh.html"/>
                <title value="Hospital Discharge Report (X-eHealth)"/>
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="StructureDefinition-Composition-ips-xeh.html"/>
-               <title value="IPS (X-eHealth)"/>
+               <nameUrl value="StructureDefinition-Composition-eu-xeh.html"/>
+               <title value="Clinical Document (X-eHealth)"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-Condition-eu-xeh.html"/>
+               <title value="Condition (X-eHealth)"/>
                <generation value="generated"/>
             </page>
             <page>
                <nameUrl value="StructureDefinition-DiagnosticReport-eu-xeh.html"/>
                <title value="DiagnosticReport (X-eHealth)"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="StructureDefinition-Observation-results-eu-xeh.html"/>
-               <title value="Observation Results: laboratory (X-eHealth)"/>
                <generation value="generated"/>
             </page>
             <page>
@@ -425,6 +342,11 @@
                <generation value="generated"/>
             </page>
             <page>
+               <nameUrl value="StructureDefinition-Observation-results-eu-xeh.html"/>
+               <title value="Observation Results: laboratory (X-eHealth)"/>
+               <generation value="generated"/>
+            </page>
+            <page>
                <nameUrl value="StructureDefinition-Organization-eu-xeh.html"/>
                <title value="Organization (X-eHealth)"/>
                <generation value="generated"/>
@@ -435,13 +357,13 @@
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="StructureDefinition-Practitioner-eu-xeh.html"/>
-               <title value="Practitioner (X-eHealth)"/>
+               <nameUrl value="StructureDefinition-PractitionerRole-eu-xeh.html"/>
+               <title value="PractitionerRole (X-eHealth)"/>
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="StructureDefinition-PractitionerRole-eu-xeh.html"/>
-               <title value="PractitionerRole (X-eHealth)"/>
+               <nameUrl value="StructureDefinition-Practitioner-eu-xeh.html"/>
+               <title value="Practitioner (X-eHealth)"/>
                <generation value="generated"/>
             </page>
             <page>
@@ -449,25 +371,19 @@
                <title value="Conformance attribute"/>
                <generation value="generated"/>
             </page>
-            <page>
-               <nameUrl value="ValueSet-conformance-cen-ips.html"/>
-               <title value="Conformance (CEN IPS)"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="CodeSystem-conformance-cen-ips.html"/>
-               <title value="EN 17269 Conformance"/>
-               <generation value="generated"/>
-            </page>
          </page>
       </page>
       <parameter>
          <code value="copyrightyear"/>
-         <value value="2019+"/>
+         <value value="2020+"/>
       </parameter>
       <parameter>
          <code value="releaselabel"/>
          <value value="CI Build"/>
+      </parameter>
+      <parameter>
+         <code value="show-inherited-invariants"/>
+         <value value="false"/>
       </parameter>
       <parameter>
          <code value="autoload-resources"/>

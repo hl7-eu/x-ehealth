@@ -1,10 +1,19 @@
 //============== ALIAS ===============
 Alias: ips_DiagnosticReport = http://hl7.org/fhir/uv/ips/StructureDefinition/DiagnosticReport-uv-ips
 Alias: ips_Patient = http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips
+Alias: $Condition-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips
 //=========================
 
 //====== Profiles =====================================
 
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Profile:  ConditionXeh
+Parent:   $Condition-uv-ips
+Id:       Condition-eu-xeh
+Title:    "Condition (X-eHealth)"
+Description: "This profile defines how to represent Condition in FHIR for the purpose of the X-eHealth project."
+
+//-------------------------------------------------------------------------------------------
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Profile:  PatientXeh

@@ -13,24 +13,43 @@
 id: hl7.eu.fhir.xeh
 canonical: http://hl7.eu/fhir/ig/xeh
 version: 0.0.1
-name: X-eHealthImplementationGuide
-title: x-eHealth Implementation Guide
-status: active
-publisher: x-eHealth project
+name: XeHealthImplementationGuide
+title: X-eHealth Implementation Guide
+status: draft
+publisher: X-eHealth project
 contact:
-  - name: x-eHealth project
+  - name: X-eHealth project
     telecom:
       - system: url
         value: http://x-eHealth-project.eu
-description: An example of how FSH can be used to create an IG about fish
+description: This guide collects the HL7 FHIR artefacts defined by the European project X-eHealth for supporting the European EHR eXchange Format.
 license: CC0-1.0
 fhirVersion: 4.0.1
 dependencies:
-  hl7.fhir.uv.ips: current
+  hl7.fhir.uv.ips: dev
 parameters:
   show-inherited-invariants: false
+  find-other-resources: true 
 copyrightYear: 2020+
 releaseLabel: CI Build
+    
+    
+# ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
+# │  To use a provided input/includes/menu.xml file, delete the "menu" property below.             │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+menu:
+  IG Home: index.html
+  Table of Contents: toc.html
+  Models:
+    Logical Models: models.html
+  Specifications:
+    FHIR Profiles</a>: profiles.html
+    Terminologies: terminologies.html
+  Artifact Index: artifacts.html
+  Support:
+    FHIR Spec: http://hl7.org/fhir/R4/index.html
+    Downloads: downloads.html
+ # Copyright: copyright.html
 
 
-FSHOnly: true
+FSHOnly: false
