@@ -17,7 +17,7 @@
    <name value="XeHealthImplementationGuide"/>
    <title value="X-eHealth Implementation Guide"/>
    <status value="draft"/>
-   <date value="2021-09-25T13:12:28+02:00"/>
+   <date value="2021-10-06T17:04:07+02:00"/>
    <contact>
       <name value="X-eHealth project"/>
       <telecom>
@@ -68,13 +68,28 @@
             <valueString value="StructureDefinition:resource"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="StructureDefinition-Composition-HDR-xeh.html"/>
+            <valueUri value="StructureDefinition-Composition-ips-xeh.html"/>
          </extension>
          <reference>
-            <reference value="StructureDefinition/Composition-HDR-xeh"/>
+            <reference value="StructureDefinition/Composition-ips-xeh"/>
          </reference>
          <name value="Hospital Discharge Report (X-eHealth)"/>
          <description value="Clinical document used to represent a Hospital Discharge Report (HDR) for the scope of the XeHealth project."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-profile"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:resource"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-Composition-ps-xeh.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/Composition-ps-xeh"/>
+         </reference>
+         <name value="Patient Summary (X-eHealth)"/>
+         <description value="Clinical document used to represent a Patient Summary (PS) for the scope of the XeHealth project."/>
          <exampleBoolean value="false"/>
          <groupingId value="-str-profile"/>
       </resource>
@@ -120,6 +135,21 @@
          </reference>
          <name value="DiagnosticReport (X-eHealth)"/>
          <description value="This profile constrains the DiagnosticReport resource to represent diagnostic test and procedure reports in a X-eHealth Project"/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-profile"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:resource"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-Flag-eu-xeh.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/Flag-eu-xeh"/>
+         </reference>
+         <name value="Flag (X-eHealth)"/>
+         <description value="This profile constrains the Flag resource to represent alerts or warnings in FHIR for the purpose of the X-eHealth project."/>
          <exampleBoolean value="false"/>
          <groupingId value="-str-profile"/>
       </resource>
@@ -307,8 +337,13 @@
             <title value="Artifacts Summary"/>
             <generation value="html"/>
             <page>
-               <nameUrl value="StructureDefinition-Composition-HDR-xeh.html"/>
+               <nameUrl value="StructureDefinition-Composition-ips-xeh.html"/>
                <title value="Hospital Discharge Report (X-eHealth)"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-Composition-ps-xeh.html"/>
+               <title value="Patient Summary (X-eHealth)"/>
                <generation value="generated"/>
             </page>
             <page>
@@ -324,6 +359,11 @@
             <page>
                <nameUrl value="StructureDefinition-DiagnosticReport-eu-xeh.html"/>
                <title value="DiagnosticReport (X-eHealth)"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-Flag-eu-xeh.html"/>
+               <title value="Flag (X-eHealth)"/>
                <generation value="generated"/>
             </page>
             <page>

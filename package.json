@@ -1,0 +1,17 @@
+{
+ "name": "gatekeeper",
+ "version" : "0.1.0",  
+ "canonical" : "http://hl7.eu/fhir/ig/xeh",
+ "url" : "http://hl7.eu/fhir/ig/xeh",
+ "title" : "x-eHealth FHIR Implementation Guide",
+ "description": "x-eHealth FHIR Implementation Guide",
+ "dependencies": {    
+    "hl7.fhir.uv.ips": "current"
+ },
+ "keywords": [
+   "x-eHealth",
+   "European EHR-xF"
+ ],
+ "language": "en",
+ "license": "CC0-1.0"
+}

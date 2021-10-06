@@ -2,9 +2,28 @@
 Alias: ips_DiagnosticReport = http://hl7.org/fhir/uv/ips/StructureDefinition/DiagnosticReport-uv-ips
 Alias: ips_Patient = http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips
 Alias: $Condition-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips
+Alias: $bodySite = http://hl7.org/fhir/StructureDefinition/bodySite
+Alias: $flag-detail = http://hl7.org/fhir/StructureDefinition/flag-detail
+Alias: $flag-priority = http://hl7.org/fhir/StructureDefinition/flag-priority
 //=========================
 
 //====== Profiles =====================================
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Profile:  FlagXeh
+Parent:   Flag
+Id:       Flag-eu-xeh
+Title:    "Flag (X-eHealth)"
+Description: "This profile constrains the Flag resource to represent alerts or warnings in FHIR for the purpose of the X-eHealth project."
+//-------------------------------------------------------------------------------------------
+
+* extension contains $flag-detail named $flagDetailExt 0..*
+* extension contains $flag-priority named $flagPriorityExt 0..*
+* status MS
+* code MS
+* subject MS
+* subject only Reference(PatientXeh)
+
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Profile:  ConditionXeh
@@ -14,6 +33,29 @@ Title:    "Condition (X-eHealth)"
 Description: "This profile defines how to represent Condition in FHIR for the purpose of the X-eHealth project."
 
 //-------------------------------------------------------------------------------------------
+
+* extension contains $bodySite named bodySiteExt 0..*
+* identifier ^definition = "Globally unique identifier of this problem which remain constant as the resource is updated and propagates from server to server."
+* recordedDate ^definition = "Date (and time) when this problem was recorded into information system."
+* severity MS
+* severity ^definition = "A subjective assessment of the severity of the condition as evaluated by the clinician."
+* recorder ^definition = "A healthcare professional who authored information about the problem."
+* category ^definition = "The type of problem; see the concept description."
+* code ^definition = "The problem code specifies the problem. Depending on the setting, different code systems can be used. The ProblemCodelist provides an overview of the possible code systems."
+* text ^definition = "Human readable specification of the problem. This is a general notes/comments entry for description of the problem, its diagnosis and prognosis."
+* onsetDateTime ^definition = "Onset of the symptom, complaint, functional limitation, complication or date of diagnosis. A ‘vague’ date, such as only the year or the month and the year, is permitted."
+* abatementDateTime ^definition = "The date or estimated date that the condition resolved or went into remission. A ‘vague’ date, such as only the year or the month and the year, is permitted"
+* clinicalStatus ^definition = "The problem status describes the condition of the problem:\n\r 
+1.	Active problems are problems of which the patient experiences symptoms or for which evidence exists.\n\r  
+2.	If condition is abated, then clinicalStatus must be either inactive, resolved, or remission. \n\r 
+3.	Problems with the status 'Inactive' refer to problems that don't affect the patient anymore or that of which there is no evidence of existence anymore."
+* verificationStatus ^definition = "The verification status to support the clinical status of the condition."
+* note ^definition = "Comment by the one who determined or updated the Problem." 
+* bodySite  ^definition = "Anatomical location which is the focus of the problem."
+
+
+
+
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Profile:  PatientXeh
