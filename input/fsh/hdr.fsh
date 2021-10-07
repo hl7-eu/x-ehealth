@@ -173,7 +173,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 * section[sectionAllergies].section ^mustSupport = false
 
 // -------------------------------------
-// Health Concern 0 .. 1
+// Alert 0 .. 1
 // -------------------------------------
 * section contains AlertSection ..1 MS
 * section[AlertSection] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"

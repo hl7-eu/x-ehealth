@@ -26,14 +26,10 @@ Description: "Clinical document used to represent a Patient Summary (PS) for the
 * title ^short = "Patient Summary"
 * title ^definition = "Official human-readable label for the composition.\r\n\r\nFor this document should be \"Patient Summary\" or any equivalent translation"
 
-
-/* === 
-
-* section ^slicing.discriminator[0].type = #value
+* section ^slicing.discriminator[0].type = #pattern
 * section ^slicing.discriminator[0].path = "code"
 * section ^slicing.ordered = false
 * section ^slicing.rules = #open
-
 
 // -------------------------------------
 // Alert 0 .. 1
@@ -83,5 +79,3 @@ Description: "Clinical document used to represent a Patient Summary (PS) for the
 * section[AlertSection].emptyReason ^mustSupport = false
 * section[AlertSection].section ..0
 * section[AlertSection].section ^mustSupport = false
-
-== */
