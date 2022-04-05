@@ -26,7 +26,8 @@ description: This guide collects the HL7 FHIR artefacts defined by the European 
 license: CC0-1.0
 fhirVersion: 4.0.1
 dependencies:
-  hl7.fhir.uv.ips: dev
+  hl7.fhir.uv.ips: current
+  hl7.fhir.us.mcode: current
 parameters:
   show-inherited-invariants: false
   find-other-resources: true 

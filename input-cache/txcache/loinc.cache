@@ -2,336 +2,661 @@
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "11329-0"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "History general Narrative - Reported",
   "code" : "11329-0",
-  "system" : "http://loinc.org",
-  "severity" : null,
-  "error" : ""
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "46241-6"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Hospital admission diagnosis Narrative - Reported",
   "code" : "46241-6",
-  "system" : "http://loinc.org",
-  "severity" : null,
-  "error" : ""
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "42346-7"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Medications on admission (narrative)",
   "code" : "42346-7",
-  "system" : "http://loinc.org",
-  "severity" : null,
-  "error" : ""
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "46239-0"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Chief complaint+Reason for visit Narrative",
   "code" : "46239-0",
-  "system" : "http://loinc.org",
-  "severity" : null,
-  "error" : ""
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "11450-4"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Problem list - Reported",
   "code" : "11450-4",
-  "system" : "http://loinc.org",
-  "severity" : null,
-  "error" : ""
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "48765-2"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Allergies and adverse reactions Document",
   "code" : "48765-2",
-  "system" : "http://loinc.org",
-  "severity" : null,
-  "error" : ""
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "75310-3"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Health concerns Document",
   "code" : "75310-3",
-  "system" : "http://loinc.org",
-  "severity" : null,
-  "error" : ""
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "47519-4"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "History of Procedures Document",
   "code" : "47519-4",
-  "system" : "http://loinc.org",
-  "severity" : null,
-  "error" : ""
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "11369-6"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "History of Immunization Narrative",
   "code" : "11369-6",
-  "system" : "http://loinc.org",
-  "severity" : null,
-  "error" : ""
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "10157-6"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "History of family member diseases Narrative",
   "code" : "10157-6",
-  "system" : "http://loinc.org",
-  "severity" : null,
-  "error" : ""
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "46264-8"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "History of medical device use",
   "code" : "46264-8",
-  "system" : "http://loinc.org",
-  "severity" : null,
-  "error" : ""
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "11348-0"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "History of Past illness Narrative",
   "code" : "11348-0",
-  "system" : "http://loinc.org",
-  "severity" : null,
-  "error" : ""
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "47420-5"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Functional status assessment note",
   "code" : "47420-5",
-  "system" : "http://loinc.org",
-  "severity" : null,
-  "error" : ""
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "10162-6"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "History of pregnancies Narrative",
   "code" : "10162-6",
-  "system" : "http://loinc.org",
-  "severity" : null,
-  "error" : ""
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "29762-2"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Social history Narrative",
   "code" : "29762-2",
-  "system" : "http://loinc.org",
-  "severity" : null,
-  "error" : ""
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "8648-8"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Hospital course Narrative",
   "code" : "8648-8",
-  "system" : "http://loinc.org",
-  "severity" : null,
-  "error" : ""
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "10160-0"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "History of Medication use Narrative",
   "code" : "10160-0",
-  "system" : "http://loinc.org",
-  "severity" : null,
-  "error" : ""
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "29549-3"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Medication administered Narrative",
   "code" : "29549-3",
-  "system" : "http://loinc.org",
-  "severity" : null,
-  "error" : ""
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "30954-2"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Relevant diagnostic tests/laboratory data Narrative",
   "code" : "30954-2",
-  "system" : "http://loinc.org",
-  "severity" : null,
-  "error" : ""
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "29554-3"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Procedure Narrative",
   "code" : "29554-3",
-  "system" : "http://loinc.org",
-  "severity" : null,
-  "error" : ""
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "8716-3"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Vital signs",
   "code" : "8716-3",
-  "system" : "http://loinc.org",
-  "severity" : null,
-  "error" : ""
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "11535-2"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Hospital discharge Dx Narrative",
   "code" : "11535-2",
-  "system" : "http://loinc.org",
-  "severity" : null,
-  "error" : ""
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "18776-5"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Plan of care note",
   "code" : "18776-5",
-  "system" : "http://loinc.org",
-  "severity" : null,
-  "error" : ""
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "11493-4"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Hospital discharge studies summary Narrative",
   "code" : "11493-4",
-  "system" : "http://loinc.org",
-  "severity" : null,
-  "error" : ""
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "42348-3"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Advance directives",
   "code" : "42348-3",
-  "system" : "http://loinc.org",
-  "severity" : null,
-  "error" : ""
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "46240-8"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "History of Hospitalizations+Outpatient visits Narrative",
   "code" : "46240-8",
+  "system" : "http://loinc.org"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
   "system" : "http://loinc.org",
-  "severity" : null,
-  "error" : ""
+  "code" : "85847-2"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "display" : "Patient Care team information",
+  "code" : "85847-2",
+  "system" : "http://loinc.org"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "21907-1"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "display" : "Distant metastases.clinical [Class] Cancer",
+  "code" : "21907-1",
+  "system" : "http://loinc.org"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "21901-4"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "display" : "Distant metastases.pathology [Class] Cancer",
+  "code" : "21901-4",
+  "system" : "http://loinc.org"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "21913-9"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "display" : "Distant metastases.other [Class] Cancer",
+  "code" : "21913-9",
+  "system" : "http://loinc.org"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "21905-5"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "display" : "Primary tumor.clinical [Class] Cancer",
+  "code" : "21905-5",
+  "system" : "http://loinc.org"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "21899-0"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "display" : "Primary tumor.pathology Cancer",
+  "code" : "21899-0",
+  "system" : "http://loinc.org"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "21911-3"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "display" : "Primary tumor.other [Class] Cancer",
+  "code" : "21911-3",
+  "system" : "http://loinc.org"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "21906-3"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "display" : "Regional lymph nodes.clinical [Class] Cancer",
+  "code" : "21906-3",
+  "system" : "http://loinc.org"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "21900-6"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "display" : "Regional lymph nodes.pathology [Class] Cancer",
+  "code" : "21900-6",
+  "system" : "http://loinc.org"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "21912-1"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "display" : "Regional lymph nodes.other [Class] Cancer",
+  "code" : "21912-1",
+  "system" : "http://loinc.org"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "21908-9"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "display" : "Stage group.clinical Cancer",
+  "code" : "21908-9",
+  "system" : "http://loinc.org"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "21902-2"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "display" : "Stage group.pathology Cancer",
+  "code" : "21902-2",
+  "system" : "http://loinc.org"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "21914-7"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "display" : "Stage group.other Cancer",
+  "code" : "21914-7",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "34133-9"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Summary of episode note",
   "code" : "34133-9",
-  "system" : "http://loinc.org",
-  "severity" : null,
-  "error" : ""
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "60591-5"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Patient summary Document",
   "code" : "60591-5",
+  "system" : "http://loinc.org"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
   "system" : "http://loinc.org",
-  "severity" : null,
+  "code" : "5792-7"
+}, "valueSet" :{
+  "resourceType" : "ValueSet"
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "severity" : "error",
+  "error" : "Error from server: Unable to resolve value set \"http://hl7.eu/fhir/ig/xeh/ValueSet/conformance-cen-ips\"",
+  "class" : "SERVER_ERROR"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "29308-4",
+  "display" : "Diagnosis"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "display" : "Diagnosis",
+  "code" : "29308-4",
+  "system" : "http://loinc.org"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "http://loinc.org",
+      "concept" : [{
+        "code" : "21907-1",
+        "display" : "Distant metastases.clinical [Class] Cancer"
+      },
+      {
+        "code" : "21901-4",
+        "display" : "Distant metastases.pathology [Class] Cancer"
+      },
+      {
+        "code" : "21913-9",
+        "display" : "Distant metastases.other [Class] Cancer"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "language" : "en",
+  "status" : "active",
+  "expansion" : {
+    "identifier" : "urn:uuid:6618af4a-e372-4549-9e74-d13416ecbdea",
+    "timestamp" : "2022-04-05T16:32:29.025Z",
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "version",
+      "valueUri" : "http://loinc.org|2.71"
+    }],
+    "contains" : [{
+      "system" : "http://loinc.org",
+      "code" : "21907-1",
+      "display" : "Distant metastases.clinical [Class] Cancer"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "21901-4",
+      "display" : "Distant metastases.pathology [Class] Cancer"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "21913-9",
+      "display" : "Distant metastases.other [Class] Cancer"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "http://loinc.org",
+      "concept" : [{
+        "code" : "21905-5",
+        "display" : "Primary tumor.clinical [Class] Cancer"
+      },
+      {
+        "code" : "21899-0",
+        "display" : "Primary tumor.pathology Cancer"
+      },
+      {
+        "code" : "21911-3",
+        "display" : "Primary tumor.other [Class] Cancer"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "language" : "en",
+  "status" : "active",
+  "expansion" : {
+    "identifier" : "urn:uuid:e343c224-b911-4e2b-abb8-e50d33be781d",
+    "timestamp" : "2022-04-05T16:32:29.400Z",
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "version",
+      "valueUri" : "http://loinc.org|2.71"
+    }],
+    "contains" : [{
+      "system" : "http://loinc.org",
+      "code" : "21905-5",
+      "display" : "Primary tumor.clinical [Class] Cancer"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "21899-0",
+      "display" : "Primary tumor.pathology Cancer"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "21911-3",
+      "display" : "Primary tumor.other [Class] Cancer"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "http://loinc.org",
+      "concept" : [{
+        "code" : "21906-3",
+        "display" : "Regional lymph nodes.clinical [Class] Cancer"
+      },
+      {
+        "code" : "21900-6",
+        "display" : "Regional lymph nodes.pathology [Class] Cancer"
+      },
+      {
+        "code" : "21912-1",
+        "display" : "Regional lymph nodes.other [Class] Cancer"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "language" : "en",
+  "status" : "active",
+  "expansion" : {
+    "identifier" : "urn:uuid:79dd0d34-a236-4f2d-9909-65396284049e",
+    "timestamp" : "2022-04-05T16:32:29.853Z",
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "version",
+      "valueUri" : "http://loinc.org|2.71"
+    }],
+    "contains" : [{
+      "system" : "http://loinc.org",
+      "code" : "21906-3",
+      "display" : "Regional lymph nodes.clinical [Class] Cancer"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "21900-6",
+      "display" : "Regional lymph nodes.pathology [Class] Cancer"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "21912-1",
+      "display" : "Regional lymph nodes.other [Class] Cancer"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "http://loinc.org",
+      "concept" : [{
+        "code" : "21908-9",
+        "display" : "Stage group.clinical Cancer"
+      },
+      {
+        "code" : "21902-2",
+        "display" : "Stage group.pathology Cancer"
+      },
+      {
+        "code" : "21914-7",
+        "display" : "Stage group.other Cancer"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "language" : "en",
+  "status" : "active",
+  "expansion" : {
+    "identifier" : "urn:uuid:4050c3d2-8dcf-4e04-ac3d-3ed863c2f969",
+    "timestamp" : "2022-04-05T16:32:30.243Z",
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "version",
+      "valueUri" : "http://loinc.org|2.71"
+    }],
+    "contains" : [{
+      "system" : "http://loinc.org",
+      "code" : "21908-9",
+      "display" : "Stage group.clinical Cancer"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "21902-2",
+      "display" : "Stage group.pathology Cancer"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "21914-7",
+      "display" : "Stage group.other Cancer"
+    }]
+  }
+},
   "error" : ""
 }
 -------------------------------------------------------------------------------------

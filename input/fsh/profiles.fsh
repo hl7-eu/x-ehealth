@@ -5,9 +5,57 @@ Alias: $Condition-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Condit
 Alias: $bodySite = http://hl7.org/fhir/StructureDefinition/bodySite
 Alias: $flag-detail = http://hl7.org/fhir/StructureDefinition/flag-detail
 Alias: $flag-priority = http://hl7.org/fhir/StructureDefinition/flag-priority
+Alias: $MedicationStatement-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/MedicationStatement-uv-ips
+Alias: $Organization-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Organization-uv-ips
 //=========================
 
 //====== Profiles =====================================
+
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Profile:  OrganizationCareProviderXeh
+Parent:   $Organization-uv-ips
+Id:       Organization-careprovider-eu-xeh
+Title:    "CareTeam (X-eHealth)"
+Description: "This profile constrains the Organization IPS profile to represent care provisioning organanizations (as RD centers) for the purpose of the X-eHealth project."
+//-------------------------------------------------------------------------------------------
+
+* type MS
+* telecom MS
+* address MS
+* partOf ^short = "The organization of which this organization is part of: e.g. an ERN"
+* partOf only Reference (OrganizationCareProviderXeh or Organization)
+* contact MS
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Profile:  CareTeamXeh
+Parent:   CareTeam
+Id:       CareTeam-eu-xeh
+Title:    "CareTeam (X-eHealth)"
+Description: "This profile constrains the CareTeam resource for the purpose of the X-eHealth project."
+//-------------------------------------------------------------------------------------------
+
+* subject only Reference(PatientXeh)
+* subject MS
+* participant 1.. MS
+* participant.role MS
+* participant.member 1.. MS
+* participant.member only Reference (Practitioner or PractitionerRole or RelatedPerson or OrganizationCareProviderXeh or CareTeamXeh)
+* reasonCode ^short = "Problem this team is in charge of"
+* reasonReference only Reference(ConditionXeh)
+
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Profile:  MedicationStatementXeh
+Parent:   $MedicationStatement-uv-ips
+Id:       MedicationStatement-eu-xeh
+Title:    "MedicationStatement (X-eHealth)"
+Description: "This profile constrains the MedicationStatement IPS FHIR profile for the purpose of the X-eHealth project."
+//-------------------------------------------------------------------------------------------
+
+* reasonCode ^short = "Reason (e.g. the Rare Disease) for why the medication is being/was taken"
+* reasonReference only Reference(ConditionXeh or Observation or DiagnosticReport)
+* subject only Reference(PatientXeh)
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Profile:  FlagXeh
@@ -77,7 +125,7 @@ Description: "This profile defines how to represent Patients in FHIR for the pur
 //-------------------------------------------------------------------------------------------
 * ^description = "This profile constrains the DiagnosticReport resource to represent diagnostic test and procedure reports in a X-eHealth Project"
 * subject only Reference(PatientXeh or Group) 
-* performer only Reference(PractitionerXeh or PractitionerRoleXeh or OrganizationXeh or CareTeam)
+* performer only Reference(PractitionerXeh or PractitionerRoleXeh or OrganizationCareProviderXeh or CareTeamXeh)
 * result[observation-results] only Reference(ObservationResultsLaboratoryXeh or ObservationResultsPathologyXeh or ObservationResultsRadiologyXeh or ObservationResultsXeh)
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -112,14 +160,6 @@ Title:    "Observation Results: radiology (X-eHealth)"
 Description: "This profile constrains the Observation resource to represent results produced by pathology studies for the X-eHealth project."
 //-------------------------------------------------------------------------------------------
 
-//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Profile:  OrganizationXeh
-Parent:   http://hl7.org/fhir/uv/ips/StructureDefinition/Organization-uv-ips
-Id:       Organization-eu-xeh
-Title:    "Organization (X-eHealth)"
-Description: "This profile defines how to represent Organizations in FHIR for the purpose of the X-eHealth project."
-
-//-------------------------------------------------------------------------------------------
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Profile:  PractitionerXeh
