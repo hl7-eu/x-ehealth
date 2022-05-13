@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+*******************************************************************************
+Schema for HL7 Clinical Document Architecture (CDA) R2 (2005)
+
+Containing extensions for :
+- POCD_MT000040.Material (HL7 Pharmacy CDA extensions)
+- translated desinations for the coded elements (International Patient Summary (IPS) CDA extensions)
+- documentStatus and other XeH extensions
+
+
+History:
+2018.06.28 Giorgio Cangioli, first version based on the ELGA XML schema created by Tony Schaller, medshare GmbH, Switzerland
+add missing versions....
+2022.05.13 Giorgio Cangioli, added XeH extensions
+
+*******************************************************************************
+-->
+<xs:schema xmlns:hl7v3="urn:hl7-org:v3" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:hl7-org:v3" elementFormDefault="qualified">
+	<xs:include schemaLocation="POCD_MT000040_XeH.xsd"/>
+	<xs:element name="ClinicalDocument" type="hl7v3:POCD_MT000040.ClinicalDocument"/>
+</xs:schema>
