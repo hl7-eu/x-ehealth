@@ -15,7 +15,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 * type only http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
 * type ^short = "Kind of composition (\"Hospital Discharge Report\")"
 * type ^definition = "Specifies that this composition refer to a Hospital Discharge Report"
-* type = http://loinc.org#34133-9 // CHANGE BINDING TO 
+* type = http://loinc.org#34105-7  
 * subject only Reference(PatientXeh)
 * subject 1..1 MS
 * subject ^definition = "Who or what the composition is about. \r\nIn general a composition can be about a person, (patient or healthcare practitioner), a device (e.g. a machine) or even a group of subjects (such as a document about a herd of livestock, or a set of patients that share a common exposure).\r\nFor the hdr the subject is always the patient."
@@ -60,7 +60,13 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 * section[patientHxSection].text only Narrative
 * section[patientHxSection].emptyReason ..0
 * section[patientHxSection].emptyReason ^mustSupport = false
-* section[patientHxSection].section ..0
+
+
+
+
+
+
+
 * section[patientHxSection].section ^mustSupport = false
 
 // -------------------------------------
@@ -83,8 +89,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 * section[admissionDiagnosisSection].entry ^definition = "Admission Diagnosis"
 * section[admissionDiagnosisSection].emptyReason ..0
 * section[admissionDiagnosisSection].emptyReason ^mustSupport = false
-* section[admissionDiagnosisSection].section ..0
-* section[admissionDiagnosisSection].section ^mustSupport = false
+
 
 // ------------------------------------- 
 // Admission Medications Section 0 … 1 R
@@ -101,8 +106,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 * section[sectionAdmissionMedications].entry MS
 * section[sectionAdmissionMedications].emptyReason ..0
 * section[sectionAdmissionMedications].emptyReason ^mustSupport = false
-* section[sectionAdmissionMedications].section ..0
-* section[sectionAdmissionMedications].section ^mustSupport = false
+
 
 
 
@@ -122,8 +126,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 * section[CCandReasonforVisitSection].text only Narrative
 * section[CCandReasonforVisitSection].emptyReason ..0
 * section[CCandReasonforVisitSection].emptyReason ^mustSupport = false
-* section[CCandReasonforVisitSection].section ..0
-* section[CCandReasonforVisitSection].section ^mustSupport = false
+
 
 
 
@@ -147,8 +150,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 * section[sectionProblems].entry ^definition = "It lists and describes clinical problems or conditions currently being monitored for the patient.  This entry shall be used to document that no information about problems is available, or that no relevant problems are known."
 * section[sectionProblems].emptyReason ..0
 * section[sectionProblems].emptyReason ^mustSupport = false
-* section[sectionProblems].section ..0
-* section[sectionProblems].section ^mustSupport = false
+
 
 // -------------------------------------
 // Allergies and Intolerances Section 0 … 1
@@ -169,8 +171,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 * section[sectionAllergies].entry ^definition = "It lists the relevant allergies or intolerances (conditions) for that patient, describing the kind of reaction (e.g. rash, anaphylaxis,..); preferably the agents that cause it; and optionally the criticality and the certainty of the allergy.\r\nAt a minimum, it should list currently active and any relevant historical allergies and adverse reactions.\r\n This entry shall be used to document that no information about allergies is available, or that no allergies are known ."
 * section[sectionAllergies].emptyReason ..0
 * section[sectionAllergies].emptyReason ^mustSupport = false
-* section[sectionAllergies].section ..0
-* section[sectionAllergies].section ^mustSupport = false
+
 
 // -------------------------------------
 // Alert 0 .. 1
@@ -202,8 +203,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 
 * section[AlertSection].emptyReason ..0
 * section[AlertSection].emptyReason ^mustSupport = false
-* section[AlertSection].section ..0
-* section[AlertSection].section ^mustSupport = false
+
 // -------------------------------------
 // History of Procedures Section 0 … 1
 // -------------------------------------
@@ -223,8 +223,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 * section[sectionProceduresHx].entry ^definition = "It lists the patient past procedures that are pertinent to the scope of this document.\r\nProcedures may refer for example to:\r\n1. Invasive Diagnostic procedure:e.g. Cardiac catheterization; (the results of these procedure are documented in the results section)\r\n2. Therapeutic procedure: e.g. dialysis;\r\n3. Surgical procedure: e.g. appendectomy. This entry shall be used to document that no information about past procedures is available, or that no relevant past procedures are known."
 * section[sectionProceduresHx].emptyReason ..0
 * section[sectionProceduresHx].emptyReason ^mustSupport = false
-* section[sectionProceduresHx].section ..0
-* section[sectionProceduresHx].section ^mustSupport = false
+
 
 // -------------------------------------
 // Immunizations Section 0 … 1
@@ -246,8 +245,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 * section[sectionImmunizations].entry ^definition = "It defines the patient's current immunization status and pertinent immunization history.\r\nThe primary use case for the Immunization Section is to enable communication of a patient's immunization status.\r\nIt may contain the entire immunization history that is relevant to the period of time being summarized. This entry shall be used to document that no information about immunizations is available, or that no immunizations are known."
 * section[sectionImmunizations].emptyReason ..0
 * section[sectionImmunizations].emptyReason ^mustSupport = false
-* section[sectionImmunizations].section ..0
-* section[sectionImmunizations].section ^mustSupport = false
+
 
 // -------------------------------------
 // Family History Section 0 … 1
@@ -268,8 +266,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 * section[familyHistorySection].entry ^definition = "Family History"
 * section[familyHistorySection].emptyReason ..0
 * section[familyHistorySection].emptyReason ^mustSupport = false
-* section[familyHistorySection].section ..0
-* section[familyHistorySection].section ^mustSupport = false
+
 // -------------------------------------
 // Medical Devices Section 0 … 1
 // -------------------------------------
@@ -289,8 +286,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 * section[sectionMedicalDevices].entry ^definition = "It describes the patient history of medical device use. This entry shall be used to document that no information about medical device use is available, or that no relevant medical device use is known."
 * section[sectionMedicalDevices].emptyReason ..0
 * section[sectionMedicalDevices].emptyReason ^mustSupport = false
-* section[sectionMedicalDevices].section ..0
-* section[sectionMedicalDevices].section ^mustSupport = false
+
 
 // -------------------------------------
 // History of Past Illness Section 0 … 1
@@ -311,8 +307,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 * section[sectionPastIllnessHx].entry ^definition = "It contains a description of the conditions the patient suffered in the past."
 * section[sectionPastIllnessHx].emptyReason ..0
 * section[sectionPastIllnessHx].emptyReason ^mustSupport = false
-* section[sectionPastIllnessHx].section ..0
-* section[sectionPastIllnessHx].section ^mustSupport = false
+
 
 // -------------------------------------
 // Functional Status Section 0 … 1
@@ -334,8 +329,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 * section[sectionFunctionalStatus].entry ^definition = "It describes capabilities of the patient to perform acts of daily living, including possible needs of the patient to be continuously assessed by third parties. The invalidity status may in fact influence decisions about how to administer treatments.\r\nProfiles to express disabilities and functional assessments will be specified by future versions of this guide."
 * section[sectionFunctionalStatus].emptyReason ..0
 * section[sectionFunctionalStatus].emptyReason ^mustSupport = false
-* section[sectionFunctionalStatus].section ..0
-* section[sectionFunctionalStatus].section ^mustSupport = false
+
 
 // -------------------------------------
 // Gynaecological-obstetric history 0 … 1
@@ -355,8 +349,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 * section[sectionPregnancyHx].entry ^definition = "It contains information about whether the patient is currently pregnant or not.\r\nIt may contain addition summarizing information about the outcome of earlier pregnancies."
 * section[sectionPregnancyHx].emptyReason ..0
 * section[sectionPregnancyHx].emptyReason ^mustSupport = false
-* section[sectionPregnancyHx].section ..0
-* section[sectionPregnancyHx].section ^mustSupport = false
+
 // -------------------------------------
 // Social History Section
 // -------------------------------------
@@ -375,8 +368,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 * section[sectionSocialHistory].entry ^definition = "Description of the person’s Health related “lifestyle factors\" or \"lifestyle observations\" (e.g. smoke habits; alcohol consumption; diets, risky habits.)"
 * section[sectionSocialHistory].emptyReason ..0
 * section[sectionSocialHistory].emptyReason ^mustSupport = false
-* section[sectionSocialHistory].section ..0
-* section[sectionSocialHistory].section ^mustSupport = false
+
 
 
 // -------------------------------------
@@ -391,8 +383,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 * section[sectionHospitalCourse].code only http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
 * section[sectionHospitalCourse].code = http://loinc.org#8648-8 (exactly)
 * section[sectionHospitalCourse].text 1.. MS
-* section[sectionHospitalCourse].section ..0
-* section[sectionHospitalCourse].section ^mustSupport = false
+
 
 // -------------------------------------
 // Medications Section 0 … 1
@@ -416,8 +407,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 * section[sectionMedications].entry ^definition = "This list the medications relevant for the scope of the patient summary or it is used to indicate that the subject is known not to be on any relevant medication; either that no information is available about medications."
 * section[sectionMedications].emptyReason ..0
 * section[sectionMedications].emptyReason ^mustSupport = false
-* section[sectionMedications].section ..0
-* section[sectionMedications].section ^mustSupport = false
+
 
 // OR THIS ONE ???
 
@@ -433,8 +423,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 * section[sectionMedicationsAdministered].entry MS
 * section[sectionMedicationsAdministered].emptyReason ..0
 * section[sectionMedicationsAdministered].emptyReason ^mustSupport = false
-* section[sectionMedicationsAdministered].section ..0
-* section[sectionMedicationsAdministered].section ^mustSupport = false
+
 
 // -------------------------------------
 // Results Section 0 … 1
@@ -455,8 +444,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 * section[sectionResults].entry ^definition = "Relevant observation results collected on the patient or produced on in-vitro biologic specimens collected from the patient. Some of these results may be laboratory results, others may be anatomic pathology results, others, radiology results, and others, clinical results."
 * section[sectionResults].emptyReason ..0
 * section[sectionResults].emptyReason ^mustSupport = false
-* section[sectionResults].section ..0
-* section[sectionResults].section ^mustSupport = false
+
 
 // -------------------------------------
 // Procedures Section 0 … 1
@@ -472,8 +460,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 * section[sectionProcedure].entry MS
 * section[sectionProcedure].emptyReason ..0
 * section[sectionProcedure].emptyReason ^mustSupport = false
-* section[sectionProcedure].section ..0
-* section[sectionProcedure].section ^mustSupport = false
+
 
 // -------------------------------------
 // Vital Signs Section 0 … 1
@@ -496,8 +483,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 * section[sectionVitalSigns].entry ^definition = "Notable vital signs or physical findings as: blood pressure, body temperature, heart rate, and respiratory rate. It may also include other clinical findings, such as height, weight, body mass index, head circumference, and pulse oximetry. In particular, notable vital signs or physical findings such as the most recent, maximum and/or minimum, baseline, or relevant trends may be included"
 * section[sectionVitalSigns].emptyReason ..0
 * section[sectionVitalSigns].emptyReason ^mustSupport = false
-* section[sectionVitalSigns].section ..0
-* section[sectionVitalSigns].section ^mustSupport = false
+
 // -------------------------------------
 
 // -------------------------------------
@@ -520,8 +506,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 * section[dischargeDiagnosisSection].entry ^definition = "Discharge Diagnosis"
 * section[dischargeDiagnosisSection].emptyReason ..0
 * section[dischargeDiagnosisSection].emptyReason ^mustSupport = false
-* section[dischargeDiagnosisSection].section ..0
-* section[dischargeDiagnosisSection].section ^mustSupport = false
+
 
 
 // -------------------------------------
@@ -539,8 +524,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 * section[sectionDischargeMedications].entry MS
 * section[sectionDischargeMedications].emptyReason ..0
 * section[sectionDischargeMedications].emptyReason ^mustSupport = false
-* section[sectionDischargeMedications].section ..0
-* section[sectionDischargeMedications].section ^mustSupport = false
+
 
 
 // -------------------------------------
@@ -559,8 +543,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 * section[sectionPlanOfCare].text only Narrative
 * section[sectionPlanOfCare].emptyReason ..0
 * section[sectionPlanOfCare].emptyReason ^mustSupport = false
-* section[sectionPlanOfCare].section ..0
-* section[sectionPlanOfCare].section ^mustSupport = false
+
 // -------------------------------------
 // Hospital Discharge Studies Summary Section
 // -------------------------------------
@@ -581,8 +564,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 * section[hospitalDischargeStudiesSection].entry ^definition = "Study Summary"
 * section[hospitalDischargeStudiesSection].emptyReason ..0
 * section[hospitalDischargeStudiesSection].emptyReason ^mustSupport = false
-// * section[hospitalDischargeStudiesSection].section ..0
-// * section[hospitalDischargeStudiesSection].section ^mustSupport = false
+
 // -------------------------------------
 
 // -------------------------------------
@@ -610,8 +592,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 * section[sectionAdvanceDirectives].entry MS
 * section[sectionAdvanceDirectives].emptyReason ..0
 * section[sectionAdvanceDirectives].emptyReason ^mustSupport = false
-* section[sectionAdvanceDirectives].section ..0
-* section[sectionAdvanceDirectives].section ^mustSupport = false
+
 
 // -------------------------------------
 
@@ -627,8 +608,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 * section[sectionEncounters].entry MS
 * section[sectionEncounters].emptyReason ..0
 * section[sectionEncounters].emptyReason ^mustSupport = false
-* section[sectionEncounters].section ..0
-* section[sectionEncounters].section ^mustSupport = false
+
 
 // -------------------------------------
 
