@@ -3240,3 +3240,394 @@ v: {
   "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "18717-9"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "display" : "Blood bank studies (set)",
+  "code" : "18717-9",
+  "system" : "http://loinc.org"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "18718-7"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "display" : "Cell marker studies (set)",
+  "code" : "18718-7",
+  "system" : "http://loinc.org"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "18719-5"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "display" : "Chemistry studies (set)",
+  "code" : "18719-5",
+  "system" : "http://loinc.org"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "18720-3"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "display" : "Coagulation studies (set)",
+  "code" : "18720-3",
+  "system" : "http://loinc.org"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "18721-1"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "display" : "Therapeutic drug monitoring studies (set)",
+  "code" : "18721-1",
+  "system" : "http://loinc.org"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "18722-9"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "display" : "Fertility studies (set)",
+  "code" : "18722-9",
+  "system" : "http://loinc.org"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "18723-7"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "display" : "Hematology studies (set)",
+  "code" : "18723-7",
+  "system" : "http://loinc.org"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "18724-5"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "display" : "HLA studies (set)",
+  "code" : "18724-5",
+  "system" : "http://loinc.org"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "18725-2"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "display" : "Microbiology studies (set)",
+  "code" : "18725-2",
+  "system" : "http://loinc.org"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "18727-8"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "display" : "Serology studies (set)",
+  "code" : "18727-8",
+  "system" : "http://loinc.org"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "18728-6"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "display" : "Toxicology studies (set)",
+  "code" : "18728-6",
+  "system" : "http://loinc.org"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "18729-4"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "display" : "Urinalysis studies (set)",
+  "code" : "18729-4",
+  "system" : "http://loinc.org"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "18767-4"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "display" : "Blood gas studies (set)",
+  "code" : "18767-4",
+  "system" : "http://loinc.org"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "18768-2"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "display" : "Cell counts+Differential studies (set)",
+  "code" : "18768-2",
+  "system" : "http://loinc.org"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "18769-0"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "display" : "Microbial susceptibility tests Set",
+  "code" : "18769-0",
+  "system" : "http://loinc.org"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "26435-8"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "display" : "Molecular pathology studies (set)",
+  "code" : "26435-8",
+  "system" : "http://loinc.org"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "26436-6"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "display" : "Laboratory studies (set)",
+  "code" : "26436-6",
+  "system" : "http://loinc.org"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "26437-4"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "display" : "Chemistry challenge studies (set)",
+  "code" : "26437-4",
+  "system" : "http://loinc.org"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "26438-2"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "display" : "Cytology studies (set)",
+  "code" : "26438-2",
+  "system" : "http://loinc.org"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "http://loinc.org",
+      "concept" : [{
+        "code" : "18717-9",
+        "display" : "BLOOD BANK STUDIES"
+      },
+      {
+        "code" : "18718-7",
+        "display" : "CELL MARKER STUDIES"
+      },
+      {
+        "code" : "18719-5",
+        "display" : "CHEMISTRY STUDIES"
+      },
+      {
+        "code" : "18720-3",
+        "display" : "COAGULATION STUDIES"
+      },
+      {
+        "code" : "18721-1",
+        "display" : "THERAPEUTIC DRUG MONITORING STUDIES"
+      },
+      {
+        "code" : "18722-9",
+        "display" : "FERTILITY STUDIES"
+      },
+      {
+        "code" : "18723-7",
+        "display" : "HEMATOLOGY STUDIES"
+      },
+      {
+        "code" : "18724-5",
+        "display" : "HLA STUDIES"
+      },
+      {
+        "code" : "18725-2",
+        "display" : "MICROBIOLOGY STUDIES"
+      },
+      {
+        "code" : "18727-8",
+        "display" : "SEROLOGY STUDIES"
+      },
+      {
+        "code" : "18728-6",
+        "display" : "TOXICOLOGY STUDIES"
+      },
+      {
+        "code" : "18729-4",
+        "display" : "URINALYSIS STUDIES"
+      },
+      {
+        "code" : "18767-4",
+        "display" : "BLOOD GAS STUDIES"
+      },
+      {
+        "code" : "18768-2",
+        "display" : "CELL COUNTS+DIFFERENTIAL STUDIES"
+      },
+      {
+        "code" : "18769-0",
+        "display" : "MICROBIAL SUSCEPTIBILITY TESTS"
+      },
+      {
+        "code" : "26435-8",
+        "display" : "MOLECULAR PATHOLOGY STUDIES"
+      },
+      {
+        "code" : "26436-6",
+        "display" : "LABORATORY STUDIES"
+      },
+      {
+        "code" : "26437-4",
+        "display" : "CHEMISTRY CHALLENGE STUDIES"
+      },
+      {
+        "code" : "26438-2",
+        "display" : "CYTOLOGY STUDIES"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "language" : "en",
+  "status" : "active",
+  "expansion" : {
+    "identifier" : "urn:uuid:f61ef268-b8f5-41bc-b43d-65e9fd3bf11c",
+    "timestamp" : "2022-06-26T13:46:39.292Z",
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "version",
+      "valueUri" : "http://loinc.org|2.72"
+    }],
+    "contains" : [{
+      "system" : "http://loinc.org",
+      "code" : "18717-9",
+      "display" : "BLOOD BANK STUDIES"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "18718-7",
+      "display" : "CELL MARKER STUDIES"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "18719-5",
+      "display" : "CHEMISTRY STUDIES"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "18720-3",
+      "display" : "COAGULATION STUDIES"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "18721-1",
+      "display" : "THERAPEUTIC DRUG MONITORING STUDIES"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "18722-9",
+      "display" : "FERTILITY STUDIES"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "18723-7",
+      "display" : "HEMATOLOGY STUDIES"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "18724-5",
+      "display" : "HLA STUDIES"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "18725-2",
+      "display" : "MICROBIOLOGY STUDIES"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "18727-8",
+      "display" : "SEROLOGY STUDIES"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "18728-6",
+      "display" : "TOXICOLOGY STUDIES"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "18729-4",
+      "display" : "URINALYSIS STUDIES"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "18767-4",
+      "display" : "BLOOD GAS STUDIES"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "18768-2",
+      "display" : "CELL COUNTS+DIFFERENTIAL STUDIES"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "18769-0",
+      "display" : "MICROBIAL SUSCEPTIBILITY TESTS"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "26435-8",
+      "display" : "MOLECULAR PATHOLOGY STUDIES"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "26436-6",
+      "display" : "LABORATORY STUDIES"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "26437-4",
+      "display" : "CHEMISTRY CHALLENGE STUDIES"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "26438-2",
+      "display" : "CYTOLOGY STUDIES"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------

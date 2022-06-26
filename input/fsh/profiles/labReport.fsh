@@ -10,6 +10,18 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
 // what to do with the composition text ?
 // should we make it 0.. ?
 // or have text repeated here and int he secitons ?
+* extension contains OrderFulfilled named order 0..*
+* extension[order].valueReference only Reference( ServiceRequestLabXeH or RequestGroupLabXeH)
+
+/*  TO DO Header
+- add optional data enterer
+- add optional XeH Information Recipient
+- defiend rules for attester to distiguish  Authenticators and Legal Auth 
+- ordering provider mapped into the order details 
+- addc Lab DocumentationOf.serviceEvent details
+- ComponentOf.encounter define details in Enouncter profile
+*/
+
 * text ^short = "Narrative text"
 * identifier ^short = "Business identifier of the Laboratoruy Report"
 * status ^short = "Status of the Report"
@@ -20,15 +32,19 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
   // slice the subject tp cover the three cases of human ; non-human and mixed
 * subject only Reference(PatientXeh)
 * subject 1..1
+* encounter only Reference (EncounterXeH)
 * author 1..
 * author ^short = "Who and/or what authored the Laboratory Report"
 * author ^definition = "Identifies who is responsible for the information in the Laboratory Report, not necessarily who typed it in."
+* attester 1..
+* event ^short = "The laboratory service(s) being documented"
+// add deatuils avìbout the service
 * title 1..
 * title ^short = "Laboratory Report"
 * title ^definition = "Official human-readable label for the composition.\r\n\r\nFor this document should be \"Laboratory Report\" or any equivalent translation"
 
-// add link to the order
-// extension inFullfillmentOf ?
+
+
 // ServiceRequest and/or RequestGroup
 
 // add attester
@@ -44,18 +60,25 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
 * section ^slicing.rules = #closed
 
 
+/* TO DO
+
+How to manage the Payer data ? should it be a separate section ? sboud they be part of the diagnosticReport ?
+How to manage the annotation section ? should it be a separate section ?
+
+*/
 
 
 // -------------------------------------
 // Single section  0 .. 1
 // -------------------------------------
 
-* section contains no-subsections ..1
-* section[no-subsections] ^short = "Single section"
+* section contains no-subsections ..* // check if ..1 or ..*
+* section[no-subsections] ^short = "Variant 1: section with text and entry"
 // * section ^definition = "This section contains data describing an interest or worry about a health state or process that could possibly require attention, intervention, or management. A Health Concern is a health related matter that is of interest, importance or worry to someone, who may be the patient, patient's family or patient's health care provider. Health concerns are derived from a variety of sources within an EHR (such as Problem List, Family History, Social History, Social Worker Note, etc.). Health concerns can be medical, surgical, nursing, allied health or patient-reported concerns. Problem Concerns are a subset of Health Concerns that have risen to the level of importance that they typically would belong on a classic “Problem List”, such as “Diabetes Mellitus” or “Family History of Melanoma” or “Tobacco abuse”. These are of broad interest to multiple members of the care team. Examples of other Health Concerns that might not typically be considered a Problem Concern include “Risk of Hyperkalemia” for a patient taking an ACE-inhibitor medication, or “Transportation difficulties” for someone who doesn't drive and has trouble getting to appointments, or “Under-insured” for someone who doesn't have sufficient insurance to properly cover their medical needs such as medications. These are typically most important to just a limited number of care team members."
 * section[no-subsections].title 1..
 * section[no-subsections].code 1..
 * section[no-subsections].code only http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
+* section[no-subsections].code from LabStudyTypesXeH (preferred)
 // * section.code = http://loinc.org#75310-3 (exactly) // add binding
 * section[no-subsections].text 1..
 * section[no-subsections].text only Narrative
@@ -68,8 +91,8 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
 // Structured section  0 .. 1
 // -------------------------------------
 
-* section contains subsections ..1
-* section[subsections] ^short = "Structured section"
+* section contains subsections ..* // check if ..1 or ..*
+* section[subsections] ^short = "Variant 2: section with one to many subsections Laboratory Report Item"
 // * section ^definition = "This section contains data describing an interest or worry about a health state or process that could possibly require attention, intervention, or management. A Health Concern is a health related matter that is of interest, importance or worry to someone, who may be the patient, patient's family or patient's health care provider. Health concerns are derived from a variety of sources within an EHR (such as Problem List, Family History, Social History, Social Worker Note, etc.). Health concerns can be medical, surgical, nursing, allied health or patient-reported concerns. Problem Concerns are a subset of Health Concerns that have risen to the level of importance that they typically would belong on a classic “Problem List”, such as “Diabetes Mellitus” or “Family History of Melanoma” or “Tobacco abuse”. These are of broad interest to multiple members of the care team. Examples of other Health Concerns that might not typically be considered a Problem Concern include “Risk of Hyperkalemia” for a patient taking an ACE-inhibitor medication, or “Transportation difficulties” for someone who doesn't drive and has trouble getting to appointments, or “Under-insured” for someone who doesn't have sufficient insurance to properly cover their medical needs such as medications. These are typically most important to just a limited number of care team members."
 * section[subsections].title 1..
 * section[subsections].code 1..
