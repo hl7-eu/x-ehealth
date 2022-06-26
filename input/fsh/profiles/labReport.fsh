@@ -6,7 +6,8 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
 * ^publisher = "X-eHealth Project"
 * ^copyright = "X-eHealth Project"
 * . ^short = "Laboratory Report composition"
-* . ^definition = "Laboratory Report composition. \r\nA composition is a set of healthcare-related information that is assembled together into a single logical document that provides a single coherent statement of meaning, establishes its own context and that has clinical attestation with regard to who is making the statement. \r\nWhile a Composition defines the structure, it does not actually contain the content: rather the full content of a document is contained in a Bundle, of which the Composition is the first resource contained."
+* . ^definition = "Laboratory Report composition.
+\r\nA composition is a set of healthcare-related information that is assembled together into a single logical document that provides a single coherent statement of meaning, establishes its own context and that has clinical attestation with regard to who is making the statement. \r\nWhile a Composition defines the structure, it does not actually contain the content: rather the full content of a document is contained in a Bundle, of which the Composition is the first resource contained."
 // what to do with the composition text ?
 // should we make it 0.. ?
 // or have text repeated here and int he secitons ?
@@ -32,7 +33,7 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
   // slice the subject tp cover the three cases of human ; non-human and mixed
 * subject only Reference(PatientXeh)
 * subject 1..1
-* encounter only Reference (EncounterXeH)
+* encounter only Reference (EncounterXeH)  // profile defined for other scopes to be checked
 * author 1..
 * author ^short = "Who and/or what authored the Laboratory Report"
 * author ^definition = "Identifies who is responsible for the information in the Laboratory Report, not necessarily who typed it in."
@@ -84,7 +85,7 @@ How to manage the annotation section ? should it be a separate section ?
 * section[no-subsections].text only Narrative
 // add slices check the needed resoucres
 // check structure od XD-LAB
-* section[no-subsections].entry only Reference (DiagnosticReport)
+* section[no-subsections].entry only Reference (DiagnosticReportLabXeH)
 * section[no-subsections].section ..0
 
 // -------------------------------------
@@ -111,4 +112,4 @@ How to manage the annotation section ? should it be a separate section ?
   * section.text only Narrative
 // add slices check the needed resoucres
 // check structure od XD-LAB
-  * section.entry only Reference (DiagnosticReport)
+  * section.entry only Reference (DiagnosticReportLabXeH)
