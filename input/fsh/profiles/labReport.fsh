@@ -1,7 +1,58 @@
+Profile: BundleLabReportXeH
+Parent: Bundle
+Id: Bundle-lab-xeh
+Title: "Bundle: Laboratory Report (XeH)"
+Description: "Clinical document used to represent a Laboratory Report for the scope of the XeHealth project."
+* ^publisher = "X-eHealth Project"
+* ^copyright = "X-eHealth Project"
+* . ^short = "Laboratory Report composition"
+* . ^definition = "Laboratory Report composition."
+* identifier ^short = "Business identifier for this Laboratory Report"
+* type = #document
+* timestamp 1..
+* total ..0
+* link ..0
+* entry 1..
+  * link ..0
+  * fullUrl 1..1
+  * resource 1..
+  * search ..0
+  * request ..0
+  * response ..0
+* signature ^short = "Digital Signature of this report"
+
+* entry ^slicing.discriminator[0].type = #type
+* entry ^slicing.discriminator[0].path = "$this.resolve()"
+* entry ^slicing.ordered = false
+* entry ^slicing.rules = #open
+
+* entry contains composition 1..1
+* entry[composition].resource only CompositionLabReportXeH
+
+* entry contains diagnosticReport 1..*
+* entry[diagnosticReport].resource only DiagnosticReportLabXeH
+
+* entry contains patient 0..1
+* entry[patient].resource only PatientXeh
+
+* entry contains observation 0..*
+* entry[observation].resource only Observation // Add profiles
+
+* entry contains specimen 0..*
+* entry[specimen].resource only Specimen // Add profiles
+
+* entry contains serviceRequest 0..*
+* entry[serviceRequest].resource only ServiceRequestLabXeH // Add profiles
+
+* entry contains requestGroup 0..1
+* entry[requestGroup].resource only RequestGroupLabXeH // Add profiles
+
+// add slices
+
 Profile: CompositionLabReportXeH
 Parent: http://hl7.org/fhir/StructureDefinition/clinicaldocument
 Id: Composition-lab-xeh
-Title: "Laboratory Report (X-eHealth)"
+Title: "Composition: Laboratory Report (XeH)"
 Description: "Clinical document used to represent a Laboratory Report for the scope of the XeHealth project."
 * ^publisher = "X-eHealth Project"
 * ^copyright = "X-eHealth Project"
@@ -24,7 +75,7 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
 */
 
 * text ^short = "Narrative text"
-* identifier ^short = "Business identifier of the Laboratoruy Report"
+* identifier ^short = "Business identifier of the Laboratory Report (setID)"
 * status ^short = "Status of the Report"
 * type = $loinc#11502-2 // change to a VS binding
 * type only http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips

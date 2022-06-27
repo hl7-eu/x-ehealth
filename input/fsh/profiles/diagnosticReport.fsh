@@ -1,7 +1,7 @@
 Profile: DiagnosticReportLabXeH
 Parent: DiagnosticReport
 Id: DiagnosticReport-lab-xeh
-Title: "Laboratory DiagnosticReport (X-eHealth)"
+Title: "DiagnosticReport: Laboratory Report (XeH)"
 Description: "CDiagnosticReport used to represent an entry of a Laboratory Report, including its context, for the scope of the XeHealth project."
 * ^publisher = "X-eHealth Project"
 * ^copyright = "X-eHealth Project"
