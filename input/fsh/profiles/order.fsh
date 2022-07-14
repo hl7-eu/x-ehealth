@@ -13,7 +13,7 @@ RuleSet: OrderCommonRules
 Profile: ServiceRequestLabXeH
 Parent: ServiceRequest
 Id: ServiceRequest-lab-xeh
-Title: "Laboratory Order (X-eHealth)"
+Title: "ServiceRequest: Laboratory Order"
 Description: "ServiceRequest used to represent a Laboratory Order for the scope of the XeHealth project."
 * insert OrderCommonRules
 // Clarify when to use ServiceRequest and RequestGroup
@@ -28,7 +28,7 @@ Description: "ServiceRequest used to represent a Laboratory Order for the scope 
 Profile: RequestGroupLabXeH
 Parent: RequestGroup
 Id: RequestGroup-lab-xeh
-Title: "Laboratory Order (X-eHealth)"
+Title: "RequestGroup: Laboratory Order"
 Description: "RequestGroup used to represent a Laboratory Order for the scope of the XeHealth project."
 * ^publisher = "X-eHealth Project"
 * ^copyright = "X-eHealth Project"
