@@ -88,7 +88,7 @@ Usage: #inline
 * section[=].code = http://example.org#diag "Problems"
 * section[=].text.status = #additional
 * section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
-	<p>2013: gastric GIST</p>
+	<p>2013 May: gastric GIST</p>
 </div>"
 
 
@@ -97,10 +97,10 @@ Usage: #inline
 * section[=].code = http://example.org#ms "Medication Summary"
 * section[=].text.status = #additional
 * section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
-	<p>Imatinib 400 mg/d for 3 years.</p>
-	<p>2017: imatinib 400 mg/d for 2 years</p>	
-	<p>February 2019: sunitinib 37.5 mg/d</p>
-	<p>July 2019: regorafenib 160 mg/d-3/4w</p>
+	<p>2013 May: Imatinib 400 mg/d for 3 years.</p>
+	<p>2017 January : imatinib 400 mg/d for 2 years</p>	
+	<p>2019 February: sunitinib 37.5 mg/d</p>
+	<p>2019 July: regorafenib 160 mg/d-3/4w</p>
 </div>"
 
 * section[+].title = "Allergies and Intolerances"
@@ -116,7 +116,7 @@ Usage: #inline
 * section[=].code = http://example.org#proc "Hx of Procedures"
 * section[=].text.status = #additional
 * section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
-	<p>Partial gastrectomy, R0</p>
+	<p>2013 June: Partial gastrectomy, R0</p>
 </div>"
 
 * section[+].title = "Devices"

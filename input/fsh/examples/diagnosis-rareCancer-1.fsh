@@ -26,7 +26,7 @@ RuleSet: ConditionGist
 * stage.summary.text = "pT1a"
 */
 
-* subject = Reference(urn:uuid:2b90dd2b-2dab-4c75-9bb9-a355e07401e9)
+
 * encounter = Reference(urn:uuid:2b26ce51-5ba7-40b9-bcc8-90519510cbcc)
 * encounter.type = "Encounter"
 
@@ -39,17 +39,20 @@ InstanceOf: ConditionPrimaryCancerXeH
 Usage: #inline
 
 * id = "8e280fc4-7e66-40d6-9c03-7ae0d4e9374d"
+* subject = Reference(urn:uuid:2b90dd2b-2dab-4c75-9bb9-a355e07401e9)
 * insert ConditionGist
 
 // === Condition
 
-Instance: Condition-Gist-1
+Instance: Condition-rc-1
 InstanceOf: ConditionPrimaryCancerXeH
 Title:   "Condition: Primary Diagnosis GIST"
 Description: "Sample of Primary Diagnosis GIST"
 Usage: #example
 
 * insert ConditionGist
+* subject = Reference(Patient-rc)
+
 
 // ===================== Organization
 Instance: Inline-Organization-02-1

@@ -1,10 +1,6 @@
-Instance: Inline-Procedure-02-1
-InstanceOf: Procedure
-Usage: #inline
-* id = "2b26ce51-5ba7-40b9-bcc8-90519510cbcc"
-* extension.url = "http://hl7.eu/fhir/ig/pcsp/StructureDefinition/surgery-sacrifiedOrgan"
-* extension.valueCodeableConcept.coding[0] = http://terminology.hl7.org/CodeSystem/v3-ActCode#78961009 "Bazo"
-* extension.valueCodeableConcept.coding[+] = http://terminology.hl7.org/CodeSystem/v3-ActCode#OTH "Otro"
+
+RuleSet: procedure-GIST
+
 * status = #completed
 * category = http://snomed.info/sct#387713003 "Surgical Procedure"
 * code = $sct#387867004 "Gastrotomy"
@@ -20,3 +16,20 @@ Usage: #inline
 * reasonReference.type = "Condition"
 * bodySite.coding[+] = $icd03#C16 "Stomach"
 * bodySite.coding[+] = $sct#69695003 "Stomach structure"
+
+Instance: Inline-Procedure-02-1
+InstanceOf: Procedure
+Usage: #inline
+* insert procedure-GIST
+* id = "2b26ce51-5ba7-40b9-bcc8-90519510cbcc"
+* subject = Reference( urn:uuid:2b90dd2b-2dab-4c75-9bb9-a355e07401e9 )
+* reasonReference = Reference(urn:uuid:8e280fc4-7e66-40d6-9c03-7ae0d4e9374d)
+
+Instance: Procedure-rc-1
+InstanceOf: Procedure
+Title: "Procedure GIST example"
+Description: "Procedure GIST example"
+Usage: #example
+* insert procedure-GIST
+* subject = Reference( Patient-rc )
+* reasonReference = Reference(Condition-rc-1)
