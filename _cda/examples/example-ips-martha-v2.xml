@@ -1,0 +1,566 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../stylesheets/cda.xsl"?>
+<?xml-model href="../schematron/hl7ips-hl7ips1.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<ClinicalDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ips="urn:hl7-org:ips" xmlns:pharm="urn:hl7-org:pharm" xmlns="urn:hl7-org:v3" xsi:schemaLocation="urn:hl7-org:v3 ../CDA_IPS_Schema/CDA_IPS.xsd">
+	<!-- 
+        Patient Summary of Martha, 45yo
+        Created by her general practitioner on 2017-07-20
+        in Dordrecht (NL) where Martha lives when she is in Europe
+    -->
+	<realmCode code="EU"/>
+	<typeId extension="POCD_HD000040" root="2.16.840.1.113883.1.3"/>
+	<templateId root="2.16.840.1.113883.10.22.1.1"/>
+	<id root="2.16.724.4.8.10.200.10" extension="175bd032-8b00-4728-b2dc-748bb1501aed"/>
+	<code code="60591-5" codeSystem="2.16.840.1.113883.6.1" displayName="Patient Summary"/>
+	<title>Patient Summary as of July 20, 2017 14:30</title>
+	<effectiveTime value="20170720214300+0100"/>
+	<confidentialityCode code="N" displayName="normal" codeSystem="2.16.840.1.113883.5.25"/>
+	<languageCode code="en-GB"/>
+	<setId root="2.16.724.4.8.10.200.10" extension="3f69e0a5-2177-4540-baab-7a5d0877428f"/>
+	<versionNumber value="2"/>
+	<recordTarget typeCode="RCT" contextControlCode="OP">
+		<patientRole classCode="PAT">
+			<id root="2.16.840.1.113883.2.4.6.3" extension="574687583"/>
+			<addr>
+				<streetAddressLine>Laan Van Europa 1600</streetAddressLine>
+				<postalCode>3317 DB</postalCode>
+				<city>Dordrecht</city>
+				<country>NL</country>
+			</addr>
+			<telecom use="HP" value="tel:+31788700800"/>
+			<patient>
+				<name>
+					<given>Martha</given>
+					<family>DeLarosa</family>
+				</name>
+				<administrativeGenderCode code="F" codeSystem="2.16.840.1.113883.5.1" displayName="Female"/>
+				<birthTime value="19720501"/>
+			</patient>
+		</patientRole>
+	</recordTarget>
+	<author>
+		<time value="20170720214300+0100"/>
+		<assignedAuthor>
+			<id extension="129854633" root="2.16.528.1.1007.3.1" assigningAuthorityName="CIBG"/>
+			<code code="2211" codeSystem="2.16.840.1.113883.2.9.6.2.7" displayName="Generalist medical practitioners" codeSystemName="ISCO">
+				<translation code="01.015" codeSystem="2.16.840.1.113883.2.4.15.111" displayName="Huisarts" codeSystemName="RoleCodeNL"/>
+			</code>
+			<addr use="WP">
+				<streetAddressLine>Houttuinen 27</streetAddressLine>
+				<postalCode>3311 CE</postalCode>
+				<city>Dordrecht</city>
+				<country>NL</country>
+			</addr>
+			<telecom use="WP" value="tel:+31-51-34343434"/>
+			<assignedPerson>
+				<name>
+					<given>Beetje</given>
+					<family qualifier="VV">van </family>
+					<family>Hulp</family>
+				</name>
+			</assignedPerson>
+		</assignedAuthor>
+	</author>
+	<custodian typeCode="CST">
+		<assignedCustodian classCode="ASSIGNED">
+			<representedCustodianOrganization classCode="ORG" determinerCode="INSTANCE">
+				<id root="2.16.528.1.1007.3.3" extension="564738757"/>
+				<name>The best custodian ever</name>
+				<telecom use="WP" value="tel:+31-51-34343400"/>
+				<addr use="WP">
+					<streetAddressLine>Houttuinen 27</streetAddressLine>
+					<postalCode>3311 CE</postalCode>
+					<city>Dordrecht</city>
+					<country>NL</country>
+				</addr>
+			</representedCustodianOrganization>
+		</assignedCustodian>
+	</custodian>
+	<legalAuthenticator>
+		<time value="20170720214300+0100"/>
+		<signatureCode code="S"/>
+		<assignedEntity>
+			<id extension="129854633" root="2.16.528.1.1007.3.1" assigningAuthorityName="CIBG"/>
+			<addr use="WP">
+				<streetAddressLine>Houttuinen 27</streetAddressLine>
+				<postalCode>3311 CE</postalCode>
+				<city>Dordrecht</city>
+				<country>NL</country>
+			</addr>
+			<telecom use="WP" value="tel:+31-51-34343434"/>
+			<assignedPerson>
+				<name>
+					<given>Beetje</given>
+					<family qualifier="VV">van </family>
+					<family>Hulp</family>
+				</name>
+			</assignedPerson>
+			<representedOrganization classCode="ORG" determinerCode="INSTANCE">
+				<id root="2.16.528.1.1007.3.3" extension="564738757"/>
+				<name>Anorg Aniza Tion BV</name>
+				<telecom use="WP" value="tel:+31-51-34343400"/>
+				<addr>
+					<streetAddressLine>Houttuinen 27</streetAddressLine>
+					<postalCode>3311 CE</postalCode>
+					<city>Dordrecht</city>
+					<country>NL</country>
+				</addr>
+			</representedOrganization>
+		</assignedEntity>
+	</legalAuthenticator>
+	<participant typeCode="IND">
+		<templateId root="2.16.840.1.113883.10.22.2.5"/>
+		<associatedEntity classCode="NOK">
+			<addr>
+				<streetAddressLine>Promenade des Anglais 111</streetAddressLine>
+				<city>Lyon</city>
+				<postalCode>69001</postalCode>
+				<country>France</country>
+			</addr>
+			<telecom value="tel:+33-555-20036" use="WP"/>
+			<associatedPerson>
+				<name>
+					<given>Martha</given>
+					<family>Mum</family>
+				</name>
+			</associatedPerson>
+		</associatedEntity>
+	</participant>
+	<documentationOf typeCode="DOC">
+		<serviceEvent classCode="PCPR" moodCode="EVN">
+			<id root="1.2.3.999" extension="8e6b6d2b-2aa1-43f8-b2b2-ee21a92c07cc"/>
+			<effectiveTime>
+				<low nullFlavor="UNK"/>
+				<high value="20170720214300+0100"/>
+			</effectiveTime>
+			<performer typeCode="PRF">
+				<functionCode code="2211" codeSystem="2.16.840.1.113883.2.9.6.2.7" displayName="Generalist medical practitioners" codeSystemName="ISCO"/>
+				<assignedEntity>
+					<id extension="129854633" root="2.16.528.1.1007.3.1" assigningAuthorityName="CIBG"/>
+					<addr nullFlavor="NI"/>
+					<telecom nullFlavor="NI"/>
+					<assignedPerson>
+						<name>
+							<given>Beetje</given>
+							<family qualifier="VV">van </family>
+							<family>Hulp</family>
+						</name>
+					</assignedPerson>
+					<representedOrganization classCode="ORG" determinerCode="INSTANCE">
+						<id root="2.16.528.1.1007.3.3" extension="564738757"/>
+						<name>Anorg Aniza Tion BV</name>
+						<telecom use="WP" value="tel:+31-51-34343400"/>
+						<addr>
+							<streetAddressLine>Houttuinen 27</streetAddressLine>
+							<postalCode>3311 CE</postalCode>
+							<city>Dordrecht</city>
+							<country>NL</country>
+						</addr>
+					</representedOrganization>
+				</assignedEntity>
+			</performer>
+		</serviceEvent>
+	</documentationOf>
+	<relatedDocument typeCode="APND">
+		<parentDocument classCode="DOCCLIN" moodCode="EVN">
+			<id root="2.16.724.4.8.10.200.10" extension="c2277753-9f90-4a95-8ddb-a0b3f6e7d292"/>
+			<code code="60591-5" codeSystem="2.16.840.1.113883.6.1" displayName="Patient Summary"/>
+			<setId root="2.16.724.4.8.10.200.10" extension="3f69e0a5-2177-4540-baab-7a5d0877428f"/>
+			<versionNumber value="1"/>
+		</parentDocument>
+	</relatedDocument>
+	<!-- 
+        body
+    -->
+	<component>
+		<structuredBody classCode="DOCBODY">
+			<component>
+				<section classCode="DOCSECT">
+					<!-- IPS Problems Section -->
+					<templateId root="2.16.840.1.113883.10.22.3.3"/>
+					<id root="1.2.3.999" extension="759d86e8-026e-4f6a-952a-5e28a8d3a554"/>
+					<code code="11450-4" codeSystem="2.16.840.1.113883.6.1" displayName="Problem list"/>
+					<title>Active Problems</title>
+					<text>
+						<content ID="prob-1">Hot flushes</content>
+					</text>
+					<entry typeCode="COMP" contextConductionInd="true">
+						<act classCode="ACT" moodCode="EVN">
+							<!-- IPS Problem Concern Entry -->
+							<templateId root="2.16.840.1.113883.10.22.4.7"/>
+							<id root="1.2.3.999" extension="c87bf51c-e53c-4bfe-b8b7-aa62bdd93002"/>
+							<code code="CONC" codeSystem="2.16.840.1.113883.5.6"/>
+							<statusCode code="active"/>
+							<effectiveTime>
+								<low value="201610"/>
+							</effectiveTime>
+							<entryRelationship typeCode="SUBJ" inversionInd="false">
+								<observation classCode="OBS" moodCode="EVN">
+									<!-- IPS Problem Entry -->
+									<templateId root="2.16.840.1.113883.10.22.4.8"/>
+									<id root="1.2.3.999" extension="7b63382d-5f10-4c8c-a94c-65b99579b601"/>
+									<code code="75326-9" codeSystem="2.16.840.1.113883.6.1" displayName="Problem"/>
+									<text>
+										<reference value="#prob-1"/>
+									</text>
+									<statusCode code="completed"/>
+									<effectiveTime>
+										<low value="201610"/>
+									</effectiveTime>
+									<value xsi:type="CD" code="198436008" displayName="Menopausal flushing (finding)" codeSystem="2.16.840.1.113883.6.96">
+										<translation code="N95.1" codeSystem="2.16.840.1.113883.6.3" displayName="Menopausal and female climacteric states"/>
+									</value>
+									<entryRelationship typeCode="REFR" inversionInd="false">
+										<observation classCode="OBS" moodCode="EVN">
+											<!-- IPS Problem Status Observation -->
+											<templateId root="2.16.840.1.113883.10.22.4.20"/>
+											<code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status" codeSystemName="LOINC"/>
+											<statusCode code="completed"/>
+											<value xsi:type="CE" code="active" displayName="Active" codeSystem="2.16.840.1.113883.4.642.3.155"/>
+										</observation>
+									</entryRelationship>
+								</observation>
+							</entryRelationship>
+						</act>
+					</entry>
+					<component>
+						<section>
+							<title>Actieve probleme</title>
+							<text>
+								<content>opvliegers</content>
+							</text>
+							<languageCode code="nl-NL"/>
+						</section>
+					</component>
+				</section>
+			</component>
+			<component>
+				<section classCode="DOCSECT">
+					<!-- IPS Medication Summary Section -->
+					<templateId root="2.16.840.1.113883.10.22.3.1"/>
+					<id root="1.2.3.999" extension="11ef34d3-0077-4a15-84cc-19adb11ba2f1"/>
+					<code code="10160-0" codeSystem="2.16.840.1.113883.6.1" displayName="Medication use"/>
+					<title>Medication</title>
+					<text>
+						<table>
+							<thead>
+								<tr>
+									<th>Medication</th>
+									<th>Strength</th>
+									<th>Form</th>
+									<th>Dosage</th>
+									<th>Comment</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr ID="med-1">
+									<td>Anastrozole</td>
+									<td>1 mg</td>
+									<td>tablet</td>
+									<td>once daily</td>
+									<td>treatment for breast cancer</td>
+								</tr>
+								<tr ID="med-2">
+									<td>Black Cohosh Extract</td>
+									<td> </td>
+									<td>pil</td>
+									<td> </td>
+									<td>herbal supplement</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry typeCode="COMP" contextConductionInd="true">
+						<substanceAdministration classCode="SBADM" moodCode="EVN">
+							<!-- IPS Medication Entry -->
+							<templateId root="2.16.840.1.113883.10.22.4.4"/>
+							<id root="1.2.3.999" extension="b75f92cb-61d4-469a-9387-df5ef70d25f0"/>
+							<code code="DRUG" displayName="Drug therapy" codeSystem="2.16.840.1.113883.5.4"/>
+							<text>
+								<reference value="#med-1"/>
+							</text>
+							<statusCode code="completed"/>
+							<effectiveTime xsi:type="IVL_TS">
+								<low value="201503"/>
+							</effectiveTime>
+							<routeCode code="20053000" codeSystem="0.4.0.127.0.16.1.1.2.1" displayName="Oral use" codeSystemName="EDQM"/>
+							<consumable typeCode="CSM">
+								<manufacturedProduct classCode="MANU">
+									<!-- IPS ManufacturedProduct -->
+									<templateId root="2.16.840.1.113883.10.22.4.2"/>
+									<manufacturedMaterial classCode="MMAT" determinerCode="KIND">
+										<templateId root="2.16.840.1.113883.10.22.4.3"/>
+										<code code="108774000" codeSystem="2.16.840.1.113883.6.96" displayName="Anastrozole (product)">
+											<translation code="99872" codeSystem="2.16.840.1.113883.2.4.4.1" displayName="ANASTROZOL 1MG TABLET" codeSystemName="GPK">
+												<translation code="2076667" codeSystem="2.16.840.1.113883.2.4.4.7" displayName="ANASTROZOL CF TABLET FILMOMHULD 1MG" codeSystemName="HPK"/>
+											</translation>
+										</code>
+										<pharm:formCode code="10219000" codeSystem="0.4.0.127.0.16.1.1.2.1" displayName="Tablet"/>
+										<!-- change 2018-06-04 removed determinerCode -->
+										<pharm:ingredient classCode="ACTI">
+											<pharm:quantity>
+												<numerator value="1" unit="mg" xsi:type="PQ"/>
+												<denominator value="1" unit="{tablet}" xsi:type="PQ"/>
+											</pharm:quantity>
+											<!-- change 2018-06-04 added determinerCode and classCode -->
+											<pharm:ingredientSubstance classCode="MMAT" determinerCode="KIND">
+												<pharm:code code="386910003" codeSystem="2.16.840.1.113883.6.96" displayName="Anastrozole (substance)" xsi:type="CD">
+													<ips:designation language="it-IT">anastrozole</ips:designation>
+													<translation code="L02BG03" codeSystem="2.16.840.1.113883.6.73" displayName="anastrozole" codeSystemName="WHO ATC"/>
+												</pharm:code>
+											</pharm:ingredientSubstance>
+										</pharm:ingredient>
+									</manufacturedMaterial>
+								</manufacturedProduct>
+							</consumable>
+							<entryRelationship typeCode="COMP">
+								<sequenceNumber value="1"/>
+								<substanceAdministration classCode="SBADM" moodCode="EVN">
+									<!-- IPS Subordinate SubstanceAdministration -->
+									<templateId root="2.16.840.1.113883.10.22.4.33"/>
+									<statusCode code="completed"/>
+									<effectiveTime xsi:type="PIVL_TS" institutionSpecified="true">
+										<period value="1" unit="d"/>
+									</effectiveTime>
+									<doseQuantity>
+										<low value="1" unit="{tablet}"/>
+									</doseQuantity>
+									<consumable>
+										<manufacturedProduct>
+											<manufacturedMaterial nullFlavor="NA"/>
+										</manufacturedProduct>
+									</consumable>
+								</substanceAdministration>
+							</entryRelationship>
+						</substanceAdministration>
+					</entry>
+					<entry typeCode="COMP" contextConductionInd="true">
+						<substanceAdministration classCode="SBADM" moodCode="EVN">
+							<!-- IPS Medication Entry -->
+							<templateId root="2.16.840.1.113883.10.22.4.4"/>
+							<id root="1.2.3.999" extension="9e312d6b-c6b6-439a-a730-6efaa5dcf8bc"/>
+							<code code="DRUG" displayName="Drug therapy" codeSystem="2.16.840.1.113883.5.4"/>
+							<text>
+								<reference value="#med-2"/>
+							</text>
+							<statusCode code="completed"/>
+							<effectiveTime xsi:type="IVL_TS">
+								<low value="201601"/>
+							</effectiveTime>
+							<routeCode code="20053000" codeSystem="0.4.0.127.0.16.1.1.2.1" displayName="Oral use" codeSystemName="EDQM"/>
+							<consumable typeCode="CSM">
+								<manufacturedProduct classCode="MANU">
+									<!-- IPS ManufacturedProduct -->
+									<templateId root="2.16.840.1.113883.10.22.4.2"/>
+									<manufacturedMaterial classCode="MMAT" determinerCode="KIND">
+										<templateId root="2.16.840.1.113883.10.22.4.3"/>
+										<!-- primary code from IDMP -->
+										<code nullFlavor="NA">
+											<originalText>Black Cohosh Extract herbal supplement</originalText>
+											<translation code="412588001" codeSystem="2.16.840.1.113883.6.96" displayName="Cimicifuga racemosa extract (substance)"/>
+										</code>
+									</manufacturedMaterial>
+								</manufacturedProduct>
+							</consumable>
+						</substanceAdministration>
+					</entry>
+					<component>
+						<section>
+							<title>Medicatie</title>
+							<text>
+								<table>
+									<thead>
+										<tr>
+											<th>medicatie</th>
+											<th>sterkte</th>
+											<th>toedieningsvorm</th>
+											<th>dosering</th>
+											<th>commentaar</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>ANASTROZOL</td>
+											<td>1MG</td>
+											<td>TABLET</td>
+											<td>once daily</td>
+											<td>treatment for breast cancer</td>
+										</tr>
+										<tr>
+											<td>Zwarte Cohosh Extract</td>
+											<td> </td>
+											<td>pil</td>
+											<td> </td>
+											<td>kruiden</td>
+										</tr>
+									</tbody>
+								</table>
+							</text>
+							<languageCode code="nl-NL"/>
+						</section>
+					</component>
+				</section>
+			</component>
+			<component>
+				<section classCode="DOCSECT">
+					<!-- IPS Allergies and Intolerances Section -->
+					<templateId root="2.16.840.1.113883.10.22.3.2"/>
+					<id root="1.2.3.999" extension="d3760a22-fd4f-400c-b35c-5f6301cb3bd9"/>
+					<code code="48765-2" codeSystem="2.16.840.1.113883.6.1" displayName="Allergies &amp;or adverse reactions"/>
+					<title>Allergies and Intolerances</title>
+					<text>
+						<content ID="ai1">Penicillin, high criticality, active</content>
+					</text>
+					<entry typeCode="COMP" contextConductionInd="true">
+						<act classCode="ACT" moodCode="EVN">
+							<!-- IPS Allergy and Intolerance Concern -->
+							<templateId root="2.16.840.1.113883.10.22.4.5"/>
+							<id root="1.2.3.999" extension="3a462598-009c-484a-965c-d6b24a821424"/>
+							<code code="CONC" codeSystem="2.16.840.1.113883.5.6"/>
+							<statusCode code="active"/>
+							<effectiveTime>
+								<low value="2010"/>
+							</effectiveTime>
+							<entryRelationship typeCode="SUBJ" inversionInd="false">
+								<observation classCode="OBS" moodCode="EVN">
+									<!-- IPS Allergy or Intolerance -->
+									<templateId root="2.16.840.1.113883.10.22.4.1"/>
+									<id root="1.2.3.999" extension="6273319e-b6f4-46f4-a4f1-72f3a8db673a"/>
+									<code code="allergy" displayName="Allergy" codeSystem="2.16.840.1.113883.4.642.1.122"/>
+									<text>
+										<reference value="#ai1"/>
+									</text>
+									<statusCode code="completed"/>
+									<effectiveTime>
+										<low value="2010"/>
+									</effectiveTime>
+									<participant typeCode="CSM">
+										<participantRole classCode="MANU">
+											<playingEntity classCode="MMAT">
+												<code code="373270004" codeSystem="2.16.840.1.113883.6.96" displayName="Penicillin"/>
+											</playingEntity>
+										</participantRole>
+									</participant>
+									<entryRelationship typeCode="SUBJ" inversionInd="true">
+										<observation classCode="OBS" moodCode="EVN">
+											<!-- IPS Criticality Observation -->
+											<templateId root="2.16.840.1.113883.10.22.4.18"/>
+											<code code="82606-5" codeSystem="2.16.840.1.113883.6.1"/>
+											<statusCode code="completed"/>
+											<value xsi:type="CD" code="high" displayName="High Risk" codeSystem="2.16.840.1.113883.4.642.1.120"/>
+										</observation>
+									</entryRelationship>
+									<entryRelationship typeCode="REFR" inversionInd="false">
+										<observation classCode="OBS" moodCode="EVN">
+											<!-- IPS Allergy Status Observation -->
+											<templateId root="2.16.840.1.113883.10.22.4.21"/>
+											<templateId root="2.16.840.1.113883.10.22.4.20"/>
+											<code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status" codeSystemName="LOINC"/>
+											<statusCode code="completed"/>
+											<value xsi:type="CE" code="active" displayName="Active" codeSystem="2.16.840.1.113883.4.642.3.155"/>
+										</observation>
+									</entryRelationship>
+								</observation>
+							</entryRelationship>
+						</act>
+					</entry>
+					<component>
+						<section>
+							<title>Allergieën en intoleranties</title>
+							<text>
+								<content>penicilline, hoge criticaliteit, actief</content>
+							</text>
+							<languageCode code="nl-NL"/>
+						</section>
+					</component>
+				</section>
+			</component>
+			<component>
+				<section classCode="DOCSECT">
+					<!-- IPS History of Past Illness Section -->
+					<templateId root="2.16.840.1.113883.10.22.3.7"/>
+					<id root="1.2.3.999" extension="96d6bbd6-91db-436f-ae0e-192925d7ad59"/>
+					<code code="11348-0" codeSystem="2.16.840.1.113883.6.1" displayName="Past illness"/>
+					<title>History of Past Illness</title>
+					<text>
+						<content ID="hip-1">Breast cancer Stage II <content ID="hip-1-s"/> with no evidence of recurrence following treatment</content>
+					</text>
+					<entry typeCode="COMP" contextConductionInd="true">
+						<act classCode="ACT" moodCode="EVN">
+							<!-- IPS Problem Concern Entry -->
+							<templateId root="2.16.840.1.113883.10.22.4.7"/>
+							<id root="1.2.3.999" extension="66d4a8c7-9081-43e0-a63f-489c2ae6edd6"/>
+							<code code="CONC" codeSystem="2.16.840.1.113883.5.6"/>
+							<statusCode code="active"/>
+							<effectiveTime>
+								<low value="201501"/>
+								<high value="201503"/>
+							</effectiveTime>
+							<entryRelationship typeCode="SUBJ" inversionInd="false">
+								<observation classCode="OBS" moodCode="EVN">
+									<!-- IPS Problem Entry -->
+									<templateId root="2.16.840.1.113883.10.22.4.8"/>
+									<id root="1.2.3.999" extension="0c5ca603-2305-44a5-aa7c-3364e4a4456d"/>
+									<code code="75326-9" codeSystem="2.16.840.1.113883.6.1" displayName="Problem"/>
+									<text>
+										<reference value="#hip-1"/>
+									</text>
+									<statusCode code="completed"/>
+									<effectiveTime>
+										<low value="201501"/>
+										<high value="201503"/>
+									</effectiveTime>
+									<value xsi:type="CD" code="254837009" displayName="Malignant tumor of breast (disorder)" codeSystem="2.16.840.1.113883.6.96">
+										<qualifier>
+											<name code="246090004" codeSystem="2.16.840.1.113883.6.96" displayName="Associated finding (attribute)"/>
+											<value code="60333009" codeSystem="2.16.840.1.113883.6.96" displayName="Clinical stage II (finding)"/>
+										</qualifier>
+										<translation code="8500/3" codeSystem="2.16.840.1.113883.6.43" displayName="Infiltrating duct carcinoma, NOS"/>
+									</value>
+									<entryRelationship typeCode="REFR" inversionInd="false">
+										<observation classCode="OBS" moodCode="EVN">
+											<!-- IPS Problem Status Observation -->
+											<templateId root="2.16.840.1.113883.10.22.4.20"/>
+											<code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status" codeSystemName="LOINC"/>
+											<text>
+												<reference value="#hip-1-s"/>
+											</text>
+											<statusCode code="completed"/>
+											<value xsi:type="CE" code="remission" codeSystem="2.16.840.1.113883.4.642.3.155" displayName="Remission"/>
+										</observation>
+									</entryRelationship>
+								</observation>
+							</entryRelationship>
+						</act>
+					</entry>
+					<component>
+						<section>
+							<title>Vroegere ziekten</title>
+							<text>
+								<content>Borstkanker stadium II zonder aanwijzingen van recidieven na behandeling</content>
+							</text>
+							<languageCode code="nl-NL"/>
+						</section>
+					</component>
+				</section>
+			</component>
+			<component>
+				<section classCode="DOCSECT">
+					<!-- IPS Plan of Treatment Section -->
+					<templateId root="2.16.840.1.113883.10.22.3.9"/>
+					<id root="1.2.3.999" extension="4f5ca10e-71d0-42c9-aee5-da32b529402e"/>
+					<code code="18776-5" codeSystem="2.16.840.1.113883.6.1" displayName="Plan of care note"/>
+					<title>Plan of Treatment</title>
+					<text>Continue hormone medication with Anastrozole for total of 5 years and monitor for potential breast cancer recurrence</text>
+					<component>
+						<section>
+							<title>Zorgplan</title>
+							<text>Hormoonmedicijn met Anastrozole voor een totaal van 5 jaar voortzetten en controleren op eventuele terugkeer van borstkanker</text>
+							<languageCode code="nl-NL"/>
+						</section>
+					</component>
+				</section>
+			</component>
+		</structuredBody>
+	</component>
+</ClinicalDocument>
