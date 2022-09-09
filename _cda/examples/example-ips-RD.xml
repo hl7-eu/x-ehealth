@@ -192,8 +192,7 @@
 						<act classCode="ACT" moodCode="EVN">
 							<!-- XeH Problem Concern Entry -->
 							<templateId root="2.16.840.1.113883.2.51.10.24"/>
-							<!--id element leave as IPS example-->
-							<id root="1.2.3.999" extension="c87bf51c-e53c-4bfe-b8b7-aa62bdd93002"/>
+							<id root="1.2.3.010" extension="175bd032-8b00-4728-b2dc-748bb1501aed"/>
 							<code code="CONC" codeSystem="2.16.840.1.113883.5.6"/>
 							<statusCode code="active"/>
 							<effectiveTime>
@@ -299,7 +298,7 @@
 									<!-- XeH Problem Entry -->
 									<templateId root="2.16.840.1.113883.2.51.10.25"/>
 									<!--id element leave as IPS example-->
-									<id root="1.2.3.999" extension="7b63382d-5f10-4c8c-a94c-65b99579b601"/>
+									<id root="1.2.3.888" extension="7b63382d-5f10-4c8c-a94c-65b99579b601"/>
 									<code code="75326-9" codeSystem="2.16.840.1.113883.6.1" displayName="Problem"/>
 									<text>
 										<reference value="#problem-2"/>
@@ -351,8 +350,8 @@
 			</component>
 			<component>
 				<section classCode="DOCSECT">
-					<!-- IPS Medication Summary Section -->
-					<templateId root="2.16.840.1.113883.10.22.3.1"/>
+					<!-- XeH Medication Summary Section  -->
+					<templateId root="2.16.840.1.113883.2.51.10.41"/>
 					<code code="10160-0" codeSystem="2.16.840.1.113883.6.1" displayName="Medication use"/>
 					<title>Medication</title>
 					<text>
@@ -372,67 +371,45 @@
 									<td>1 mg</td>
 									<td>tablet</td>
 									<td>once daily</td>
-									<td>treatment for breast cancer</td>
-								</tr>
-								<tr ID="med-2">
-									<td>Black Cohosh Extract</td>
-									<td> </td>
-									<td>pil</td>
-									<td> </td>
-									<td>herbal supplement</td>
-								</tr>
+									<td>treatment for RARE DISEASE 1</td>
+								</tr>								
 							</tbody>
 						</table>
 					</text>
+					<!-- XeH Medication Statement -->
 					<entry typeCode="COMP" contextConductionInd="true">
 						<substanceAdministration classCode="SBADM" moodCode="EVN">
-							<!-- IPS Medication Entry -->
-							<templateId root="2.16.840.1.113883.10.22.4.4"/>
-							<id root="1.2.3.999" extension="b75f92cb-61d4-469a-9387-df5ef70d25f0"/>
+							<templateId root="2.16.840.1.113883.2.51.10.40"/>
+							<id root="1.2.3.222" extension="b75f92cb-61d4-469a-9387-df5ef70dfsa"/>
 							<code code="DRUG" displayName="Drug therapy" codeSystem="2.16.840.1.113883.5.4"/>
 							<text>
 								<reference value="#med-1"/>
 							</text>
-							<statusCode code="completed"/>
+							<!-- I haven't found a rule for the code of statusCode, maybe it could be completed -->
+							<statusCode code="active"/>
 							<effectiveTime xsi:type="IVL_TS">
-								<low value="201503"/>
+								<low value="201610"/>
 							</effectiveTime>
 							<routeCode code="20053000" codeSystem="0.4.0.127.0.16.1.1.2.1" displayName="Oral use" codeSystemName="EDQM"/>
 							<consumable typeCode="CSM">
+								<!-- IPS IPS Medication Information -->
 								<manufacturedProduct classCode="MANU">
-									<!-- IPS ManufacturedProduct -->
-									<templateId root="2.16.840.1.113883.10.22.4.2"/>
+									<templateId root="2.16.840.1.113883.10.22.4.3"/>
 									<manufacturedMaterial classCode="MMAT" determinerCode="KIND">
 										<templateId root="2.16.840.1.113883.10.22.4.3"/>
-										<code code="108774000" codeSystem="2.16.840.1.113883.6.96" displayName="Anastrozole (product)">
-											<translation code="99872" codeSystem="2.16.840.1.113883.2.4.4.1" displayName="ANASTROZOL 1MG TABLET" codeSystemName="GPK">
-												<translation code="2076667" codeSystem="2.16.840.1.113883.2.4.4.7" displayName="ANASTROZOL CF TABLET FILMOMHULD 1MG" codeSystemName="HPK"/>
-											</translation>
-										</code>
-										<pharm:formCode code="10219000" codeSystem="0.4.0.127.0.16.1.1.2.1" displayName="Tablet"/>
-										<!-- change 2018-06-04 removed determinerCode -->
-										<pharm:ingredient classCode="ACTI">
-											<pharm:quantity>
-												<numerator value="1" unit="mg" xsi:type="PQ"/>
-												<denominator value="1" unit="{tablet}" xsi:type="PQ"/>
-											</pharm:quantity>
-											<!-- change 2018-06-04 added determinerCode and classCode -->
-											<pharm:ingredientSubstance classCode="MMAT" determinerCode="KIND">
-												<pharm:code code="386910003" codeSystem="2.16.840.1.113883.6.96" displayName="Anastrozole (substance)" xsi:type="CD">
-													<ips:designation language="it-IT">anastrozole</ips:designation>
-													<translation code="L02BG03" codeSystem="2.16.840.1.113883.6.73" displayName="anastrozole" codeSystemName="WHO ATC"/>
-												</pharm:code>
-											</pharm:ingredientSubstance>
-										</pharm:ingredient>
+										<code code="108774000" codeSystem="2.16.840.1.113883.6.96" displayName="Anastrozole (product)"/>											
+										<pharm:formCode code="10219000" codeSystem="0.4.0.127.0.16.1.1.2.1" displayName="Tablet"/>										
 									</manufacturedMaterial>
 								</manufacturedProduct>
 							</consumable>
 							<entryRelationship typeCode="COMP">
+								<!-- In the example in the guide it is put after substanceAdministration but this is the correct place-->
 								<sequenceNumber value="1"/>
+								<!-- UV Subordinate Substance Administration -->
 								<substanceAdministration classCode="SBADM" moodCode="EVN">
-									<!-- IPS Subordinate SubstanceAdministration -->
-									<templateId root="2.16.840.1.113883.10.22.4.33"/>
-									<statusCode code="completed"/>
+									<templateId root="2.16.840.1.113883.10.21.4.6"/>
+									<!-- It must be the same as the parent substanceAdministration-->
+									<statusCode code="active"/>
 									<effectiveTime xsi:type="PIVL_TS" institutionSpecified="true">
 										<period value="1" unit="d"/>
 									</effectiveTime>
@@ -446,73 +423,13 @@
 									</consumable>
 								</substanceAdministration>
 							</entryRelationship>
+							<entryRelationship typeCode="RSON" inversionInd="false" contextConductionInd="false">
+								<act classCode="ACT" moodCode="EVN">
+									<id root="1.2.3.010" extension="175bd032-8b00-4728-b2dc-748bb1501aed"/>
+								</act>
+							</entryRelationship>
 						</substanceAdministration>
-					</entry>
-					<entry typeCode="COMP" contextConductionInd="true">
-						<substanceAdministration classCode="SBADM" moodCode="EVN">
-							<!-- IPS Medication Entry -->
-							<templateId root="2.16.840.1.113883.10.22.4.4"/>
-							<id root="1.2.3.999" extension="9e312d6b-c6b6-439a-a730-6efaa5dcf8bc"/>
-							<code code="DRUG" displayName="Drug therapy" codeSystem="2.16.840.1.113883.5.4"/>
-							<text>
-								<reference value="#med-2"/>
-							</text>
-							<statusCode code="completed"/>
-							<effectiveTime xsi:type="IVL_TS">
-								<low value="201601"/>
-							</effectiveTime>
-							<routeCode code="20053000" codeSystem="0.4.0.127.0.16.1.1.2.1" displayName="Oral use" codeSystemName="EDQM"/>
-							<consumable typeCode="CSM">
-								<manufacturedProduct classCode="MANU">
-									<!-- IPS ManufacturedProduct -->
-									<templateId root="2.16.840.1.113883.10.22.4.2"/>
-									<manufacturedMaterial classCode="MMAT" determinerCode="KIND">
-										<templateId root="2.16.840.1.113883.10.22.4.3"/>
-										<!-- primary code from IDMP -->
-										<code nullFlavor="NA">
-											<originalText>Black Cohosh Extract herbal supplement</originalText>
-											<translation code="412588001" codeSystem="2.16.840.1.113883.6.96" displayName="Cimicifuga racemosa extract (substance)"/>
-										</code>
-									</manufacturedMaterial>
-								</manufacturedProduct>
-							</consumable>
-						</substanceAdministration>
-					</entry>
-					<component>
-						<section>
-							<title>Medicatie</title>
-							<text>
-								<table>
-									<thead>
-										<tr>
-											<th>medicatie</th>
-											<th>sterkte</th>
-											<th>toedieningsvorm</th>
-											<th>dosering</th>
-											<th>commentaar</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>ANASTROZOL</td>
-											<td>1MG</td>
-											<td>TABLET</td>
-											<td>once daily</td>
-											<td>treatment for breast cancer</td>
-										</tr>
-										<tr>
-											<td>Zwarte Cohosh Extract</td>
-											<td> </td>
-											<td>pil</td>
-											<td> </td>
-											<td>kruiden</td>
-										</tr>
-									</tbody>
-								</table>
-							</text>
-							<languageCode code="nl-NL"/>
-						</section>
-					</component>
+					</entry>					
 				</section>
 			</component>
 			<component>
