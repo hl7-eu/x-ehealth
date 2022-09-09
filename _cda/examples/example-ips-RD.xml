@@ -176,18 +176,23 @@
 		<structuredBody classCode="DOCBODY">
 			<component>
 				<section classCode="DOCSECT">
-					<!-- IPS Problems Section -->
-					<templateId root="2.16.840.1.113883.10.22.3.3"/>
-					<id root="1.2.3.999" extension="759d86e8-026e-4f6a-952a-5e28a8d3a554"/>
+					<!-- RD diagnosis: XeH Problems Section -->
+					<templateId root="2.16.840.1.113883.2.51.10.23"/>
+					<id root="1.2.3.001" extension="759d86e8-026e-4f6a-952a-5e28a8d3a554"/>
 					<code code="11450-4" codeSystem="2.16.840.1.113883.6.1" displayName="Problem list"/>
 					<title>Active Problems</title>
 					<text>
-						<content ID="prob-1">Hot flushes</content>
+						<!--Text changed-->
+						<content ID="problem-1">RARE DISEASE: DISEASE 1 NAME</content>
+						<content ID="problem-2">RARE DISEASE: DISEASE 2 NAME</content>
+						<content ID="problem-3">RARE DISEASE: DISEASE 3 NAME</content>
 					</text>
+					<!-- DISEASE 1 Entry-->
 					<entry typeCode="COMP" contextConductionInd="true">
 						<act classCode="ACT" moodCode="EVN">
-							<!-- IPS Problem Concern Entry -->
-							<templateId root="2.16.840.1.113883.10.22.4.7"/>
+							<!-- XeH Problem Concern Entry -->
+							<templateId root="2.16.840.1.113883.2.51.10.24"/>
+							<!--id element leave as IPS example-->
 							<id root="1.2.3.999" extension="c87bf51c-e53c-4bfe-b8b7-aa62bdd93002"/>
 							<code code="CONC" codeSystem="2.16.840.1.113883.5.6"/>
 							<statusCode code="active"/>
@@ -196,49 +201,158 @@
 							</effectiveTime>
 							<entryRelationship typeCode="SUBJ" inversionInd="false">
 								<observation classCode="OBS" moodCode="EVN">
-									<!-- IPS Problem Entry -->
-									<templateId root="2.16.840.1.113883.10.22.4.8"/>
+									<!-- XeH Problem Entry -->
+									<templateId root="2.16.840.1.113883.2.51.10.25"/>
+									<!--id element leave as IPS example-->
 									<id root="1.2.3.999" extension="7b63382d-5f10-4c8c-a94c-65b99579b601"/>
 									<code code="75326-9" codeSystem="2.16.840.1.113883.6.1" displayName="Problem"/>
 									<text>
-										<reference value="#prob-1"/>
+										<reference value="#problem-1"/>
 									</text>
 									<statusCode code="completed"/>
 									<effectiveTime>
 										<low value="201610"/>
 									</effectiveTime>
-									<value xsi:type="CD" code="198436008" displayName="Menopausal flushing (finding)" codeSystem="2.16.840.1.113883.6.96">
-										<translation code="N95.1" codeSystem="2.16.840.1.113883.6.3" displayName="Menopausal and female climacteric states"/>
-									</value>
-									<entryRelationship typeCode="REFR" inversionInd="false">
+									<!-- OrphaNet code corrisponding to DISEASE 1 -->
+									<value xsi:type="CD" code="XXXXXX" displayName="DISEASE 1 NAME" codeSystem="1.3.6.1.4.1.12559.11.10.1.3.1.44.5"/>
+									<!-- Diagnosis assertion status -->
+									<entryRelationship typeCode="SUBJ" inversionInd="true">															
+										<!-- IPS Certainty Observation -->
 										<observation classCode="OBS" moodCode="EVN">
-											<!-- IPS Problem Status Observation -->
-											<templateId root="2.16.840.1.113883.10.22.4.20"/>
-											<code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status" codeSystemName="LOINC"/>
+											<templateId root="2.16.840.1.113883.10.22.4.19"/>
+											<code code="66455-7" codeSystem="2.16.840.1.113883.6.1" displayName="Condition status" codeSystemName="LOINC"/>
 											<statusCode code="completed"/>
-											<value xsi:type="CE" code="active" displayName="Active" codeSystem="2.16.840.1.113883.4.642.3.155"/>
+											<value xsi:type="CD" code="confirmed" displayName="Confirmed"/>
 										</observation>
+									</entryRelationship>
+									<!-- Care pathway -->																		
+									<entryRelationship typeCode="REFR" inversionInd="false">
+										<!-- XeH Care Team Act -->
+										<act classCode="PCPR" moodCode="EVN">
+											<templateId root="2.16.840.1.113883.2.51.10.37"/>
+											<code code="85847-2" codeSystem="2.16.840.1.113883.6.1"/>
+											<statusCode code="normal"/>
+											<!-- Name of the physician in charge of the patient -->
+											<performer typeCode="PRF">
+												<assignedEntity classCode="ASSIGNED">
+													<id root="11111" extension="7b63382d-5f10-4c8c-a94c-65b99579b6045"/>
+													<addr>
+														<streetAddressLine>Rue Creuzet 111</streetAddressLine>
+														<city>Lyon</city>
+														<postalCode>69001</postalCode>
+														<country>France</country>
+													</addr>
+													<telecom value="tel:+33-555-44555" use="WP"/>
+													<telecom value="mailto://eve.everywoman@ghh.com" use="WP"/>
+													<assignedPerson classCode="PSN" determinerCode="INSTANCE">
+														<name>
+															<given>EVE</given>
+                    										<family>EVERYWOMAN</family>
+														</name>
+													</assignedPerson>
+												</assignedEntity>
+											</performer>
+											<!-- Rare disease centre following the patient: name of the centre/hospital/ location/phone number (incl. emergency phone number) -->
+											<performer typeCode="PRF">
+												<assignedEntity classCode="ASSIGNED">
+													<id root="222222" extension="7b63382d-5f10-4c8c-a94c-65b9952174165"/>
+													<representedOrganization classCode="ORG" determinerCode="INSTANCE">
+														<name>Good Health Hospital Lyon</name>
+														<telecom value="tel:+33-555-44000" use="EC"/>
+														<addr>
+															<streetAddressLine>Rue Creuzet 111</streetAddressLine>
+															<city>Lyon</city>
+															<postalCode>69001</postalCode>
+															<country>France</country>
+														</addr>
+														<!-- Is the RD centre part of an ERN  -->
+														<asOrganizationPartOf classCode="PART">
+															<!-- ERN name -->
+															<wholeOrganization classCode="ORG" determinerCode="INSTANCE">
+																<name>European Good Health Hospitals</name>
+															</wholeOrganization>
+														</asOrganizationPartOf>
+													</representedOrganization>												
+												</assignedEntity>
+											</performer>											
+										</act>				
 									</entryRelationship>
 								</observation>
 							</entryRelationship>
 						</act>
 					</entry>
-					<component>
-						<section>
-							<title>Actieve probleme</title>
-							<text>
-								<content>opvliegers</content>
-							</text>
-							<languageCode code="nl-NL"/>
-						</section>
-					</component>
+					<!-- DISEASE 2 Entry-->
+					<entry typeCode="COMP" contextConductionInd="true">
+						<act classCode="ACT" moodCode="EVN">
+							<!-- XeH Problem Concern Entry -->
+							<templateId root="2.16.840.1.113883.2.51.10.24"/>
+							<!--id element leave as IPS example-->
+							<id root="1.2.3.002" extension="c87bf51c-e53c-4bfe-b8b7-aa62bdd93002"/>
+							<code code="CONC" codeSystem="2.16.840.1.113883.5.6"/>
+							<statusCode code="completed"/>
+							<effectiveTime>
+								<low value="200512"/>
+								<high value="202007"/>
+							</effectiveTime>
+							<entryRelationship typeCode="SUBJ" inversionInd="false">
+								<observation classCode="OBS" moodCode="EVN">
+									<!-- XeH Problem Entry -->
+									<templateId root="2.16.840.1.113883.2.51.10.25"/>
+									<!--id element leave as IPS example-->
+									<id root="1.2.3.999" extension="7b63382d-5f10-4c8c-a94c-65b99579b601"/>
+									<code code="75326-9" codeSystem="2.16.840.1.113883.6.1" displayName="Problem"/>
+									<text>
+										<reference value="#problem-2"/>
+									</text>
+									<statusCode code="completed"/>
+									<effectiveTime>
+										<low value="202010"/>
+									</effectiveTime>
+									<!-- OrphaNet code corrisponding to DISEASE 2 -->
+									<value xsi:type="CD" code="YYYYYY" displayName="DISEASE 2 NAME" codeSystem="1.3.6.1.4.1.12559.11.10.1.3.1.44.5"/>									
+								</observation>
+							</entryRelationship>
+						</act>
+					</entry>
+					<!-- DISEASE 3 Entry-->
+					<entry typeCode="COMP" contextConductionInd="true">
+						<act classCode="ACT" moodCode="EVN">
+							<!-- XeH Problem Concern Entry -->
+							<templateId root="2.16.840.1.113883.2.51.10.24"/>
+							<!--id element leave as IPS example-->
+							<id root="1.2.3.003" extension="c87bf51c-e53c-4bfe-b8b7-aa62bdd93002"/>
+							<code code="CONC" codeSystem="2.16.840.1.113883.5.6"/>
+							<statusCode code="completed"/>
+							<effectiveTime>
+								<low value="199012"/>
+								<high value="200107"/>
+							</effectiveTime>
+							<entryRelationship typeCode="SUBJ" inversionInd="false">
+								<observation classCode="OBS" moodCode="EVN">
+									<!-- XeH Problem Entry -->
+									<templateId root="2.16.840.1.113883.2.51.10.25"/>
+									<!--id element leave as IPS example-->
+									<id root="1.2.3.004" extension="7b63382d-5f10-4c8c-a94c-65b99579b601"/>
+									<code code="75326-9" codeSystem="2.16.840.1.113883.6.1" displayName="Problem"/>
+									<text>
+										<reference value="#problem-3"/>
+									</text>
+									<statusCode code="completed"/>
+									<effectiveTime>
+										<low value="202010"/>
+									</effectiveTime>
+									<!-- OrphaNet code corrisponding to DISEASE 3 -->
+									<value xsi:type="CD" code="ZZZZZ" displayName="DISEASE 3 NAME" codeSystem="1.3.6.1.4.1.12559.11.10.1.3.1.44.5"/>									
+								</observation>
+							</entryRelationship>
+						</act>
+					</entry>									
 				</section>
 			</component>
 			<component>
 				<section classCode="DOCSECT">
 					<!-- IPS Medication Summary Section -->
 					<templateId root="2.16.840.1.113883.10.22.3.1"/>
-					<id root="1.2.3.999" extension="11ef34d3-0077-4a15-84cc-19adb11ba2f1"/>
 					<code code="10160-0" codeSystem="2.16.840.1.113883.6.1" displayName="Medication use"/>
 					<title>Medication</title>
 					<text>
