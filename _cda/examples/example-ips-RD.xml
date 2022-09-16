@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="../stylesheets/cda.xsl"?>
 <?xml-model href="../schematron/hl7ips-hl7ips1.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<ClinicalDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ips="urn:hl7-org:ips" xmlns:pharm="urn:hl7-org:pharm" xmlns="urn:hl7-org:v3" xsi:schemaLocation="urn:hl7-org:v3 ../CDA_IPS_Schema/CDA_IPS.xsd">
+<ClinicalDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ips="urn:hl7-org:ips" xmlns:pharm="urn:hl7-org:pharm" xmlns="urn:hl7-org:v3" xsi:schemaLocation="urn:hl7-org:v3 ../schema/CDA_XeH.xsd">
 	<!-- 
         Patient Summary of Martha, 45yo
         Created by her general practitioner on 2017-07-20
@@ -178,11 +178,11 @@
 				<section classCode="DOCSECT">
 					<!-- RD diagnosis: XeH Problems Section -->
 					<templateId root="2.16.840.1.113883.2.51.10.23"/>
-					<id root="1.2.3.001" extension="759d86e8-026e-4f6a-952a-5e28a8d3a554"/>
+					<id root="2.16.724.4.8.10.200.10.2" extension="759d86e8-026e-4f6a-952a-5e28a8d3a554"/>
 					<code code="11450-4" codeSystem="2.16.840.1.113883.6.1" displayName="Problem list"/>
 					<title>Active Problems</title>
 					<text>
-						<!--Text changed-->
+						<!--Disease name-->
 						<content ID="problem-1">RARE DISEASE: DISEASE 1 NAME</content>
 						<content ID="problem-2">RARE DISEASE: DISEASE 2 NAME</content>
 						<content ID="problem-3">RARE DISEASE: DISEASE 3 NAME</content>
@@ -192,7 +192,7 @@
 						<act classCode="ACT" moodCode="EVN">
 							<!-- XeH Problem Concern Entry -->
 							<templateId root="2.16.840.1.113883.2.51.10.24"/>
-							<id root="1.2.3.010" extension="175bd032-8b00-4728-b2dc-748bb1501aed"/>
+							<id root="2.16.724.4.8.10.200.10.1" extension="175bd032-8b00-4728-b2dc-748bb1501aed"/>
 							<code code="CONC" codeSystem="2.16.840.1.113883.5.6"/>
 							<statusCode code="active"/>
 							<effectiveTime>
@@ -234,7 +234,7 @@
 											<!-- Name of the physician in charge of the patient -->
 											<performer typeCode="PRF">
 												<assignedEntity classCode="ASSIGNED">
-													<id root="11111" extension="7b63382d-5f10-4c8c-a94c-65b99579b6045"/>
+													<id root="2.16.724.4.8.10.200.10.3" extension="7b63382d-5f10-4c8c-a94c-65b99579b6045"/>
 													<addr>
 														<streetAddressLine>Rue Creuzet 111</streetAddressLine>
 														<city>Lyon</city>
@@ -254,7 +254,7 @@
 											<!-- Rare disease centre following the patient: name of the centre/hospital/ location/phone number (incl. emergency phone number) -->
 											<performer typeCode="PRF">
 												<assignedEntity classCode="ASSIGNED">
-													<id root="222222" extension="7b63382d-5f10-4c8c-a94c-65b9952174165"/>
+													<id root="2.16.724.4.8.10.200.10.4" extension="7b63382d-5f10-4c8c-a94c-65b9952174165"/>
 													<representedOrganization classCode="ORG" determinerCode="INSTANCE">
 														<name>Good Health Hospital Lyon</name>
 														<telecom value="tel:+33-555-44000" use="EC"/>
@@ -276,6 +276,14 @@
 											</performer>											
 										</act>				
 									</entryRelationship>
+									<!-- Useful infomation: url leading to information on the disease, including CPGs, emergency and anesthesia guidelines-->
+									<reference typeCode="REFR">
+										<externalDocument moodCode="EVN">
+											<text>
+												<reference value="www.GUIDELINE-DISEASE1.ORG" />
+											</text>
+										</externalDocument>
+									</reference>
 								</observation>
 							</entryRelationship>
 						</act>
@@ -286,7 +294,7 @@
 							<!-- XeH Problem Concern Entry -->
 							<templateId root="2.16.840.1.113883.2.51.10.24"/>
 							<!--id element leave as IPS example-->
-							<id root="1.2.3.002" extension="c87bf51c-e53c-4bfe-b8b7-aa62bdd93002"/>
+							<id root="2.16.724.4.8.10.200.10.5" extension="c87bf51c-e53c-4bfe-b8b7-aa62bdd93002"/>
 							<code code="CONC" codeSystem="2.16.840.1.113883.5.6"/>
 							<statusCode code="completed"/>
 							<effectiveTime>
@@ -319,7 +327,7 @@
 							<!-- XeH Problem Concern Entry -->
 							<templateId root="2.16.840.1.113883.2.51.10.24"/>
 							<!--id element leave as IPS example-->
-							<id root="1.2.3.003" extension="c87bf51c-e53c-4bfe-b8b7-aa62bdd93002"/>
+							<id root="2.16.724.4.8.10.200.10.6" extension="c87bf51c-e53c-4bfe-b8b7-aa62bdd93002"/>
 							<code code="CONC" codeSystem="2.16.840.1.113883.5.6"/>
 							<statusCode code="completed"/>
 							<effectiveTime>
@@ -330,8 +338,7 @@
 								<observation classCode="OBS" moodCode="EVN">
 									<!-- XeH Problem Entry -->
 									<templateId root="2.16.840.1.113883.2.51.10.25"/>
-									<!--id element leave as IPS example-->
-									<id root="1.2.3.004" extension="7b63382d-5f10-4c8c-a94c-65b99579b601"/>
+									<id root="2.16.724.4.8.10.200.10.8" extension="7b63382d-5f10-4c8c-a94c-65b99579b601"/>
 									<code code="75326-9" codeSystem="2.16.840.1.113883.6.1" displayName="Problem"/>
 									<text>
 										<reference value="#problem-3"/>
@@ -376,7 +383,7 @@
 							</tbody>
 						</table>
 					</text>
-					<!-- XeH Medication Statement -->
+					<!-- XeH Medication Statement - Name and posology of the ongoing treatment(s) (RD specific; others) -->
 					<entry typeCode="COMP" contextConductionInd="true">
 						<substanceAdministration classCode="SBADM" moodCode="EVN">
 							<templateId root="2.16.840.1.113883.2.51.10.40"/>
@@ -423,13 +430,35 @@
 									</consumable>
 								</substanceAdministration>
 							</entryRelationship>
+							<!-- Treatment specific for DISEASE 1. Iven if it not indicated in the IG, I used XeH Internal Reference as for XeH Alerts Section-->
 							<entryRelationship typeCode="RSON" inversionInd="false" contextConductionInd="false">
 								<act classCode="ACT" moodCode="EVN">
-									<id root="1.2.3.010" extension="175bd032-8b00-4728-b2dc-748bb1501aed"/>
+									<id root="2.16.724.4.8.10.200.10.1" extension="175bd032-8b00-4728-b2dc-748bb1501aed"/>
+									<code code="CONC" codeSystem="2.16.840.1.113883.5.6"/>
 								</act>
 							</entryRelationship>
 						</substanceAdministration>
 					</entry>					
+				</section>
+			</component>
+			<component>
+				<section classCode="DOCSECT">
+					<!-- XeH Alerts Section - Main alert messages -->
+					<templateId root="2.16.840.1.113883.2.51.10.17"/>
+					<code code="75310-3" codeSystem="2.16.840.1.113883.6.1" displayName="Health concerns Document"/>
+					<title>Alert Section</title>
+					<text>
+						<content ID="alert-1">Alert.........</content>						
+					</text>
+					<entry>
+						<act classCode="ACT" moodCode="EVN">
+							<!-- Template id of IHE Internal Reference -->
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.4.1"/>
+							<id root="2.16.724.4.8.10.200.10.1" extension="175bd032-8b00-4728-b2dc-748bb1501aed"/>
+							<!-- I'm not sure if the code must be the one of the act (as I indicated) or the code of the observation in the act-->
+							<code code="CONC" codeSystem="2.16.840.1.113883.5.6"/>
+						</act>
+					</entry>				
 				</section>
 			</component>
 			<component>
