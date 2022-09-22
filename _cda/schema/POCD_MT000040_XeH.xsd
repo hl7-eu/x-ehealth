@@ -806,6 +806,10 @@ History:
 			<xs:element name="repeatNumber" type="hl7v3:IVL_INT" minOccurs="0"/>
 			<xs:element name="languageCode" type="hl7v3:CS" minOccurs="0"/>
 			<xs:element name="value" type="hl7v3:ANY" minOccurs="0" maxOccurs="unbounded"/>
+			<!-- XeHealth extension for Lab results -->
+			<xs:element ref="xeh:measurementUncertainty" minOccurs="0"/>
+			<xs:element ref="xeh:testCalibrator" minOccurs="0"/>
+			<!-- extension end -->
 			<xs:element name="interpretationCode" type="hl7v3:CE" minOccurs="0" maxOccurs="unbounded"/>
 			<xs:element name="methodCode" type="hl7v3:CE" minOccurs="0" maxOccurs="unbounded"/>
 			<xs:element name="targetSiteCode" type="hl7v3:CD" minOccurs="0" maxOccurs="unbounded"/>

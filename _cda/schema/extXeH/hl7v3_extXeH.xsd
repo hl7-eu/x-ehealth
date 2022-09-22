@@ -15,4 +15,6 @@ History:
 	<xs:element name="observationStatus" type="hl7:CE"/>
 	<xs:element name="morphology" type="hl7:CE"/>
 	<xs:element name="specimenSource" type="hl7:CE"/>
+	<xs:element name="measurementUncertainty" type="hl7:PQ"/>
+	<xs:element name="testCalibrator" type="hl7:CE"/>
 </xs:schema>
