@@ -85,7 +85,6 @@ History:
 			<xs:element name="code" type="hl7v3:CD"/>
 			<xs:element name="text" type="hl7v3:ED" minOccurs="0"/>
 			<xs:element name="statusCode" type="hl7v3:CS" minOccurs="0"/>
-			<xs:element ref="xeh:documentStatus" minOccurs="0"/>
 			<xs:element name="effectiveTime" type="hl7v3:IVL_TS" minOccurs="0"/>
 			<xs:element name="priorityCode" type="hl7v3:CE" minOccurs="0"/>
 			<xs:element name="languageCode" type="hl7v3:CS" minOccurs="0"/>
@@ -229,6 +228,9 @@ History:
 			<xs:element name="id" type="hl7v3:II"/>
 			<xs:element name="code" type="hl7v3:CE"/>
 			<xs:element name="title" type="hl7v3:ST" minOccurs="0"/>
+			<!-- XeHealth extension for Lab results -->
+			<xs:element ref="xeh:documentStatus" minOccurs="0"/>
+			<!-- extension end -->
 			<xs:element name="effectiveTime" type="hl7v3:TS"/>
 			<xs:element name="confidentialityCode" type="hl7v3:CE"/>
 			<xs:element name="languageCode" type="hl7v3:CS" minOccurs="0"/>
@@ -759,7 +761,7 @@ History:
 			<xs:element name="name" type="hl7v3:EN" minOccurs="0"/>
 			<!-- HL7 Pharmacy extension -->
 			<xs:element ref="pharm:desc" minOccurs="0"/>
-			<xs:element ref="pharm:formCode" minOccurs="0" maxOccurs="1"/>
+			<xs:element ref="pharm:formCode" minOccurs="0"/>
 			<!-- end of HL7 Pharmacy extension -->
 			<xs:element name="lotNumberText" type="hl7v3:ST" minOccurs="0"/>
 			<!-- HL7 Pharmacy extension -->
@@ -1110,6 +1112,10 @@ History:
 			<xs:element name="effectiveTime" type="hl7v3:IVL_TS" minOccurs="0"/>
 			<xs:element name="priorityCode" type="hl7v3:CE" minOccurs="0"/>
 			<xs:element name="languageCode" type="hl7v3:CS" minOccurs="0"/>
+			<!-- XeHealth extension for Lab results -->
+			<xs:element ref="xeh:morphology" minOccurs="0"/>
+			<xs:element ref="xeh:specimenSource" minOccurs="0"/>
+			<!-- extension end -->
 			<xs:element name="methodCode" type="hl7v3:CE" minOccurs="0" maxOccurs="unbounded"/>
 			<xs:element name="approachSiteCode" type="hl7v3:CD" minOccurs="0" maxOccurs="unbounded"/>
 			<xs:element name="targetSiteCode" type="hl7v3:CD" minOccurs="0" maxOccurs="unbounded"/>
