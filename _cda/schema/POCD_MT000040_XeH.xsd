@@ -16,7 +16,7 @@ History:
 
 *******************************************************************************
 -->
-<xs:schema xmlns:hl7v3="urn:hl7-org:v3" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:pharm="urn:hl7-org:pharm" xmlns:ips="urn:hl7-org:ips" xmlns:xeh="http://x-ehealth.eu" xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc" targetNamespace="urn:hl7-org:v3" elementFormDefault="qualified">
+<xs:schema xmlns:hl7v3="urn:hl7-org:v3" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:pharm="urn:hl7-org:pharm" xmlns:ips="urn:hl7-org:ips" xmlns:lab="urn:oid:1.3.6.1.4.1.19376.1.3.2" xmlns:xeh="http://x-ehealth.eu" xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc" targetNamespace="urn:hl7-org:v3" elementFormDefault="qualified">
 	<!--
 	*****************************************************************************************************************
 	* XML schema for message type POCD_MT000040.
@@ -61,10 +61,9 @@ History:
 	<xs:import namespace="urn:hl7-org:pharm" schemaLocation="extPHARM/COCT_MT230100UV01_extPHARM.xsd"/>
 	<xs:include schemaLocation="extPHARM/hl7v3_extPHARM.xsd"/>
 	<!-- end of HL7 Pharmacy extension -->
-	<!-- HL7 Pharmacy extension -->
-	<xs:import namespace="urn:hl7-org:pharm" schemaLocation="extPHARM/COCT_MT230100UV01_extPHARM.xsd"/>
-	<xs:include schemaLocation="extPHARM/hl7v3_extPHARM.xsd"/>
-	<!-- end of HL7 Pharmacy extension -->
+	<!-- HL7 IHE XD-LAB extension -->
+	<xs:import namespace="urn:oid:1.3.6.1.4.1.19376.1.3.2" schemaLocation="extXDLAB/hl7v3_extXDLAB.xsd"/>
+	<!-- end of IHE XD-LAB extension -->
 	<!-- XeH extensions: import added -->
 	<xs:import namespace="http://x-ehealth.eu" schemaLocation="extXeH/hl7v3_extXeH.xsd"/>
 	<!-- XeH extensions: end -->
@@ -85,7 +84,6 @@ History:
 			<xs:element name="code" type="hl7v3:CD"/>
 			<xs:element name="text" type="hl7v3:ED" minOccurs="0"/>
 			<xs:element name="statusCode" type="hl7v3:CS" minOccurs="0"/>
-			<xs:element ref="xeh:documentStatus" minOccurs="0"/>
 			<xs:element name="effectiveTime" type="hl7v3:IVL_TS" minOccurs="0"/>
 			<xs:element name="priorityCode" type="hl7v3:CE" minOccurs="0"/>
 			<xs:element name="languageCode" type="hl7v3:CS" minOccurs="0"/>
@@ -229,6 +227,9 @@ History:
 			<xs:element name="id" type="hl7v3:II"/>
 			<xs:element name="code" type="hl7v3:CE"/>
 			<xs:element name="title" type="hl7v3:ST" minOccurs="0"/>
+			<!-- XeHealth extension for Lab results -->
+			<xs:element ref="xeh:documentStatus" minOccurs="0"/>
+			<!-- extension end -->
 			<xs:element name="effectiveTime" type="hl7v3:TS"/>
 			<xs:element name="confidentialityCode" type="hl7v3:CE"/>
 			<xs:element name="languageCode" type="hl7v3:CS" minOccurs="0"/>
@@ -759,7 +760,7 @@ History:
 			<xs:element name="name" type="hl7v3:EN" minOccurs="0"/>
 			<!-- HL7 Pharmacy extension -->
 			<xs:element ref="pharm:desc" minOccurs="0"/>
-			<xs:element ref="pharm:formCode" minOccurs="0" maxOccurs="1"/>
+			<xs:element ref="pharm:formCode" minOccurs="0"/>
 			<!-- end of HL7 Pharmacy extension -->
 			<xs:element name="lotNumberText" type="hl7v3:ST" minOccurs="0"/>
 			<!-- HL7 Pharmacy extension -->
@@ -862,6 +863,9 @@ History:
 			<xs:element name="text" type="hl7v3:ED" minOccurs="0"/>
 			<xs:element name="value" type="hl7v3:ANY" minOccurs="0"/>
 			<xs:element name="interpretationCode" type="hl7v3:CE" minOccurs="0"/>
+			<!-- IHE XD-LAB extension for Lab results -->
+			<xs:element ref="lab:precondition" minOccurs="0"/>
+			<!-- extension end -->
 		</xs:sequence>
 		<xs:attribute name="nullFlavor" type="hl7v3:NullFlavor" use="optional"/>
 		<xs:attribute name="classCode" type="hl7v3:ActClassObservation" use="optional" default="OBS"/>
@@ -1110,6 +1114,10 @@ History:
 			<xs:element name="effectiveTime" type="hl7v3:IVL_TS" minOccurs="0"/>
 			<xs:element name="priorityCode" type="hl7v3:CE" minOccurs="0"/>
 			<xs:element name="languageCode" type="hl7v3:CS" minOccurs="0"/>
+			<!-- XeHealth extension for Lab results -->
+			<xs:element ref="xeh:morphology" minOccurs="0"/>
+			<xs:element ref="xeh:specimenSource" minOccurs="0"/>
+			<!-- extension end -->
 			<xs:element name="methodCode" type="hl7v3:CE" minOccurs="0" maxOccurs="unbounded"/>
 			<xs:element name="approachSiteCode" type="hl7v3:CD" minOccurs="0" maxOccurs="unbounded"/>
 			<xs:element name="targetSiteCode" type="hl7v3:CD" minOccurs="0" maxOccurs="unbounded"/>
@@ -1293,6 +1301,9 @@ History:
 			<xs:element name="templateId" type="hl7v3:II" minOccurs="0" maxOccurs="unbounded"/>
 			<xs:element name="id" type="hl7v3:II" minOccurs="0" maxOccurs="unbounded"/>
 			<xs:element name="code" type="hl7v3:CE" minOccurs="0"/>
+			<!-- IHE XD-LAB extension for Lab results -->
+			<xs:element ref="lab:statusCode" minOccurs="0"/>
+			<!-- extension end -->
 			<xs:element name="effectiveTime" type="hl7v3:IVL_TS" minOccurs="0"/>
 			<xs:element name="performer" type="hl7v3:POCD_MT000040.Performer1" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
