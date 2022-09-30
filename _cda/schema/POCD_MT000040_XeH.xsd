@@ -13,10 +13,12 @@ History:
 ... add missing versions
 2022.02.25 Giorgio Cangioli, added part extension (pharma namespace)
 2022.05.13 Giorgio Cangioli, added XeH extensions documentStatus and observationStatus
+2022.09.20 Jürgen Brandstätter, added Lab extensions, corrected and extended XeH extensions
+2022.09.29 Jürgen Brandstätter, added DICOM PS3.20 extensions
 
 *******************************************************************************
 -->
-<xs:schema xmlns:hl7v3="urn:hl7-org:v3" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:pharm="urn:hl7-org:pharm" xmlns:ips="urn:hl7-org:ips" xmlns:lab="urn:oid:1.3.6.1.4.1.19376.1.3.2" xmlns:xeh="http://x-ehealth.eu" xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc" targetNamespace="urn:hl7-org:v3" elementFormDefault="qualified">
+<xs:schema xmlns:hl7v3="urn:hl7-org:v3" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:pharm="urn:hl7-org:pharm" xmlns:ips="urn:hl7-org:ips" xmlns:lab="urn:oid:1.3.6.1.4.1.19376.1.3.2" xmlns:xeh="http://x-ehealth.eu" xmlns:ps3-20="urn:dicom-org:ps3-20" xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc" targetNamespace="urn:hl7-org:v3" elementFormDefault="qualified">
 	<!--
 	*****************************************************************************************************************
 	* XML schema for message type POCD_MT000040.
@@ -57,16 +59,19 @@ History:
 	<xs:include schemaLocation="coreschemas/datatypes.xsd"/>
 	<xs:include schemaLocation="coreschemas/voc.xsd"/>
 	<xs:include schemaLocation="coreschemas/narrative-block.xsd"/>
-	<!-- HL7 Pharmacy extension -->
+	<!-- HL7 Pharmacy extension: start -->
 	<xs:import namespace="urn:hl7-org:pharm" schemaLocation="extPHARM/COCT_MT230100UV01_extPHARM.xsd"/>
 	<xs:include schemaLocation="extPHARM/hl7v3_extPHARM.xsd"/>
-	<!-- end of HL7 Pharmacy extension -->
-	<!-- HL7 IHE XD-LAB extension -->
+	<!-- end of HL7 Pharmacy extension: end -->
+	<!-- IHE XD-LAB extensions: start -->
 	<xs:import namespace="urn:oid:1.3.6.1.4.1.19376.1.3.2" schemaLocation="extXDLAB/hl7v3_extXDLAB.xsd"/>
-	<!-- end of IHE XD-LAB extension -->
-	<!-- XeH extensions: import added -->
+	<!-- IHE XD-LAB extensions: end -->
+	<!-- XeH extensions: start -->
 	<xs:import namespace="http://x-ehealth.eu" schemaLocation="extXeH/hl7v3_extXeH.xsd"/>
 	<!-- XeH extensions: end -->
+	<!-- DICOM PS3.20 extensions: start -->
+	<xs:import namespace="urn:dicom-org:ps3-20" schemaLocation="extDICOMPS320/hl7v3_extDICOMPS320.xsd"/>
+	<!-- DICOM PS3.20 extensions: end -->
 	<xs:complexType name="POCD_MT000040.InfrastructureRoot.typeId">
 		<xs:complexContent>
 			<xs:restriction base="hl7v3:II">
@@ -883,6 +888,7 @@ History:
 			<xs:element name="id" type="hl7v3:II" maxOccurs="unbounded"/>
 			<xs:element name="code" type="hl7v3:CE" minOccurs="0"/>
 			<xs:element name="priorityCode" type="hl7v3:CE" minOccurs="0"/>
+			<xs:element ref="ps3-20:accessionNumber" minOccurs="0"/>
 		</xs:sequence>
 		<xs:attribute name="nullFlavor" type="hl7v3:NullFlavor" use="optional"/>
 		<xs:attribute name="classCode" type="hl7v3:ActClassRoot" use="optional" default="ACT"/>
