@@ -1,8 +1,8 @@
-Profile: DiagnosticReportLabXeH
+Profile: DiagnosticReportLabXeh
 Parent: DiagnosticReport
 Id: DiagnosticReport-lab-xeh
-Title: "DiagnosticReport: Laboratory Report (XeH)"
-Description: "CDiagnosticReport used to represent an entry of a Laboratory Report, including its context, for the scope of the XeHealth project."
+Title: "DiagnosticReport: Laboratory Report (Xeh)"
+Description: "CDiagnosticReport used to represent an entry of a Laboratory Report, including its context, for the scope of the Xehealth project."
 * ^publisher = "X-eHealth Project"
 * ^copyright = "X-eHealth Project"
 * . ^short = "Laboratory Report DiagnosticReport"
@@ -27,13 +27,13 @@ Mutimedia Embedded Content
 Annotation Comment
 */
 
-* basedOn only Reference ( ServiceRequestLabXeH )
+* basedOn only Reference ( ServiceRequestLabXeh )
 * status ^short = "Status of this report"
 * category 1.. // 1.. ?
-* code from LabStudyTypesXeH (preferred) 
+* code from LabStudyTypesXeh (preferred) 
 * code 1..
 * subject 1..
-* encounter only Reference (EncounterXeH) // profile defined for other scopes to be checked
+* encounter only Reference (EncounterXeh) // profile defined for other scopes to be checked
 * effective[x] ^short = "Clinically relevant time/time-period for report."
 * performer ^short = "Responsible Diagnostic Service." // add reference to the used profiles
 * specimen ^short = "Specimens this report is based on." // add reference to the used profile

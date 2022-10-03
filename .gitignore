@@ -6,3 +6,6 @@ Thumbs.db
 /temp
 /template
 _*.*
+/_bak
+/gofsh
+/input/fsh/json-models/*.txt

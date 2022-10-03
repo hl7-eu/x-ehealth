@@ -35,7 +35,7 @@ RuleSet: ConditionGist
 // === Condition
 
 Instance: Inline-Condition-02-1
-InstanceOf: ConditionPrimaryCancerXeH
+InstanceOf: ConditionPrimaryCancerXeh
 Usage: #inline
 
 * id = "8e280fc4-7e66-40d6-9c03-7ae0d4e9374d"
@@ -45,7 +45,7 @@ Usage: #inline
 // === Condition
 
 Instance: Condition-rc-1
-InstanceOf: ConditionPrimaryCancerXeH
+InstanceOf: ConditionPrimaryCancerXeh
 Title:   "Condition: Primary Diagnosis GIST"
 Description: "Sample of Primary Diagnosis GIST"
 Usage: #example
@@ -56,7 +56,7 @@ Usage: #example
 
 // ===================== Organization
 Instance: Inline-Organization-02-1
-InstanceOf: OrganizationCenterXeH
+InstanceOf: OrganizationCenterXeh
 Title:   "Organization: Primary Diagnosis Hulafe (Organization)"
 Description: "Sample of Primary Diagnosis based on information provided by Hulafe (Organization)"
 Usage: #inline

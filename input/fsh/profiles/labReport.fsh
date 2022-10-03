@@ -1,8 +1,8 @@
-Profile: BundleLabReportXeH
+Profile: BundleLabReportXeh
 Parent: Bundle
 Id: Bundle-lab-xeh
-Title: "Bundle: Laboratory Report (XeH)"
-Description: "Clinical document used to represent a Laboratory Report for the scope of the XeHealth project."
+Title: "Bundle: Laboratory Report (Xeh)"
+Description: "Clinical document used to represent a Laboratory Report for the scope of the Xehealth project."
 * ^publisher = "X-eHealth Project"
 * ^copyright = "X-eHealth Project"
 * . ^short = "Laboratory Report composition"
@@ -27,10 +27,10 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
 * entry ^slicing.rules = #open
 
 * entry contains composition 1..1
-* entry[composition].resource only CompositionLabReportXeH
+* entry[composition].resource only CompositionLabReportXeh
 
 * entry contains diagnosticReport 1..*
-* entry[diagnosticReport].resource only DiagnosticReportLabXeH
+* entry[diagnosticReport].resource only DiagnosticReportLabXeh
 
 * entry contains patient 0..1
 * entry[patient].resource only PatientXeh
@@ -42,18 +42,18 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
 * entry[specimen].resource only Specimen // Add profiles
 
 * entry contains serviceRequest 0..*
-* entry[serviceRequest].resource only ServiceRequestLabXeH // Add profiles
+* entry[serviceRequest].resource only ServiceRequestLabXeh // Add profiles
 
 * entry contains requestGroup 0..1
-* entry[requestGroup].resource only RequestGroupLabXeH // Add profiles
+* entry[requestGroup].resource only RequestGroupLabXeh // Add profiles
 
 // add slices
 
-Profile: CompositionLabReportXeH
+Profile: CompositionLabReportXeh
 Parent: http://hl7.org/fhir/StructureDefinition/clinicaldocument
 Id: Composition-lab-xeh
-Title: "Composition: Laboratory Report (XeH)"
-Description: "Clinical document used to represent a Laboratory Report for the scope of the XeHealth project."
+Title: "Composition: Laboratory Report (Xeh)"
+Description: "Clinical document used to represent a Laboratory Report for the scope of the Xehealth project."
 * ^publisher = "X-eHealth Project"
 * ^copyright = "X-eHealth Project"
 * . ^short = "Laboratory Report composition"
@@ -63,11 +63,11 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
 // should we make it 0.. ?
 // or have text repeated here and int he secitons ?
 * extension contains OrderFulfilled named order 0..*
-* extension[order].valueReference only Reference( ServiceRequestLabXeH or RequestGroupLabXeH)
+* extension[order].valueReference only Reference( ServiceRequestLabXeh or RequestGroupLabXeh)
 
 /*  TO DO Header
 - add optional data enterer
-- add optional XeH Information Recipient
+- add optional Xeh Information Recipient
 - defiend rules for attester to distiguish  Authenticators and Legal Auth 
 - ordering provider mapped into the order details 
 - addc Lab DocumentationOf.serviceEvent details
@@ -84,7 +84,7 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
   // slice the subject tp cover the three cases of human ; non-human and mixed
 * subject only Reference(PatientXeh)
 * subject 1..1
-* encounter only Reference (EncounterXeH)  // profile defined for other scopes to be checked
+* encounter only Reference (EncounterXeh)  // profile defined for other scopes to be checked
 * author 1..
 * author ^short = "Who and/or what authored the Laboratory Report"
 * author ^definition = "Identifies who is responsible for the information in the Laboratory Report, not necessarily who typed it in."
@@ -130,13 +130,13 @@ How to manage the annotation section ? should it be a separate section ?
 * section[no-subsections].title 1..
 * section[no-subsections].code 1..
 * section[no-subsections].code only http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
-* section[no-subsections].code from LabStudyTypesXeH (preferred)
+* section[no-subsections].code from LabStudyTypesXeh (preferred)
 // * section.code = http://loinc.org#75310-3 (exactly) // add binding
 * section[no-subsections].text 1..
 * section[no-subsections].text only Narrative
 // add slices check the needed resoucres
 // check structure od XD-LAB
-* section[no-subsections].entry only Reference (DiagnosticReportLabXeH)
+* section[no-subsections].entry only Reference (DiagnosticReportLabXeh)
 * section[no-subsections].section ..0
 
 // -------------------------------------
@@ -163,4 +163,4 @@ How to manage the annotation section ? should it be a separate section ?
   * section.text only Narrative
 // add slices check the needed resoucres
 // check structure od XD-LAB
-  * section.entry only Reference (DiagnosticReportLabXeH)
+  * section.entry only Reference (DiagnosticReportLabXeh)
