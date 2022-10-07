@@ -183,11 +183,11 @@
 					<title>Active Problems</title>
 					<text>
 						<!--Disease name-->
-						<content ID="problem-1">RARE DISEASE: DISEASE 1 NAME</content>
-						<content ID="problem-2">RARE DISEASE: DISEASE 2 NAME</content>
-						<content ID="problem-3">RARE DISEASE: DISEASE 3 NAME</content>
+						<content ID="problem-1">RARE DISEASE: Idiopathic achalasia</content>
+						<content ID="problem-2">RARE DISEASE: Steinert myotonic dystrophy</content>
+						<content ID="problem-3">RARE DISEASE: Cardiogenital syndrome</content>
 					</text>
-					<!-- DISEASE 1 Entry-->
+					<!--  Idiopathic achalasia Entry-->
 					<entry typeCode="COMP" contextConductionInd="true">
 						<act classCode="ACT" moodCode="EVN">
 							<!-- XeH Problem Concern Entry -->
@@ -212,8 +212,8 @@
 									<effectiveTime>
 										<low value="201610"/>
 									</effectiveTime>
-									<!-- OrphaNet code corrisponding to DISEASE 1 -->
-									<value xsi:type="CD" code="XXXXXX" displayName="DISEASE 1 NAME" codeSystem="1.3.6.1.4.1.12559.11.10.1.3.1.44.5"/>
+									<!-- OrphaNet code corrisponding to Idiopathic achalasia -->
+									<value xsi:type="CD" code="930" displayName="Idiopathic achalasia" codeSystem="1.3.6.1.4.1.12559.11.10.1.3.1.44.5"/>
 									<!-- Diagnosis assertion status -->
 									<entryRelationship typeCode="SUBJ" inversionInd="true">															
 										<!-- IPS Certainty Observation -->
@@ -280,7 +280,7 @@
 									<reference typeCode="REFR">
 										<externalDocument moodCode="EVN">
 											<text>
-												<reference value="www.GUIDELINE-DISEASE1.ORG" />
+												<reference value="https://www.orpha.net/consor/cgi-bin/Disease_Search.php?lng=EN&data_id=302&Disease_Disease_Search_diseaseGroup=930&Disease_Disease_Search_diseaseType=ORPHA&Disease(s)/group%20of%20diseases=Idiopathic-achalasia&title=Idiopathic%20achalasia&search=Disease_Search_Simple" />
 											</text>
 										</externalDocument>
 									</reference>
@@ -288,7 +288,7 @@
 							</entryRelationship>
 						</act>
 					</entry>
-					<!-- DISEASE 2 Entry-->
+					<!-- Steinert myotonic dystrophy Entry-->
 					<entry typeCode="COMP" contextConductionInd="true">
 						<act classCode="ACT" moodCode="EVN">
 							<!-- XeH Problem Concern Entry -->
@@ -315,13 +315,13 @@
 									<effectiveTime>
 										<low value="202010"/>
 									</effectiveTime>
-									<!-- OrphaNet code corrisponding to DISEASE 2 -->
-									<value xsi:type="CD" code="YYYYYY" displayName="DISEASE 2 NAME" codeSystem="1.3.6.1.4.1.12559.11.10.1.3.1.44.5"/>									
+									<!-- OrphaNet code corrisponding to Steinert myotonic dystrophy -->
+									<value xsi:type="CD" code="273" displayName="Steinert myotonic dystrophy" codeSystem="1.3.6.1.4.1.12559.11.10.1.3.1.44.5"/>									
 								</observation>
 							</entryRelationship>
 						</act>
 					</entry>
-					<!-- DISEASE 3 Entry-->
+					<!-- Cardiogenital syndrome Entry-->
 					<entry typeCode="COMP" contextConductionInd="true">
 						<act classCode="ACT" moodCode="EVN">
 							<!-- XeH Problem Concern Entry -->
@@ -348,7 +348,7 @@
 										<low value="202010"/>
 									</effectiveTime>
 									<!-- OrphaNet code corrisponding to DISEASE 3 -->
-									<value xsi:type="CD" code="ZZZZZ" displayName="DISEASE 3 NAME" codeSystem="1.3.6.1.4.1.12559.11.10.1.3.1.44.5"/>									
+									<value xsi:type="CD" code="2229" displayName="Dilated cardiomyopathy-hypergonadotropic hypogonadism syndrome" codeSystem="1.3.6.1.4.1.12559.11.10.1.3.1.44.5"/>									
 								</observation>
 							</entryRelationship>
 						</act>
@@ -374,11 +374,11 @@
 							</thead>
 							<tbody>
 								<tr ID="med-1">
-									<td>Anastrozole</td>
-									<td>1 mg</td>
+									<td>Diltiazem hydrochloride</td>
+									<td>30 mg</td>
 									<td>tablet</td>
 									<td>once daily</td>
-									<td>treatment for RARE DISEASE 1</td>
+									<td>treatment for Idiopathic achalasia</td>
 								</tr>								
 							</tbody>
 						</table>
@@ -404,7 +404,7 @@
 									<templateId root="2.16.840.1.113883.10.22.4.3"/>
 									<manufacturedMaterial classCode="MMAT" determinerCode="KIND">
 										<templateId root="2.16.840.1.113883.10.22.4.3"/>
-										<code code="108774000" codeSystem="2.16.840.1.113883.6.96" displayName="Anastrozole (product)"/>											
+										<code code="108774000" codeSystem="2.16.840.1.113883.6.96" displayName="Diltiazem hydrochloride (substance)"/>											
 										<pharm:formCode code="10219000" codeSystem="0.4.0.127.0.16.1.1.2.1" displayName="Tablet"/>										
 									</manufacturedMaterial>
 								</manufacturedProduct>
@@ -420,7 +420,7 @@
 									<effectiveTime xsi:type="PIVL_TS" institutionSpecified="true">
 										<period value="1" unit="d"/>
 									</effectiveTime>
-									<doseQuantity>
+									<doseQuantity value="30" unit="mg"/>
 										<low value="1" unit="{tablet}"/>
 									</doseQuantity>
 									<consumable>
@@ -448,7 +448,7 @@
 					<code code="75310-3" codeSystem="2.16.840.1.113883.6.1" displayName="Health concerns Document"/>
 					<title>Alert Section</title>
 					<text>
-						<content ID="alert-1">Alert.........</content>						
+						<content ID="alert-1">In case of encrise of LES pressure perform operation to facilitating esophageal emptying by gravity and hydrostatic such as pneumatic dilation, surgical myotomy, and pharmacologic agents</content>						
 					</text>
 					<entry>
 						<act classCode="ACT" moodCode="EVN">
