@@ -1,0 +1,11 @@
+.DS_Store
+Thumbs.db
+/fsh-generated
+/input-cache
+/output
+/temp
+/template
+_*.*
+/_bak
+/gofsh
+/input/fsh/json-models/*.txt

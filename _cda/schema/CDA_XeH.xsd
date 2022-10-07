@@ -13,6 +13,8 @@ History:
 2018.06.28 Giorgio Cangioli, first version based on the ELGA XML schema created by Tony Schaller, medshare GmbH, Switzerland
 add missing versions....
 2022.05.13 Giorgio Cangioli, added XeH extensions
+2022.09.20 Jürgen Brandstätter, added Lab extensions, corrected and extended XeH extensions
+2022.09.29 Jürgen Brandstätter, added DICOM PS3.20 extensions
 
 *******************************************************************************
 -->

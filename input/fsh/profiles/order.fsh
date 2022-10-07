@@ -10,11 +10,11 @@ RuleSet: OrderCommonRules
 * subject 1..
 
 
-Profile: ServiceRequestLabXeH
+Profile: ServiceRequestLabXeh
 Parent: ServiceRequest
 Id: ServiceRequest-lab-xeh
 Title: "ServiceRequest: Laboratory Order"
-Description: "ServiceRequest used to represent a Laboratory Order for the scope of the XeHealth project."
+Description: "ServiceRequest used to represent a Laboratory Order for the scope of the Xehealth project."
 * insert OrderCommonRules
 // Clarify when to use ServiceRequest and RequestGroup
 * . ^short = "Laboratory Order"
@@ -25,11 +25,11 @@ Description: "ServiceRequest used to represent a Laboratory Order for the scope 
   // add invariant ?
 
 
-Profile: RequestGroupLabXeH
+Profile: RequestGroupLabXeh
 Parent: RequestGroup
 Id: RequestGroup-lab-xeh
 Title: "RequestGroup: Laboratory Order"
-Description: "RequestGroup used to represent a Laboratory Order for the scope of the XeHealth project."
+Description: "RequestGroup used to represent a Laboratory Order for the scope of the Xehealth project."
 * ^publisher = "X-eHealth Project"
 * ^copyright = "X-eHealth Project"
 * identifier 1..
