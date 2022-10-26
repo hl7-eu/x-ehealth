@@ -9,7 +9,7 @@ Description: "CDiagnosticReport used to represent an entry of a Laboratory Repor
 * . ^definition = "Laboratory Report DiagnosticReport"
 
 
-// add a reference also tot he RequestGroup to enable the retrievale of all the DiagnosticReports associated with a RequestGroup ?
+// add a reference also to the RequestGroup to enable the retrieval of all the DiagnosticReports associated with a RequestGroup ?
 
 /*
 content to be referred...

@@ -29,7 +29,7 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
 * entry contains composition 1..1
 * entry[composition].resource only CompositionLabReportXeh
 
-* entry contains diagnosticReport 1..*
+* entry contains diagnosticReport 0..1
 * entry[diagnosticReport].resource only DiagnosticReportLabXeh
 
 * entry contains patient 0..1
@@ -61,7 +61,7 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
 \r\nA composition is a set of healthcare-related information that is assembled together into a single logical document that provides a single coherent statement of meaning, establishes its own context and that has clinical attestation with regard to who is making the statement. \r\nWhile a Composition defines the structure, it does not actually contain the content: rather the full content of a document is contained in a Bundle, of which the Composition is the first resource contained."
 // what to do with the composition text ?
 // should we make it 0.. ?
-// or have text repeated here and int he secitons ?
+// or have text repeated here and in the sections ?
 * extension contains OrderFulfilled named order 0..*
 * extension[order].valueReference only Reference( ServiceRequestLabXeh or RequestGroupLabXeh)
 
@@ -88,9 +88,9 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
 * author 1..
 * author ^short = "Who and/or what authored the Laboratory Report"
 * author ^definition = "Identifies who is responsible for the information in the Laboratory Report, not necessarily who typed it in."
-* attester 1..
+* attester 1.. // RH - should attester be 1.. or 0..? - since author is also required? 
 * event ^short = "The laboratory service(s) being documented"
-// add deatuils avìbout the service
+// add details about the service
 * title 1..
 * title ^short = "Laboratory Report"
 * title ^definition = "Official human-readable label for the composition.\r\n\r\nFor this document should be \"Laboratory Report\" or any equivalent translation"
@@ -100,6 +100,7 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
 // ServiceRequest and/or RequestGroup
 
 // add attester
+// RH - attester is already being included above?
 
 // 
 
@@ -134,9 +135,10 @@ How to manage the annotation section ? should it be a separate section ?
 // * section.code = http://loinc.org#75310-3 (exactly) // add binding
 * section[no-subsections].text 1..
 * section[no-subsections].text only Narrative
-// add slices check the needed resoucres
-// check structure od XD-LAB
-* section[no-subsections].entry only Reference (DiagnosticReportLabXeh)
+// add slices check the needed resources
+// check structure of XD-LAB
+// RH - allow a choice of both DiagnosticReport (optional) and Observation Results Lab (can be a single observation, or a grouper of nested observations)
+* section[no-subsections].entry only Reference (DiagnosticReportLabXeh or ObservationResultsLaboratoryXeh)
 * section[no-subsections].section ..0
 
 // -------------------------------------
@@ -149,6 +151,8 @@ How to manage the annotation section ? should it be a separate section ?
 * section[subsections].title 1..
 * section[subsections].code 1..
 * section[subsections].code only http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
+// Should we also include the LabStudyTypesXeh (preferred) binding here?
+* section[subsections].code from LabStudyTypesXeh (preferred)
 // * section.code = http://loinc.org#75310-3 (exactly) // add binding
 * section[subsections].text 0..0
 * section[subsections].entry 0..0
@@ -157,10 +161,13 @@ How to manage the annotation section ? should it be a separate section ?
 * section[subsections].section 1..
   * section.code 1..
   * section.code only http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
+  // And include the LabStudyTypesXeh (preferred) binding for the subsection here?
+  * section.code from LabStudyTypesXeh (preferred)
   // * section.code = http://loinc.org#75310-3 (exactly) // add binding
   * section.text 1..
   * section.entry 1..
   * section.text only Narrative
-// add slices check the needed resoucres
-// check structure od XD-LAB
-  * section.entry only Reference (DiagnosticReportLabXeh)
+  // add slices check the needed resoucres
+  // check structure od XD-LAB
+  // RH - allow a choice of both DiagnosticReport (optional) and Observation Results Lab (can be a single observation, or a grouper of nested observations)
+  * section.entry only Reference (DiagnosticReportLabXeh or ObservationResultsLaboratoryXeh)
