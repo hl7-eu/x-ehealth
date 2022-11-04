@@ -37,8 +37,16 @@ Alias: $patient-mothersMaidenName = http://hl7.org/fhir/StructureDefinition/pati
 Alias: $event-statusReason = http://hl7.org/fhir/StructureDefinition/event-statusReason
 Alias: $procedure-method = http://hl7.org/fhir/StructureDefinition/procedure-method
 Alias: $workflow-supportingInfo = http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo
-
+Alias: $bodySite = http://hl7.org/fhir/StructureDefinition/bodySite
+Alias: $flag-detail = http://hl7.org/fhir/StructureDefinition/flag-detail
+Alias: $flag-priority = http://hl7.org/fhir/StructureDefinition/flag-priority
 
 // --- Profiles
 Alias: $Patient-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips
 Alias: $Organization-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Organization-uv-ips
+Alias: $DiagnosticReport-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/DiagnosticReport-uv-ips
+Alias: $Condition-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips
+Alias: $MedicationStatement-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/MedicationStatement-uv-ips
+
+
+//=========================

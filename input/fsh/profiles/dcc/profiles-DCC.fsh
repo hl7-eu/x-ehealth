@@ -1,6 +1,4 @@
-
 //====== Profiles =====================================
-
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Profile:  CompositionDCC
@@ -10,7 +8,6 @@ Title: "Composition (Digital COVID Certificate)"
 Description: "This profile defines how to represent a vaccination certificate in FHIR by using a Composition resource"
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-* ^publisher = "Giorgio Cangioli"
 * ^purpose = "An International Patient Summary (IPS) document is an electronic health record extract containing essential healthcare information about a subject of care, comprising at least the required elements of the IPS dataset. The IPS dataset is minimal and non-exhaustive; specialty-agnostic and condition-independent; but still clinically relevant. As specified in EN 17269 and ISO/DIS 27269, it is designed for supporting the use case scenario for ‘unplanned, cross border care’, but it is not limited to it. It is intended to be international, i.e., to provide generic solutions for global application beyond a particular region or country."
 * . MS
 * . ^short = "Digital COVID Certificate composition"
@@ -258,14 +255,12 @@ Description: "This profile defines how to represent the Digital COVID Certificat
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Profile:  BundleDCC
 Parent: Bundle
-Id: Bundle-dgc
-Title: "Bundle (Digital COVID Certificate)"
+Id: Bundle-dcc
+Title: "Bundle: Digital COVID Certificate"
 Description: "This profile defines how to represent a vaccination certificate in FHIR by using a Bundle resource"
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-* ^publisher = "Giorgio Cangioli"
 * ^purpose = "The Digital COVID Certificate is designed to facilitate safe free movement inside the EU during the COVID-19 pandemic. The Digital COVID Certificate will be a proof that a person has been vaccinated against COVID-19, received a negative test result or recovered from COVID-19"
-* . MS
 * . ^short = "Digital COVID Certificate Bundle"
 * . ^definition = "Digital COVID Certificate Bundle. \r\nA composition is a set of healthcare-related information that is assembled together into a single logical document that provides a single coherent statement of meaning, establishes its own context and that has clinical attestation with regard to who is making the statement. \r\nWhile a Composition defines the structure, it does not actually contain the content: rather the full content of a document is contained in a Bundle, of which the Composition is the first resource contained."
 * identifier 1.. MS
