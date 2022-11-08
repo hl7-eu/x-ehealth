@@ -1,5 +1,5 @@
 Profile: CompositionPsXehealth
-Parent: http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips
+Parent: $Composition-uv-ips
 Id: Composition-ps-xeh
 Title: "Patient Summary (X-eHealth)"
 Description: "Clinical document used to represent a Patient Summary (PS) for the scope of the XeHealth project."
