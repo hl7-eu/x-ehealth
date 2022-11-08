@@ -55,8 +55,10 @@ Title:    "Flag (X-eHealth)"
 Description: "This profile constrains the Flag resource to represent alerts or warnings in FHIR for the purpose of the X-eHealth project."
 //-------------------------------------------------------------------------------------------
 
-* extension contains $flag-detail named $flagDetailExt 0..*
-* extension contains $flag-priority named $flagPriorityExt 0..*
+* extension contains $flag-detail named flagDetailExt 0..*
+* extension contains $flag-priority named flagPriorityExt 0..*
+* extension[flagDetailExt]
+* extension[flagPriorityExt]
 * status MS
 * code MS
 * subject MS
@@ -72,7 +74,7 @@ Description: "This profile defines how to represent Condition in FHIR for the pu
 
 //-------------------------------------------------------------------------------------------
 
-* extension contains $bodySite named bodySiteExt 0..*
+// * extension contains $bodySite named bodySiteExt 0..*
 * identifier ^definition = "Globally unique identifier of this problem which remain constant as the resource is updated and propagates from server to server."
 * recordedDate ^definition = "Date (and time) when this problem was recorded into information system."
 * severity MS
@@ -90,6 +92,7 @@ Description: "This profile defines how to represent Condition in FHIR for the pu
 * verificationStatus ^definition = "The verification status to support the clinical status of the condition."
 * note ^definition = "Comment by the one who determined or updated the Problem." 
 * bodySite  ^definition = "Anatomical location which is the focus of the problem."
+
 
 
 

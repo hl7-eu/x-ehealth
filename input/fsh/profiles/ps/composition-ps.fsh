@@ -88,3 +88,4 @@ Description: "Clinical document used to represent a Patient Summary (PS) for the
 // Care Team 0 .. 1
 // -------------------------------------
 
+* insert CareTeamSectionRules

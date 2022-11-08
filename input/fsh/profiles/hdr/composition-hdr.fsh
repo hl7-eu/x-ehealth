@@ -1,6 +1,6 @@
 Profile: CompositionHdrXehealth
 Parent: http://hl7.org/fhir/StructureDefinition/clinicaldocument
-Id: Composition-ips-xeh
+Id: Composition-hdr-xeh
 Title: "Hospital Discharge Report (X-eHealth)"
 Description: "Clinical document used to represent a Hospital Discharge Report (HDR) for the scope of the XeHealth project."
 * ^publisher = "X-eHealth Project"
