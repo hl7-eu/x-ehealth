@@ -3,7 +3,7 @@ InstanceOf: Bundle
 Title: "Bundle GIST as PS"
 Description: "GIST as PS"
 Usage: #example
-* identifier.system = "http://example.orgpid"
+* identifier.system = "http://example.org"
 * identifier.value = "V1CZ454557891308174803488707671418"
 * type = #document
 * timestamp = "2020-12-27T14:30:00+01:00"
