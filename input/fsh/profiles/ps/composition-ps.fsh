@@ -34,7 +34,10 @@ Description: "Clinical document used to represent a Patient Summary (PS) for the
 // -------------------------------------
 // Alert 0 .. 1
 // -------------------------------------
-* section contains AlertSection ..1 MS
+
+* insert AlertSectionRules
+
+/* * section contains AlertSection ..1 MS
 * section[AlertSection] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
 * section[AlertSection] ^extension[0].valueString = "Section"
 * section[AlertSection] ^short = "Health Concern Section"
@@ -78,42 +81,10 @@ Description: "Clinical document used to represent a Patient Summary (PS) for the
 * section[AlertSection].emptyReason ..0
 * section[AlertSection].emptyReason ^mustSupport = false
 * section[AlertSection].section ..0
-* section[AlertSection].section ^mustSupport = false
+* section[AlertSection].section ^mustSupport = false */
 
 
 // -------------------------------------
 // Care Team 0 .. 1
 // -------------------------------------
-* section contains CareTeamSection ..1 MS
-* section[CareTeamSection] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
-* section[CareTeamSection] ^extension[0].valueString = "Section"
-* section[CareTeamSection] ^short = "Care Team Section"
-* section[CareTeamSection] ^definition = "The Care Team Section is used to share historical and current Care Team information."
-* section[CareTeamSection].title 1.. MS
-* section[CareTeamSection].code 1.. MS
-* section[CareTeamSection].code only http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
-* section[CareTeamSection].code = http://loinc.org#85847-2 (exactly)
-* section[CareTeamSection].text 1.. MS
-* section[CareTeamSection].text only Narrative
 
-// ==> add slices
-
-* section[CareTeamSection].entry 0.. 
-* section[CareTeamSection].entry ^slicing.discriminator[0].type = #type
-* section[CareTeamSection].entry ^slicing.discriminator[0].path = "resolve()"
-* section[CareTeamSection].entry ^slicing.ordered = false
-* section[CareTeamSection].entry ^slicing.rules = #open
-* section[CareTeamSection].entry ^short = "Care Teams"
-* section[CareTeamSection].entry ^definition = "Care Teams"
-
-* section[CareTeamSection].entry contains flags 0..1
-* section[CareTeamSection].entry[flags] 0.. MS
-* section[CareTeamSection].entry[flags] ^short = "Care Team"
-* section[CareTeamSection].entry[flags] ^definition = "Care Team"
-* section[CareTeamSection].entry[flags] only Reference(CareTeamXeh)
-
-
-* section[CareTeamSection].emptyReason ..0
-* section[CareTeamSection].emptyReason ^mustSupport = false
-* section[CareTeamSection].section ..0
-* section[CareTeamSection].section ^mustSupport = false
