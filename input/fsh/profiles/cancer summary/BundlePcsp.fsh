@@ -7,13 +7,13 @@ Expression: "entry.tail().where(resource is Composition).empty()"
 Profile: BundleXeh
 Parent: Bundle
 Id: Bundle-eu-xeh
-Title: "Bundle: Survivor Passport"
+Title: "Bundle: Cancer Summary"
 Description: "This profile represents the constraints applied to the Bundle resource by the Xeh FHIR Implementation Guide."
 //===================================
 
 * obeys bdl-xeh-1
-* . ^short = "Survivorship Passport (SurPass) Bundle"
-* . ^definition = "Survivorship Passport Bundle. \r\nA container for a collection of resources in the patient summary document."
+* . ^short = "Cancer Summary Bundle"
+* . ^definition = "Cancer Summary Bundle. \r\nA container for a collection of resources in the patient summary document."
 * identifier 1.. 
 * type = #document (exactly)
 * timestamp 1.. 
@@ -24,7 +24,7 @@ Description: "This profile represents the constraints applied to the Bundle reso
 * entry ^slicing.discriminator[+].type = #profile
 * entry ^slicing.discriminator[=].path = "resource"
 * entry ^slicing.rules = #open
-* entry ^short = "Entry resource in the SurPass bundle"
+* entry ^short = "Entry resource in the Cancer Summary bundle"
 * entry ^definition = "An entry resource included in the surpass document bundle resource. "
 * entry ^comment = "Must contain the Xeh Composition as the first entry (only a single Composition resource instance may be included).  Additional constraints are specified in the Xeh Composition profile."
 * entry.fullUrl 1..

@@ -50,7 +50,13 @@ Description: "Clinical document used to represent a Hospital Discharge Report fo
     observation-alcohol-use 0..* and
     observation-tobacco-use 0..* and
     observation-results 0..* and
-    specimen 0..*
+    specimen 0..* and
+    medicationDispense 0..* and
+    medicationAdministration  0..* and
+    familyMemberHistory 0..* and
+    documentReference 0..* and
+    flag 0..*
+
 * entry[composition].resource 1..
 * entry[composition].resource only CompositionHdrXehealth
 * entry[patient].resource 1..
@@ -58,7 +64,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report fo
 * entry[allergyintolerance].resource 1..
 * entry[allergyintolerance].resource only $AllergyIntolerance-uv-ips
 * entry[condition].resource 1..
-* entry[condition].resource only $Condition-uv-ips
+* entry[condition].resource only $Condition-uv-ips or Condition
 * entry[device].resource 1..
 * entry[device].resource only Device
 * entry[deviceusestatement].resource 1..
@@ -99,6 +105,23 @@ Description: "Clinical document used to represent a Hospital Discharge Report fo
 * entry[observation-results].resource only $Observation-results-uv-ips
 * entry[specimen].resource 1..
 * entry[specimen].resource only $Specimen-uv-ips
+* entry[medicationAdministration].resource 1..
+* entry[medicationAdministration].resource only MedicationAdministration
+* entry[medicationDispense].resource 1..
+* entry[medicationDispense].resource only MedicationDispense
+
+* entry[flag].resource 1..
+* entry[flag].resource only FlagXeh
+
+* entry[familyMemberHistory].resource 1..
+* entry[familyMemberHistory].resource only FamilyMemberHistory
+
+* entry[documentReference].resource 1..
+* entry[documentReference].resource only DocumentReference
+
+
+
+
 
 Invariant: bdl-ips-1
 Description: "An IPS document must have no additional Composition (including Composition subclass) resources besides the first."
