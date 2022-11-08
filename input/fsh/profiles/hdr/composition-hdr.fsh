@@ -172,7 +172,10 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 // -------------------------------------
 // Alert 0 .. 1
 // -------------------------------------
-* section contains AlertSection ..1 MS
+
+* insert AlertSectionRules
+
+/* * section contains AlertSection ..1 MS
 * section[AlertSection] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
 * section[AlertSection] ^extension[0].valueString = "Section"
 * section[AlertSection] ^short = "Health Concern Section"
@@ -184,7 +187,6 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 * section[AlertSection].text 1.. MS
 * section[AlertSection].text only Narrative
 // ==> add slices
-
 * section[AlertSection].entry 0.. 
 * section[AlertSection].entry ^slicing.discriminator[0].type = #type
 * section[AlertSection].entry ^slicing.discriminator[0].path = "resolve()"
@@ -193,12 +195,10 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 * section[AlertSection].entry ^short = "Alerts"
 * section[AlertSection].entry ^definition = "Alerts"
 * section[AlertSection].entry contains flags 0..1
-
 * section[AlertSection].entry[flags] 0.. MS
 * section[AlertSection].entry[flags] only Reference(FlagXeh)
-
 * section[AlertSection].emptyReason ..0
-* section[AlertSection].emptyReason ^mustSupport = false
+* section[AlertSection].emptyReason ^mustSupport = false */
 
 // -------------------------------------
 // History of Procedures Section 0 … 1
@@ -332,6 +332,10 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 * section[sectionFunctionalStatus].emptyReason ..0
 * section[sectionFunctionalStatus].emptyReason ^mustSupport = false
 
+// -------------------------------------
+// Care Team 0 … 1
+// -------------------------------------
+* insert CareTeamSectionRules
 
 // -------------------------------------
 // Gynaecological-obstetric history 0 … 1
@@ -588,8 +592,6 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 
 
 
-
-
 // -------------------------------------
 * section contains sectionAdvanceDirectives ..1 MS
 * section[sectionAdvanceDirectives] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
@@ -606,7 +608,6 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 * section[sectionAdvanceDirectives].entry only Reference(Consent or DocumentReference)
 * section[sectionAdvanceDirectives].emptyReason ..0
 * section[sectionAdvanceDirectives].emptyReason ^mustSupport = false
-
 
 // -------------------------------------
 
