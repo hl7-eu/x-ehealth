@@ -56,6 +56,12 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 
 
 * section contains patientHxSection ..1 MS
+* section[patientHxSection]
+  * insert SectionComRules ( Patient History Section,  
+  This Section describes all aspects of the medical history of the patient even if not pertinent to the current procedure\, and may include chief complaint\, past medical history\, social history\, family history\, surgical or procedure history\, medication history\, and other history information. The history may be limited to information pertinent to the current procedure or may be more comprehensive. The history may be reported as a collection of random clinical statements or it may be reported categorically. Categorical report formats may be divided into multiple subsections including Past Medical History\, Social History.,
+   http://loinc.org#11329-0 )
+
+/* 
 * section[patientHxSection] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
 * section[patientHxSection] ^extension[0].valueString = "Section"
 * section[patientHxSection] ^short = "Patient History Section"
@@ -67,24 +73,24 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 * section[patientHxSection].text 1.. MS
 * section[patientHxSection].text only Narrative
 * section[patientHxSection].emptyReason ..0
-* section[patientHxSection].emptyReason ^mustSupport = false
+* section[patientHxSection].emptyReason ^mustSupport = false */
 
 // -------------------------------------
 // Admission Diagnosis Section 0 … 1 R
 // -------------------------------------
 
 * section contains admissionDiagnosisSection ..1 MS
-
-/* * section[admissionDiagnosisSection]
+* section[admissionDiagnosisSection]
   * insert SectionComRules ( 
     Admission Diagnosis, // SHORT
       Admission Diagnosis, // DESC
-      http://loinc.org#46241-6 )   // CODE
+      http://loinc.org#46241-6  )   // CODE
   * entry 0.. MS
   * insert SectionEntrySliceComRules(Admission Diagnosis, Admission Diagnosis)
-  * insert SectionEntrySliceDefRules (admissionDiagnosis, 0.. , Admission Diagnosis , Admission Diagnosis , Condition) */
+  // entry slices
+  * insert SectionEntrySliceDefRules (admissionDiagnosis, 0.. , Admission Diagnosis , Admission Diagnosis , Condition)
 
-* section[admissionDiagnosisSection] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
+/* * section[admissionDiagnosisSection] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
 * section[admissionDiagnosisSection] ^extension[0].valueString = "Section"
 * section[admissionDiagnosisSection] ^short = "Admission Diagnosis Section"
 * section[admissionDiagnosisSection] ^definition = "This section contains a narrative description of the problems or diagnoses identified by the clinician at the time of the patient’s admission. This section may contain coded entries representing the admitting diagnoses."
@@ -99,14 +105,36 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 * section[admissionDiagnosisSection].entry ^short = "Admission Diagnosis"
 * section[admissionDiagnosisSection].entry ^definition = "Admission Diagnosis"
 * section[admissionDiagnosisSection].emptyReason ..0
-* section[admissionDiagnosisSection].emptyReason ^mustSupport = false
+* section[admissionDiagnosisSection].emptyReason ^mustSupport = false */
 
 
 // ------------------------------------- 
 // Admission Medications Section 0 … 1 R
 // -------------------------------------
 * section contains sectionAdmissionMedications ..1 MS
-* section[sectionAdmissionMedications] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
+
+
+* section[sectionAdmissionMedications]
+  * insert SectionComRules ( 
+    Admission Medications, // SHORT
+      Admission Medications, // DESC
+      http://loinc.org#42346-7  )   // CODE
+  * entry 0.. MS
+  * entry only Reference(MedicationStatement
+                          or MedicationRequest
+                          or MedicationAdministration 
+                          or MedicationDispense
+                          or DocumentReference  )
+
+  * insert SectionEntrySliceComRules(Admission Medication, Admission Medication)
+  // entry slices
+  * insert SectionEntrySliceDefRules (medicationStatement, 0.. , Admission Medication Statement ,
+    Admission Medication Statement  , $MedicationStatement-uv-ips)
+  * insert SectionEntrySliceDefRules (medicationRequest, 0.. , Admission Medication Request ,
+    Admission Medication Request  , $MedicationRequest-uv-ips)
+
+
+/* * section[sectionAdmissionMedications] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
 * section[sectionAdmissionMedications] ^extension[0].valueString = "Section"
 * section[sectionAdmissionMedications] ^short = "Admission Medications"
 * section[sectionAdmissionMedications].title 1.. MS
@@ -117,7 +145,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 * section[sectionAdmissionMedications].entry MS
 * section[sectionAdmissionMedications].entry only Reference($MedicationStatement-uv-ips or $MedicationRequest-uv-ips or MedicationAdministration or MedicationDispense)
 * section[sectionAdmissionMedications].emptyReason ..0
-* section[sectionAdmissionMedications].emptyReason ^mustSupport = false
+* section[sectionAdmissionMedications].emptyReason ^mustSupport = false */
 
 
 
@@ -126,7 +154,12 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 // Chief Complaint and Reason for Visit Section 0 … 1
 // -------------------------------------
 * section contains CCandReasonforVisitSection ..1 MS
-* section[CCandReasonforVisitSection] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
+* section[CCandReasonforVisitSection]
+  * insert SectionComRules (Chief Complaint and Reason for Visit, 
+                          This section records the patient's chief complaint (the patient’s own description\) and/or the reason for the patient's visit (the provider’s description of the reason for visit\). Local policy determines whether the information is divided into two sections or recorded in one section serving both purposes., 
+                             http://loinc.org#46239-0  )
+          
+/* * section[CCandReasonforVisitSection] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
 * section[CCandReasonforVisitSection] ^extension[0].valueString = "Section"
 * section[CCandReasonforVisitSection] ^short = "Chief Complaint and Reason for Visit"
 * section[CCandReasonforVisitSection] ^definition = "This section records the patient's chief complaint (the patient’s own description) and/or the reason for the patient's visit (the provider’s description of the reason for visit). Local policy determines whether the information is divided into two sections or recorded in one section serving both purposes."
@@ -137,7 +170,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 * section[CCandReasonforVisitSection].text 1.. MS
 * section[CCandReasonforVisitSection].text only Narrative
 * section[CCandReasonforVisitSection].emptyReason ..0
-* section[CCandReasonforVisitSection].emptyReason ^mustSupport = false
+* section[CCandReasonforVisitSection].emptyReason ^mustSupport = false */
 
 
 
@@ -146,8 +179,22 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 // Problems Section 0 … 1 R
 // -------------------------------------
 
-* section contains sectionProblems ..1 MS
-* section[sectionProblems] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
+* section contains sectionProblems ..1
+* section[sectionProblems] 
+  * insert SectionComRules ( 
+    HDR Problems Section, // SHORT
+      The HDR problem section lists and describes clinical problems or conditions currently being monitored for the patient., // DESC
+      http://loinc.org#11450-4 )   // CODE
+  * entry 1..
+  * entry only Reference(Condition
+                          or DocumentReference  )
+  * insert SectionEntrySliceComRules(Clinical problems or conditions currently being monitored for the patient.,
+    It lists and describes clinical problems or conditions currently being monitored for the patient.  This entry shall be used to document that no information about problems is available\, or that no relevant problems are known.)
+  // entry slices
+  * insert SectionEntrySliceDefRules (problemIps, 0.. , Problem ,
+    Problem  , $Condition-uv-ips)
+
+/* * section[sectionProblems] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
 * section[sectionProblems] ^extension[0].valueString = "Section"
 * section[sectionProblems] ^short = "HDR Problems Section"
 * section[sectionProblems] ^definition = "The HDR problem section lists and describes clinical problems or conditions currently being monitored for the patient."
@@ -157,19 +204,35 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 * section[sectionProblems].code = http://loinc.org#11450-4 (exactly)
 * section[sectionProblems].text 1.. MS
 * section[sectionProblems].text only Narrative
-* section[sectionProblems].entry 1.. MS
-* section[sectionProblems].entry only Reference($Condition-uv-ips)
+* section[sectionProblems].entry 1.. MS */
+
+/* * section[sectionProblems].entry only Reference($Condition-uv-ips)
 * section[sectionProblems].entry ^short = "Clinical problems or conditions currently being monitored for the patient."
 * section[sectionProblems].entry ^definition = "It lists and describes clinical problems or conditions currently being monitored for the patient.  This entry shall be used to document that no information about problems is available, or that no relevant problems are known."
 * section[sectionProblems].emptyReason ..0
-* section[sectionProblems].emptyReason ^mustSupport = false
+* section[sectionProblems].emptyReason ^mustSupport = false */
 
 
 // -------------------------------------
 // Allergies and Intolerances Section 0 … 1
 // -------------------------------------
 * section contains sectionAllergies 1..1 MS
-* section[sectionAllergies] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
+
+* section[sectionAllergies]
+  * insert SectionComRules ( 
+    HDR Allergies and Intolerances Section, // SHORT
+      This section documents the relevant allergies or intolerances (conditions\) for that patient\, describing the kind of reaction (e.g. rash\, anaphylaxis\,..\); preferably the agents that cause it; and optionally the criticality and the certainty of the allergy.\r\nAt a minimum\, it should list currently active and any relevant historical allergies and adverse reactions.\r\nIf no information about allergies is available\, or if no allergies are known this should be clearly documented in the section. // DESC
+      ,  http://loinc.org#48765-2 )   // CODE
+  * entry 1..
+  * entry only Reference(AllergyIntolerance or DocumentReference  )
+  * insert SectionEntrySliceComRules(Relevant allergies or intolerances (conditions\) for that patient.,
+    It lists the relevant allergies or intolerances (conditions\) for that patient\, describing the kind of reaction (e.g. rash\, anaphylaxis\,..\); preferably the agents that cause it; and optionally the criticality and the certainty of the allergy.\r\nAt a minimum\, it should list currently active and any relevant historical allergies and adverse reactions.\r\n This entry shall be used to document that no information about allergies is available\, or that no allergies are known .)
+  // entry slices
+  * insert SectionEntrySliceDefRules (allergyIntolerance, 0.. , HDR Allergy entry ,
+    HDR Allergy entry  , $AllergyIntolerance-uv-ips)
+
+
+/* * section[sectionAllergies] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
 * section[sectionAllergies] ^extension[0].valueString = "Section"
 * section[sectionAllergies] ^short = "HDR Allergies and Intolerances Section"
 * section[sectionAllergies] ^definition = "This section documents the relevant allergies or intolerances (conditions) for that patient, describing the kind of reaction (e.g. rash, anaphylaxis,..); preferably the agents that cause it; and optionally the criticality and the certainty of the allergy.\r\nAt a minimum, it should list currently active and any relevant historical allergies and adverse reactions.\r\nIf no information about allergies is available, or if no allergies are known this should be clearly documented in the section."
@@ -184,7 +247,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 * section[sectionAllergies].entry ^short = "Relevant allergies or intolerances (conditions) for that patient."
 * section[sectionAllergies].entry ^definition = "It lists the relevant allergies or intolerances (conditions) for that patient, describing the kind of reaction (e.g. rash, anaphylaxis,..); preferably the agents that cause it; and optionally the criticality and the certainty of the allergy.\r\nAt a minimum, it should list currently active and any relevant historical allergies and adverse reactions.\r\n This entry shall be used to document that no information about allergies is available, or that no allergies are known ."
 * section[sectionAllergies].emptyReason ..0
-* section[sectionAllergies].emptyReason ^mustSupport = false
+* section[sectionAllergies].emptyReason ^mustSupport = false */
 
 
 // -------------------------------------
@@ -193,35 +256,25 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 
 * insert AlertSectionRules
 
-/* * section contains AlertSection ..1 MS
-* section[AlertSection] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
-* section[AlertSection] ^extension[0].valueString = "Section"
-* section[AlertSection] ^short = "Health Concern Section"
-* section[AlertSection] ^definition = "This section contains data describing an interest or worry about a health state or process that could possibly require attention, intervention, or management. A Health Concern is a health related matter that is of interest, importance or worry to someone, who may be the patient, patient's family or patient's health care provider. Health concerns are derived from a variety of sources within an EHR (such as Problem List, Family History, Social History, Social Worker Note, etc.). Health concerns can be medical, surgical, nursing, allied health or patient-reported concerns. Problem Concerns are a subset of Health Concerns that have risen to the level of importance that they typically would belong on a classic “Problem List”, such as “Diabetes Mellitus” or “Family History of Melanoma” or “Tobacco abuse”. These are of broad interest to multiple members of the care team. Examples of other Health Concerns that might not typically be considered a Problem Concern include “Risk of Hyperkalemia” for a patient taking an ACE-inhibitor medication, or “Transportation difficulties” for someone who doesn't drive and has trouble getting to appointments, or “Under-insured” for someone who doesn't have sufficient insurance to properly cover their medical needs such as medications. These are typically most important to just a limited number of care team members."
-* section[AlertSection].title 1.. MS
-* section[AlertSection].code 1.. MS
-* section[AlertSection].code only http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
-* section[AlertSection].code = http://loinc.org#75310-3 (exactly)
-* section[AlertSection].text 1.. MS
-* section[AlertSection].text only Narrative
-// ==> add slices
-* section[AlertSection].entry 0.. 
-* section[AlertSection].entry ^slicing.discriminator[0].type = #type
-* section[AlertSection].entry ^slicing.discriminator[0].path = "resolve()"
-* section[AlertSection].entry ^slicing.ordered = false
-* section[AlertSection].entry ^slicing.rules = #open
-* section[AlertSection].entry ^short = "Alerts"
-* section[AlertSection].entry ^definition = "Alerts"
-* section[AlertSection].entry contains flags 0..1
-* section[AlertSection].entry[flags] 0.. MS
-* section[AlertSection].entry[flags] only Reference(FlagXeh)
-* section[AlertSection].emptyReason ..0
-* section[AlertSection].emptyReason ^mustSupport = false */
-
 // -------------------------------------
 // History of Procedures Section 0 … 1
 // -------------------------------------
 * section contains sectionProceduresHx ..1 MS
+* section[sectionProceduresHx]
+  * insert SectionComRules ( 
+    HDR History of Procedures Section, // SHORT
+      The History of Procedures Section contains a description of the patient past procedures that are pertinent to the scope of this document.\r\nProcedures may refer for example to:\r\n1. Invasive Diagnostic procedure:e.g. Cardiac catheterization; (the results of these procedure are documented in the results section\)\r\n2. Therapeutic procedure: e.g. dialysis;\r\n3. Surgical procedure: e.g. appendectomy // DESC
+      ,  http://loinc.org#47519-4 )   // CODE
+  * entry 1..
+  * entry only Reference(Procedure
+                          or DocumentReference  )
+  * insert SectionEntrySliceComRules(Patient past procedures pertinent to the scope of this document.,
+    It lists the patient past procedures that are pertinent to the scope of this document.\r\nProcedures may refer for example to:\r\n1. Invasive Diagnostic procedure:e.g. Cardiac catheterization; (the results of these procedure are documented in the results section\)\r\n2. Therapeutic procedure: e.g. dialysis;\r\n3. Surgical procedure: e.g. appendectomy. This entry shall be used to document that no information about past procedures is available\, or that no relevant past procedures are known.)
+  // entry slices
+  * insert SectionEntrySliceDefRules (procedure, 0.. , Past Procedure entry ,
+    Past Procedure entry  , $Procedure-uv-ips)
+
+/* 
 * section[sectionProceduresHx] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
 * section[sectionProceduresHx] ^extension[0].valueString = "Section"
 * section[sectionProceduresHx] ^short = "HDR History of Procedures Section"
@@ -237,7 +290,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 * section[sectionProceduresHx].entry ^short = "Patient past procedures pertinent to the scope of this document."
 * section[sectionProceduresHx].entry ^definition = "It lists the patient past procedures that are pertinent to the scope of this document.\r\nProcedures may refer for example to:\r\n1. Invasive Diagnostic procedure:e.g. Cardiac catheterization; (the results of these procedure are documented in the results section)\r\n2. Therapeutic procedure: e.g. dialysis;\r\n3. Surgical procedure: e.g. appendectomy. This entry shall be used to document that no information about past procedures is available, or that no relevant past procedures are known."
 * section[sectionProceduresHx].emptyReason ..0
-* section[sectionProceduresHx].emptyReason ^mustSupport = false
+* section[sectionProceduresHx].emptyReason ^mustSupport = false */
 
 
 // -------------------------------------
