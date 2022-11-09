@@ -61,6 +61,25 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 * section[patientHxSection].emptyReason ^mustSupport = false
 * section[patientHxSection].section ^mustSupport = false
 
+
+* section[patientHxSection]
+  * insert SectionComRules ( 
+    Patient History Section, // SHORT
+      This Section describes all aspects of the medical history of the patient even if not pertinent to the current procedure\, and may include chief complaint\, past medical history\, social history\, family history\, surgical or procedure history\, medication history\, and other history information. The history may be limited to information pertinent to the current procedure or may be more comprehensive. The history may be reported as a collection of random clinical statements or it may be reported categorically. Categorical report formats may be divided into multiple subsections including Past Medical History\, Social History. , // DESC
+      http://loinc.org#75310-3 )   // CODE
+  * entry 0..
+  * insert SectionEntrySliceComRules(Alerts, Alerts)
+  // entry slices
+  * insert SectionEntrySliceDefRules (flag, 0.. , Flags , Flags , FlagXeh)
+  * insert SectionEntrySliceDefRules (detectedIssue, 0.. ,  Detected Issue,
+    Indicates an actual or potential clinical issue with or between one or more active or proposed clinical actions for a patient; e.g. Drug-drug interaction\, Ineffective treatment frequency\, Procedure-condition conflict\, etc. ,
+    DetectedIssue)
+
+  * insert SectionEntrySliceDefRules (riskAssessment, 0.. , Risk Assessment,
+    An assessment of the likely outcomes for a patient or other subject as well as the likelihood of each outcome. ,
+    RiskAssessment)
+
+
 // -------------------------------------
 // Admission Diagnosis Section 0 … 1 R
 // -------------------------------------

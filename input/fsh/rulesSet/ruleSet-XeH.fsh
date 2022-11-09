@@ -46,20 +46,6 @@ RuleSet: NoSubSectionsRules
 RuleSet: AlertSectionRules
 // Alert Section used for the HDR and PS composition
 * section contains AlertSection ..1 MS
-
-/*   * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
-  * ^extension[0].valueString = "Section"
-  * ^short = "Health Concern Section"
-  * ^definition = "This section contains data describing an interest or worry about a health state or process that could possibly require attention, intervention, or management. A Health Concern is a health related matter that is of interest, importance or worry to someone, who may be the patient, patient's family or patient's health care provider. Health concerns are derived from a variety of sources within an EHR (such as Problem List, Family History, Social History, Social Worker Note, etc.). Health concerns can be medical, surgical, nursing, allied health or patient-reported concerns. Problem Concerns are a subset of Health Concerns that have risen to the level of importance that they typically would belong on a classic “Problem List”, such as “Diabetes Mellitus” or “Family History of Melanoma” or “Tobacco abuse”. These are of broad interest to multiple members of the care team. Examples of other Health Concerns that might not typically be considered a Problem Concern include “Risk of Hyperkalemia” for a patient taking an ACE-inhibitor medication, or “Transportation difficulties” for someone who doesn't drive and has trouble getting to appointments, or “Under-insured” for someone who doesn't have sufficient insurance to properly cover their medical needs such as medications. These are typically most important to just a limited number of care team members."
-  * title 1.. 
-  * code 1.. 
-  * code only http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
-  * code = http://loinc.org#75310-3 (exactly)
-  * text 1.. MS
-  * text only Narrative
-  * emptyReason ..0
-  * emptyReason ^mustSupport = false */
-
 * section[AlertSection]
   * insert SectionComRules ( 
     Health Concern Section, // SHORT
@@ -76,22 +62,6 @@ RuleSet: AlertSectionRules
   * insert SectionEntrySliceDefRules (riskAssessment, 0.. , Risk Assessment,
     An assessment of the likely outcomes for a patient or other subject as well as the likelihood of each outcome. ,
     RiskAssessment)
-
-/*   * entry contains flags 0..* 
-  * entry[flags] 0.. MS
-  * entry[flags] only Reference(FlagXeh) */
-  
- /*  * entry contains detectedIssues 0..*
-  * entry[detectedIssues] 0.. 
-  * entry[detectedIssues] ^short = "Detected Issue"
-  * entry[detectedIssues] ^definition = "Indicates an actual or potential clinical issue with or between one or more active or proposed clinical actions for a patient; e.g. Drug-drug interaction, Ineffective treatment frequency, Procedure-condition conflict, etc."
-  * entry[detectedIssues] only Reference(DetectedIssue) */
- 
-/*   * entry contains riskAssessments 0..*
-  * entry[riskAssessments] 0.. 
-  * entry[riskAssessments] ^short = "Risk Assessment"
-  * entry[riskAssessments] ^definition = "An assessment of the likely outcome(s) for a patient or other subject as well as the likelihood of each outcome."
-  * entry[riskAssessments] only Reference(RiskAssessment) */
  
 //========================================================
 
@@ -109,27 +79,3 @@ RuleSet: CareTeamSectionRules
   * insert SectionEntrySliceDefRules (cteam, 0.. , Care Team , Care Team , CareTeamXeh)
   * insert NoSubSectionsRules
 
-/* * section[CareTeamSection] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
-* section[CareTeamSection] ^extension[0].valueString = "Section"
-* section[CareTeamSection] ^short = "Care Team Section"
-* section[CareTeamSection] ^definition = "The Care Team Section is used to share historical and current Care Team information."
-* section[CareTeamSection].title 1.. MS
-* section[CareTeamSection].code 1.. MS
-* section[CareTeamSection].code only http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
-* section[CareTeamSection].code = http://loinc.org#85847-2 (exactly)
-* section[CareTeamSection].text 1.. MS
-* section[CareTeamSection].text only Narrative
-
-* section[CareTeamSection].emptyReason ..0
-* section[CareTeamSection].emptyReason ^mustSupport = false
-*/
-
-/* * section[CareTeamSection].entry contains flags 0..1
-* section[CareTeamSection].entry[flags] 0.. MS
-* section[CareTeamSection].entry[flags] ^short = "Care Team"
-* section[CareTeamSection].entry[flags] ^definition = "Care Team"
-* section[CareTeamSection].entry[flags] only Reference(CareTeamXeh)
-
-* section[CareTeamSection].section ..0
-* section[CareTeamSection].section ^mustSupport = false
- */
