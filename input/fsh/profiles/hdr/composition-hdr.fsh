@@ -232,24 +232,6 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
     HDR Allergy entry  , $AllergyIntolerance-uv-ips)
 
 
-/* * section[sectionAllergies] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
-* section[sectionAllergies] ^extension[0].valueString = "Section"
-* section[sectionAllergies] ^short = "HDR Allergies and Intolerances Section"
-* section[sectionAllergies] ^definition = "This section documents the relevant allergies or intolerances (conditions) for that patient, describing the kind of reaction (e.g. rash, anaphylaxis,..); preferably the agents that cause it; and optionally the criticality and the certainty of the allergy.\r\nAt a minimum, it should list currently active and any relevant historical allergies and adverse reactions.\r\nIf no information about allergies is available, or if no allergies are known this should be clearly documented in the section."
-* section[sectionAllergies].title 1.. MS
-* section[sectionAllergies].code 1.. MS
-* section[sectionAllergies].code only http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
-* section[sectionAllergies].code = http://loinc.org#48765-2 (exactly)
-* section[sectionAllergies].text 1.. MS
-* section[sectionAllergies].text only Narrative
-* section[sectionAllergies].entry 1..
-* section[sectionAllergies].entry only Reference($AllergyIntolerance-uv-ips)
-* section[sectionAllergies].entry ^short = "Relevant allergies or intolerances (conditions) for that patient."
-* section[sectionAllergies].entry ^definition = "It lists the relevant allergies or intolerances (conditions) for that patient, describing the kind of reaction (e.g. rash, anaphylaxis,..); preferably the agents that cause it; and optionally the criticality and the certainty of the allergy.\r\nAt a minimum, it should list currently active and any relevant historical allergies and adverse reactions.\r\n This entry shall be used to document that no information about allergies is available, or that no allergies are known ."
-* section[sectionAllergies].emptyReason ..0
-* section[sectionAllergies].emptyReason ^mustSupport = false */
-
-
 // -------------------------------------
 // Alert 0 .. 1
 // -------------------------------------
@@ -274,31 +256,31 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
   * insert SectionEntrySliceDefRules (procedure, 0.. , Past Procedure entry ,
     Past Procedure entry  , $Procedure-uv-ips)
 
-/* 
-* section[sectionProceduresHx] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
-* section[sectionProceduresHx] ^extension[0].valueString = "Section"
-* section[sectionProceduresHx] ^short = "HDR History of Procedures Section"
-* section[sectionProceduresHx] ^definition = "The History of Procedures Section contains a description of the patient past procedures that are pertinent to the scope of this document.\r\nProcedures may refer for example to:\r\n1. Invasive Diagnostic procedure:e.g. Cardiac catheterization; (the results of these procedure are documented in the results section)\r\n2. Therapeutic procedure: e.g. dialysis;\r\n3. Surgical procedure: e.g. appendectomy"
-* section[sectionProceduresHx].title 1.. MS
-* section[sectionProceduresHx].code 1.. MS
-* section[sectionProceduresHx].code only http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
-* section[sectionProceduresHx].code = http://loinc.org#47519-4 (exactly)
-* section[sectionProceduresHx].text 1.. MS
-* section[sectionProceduresHx].text only Narrative
-* section[sectionProceduresHx].entry 1..1 
-* section[sectionProceduresHx].entry only Reference($Procedure-uv-ips)
-* section[sectionProceduresHx].entry ^short = "Patient past procedures pertinent to the scope of this document."
-* section[sectionProceduresHx].entry ^definition = "It lists the patient past procedures that are pertinent to the scope of this document.\r\nProcedures may refer for example to:\r\n1. Invasive Diagnostic procedure:e.g. Cardiac catheterization; (the results of these procedure are documented in the results section)\r\n2. Therapeutic procedure: e.g. dialysis;\r\n3. Surgical procedure: e.g. appendectomy. This entry shall be used to document that no information about past procedures is available, or that no relevant past procedures are known."
-* section[sectionProceduresHx].emptyReason ..0
-* section[sectionProceduresHx].emptyReason ^mustSupport = false */
-
 
 // -------------------------------------
 // Immunizations Section 0 … 1
 // -------------------------------------
 
 * section contains sectionImmunizations ..1 MS
-* section[sectionImmunizations] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
+
+* section[sectionImmunizations]
+  * insert SectionComRules ( 
+    HDR Immunizations Section, // SHORT
+      The Immunizations Section defines a patient's current immunization status and pertinent immunization history.\r\nThe primary use case for the Immunization Section is to enable communication of a patient's immunization status.\r\nThe section includes current immunization status\, and may contain the entire immunization history that is relevant to the period of time being summarized. // DESC
+      ,  http://loinc.org#11369-6 )   // CODE
+  * entry 1..
+  * entry only Reference(Immunization
+                          or DocumentReference  )
+  * insert SectionEntrySliceComRules ( Patient's immunization status and pertinent history.
+    , It defines the patient's current immunization status and pertinent immunization history.\r\nThe primary use case for the Immunization Section is to enable communication of a patient's immunization status.\r\n It may contain the entire immunization history that is relevant to the period of time being summarized. This entry shall be used to document that no information about immunizations is available\, or that no immunizations are known. ) //'
+  
+
+  // entry slices
+  * insert SectionEntrySliceDefRules (immunization, 0.. , Immunization entry ,
+    Immunization entry  , $Immunization-uv-ips)
+
+
+/* * section[sectionImmunizations] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
 * section[sectionImmunizations] ^extension[0].valueString = "Section"
 * section[sectionImmunizations] ^short = "HDR Immunizations Section"
 * section[sectionImmunizations] ^definition = "The Immunizations Section defines a patient's current immunization status and pertinent immunization history.\r\nThe primary use case for the Immunization Section is to enable communication of a patient's immunization status.\r\nThe section includes current immunization status, and may contain the entire immunization history that is relevant to the period of time being summarized."
@@ -313,14 +295,24 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 * section[sectionImmunizations].entry ^short = "Patient's immunization status and pertinent history."
 * section[sectionImmunizations].entry ^definition = "It defines the patient's current immunization status and pertinent immunization history.\r\nThe primary use case for the Immunization Section is to enable communication of a patient's immunization status.\r\nIt may contain the entire immunization history that is relevant to the period of time being summarized. This entry shall be used to document that no information about immunizations is available, or that no immunizations are known."
 * section[sectionImmunizations].emptyReason ..0
-* section[sectionImmunizations].emptyReason ^mustSupport = false
+* section[sectionImmunizations].emptyReason ^mustSupport = false */
 
 
 // -------------------------------------
 // Family History Section 0 … 1
 // -------------------------------------
 * section contains familyHistorySection ..1 MS
-* section[familyHistorySection] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
+* section[familyHistorySection]
+  * insert SectionComRules ( 
+    Family History Section, // SHORT
+      This section contains data defining the patient’s genetic relatives in terms of possible or relevant health risk factors that have a potential impact on the patient’s healthcare risk profile. // DESC
+      ,  http://loinc.org#10157-6  )   // CODE
+  * entry 0..
+  * entry only Reference(FamilyMemberHistory)
+  * entry ^short = "Family History"
+  * entry ^definition = "Family History"
+
+/* * section[familyHistorySection] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
 * section[familyHistorySection] ^extension[0].valueString = "Section"
 * section[familyHistorySection] ^short = "Family History Section"
 * section[familyHistorySection] ^definition = "This section contains data defining the patient’s genetic relatives in terms of possible or relevant health risk factors that have a potential impact on the patient’s healthcare risk profile."
@@ -335,12 +327,28 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 * section[familyHistorySection].entry ^short = "Family History"
 * section[familyHistorySection].entry ^definition = "Family History"
 * section[familyHistorySection].emptyReason ..0
-* section[familyHistorySection].emptyReason ^mustSupport = false
+* section[familyHistorySection].emptyReason ^mustSupport = false */
 
 // -------------------------------------
 // Medical Devices Section 0 … 1
 // -------------------------------------
 * section contains sectionMedicalDevices ..1 MS
+* section[sectionMedicalDevices]
+  * insert SectionComRules ( 
+    HDR Medical Devices Section, // SHORT
+      The medical devices section contains narrative text and coded entries describing the patient history of medical device use. // DESC
+      , http://loinc.org#46264-8 )   // CODE
+  * entry 1..
+  * entry only Reference(DeviceUseStatement
+                          or DocumentReference  )
+  * insert SectionEntrySliceComRules ( Patient history of medical device use.
+    , It describes the patient history of medical device use. This entry shall be used to document that no information about medical device use is available\, or that no relevant medical device use is known. ) //'
+  
+
+  // entry slices
+  * insert SectionEntrySliceDefRules (deviceUse, 0.. , Medical Device entry ,
+    Medical Device entry  , $DeviceUseStatement-uv-ips)
+/* 
 * section[sectionMedicalDevices] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
 * section[sectionMedicalDevices] ^extension[0].valueString = "Section"
 * section[sectionMedicalDevices] ^short = "HDR Medical Devices Section"
@@ -356,7 +364,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 * section[sectionMedicalDevices].entry ^short = "Patient history of medical device use."
 * section[sectionMedicalDevices].entry ^definition = "It describes the patient history of medical device use. This entry shall be used to document that no information about medical device use is available, or that no relevant medical device use is known."
 * section[sectionMedicalDevices].emptyReason ..0
-* section[sectionMedicalDevices].emptyReason ^mustSupport = false
+* section[sectionMedicalDevices].emptyReason ^mustSupport = false */
 
 
 // -------------------------------------
