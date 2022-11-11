@@ -21,6 +21,7 @@ Alias: $v3-ActCode = http://terminology.hl7.org/CodeSystem/v3-ActCode
 Alias: $v3-NullFlavor = http://terminology.hl7.org/CodeSystem/v3-NullFlavor
 Alias: $v3-RoleCode = http://terminology.hl7.org/CodeSystem/v3-RoleCode
 Alias: $data-absent-reason = http://terminology.hl7.org/CodeSystem/data-absent-reason
+Alias: $diagnostic-service-sections = http://terminology.hl7.org/CodeSystem/v2-0074
 
 
 // --- Value Sets
