@@ -44,5 +44,5 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
 * entry contains serviceRequest 0..*
 * entry[serviceRequest].resource only ServiceRequestLabXeh // Add profiles
 
-* entry contains requestGroup 0..1
-* entry[requestGroup].resource only RequestGroupLabXeh // Add profiles
+//* entry contains requestGroup 0..1
+//* entry[requestGroup].resource only RequestGroupLabXeh // Add profiles

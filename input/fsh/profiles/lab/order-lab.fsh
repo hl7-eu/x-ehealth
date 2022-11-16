@@ -23,20 +23,3 @@ Description: "ServiceRequest used to represent a Laboratory Order for the scope 
 * specimen	only Reference(Specimen)
   * ^short = "Must be present, if order is request for test" // Check....
   // add invariant ?
-
-
-Profile: RequestGroupLabXeh
-Parent: RequestGroup
-Id: RequestGroup-lab-xeh
-Title: "RequestGroup: Laboratory Order"
-Description: "RequestGroup used to represent a Laboratory Order for the scope of the Xehealth project."
-* ^publisher = "X-eHealth Project"
-* ^copyright = "X-eHealth Project"
-* identifier 1..
-* groupIdentifier 1.. 
-* subject 1..
-* code 1..
-// Clarify when to use ServiceRequest and RequestGroup
-// add binding for code
-* . ^short = "Laboratory Order"
-* . ^definition = "Laboratory Order composition."
