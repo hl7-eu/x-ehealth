@@ -50,6 +50,8 @@ Instance: Inline-Composition-micro
 InstanceOf: Composition
 Usage: #inline
 * id = "4789a3ee-92b1-41b2-9b97-83daacf2a239"
+* extension[+].url = $composition-diagnostic-report-reference
+* extension[=].valueReference = Reference(DiagnosticReport/b864303b-91ab-4e29-ad74-31a7d6566875)
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:3f69e0a5-2177-4540-baab-7a5d0877428f"
 * status = #final
@@ -63,9 +65,6 @@ Usage: #inline
 * attester[0].time = "2020-12-27T14:30:00+01:00"
 * attester[0].party = Reference(Organization/1e139f41-4d0f-43dd-ad5a-98003c520349)
 * custodian = Reference(Organization/1e139f41-4d0f-43dd-ad5a-98003c520349)
-* relatesTo[+].code = #transforms
-* relatesTo[=].targetIdentifier.system = "urn:ietf:rfc:3986"
-* relatesTo[=].targetIdentifier.value = "urn:uuid:b864303b-91ab-4e29-ad74-31a7d6566875" // Inline-Diag-Report-micro
 * section[+].title = "Bacterial Aerobic & Anaerobic Culture & Susceptibility"
 * section[=].code.text = "Bacterial Aerobic & Anaerobic Culture & Susceptibility"
 * section.section[+].title = "Gram Stain"
@@ -151,7 +150,7 @@ Usage: #inline
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer[+].display = "MUDr. Aleš Procházka"
 * valueCodeableConcept = $sct#2667000 "Absent"
-* valueCodeableConcept.text = $sct#2667000 "None observed"
+* valueCodeableConcept.text = "None observed"
 
 Instance: Inline-Observation-gs-org1
 InstanceOf: Observation-results-laboratory-eu-xeh
