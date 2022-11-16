@@ -1,11 +1,25 @@
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Extension: OrderFulfilled
-Id:   composition-OrderFulfilled
-Title:  "Reference to the order this document fulfills"
-Description: "This extension provides a means to link this document the ordef fulfilled."
+Extension: CompositionBasedOnOrderOrRequisition
+Id:   composition-basedOn-order-or-requisition
+Title:  "Document Based On Order"
+Description: "This extension provides a link to the order [(Reference(ServiceRequest)] or requisition [ServiceRequest.requisition (i.e., 'Request.groupIdentifier')] that this report document is based on and fulfills."
 // publisher, contact, and other metadata here using caret (^) syntax (omitted)
-* value[x] only Reference (ServiceRequest or RequestGroup)
-* valueReference 1..1
+* ^context[+].type = #element
+* ^context[=].expression = "Composition"
+* value[x] only Reference (ServiceRequest) or Identifier
+//* valueReference 1..1
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Extension: DiagnosticReportBasedOnRequisition
+Id:   diagnostic-report-basedOn-requisition
+Title:  "DiagnosticReport Based On Requesition"
+Description: "This extension provides a link to the requisition (ServiceRequest.requisition [i.e., 'groupIdentifier']) that this DiagnosticReport is based on and fulfills."
+// publisher, contact, and other metadata here using caret (^) syntax (omitted)
+// DiagnosticReport already includes 'basedOn' with Reference(ServiceRequest)
+* ^context[+].type = #element
+* ^context[=].expression = "DiagnosticReport.basedOn"
+* value[x] only Identifier
+//* valueReference 1..1
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Extension: Conformance
@@ -24,3 +38,11 @@ Description: "This attribute captures the level of requirement (mandatory, requi
 * value[x] only code
 * value[x] from http://hl7.eu/fhir/ig/xeh/ValueSet/conformance-cen-ips (required)
 
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Extension: DiagnosticReportReference
+Id:   composition-DiagnosticReportReference
+Title:  "Document DiagnosticReport Reference"
+Description: "This extension provides a reference to the DiagnosticReport instance that is associated with this document."
+// publisher, contact, and other metadata here using caret (^) syntax (omitted)
+* value[x] only Reference (DiagnosticReport)
+* valueReference 1..1

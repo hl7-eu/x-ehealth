@@ -69,4 +69,7 @@ Alias: $Specimen-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Specime
 Alias: $Bundle-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Bundle-uv-ips
 Alias: $vitalsigns = http://hl7.org/fhir/StructureDefinition/vitalsigns
 
+// --- Extensions
+Alias: $composition-diagnostic-report-reference = http://hl7.eu/fhir/ig/xeh/StructureDefinition/composition-DiagnosticReportReference
+
 //=========================
