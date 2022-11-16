@@ -8,9 +8,6 @@ Description: "CDiagnosticReport used to represent an entry of a Laboratory Repor
 * . ^short = "Laboratory Report DiagnosticReport"
 * . ^definition = "Laboratory Report DiagnosticReport"
 
-
-// add a reference also to the RequestGroup to enable the retrieval of all the DiagnosticReports associated with a RequestGroup ?
-
 /*
 content to be referred...
 Specimen Collection 1.3.6.1.4.1.19376.1.3.1.2
@@ -28,6 +25,7 @@ Annotation Comment
 */
 
 * basedOn only Reference ( ServiceRequestLabXeh )
+* basedOn.extension contains DiagnosticReportBasedOnRequisition named basedOn-requisition 0..*
 * status ^short = "Status of this report"
 * category 1.. // 1.. ?
 * code from LabStudyTypesXeh (preferred) 

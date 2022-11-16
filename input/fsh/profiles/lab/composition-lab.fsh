@@ -11,8 +11,8 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
 // what to do with the composition text ?
 // should we make it 0.. ?
 // or have text repeated here and in the sections ?
-* extension contains OrderFulfilled named order 0..*
-* extension[order].valueReference only Reference( ServiceRequestLabXeh or RequestGroupLabXeh)
+* extension contains CompositionBasedOnOrderOrRequisition named basedOn-order-or-requisition 0..*
+* extension contains DiagnosticReportReference named diagnostic-report 0..1
 
 /*  TO DO Header
 - add optional data enterer
