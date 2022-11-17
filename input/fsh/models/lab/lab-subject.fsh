@@ -1,5 +1,5 @@
 // -------------------------------------------------------------------------------				
-//  Logical Model				
+//  Logical Model				lab-subject.fsh
 // -------------------------------------------------------------------------------				
 Logical: SubjectLabEhn				
 Id: Subject				
@@ -17,8 +17,8 @@ Preferred system(s): - Preferred system(s): HL7 Administrative Gender """
 * address-telecom.address 0..* Address "A.1.2.1 Address" """Mailing and home or office addresses. The addresses are always sequences of address parts (e.g. street address line, country, ZIP code, city) even if postal address formats may vary depending on the country. An address may or may not include a specific use code; if this attribute is not present it is assumed to be the default address useful for any purpose. - Preferred system(s):  ISO 3166"""				
 * address-telecom.telecom 0..* ContactPoint "A.1.2.2 Telecom" """Telecommunication contact information (addresses) associated to a person. Multiple telecommunication addresses might be provided. - Preferred system(s): """				
 //--- END				
-				
-				
+//--- END				
+//--- END				
 				
 				
 				
@@ -34,7 +34,7 @@ Preferred system(s): - Preferred system(s): HL7 Administrative Gender """
 // -------------------------------------------------------------------------------				
 Mapping: eHNLabSubject2Fhir				
 Id: fhir				
-Title: "Idea4RC Subject model to FHIR R4 Map"				
+Title: "eHN Lab Subject model to FHIR R4 Map"				
 Source: Subject				
 Target: "hl7.org/fhir/r4"				
 				
@@ -49,160 +49,4 @@ Target: "hl7.org/fhir/r4"
 * address-telecom.address -> "Patient.gender"				
 * address-telecom.telecom -> "Patient.telecom"				
 // --END				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
+// --END				
