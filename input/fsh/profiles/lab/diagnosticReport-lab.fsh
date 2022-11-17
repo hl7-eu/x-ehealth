@@ -31,7 +31,7 @@ Annotation Comment
 * code from LabStudyTypesXeh (preferred) 
 * code 1..
 * subject 1..
-* encounter only Reference (EncounterXeh) // profile defined for other scopes to be checked
+* encounter only Reference (Encounter) // profile defined for other scopes to be checked
 * effective[x] ^short = "Clinically relevant time/time-period for report."
 * performer ^short = "Responsible Diagnostic Service." // add reference to the used profiles
 * specimen ^short = "Specimens this report is based on." // add reference to the used profile
