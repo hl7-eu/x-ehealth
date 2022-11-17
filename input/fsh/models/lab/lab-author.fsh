@@ -3,7 +3,7 @@
 // -------------------------------------------------------------------------------				
 Logical: AuthorLabEhn				
 Id: Author				
-Title: "A.1.5 Author"				
+Title: "Author (A.1.5)"				
 Description:  """A.1.5 Author (by whom the Laboratory result report or a subset of its results was authored)"""				
 * identifier 0..1 Identifier "A.1.5.1 Author identifier" """The health professional or authoring device identification number. Either an internal identifier assigned by a healthcare provider institution or (preferably) a national health professional ID such asÿthe license or registration number.ÿ - Preferred system(s): """				
 * name 0..* HumanName "A.1.5.2 Author name" """Person or device name. - Preferred system(s): """				

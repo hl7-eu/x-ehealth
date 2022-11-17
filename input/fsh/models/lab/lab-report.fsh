@@ -12,17 +12,17 @@ Description:  """Laboratory Report"""
 * header.author 0..* http://hl7.eu/fhir/ig/xeh/StructureDefinition/Author "A.1.5 Author" """A.1.5 Author (by whom the Laboratory result report or a subset of its results was authored)"""				
 * header.legalAuthenticator 0..* http://hl7.eu/fhir/ig/xeh/StructureDefinition/LegalAuthenticator "A.1.6 Legal authenticator " """A.1.6 Legal authenticator (The person taking responsibility for the medical content of the document)"""				
 * header.validator 0..* http://hl7.eu/fhir/ig/xeh/StructureDefinition/Validator "A.1.7 Result validator" """A.1.7 Result validator"""				
-* header.metadata 1..1 CodeableConcept "A.1.8 Laboratory report metadata" """A.1.8 Laboratory report metadata"""				
+* header.metadata 1..1 BackboneElement "A.1.8 Laboratory report metadata" """A.1.8 Laboratory report metadata"""				
 * header.metadata.type 1..1 CodeableConcept "A.1.8.1 Document type" """A coded type of the document. Fixed value ""Laboratory report"" - Preferred system(s): LOINC"""				
 * header.metadata.status 1..1 CodeableConcept "A.1.8.2 Document status" """The status of the laboratory test result report. E.g., preliminary, final. - Preferred system(s): hl7:DiagnosticReportStatus"""				
 * header.metadata.dateTime 1..1 dateTime "A.1.8.3 Report date and time" """Date and time of the result report creation. - Preferred system(s): ISO 8601"""				
 * header.metadata.title 0..1 string "A.1.8.4 Document title" """Document title, e.g. ""Laboratory Result report"" - Preferred system(s): """				
 * header.metadata.custodian 0..1 BackboneElement "A.1.8.5 Report custodian" """Organisation that is in charge of maintaining the laboratory report - Preferred system(s): """				
-* order 0..* BackboneElement "A.2-A.3 Order" """A.2 Order information (Laboratory Result Report could respond to multiple test orders)
+* order 0..* http://hl7.eu/fhir/ig/xeh/StructureDefinition/Order "A.2-A.3 Order" """A.2 Order information (Laboratory Result Report could respond to multiple test orders)
 A.3 Order reason (Laboratory Result Report could respond to multiple reasons)
 """				
-* specimen 0..* BackboneElement "A.4 Specimen information" """A.4 Specimen information"""				
-* result 0..* BackboneElement "A.5 Results data elements" """A.5 Results data elements"""				
+* specimen 0..* http://hl7.eu/fhir/ig/xeh/StructureDefinition/Specimen-eHN "A.4 Specimen information" """A.4 Specimen information"""				
+* result 0..* http://hl7.eu/fhir/ig/xeh/StructureDefinition/Result "A.5 Results data elements" """A.5 Results data elements"""				
 //--- END				
 //--- END				
 				
