@@ -2,7 +2,7 @@
 //  Logical Model				lab-specimen.fsh
 // -------------------------------------------------------------------------------				
 Logical: SpecimenLabEhn				
-Id: Specimen-eHN				
+Id: SpecimenLab				
 Title: "Specimen information (A.4)"				
 Description:  """A.4 Specimen information """				
 * identifier 0..1 Identifier "A.4.1 Specimen identifier" """An identifier of the specimen which is unique within in a defined scope. Example: identifier assigned by Specimening system, identifier assigned by laboratory etc. Multiple identifiers can be used. - Preferred system(s): """				
@@ -35,7 +35,7 @@ Description:  """A.4 Specimen information """
 Mapping: eHNLabSpecimen2Fhir				
 Id: fhir				
 Title: "eHN Lab Specimen model to FHIR R4 Map"				
-Source: Specimen-eHN				
+Source: SpecimenLab				
 Target: "hl7.org/fhir/r4"				
 				
 * -> "to be mapped"				

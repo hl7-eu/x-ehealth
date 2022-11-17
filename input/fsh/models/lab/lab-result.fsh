@@ -5,10 +5,10 @@ Logical: ResultLabEhn
 Id: Result				
 Title: "Results data elements (A.5)"				
 Description:  """A.5 Results data elements """				
-* narrative 0..1 BackboneElement "A.5.1 Laboratory report narrativeÿ " """A.5.1 Laboratory report narrativeÿ """				
-* narrative.report 0..* Narrative "A.5.1.1 Narrative report" """Entire report (textual summary inside the laboratory result report document) as issued by the laboratory.ÿ - Preferred system(s): """				
+* narrative 0..1 BackboneElement "A.5.1 Laboratory report narrative" """A.5.1 Laboratory report narrative"""				
+* narrative.report 0..* Narrative "A.5.1.1 Narrative report" """Entire report (textual summary inside the laboratory result report document) as issued by the laboratory.  - Preferred system(s): """				
 * narrative.notes 0..* Narrative "A.5.1.2 Comments, interpretation and recommendations" """Comments, such as a textual interpretation or advice accompanying the result report, for example. - Preferred system(s): """		 		
-* observation 0..* BackboneElement "A.5.2 Observation details" """A.5.2 Observation details (report could consist ofÿmultiple observations) """				
+* observation 0..* BackboneElement "A.5.2 Observation details" """A.5.2 Observation details (report could consist of multiple observations) """				
 * observation.dateTime 0..* CodeableConcept "A.5.2.1 Observation date" """Date and time of the observation - Preferred system(s): ISO 8601"""				
 * observation.code 0..* CodeableConcept "A.5.2.3 Observation code" """Code representing the observation using the agreed code systems.
 - Preferred system(s): LOINC
@@ -23,9 +23,9 @@ Description:  """A.5 Results data elements """
 - Preferred system(s): SNOMED CT
  - Preferred system(s): EMDN"""				
 * observation.order 0..* BackboneElement "A.5.2.8 Order" """Identifies order and order placer this observation belongs to."""				
-* observation.performer 0..* BackboneElement "A.5.2.9 Performer" """Identifies the originator/author and provides provenance information about the source of the results data that may have not originated with the source of the whole Laboratory Report document.ÿ - Preferred system(s): """				
+* observation.performer 0..* BackboneElement "A.5.2.9 Performer" """Identifies the originator/author and provides provenance information about the source of the results data that may have not originated with the source of the whole Laboratory Report document.  - Preferred system(s): """				
 * observation.reporter 0..* BackboneElement "A.5.2.10 Reporter" """With certain observation results, e.g. there may also be an interpreter or a person responsible for validation. - Preferred system(s): """				
-* observation.result 0..* BackboneElement "A.5.2.11 Observation result" """Resultÿof the observation including text, numeric and coded results of the measurement and measurement uncertainty. Content of the observation result will vary according to the type of the observation. 
+* observation.result 0..* BackboneElement "A.5.2.11 Observation result" """Result of the observation including text, numeric and coded results of the measurement and measurement uncertainty. Content of the observation result will vary according to the type of the observation. 
 - Preferred system(s): SNOMED CT (for ordinal or nominal scale results and result interpretation)
  - Preferred system(s): UCUM (for units)"""				
 * observation.interpretation 0..* CodeableConcept "A.5.2.12 Observation interpretation" """Information about reference intervals and result interpretation.

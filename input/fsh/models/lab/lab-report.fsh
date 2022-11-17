@@ -10,7 +10,7 @@ Description:  """Laboratory Report"""
 * header.payer 0..1 http://hl7.eu/fhir/ig/xeh/StructureDefinition/Payer "A.1.3 Health insurance and payment information" """A.1.3 Health insurance and payment information"""				
 * header.informationRecipient 0..1 http://hl7.eu/fhir/ig/xeh/StructureDefinition/Recipient "A.1.4 Information recipient" """A.1.4 Information recipient (intended recipient or recipients of the report, additional recipients might be identified by the ordering party, e.g. GP, other specialist), if applicable"""				
 * header.author 0..* http://hl7.eu/fhir/ig/xeh/StructureDefinition/Author "A.1.5 Author" """A.1.5 Author (by whom the Laboratory result report or a subset of its results was authored)"""				
-* header.legalAuthenticator 0..* http://hl7.eu/fhir/ig/xeh/StructureDefinition/LegalAuthenticator "A.1.6 Legal authenticator " """A.1.6 Legal authenticator (The person taking responsibility for the medical content of the document)"""				
+* header.legalAuthenticator 0..* http://hl7.eu/fhir/ig/xeh/StructureDefinition/LegalAuthenticator "A.1.6 Legal authenticator" """A.1.6 Legal authenticator (The person taking responsibility for the medical content of the document)"""				
 * header.validator 0..* http://hl7.eu/fhir/ig/xeh/StructureDefinition/Validator "A.1.7 Result validator" """A.1.7 Result validator"""				
 * header.metadata 1..1 BackboneElement "A.1.8 Laboratory report metadata" """A.1.8 Laboratory report metadata"""				
 * header.metadata.type 1..1 CodeableConcept "A.1.8.1 Document type" """A coded type of the document. Fixed value ""Laboratory report"" - Preferred system(s): LOINC"""				
@@ -21,7 +21,7 @@ Description:  """Laboratory Report"""
 * order 0..* http://hl7.eu/fhir/ig/xeh/StructureDefinition/Order "A.2-A.3 Order" """A.2 Order information (Laboratory Result Report could respond to multiple test orders)
 A.3 Order reason (Laboratory Result Report could respond to multiple reasons)
 """				
-* specimen 0..* http://hl7.eu/fhir/ig/xeh/StructureDefinition/Specimen-eHN "A.4 Specimen information" """A.4 Specimen information"""				
+* specimen 0..* http://hl7.eu/fhir/ig/xeh/StructureDefinition/SpecimenLab "A.4 Specimen information" """A.4 Specimen information"""				
 * result 0..* http://hl7.eu/fhir/ig/xeh/StructureDefinition/Result "A.5 Results data elements" """A.5 Results data elements"""				
 //--- END				
 //--- END				
@@ -53,8 +53,9 @@ Target: "hl7.org/fhir/r4"
 * header.metadata.title -> "Composition.title"				
 * header.metadata.custodian -> "Composition.custodian"				
 * order -> "Composition.extension('http://hl7.eu/fhir/ig/xeh/StructureDefinition/composition-basedOn-order-or-requisition').valueReference.resolve()"				
+* order -> "Composition.extension('http://hl7.eu/fhir/ig/xeh/StructureDefinition/composition-basedOn-order-or-requisition').valueReference.identifier"				
 * specimen -> "Observation.conformsTo('http://hl7.eu/fhir/ig/xeh/StructureDefinition/Observation-results-laboratory-eu-xeh').specimen.resolve()"				
-* result -> "Composition.section.entry.resolve(); Composition.section.section.entry.resolve() "				
+* result -> "Composition.section.entry.resolve(); Composition.section.section.entry.resolve()"				
 // --END				
 // --END				
 // --END				
