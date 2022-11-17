@@ -33,7 +33,7 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
   // slice the subject tp cover the three cases of human ; non-human and mixed
 * subject only Reference(PatientXeh)
 * subject 1..1
-* encounter only Reference (EncounterXeh)  // profile defined for other scopes to be checked
+* encounter only Reference (Encounter)  // profile defined for other scopes to be checked
 * author 1..
 * author ^short = "Who and/or what authored the Laboratory Report"
 * author ^definition = "Identifies who is responsible for the information in the Laboratory Report, not necessarily who typed it in."
