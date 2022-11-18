@@ -114,7 +114,8 @@ Instance: Inline-Organization-micro
 InstanceOf: Organization
 Usage: #inline
 * id = "1e139f41-4d0f-43dd-ad5a-98003c520349"
-* identifier[0].system = "urn:oid:1.2.203" // this is a valid OID representing the Czech Republic, though it is not being recognized as valid by the IG Publisher
+// * identifier[0].system = "urn:oid:1.2.203" // this is a valid OID representing the Czech Republic, though it is not being recognized as valid by the IG Publisher
+* identifier[0].system = "http://example.org/czech-orgs"
 * identifier[0].value = "24341"
 * name = "Ministry of Health of the Czech Republic"
 
@@ -146,13 +147,13 @@ InstanceOf: Observation-results-laboratory-eu-xeh
 Usage: #inline
 * id = "40278a69-87aa-470f-a38f-bff1e8aee175"
 * status = #final
-* category[+] = $observation-category#laboratory
+* category[0] = $observation-category#laboratory
 * category[+] = $diagnostic-service-sections#MB "Microbiology"
 * code.text = "Gram Stain"
 * subject = Reference(Patient/5bb42c3f-56fb-4bbc-b939-73910a6cce3b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
-* performer[+].display = "MUDr. Aleš Procházka"
-* hasMember[+] = Reference(Observation/1097929f-890e-4e27-a31d-58599f3e2479) // Inline-Observation-wbc
+* performer[0].display = "MUDr. Aleš Procházka"
+* hasMember[0] = Reference(Observation/1097929f-890e-4e27-a31d-58599f3e2479) // Inline-Observation-wbc
 * hasMember[+] = Reference(Observation/fcf220c3-7f3e-44f8-b669-48552a20fa0a) // Inline-Observation-gs-org1
 * hasMember[+] = Reference(Observation/331d513e-a57f-4464-9eec-25533aeb6d06) // Inline-Observation-gs-org2
 

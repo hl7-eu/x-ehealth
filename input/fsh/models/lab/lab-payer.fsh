@@ -36,7 +36,7 @@ Title: "eHN Lab Payer model to FHIR R4 Map"
 Source: Payer				
 Target: "hl7.org/fhir/r4"				
 				
-* -> "Coverage"				
+* -> "ServiceRequest.conformsTo('http://hl7.eu/fhir/ig/xeh/StructureDefinition/ServiceRequest-lab-xeh').insurance.resolve().ofType(Coverage)"				
 * insurance -> "Coverage"				
 * insurance.identifier -> "Coverage.payor.ofType(Organization).resolve().identifier"				
 * insurance.name -> "Coverage.payor.ofType(Organization).resolve().name"				

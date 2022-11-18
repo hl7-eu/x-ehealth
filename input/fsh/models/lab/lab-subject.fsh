@@ -13,9 +13,9 @@ Description:  """Patient or Subject of care"""
 * identification.gender 0..1 CodeableConcept "A.1.1.5 Gender" """This field must contain a recognised valid value for 'administrative gender'. 
 If different, 'physiological gender' should be communicated elsewhere
 Preferred system(s): - Preferred system(s): HL7 Administrative Gender """				
-* address-telecom 0..* BackboneElement "A.1.2 Patient/subject related contact information" """A.1.2 Patient/subject related contact information"""				
-* address-telecom.address 0..* Address "A.1.2.1 Address" """Mailing and home or office addresses. The addresses are always sequences of address parts (e.g. street address line, country, ZIP code, city) even if postal address formats may vary depending on the country. An address may or may not include a specific use code; if this attribute is not present it is assumed to be the default address useful for any purpose. - Preferred system(s):  ISO 3166"""				
-* address-telecom.telecom 0..* ContactPoint "A.1.2.2 Telecom" """Telecommunication contact information (addresses) associated to a person. Multiple telecommunication addresses might be provided. - Preferred system(s): """				
+* addressTelecom 0..* BackboneElement "A.1.2 Patient/subject related contact information" """A.1.2 Patient/subject related contact information"""				
+* addressTelecom.address 0..* Address "A.1.2.1 Address" """Mailing and home or office addresses. The addresses are always sequences of address parts (e.g. street address line, country, ZIP code, city) even if postal address formats may vary depending on the country. An address may or may not include a specific use code; if this attribute is not present it is assumed to be the default address useful for any purpose. - Preferred system(s):  ISO 3166"""				
+* addressTelecom.telecom 0..* ContactPoint "A.1.2.2 Telecom" """Telecommunication contact information (addresses) associated to a person. Multiple telecommunication addresses might be provided. - Preferred system(s): """				
 //--- END				
 //--- END				
 //--- END				
@@ -45,8 +45,8 @@ Target: "hl7.org/fhir/r4"
 * identification.dateOfBirth -> "Patient.birthDate"				
 * identification.identifier -> "Patient.identifier"				
 * identification.gender -> "Patient.gender"				
-* address-telecom -> "Patient.address"				
-* address-telecom.address -> "Patient.gender"				
-* address-telecom.telecom -> "Patient.telecom"				
+* addressTelecom -> "Patient.address"				
+* addressTelecom.address -> "Patient.gender"				
+* addressTelecom.telecom -> "Patient.telecom"				
 // --END				
 // --END				

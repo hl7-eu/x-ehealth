@@ -25,7 +25,7 @@ A.3 Order reason (Laboratory Result Report could respond to multiple reasons)
 * result 0..* http://hl7.eu/fhir/ig/xeh/StructureDefinition/Result "A.5 Results data elements" """A.5 Results data elements"""				
 //--- END				
 //--- END				
-				
+//--- END				
 				
 				
 				
@@ -41,7 +41,7 @@ Target: "hl7.org/fhir/r4"
 * -> "Bundle.conformsTo('http://hl7.eu/fhir/ig/xeh/StructureDefinition/Bundle-lab-xeh')"				
 * header -> "Composition.conformsTo('http://hl7.eu/fhir/ig/xeh/StructureDefinition/Composition-lab-xeh')"				
 * header.subject -> "Composition.subject"				
-* header.payer -> "Composition.section:payer.entry.resolve()"				
+* header.payer -> "ServiceRequest.conformsTo('http://hl7.eu/fhir/ig/xeh/StructureDefinition/ServiceRequest-lab-xeh').insurance.resolve()"				
 * header.informationRecipient -> ".extension('http://hl7.org/fhir/StructureDefinition/cqf-receivingOrganization') [TBD}"				
 * header.author -> "Composition.author"				
 * header.legalAuthenticator -> "Composition.attester.where(mode=http://hl7.org/fhir/composition-attestation-mode#legal)"				
@@ -53,9 +53,10 @@ Target: "hl7.org/fhir/r4"
 * header.metadata.title -> "Composition.title"				
 * header.metadata.custodian -> "Composition.custodian"				
 * order -> "Composition.extension('http://hl7.eu/fhir/ig/xeh/StructureDefinition/composition-basedOn-order-or-requisition').valueReference.resolve()"				
-* order -> "Composition.extension('http://hl7.eu/fhir/ig/xeh/StructureDefinition/composition-basedOn-order-or-requisition').valueReference.identifier"				
+* order -> "Composition.extension('http://hl7.eu/fhir/ig/xeh/StructureDefinition/composition-basedOn-order-or-requisition').valueIdentifier"				
 * specimen -> "Observation.conformsTo('http://hl7.eu/fhir/ig/xeh/StructureDefinition/Observation-results-laboratory-eu-xeh').specimen.resolve()"				
-* result -> "Composition.section:no-subsections.entry.resolve(); Composition.section:subsections.section.entry.resolve()"				
+* result -> "Composition.section:no-subsections.entry.resolve()"				
+* result -> "Composition.section:subsections.section.entry.resolve()"				
 // --END				
 // --END				
 // --END				

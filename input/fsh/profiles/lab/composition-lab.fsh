@@ -33,7 +33,7 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
   * ^short = "Kind of composition (\"Laboratory Report\")"
   * ^definition = "Specifies that this composition refer to a Laboratory Report"  
   // slice the subject tp cover the three cases of human ; non-human and mixed
-* subject only Reference(PatientXeh)
+* subject only Reference(PatientXeh or Patient or Group or Location or Device)
 * subject 1..1
 * encounter only Reference (Encounter)  // profile defined for other scopes to be checked
 * author 1..
@@ -136,17 +136,17 @@ How to manage the annotation section ? should it be a separate section ?
 
 // -------------------------------------
 // Payer section  0 .. 1
+// Payer information moved to ServiceRequest
 // -------------------------------------
 
-* section contains payers ..* // check if ..1 or ..*
+/* * section contains payers ..* // check if ..1 or ..*
 * section[payers]
   * ^short = "Payer section"
   * ^definition = "	Optional information on sources of reimbursement of the performed laboratory tests."
-// * section[no-subsections].code from LabStudyTypesXeh (preferred)
   * code = http://loinc.org#48768-6 (exactly) // add binding
   * text 1..
   * entry only Reference (Coverage)
-  * section ..0
+  * section ..0 */
 
 // -------------------------------------
 // Annotation section  0 .. 1
@@ -154,7 +154,7 @@ How to manage the annotation section ? should it be a separate section ?
 
 * section contains annotations ..* // check if ..1 or ..*
 * section[annotations]
-  * ^short = "ANNOTATION COMMENT"
+  * ^short = "Annotation comment"
   * ^definition = """Narrative expression of comments accompanying the report, such as suggestions for evaluation, technical notes from the laboratory, etc.
 
 Examples:
