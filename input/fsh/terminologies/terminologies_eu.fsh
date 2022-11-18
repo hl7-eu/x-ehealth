@@ -10,6 +10,7 @@ Id:	       vaccines-covid-19
 Title:	       "Vaccine List (COVID-19)"
 Description:   "Vaccine List (COVID-19)"
 * ^status = #draft
+* ^experimental = false
 // * $sct#1142178009 "SARS-CoV-2 vaccine"
 * $sct#1119349007 "SARS-CoV-2 mRNA vaccine"
 * $sct#1119305005 "SARS-CoV-2 antigen vaccine"
@@ -42,6 +43,7 @@ Title:	       "Vaccine Name List (COVID-19)"
 Description:   "Vaccine Name List (COVID-19)"
 // Are these codes correct and relevant, are there alternative codes?
 * ^status = #draft
+* ^experimental = false
 * $ema#EU/1/20/1528 "Comirnaty"
 * $ema#EU/1/20/1507 "COVID-19 Vaccine Moderna"
 // https://www.ema.europa.eu/en/medicines/human/EPAR/vaxzevria-previously-covid-19-vaccine-astrazeneca
@@ -61,6 +63,7 @@ Title:	       "Vaccine marketing authorization holder or Vaccine manufacturer (C
 Description:   "Vaccine marketing authorization holder or Vaccine manufacturer (COVID-19)"
 // Are these codes correct and relevant, are there alternative codes?
 * ^status = #draft
+* ^experimental = false
 * $spor#ORG-100001699	"AstraZeneca AB"
 * $spor#ORG-100030215	"Biontech Manufacturing GmbH"
 * $spor#ORG-100001417	"Janssen-Cilag International"
@@ -82,6 +85,7 @@ Id:	       covid-19-lab-methods
 Title:	       "COVID-19 Lab Methods"
 Description:   "COVID-19 Laboratory Methods"
 * ^status = #draft
+* ^experimental = false
 * $loinc#LP6464-4 "Nucleic acid amplification with probe detection"
 * $loinc#LP217198-3 "Rapid immunoassay"
 // * $loinc#LP6404-0 "Molecular genetics"
@@ -98,6 +102,7 @@ Id:	       covid-19-diseases
 Title:	       "COVID-19 Diseases"
 Description:   "COVID-19 Diseases"
 * ^status = #draft
+* ^experimental = false
 * $sct#840539006 "COVID-19"
 // * $icd-10#U07.1 "COVID-19, virus identified"
 // * $icd-10#U07.2 "COVID-19, virus not identified"
@@ -153,6 +158,7 @@ Id:	       covid-19-lab-result
 Title:	       "COVID-19 Lab Result"
 Description:   "COVID-19 Lab Result"
 * ^status = #draft
+* ^experimental = false
 * $sct#1240581000000104	"Severe acute respiratory syndrome coronavirus 2 detected"
 * $sct#1240591000000102 "Severe acute respiratory syndrome coronavirus 2 not detected"
 
@@ -166,6 +172,7 @@ Id:	       covid-19-lab-test-manufacturer-and-name
 Title:	       "COVID-19 Lab Test Manufacturer And Name"
 Description:   "Examples of COVID-19 Lab Test Manufacturer And Name from http://covid-19-diagnostics.jrc.ec.europa.eu/devices?manufacturer&text_name&marking&rapid_diag&format&target_type&field-1=HSC%20mutual%20recognition%20%28RAT%29&value-1=1&search_method=AND#form_content"
 * ^status = #draft
+* ^experimental = false
 * $jrc#1232 "Abbott Rapid Diagnostics Panbio™ COVID-19 Ag Rapid Test"
 * $jrc#1065 "Becton Dickinson BD Veritor System for Rapid Deteciton os SARS-CoV-2"
 

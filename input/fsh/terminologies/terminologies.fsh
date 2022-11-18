@@ -10,6 +10,7 @@ Id:	       loinc-disease-immunity
 Title:	       "LOINC Disease with Immunity"
 Description:   "Disease with Immunity [LOINC]"
 
+* ^experimental = false
 * ^status = #draft
 * $loinc#75505-8 "Diseases with serologic evidence of immunity"
 * $loinc#59784-9 "Disease with presumed immunity"
@@ -21,6 +22,7 @@ Title:	       "ICD11 Vaccine List (COVID-19)"
 Description:   "Vaccine List (COVID-19) from [ICD 11]"
 
 * ^status = #draft
+* ^experimental = false
 * include $icd11#XM1NL1 "COVID-19 vaccine, inactivated virus"
 * include $icd11#XM5DF6 "COVID-19 vaccine, live attenuated virus"
 * include $icd11#XM6AT1 "COVID-19 vaccine, DNA based"
@@ -37,6 +39,7 @@ Title:	       "LOINC Test List (COVID-19)"
 Description:   "Test List (COVID-19) from [LOINC]"
 
 * ^status = #draft
+* ^experimental = false
 * $loinc#96766-1  "GISAID sequence accession number"
 * $loinc#96896-6  "SARS coronavirus 2 (COVID-19) clade [Type] in Specimen by Molecular genetics method"
 * $loinc#96894-1  "SARS coronavirus 2 (COVID-19) whole genome sequencing and identification panel - Specimen by Molecular genetics method"
@@ -171,6 +174,7 @@ Title:	       "SNOMED CT Vaccine List (COVID-19)"
 Description:   "Vaccine List (COVID-19) from [SNOMED CT]"
 
 * ^status = #draft
+* ^experimental = false
 * include $sct#1119349007 "SARS-CoV-2 mRNA vaccine"
 * include $sct#1119305005 "SARS-CoV-2 antigen vaccine"
 
@@ -182,4 +186,5 @@ Title:	       "ATC Vaccine List (COVID-19)"
 Description:   "Vaccine List (COVID-19) from [ATC]"
 
 * ^status = #draft
+* ^experimental = false
 * include $atc#J07BX03 "covid-19 vaccines"

@@ -73,7 +73,8 @@ Instance: Inline-Organization-hepatitis-panel
 InstanceOf: Organization
 Usage: #inline
 * id = "608b5309-2609-4d03-b6da-c758bfa1de70"
-* identifier[+].system = "urn:oid:1.2.203" // this is a valid OID representing the Czech Republic, though it is not being recognized as valid by the IG Publisher
+// * identifier[+].system = "urn:oid:1.2.203" // this is a valid OID representing the Czech Republic, though it is not being recognized as valid by the IG Publisher
+* identifier[0].system = "http://example.org/czech-orgs"
 * identifier[=].value = "24341"
 * name = "Ministry of Health of the Czech Republic"
 
@@ -106,13 +107,13 @@ Usage: #inline
 * status = #final
 * category[+] = $observation-category#laboratory
 * category[+] = $diagnostic-service-sections#MB "Microbiology"
-* code.coding[+] = #0020089 "Hepatitis B Surface Antigen"
+* code.coding[0] = #0020089 "Hepatitis B Surface Antigen"
 * code.coding[+] = $loinc#5196-1 "Hepatitis B virus surface Ag [Presence] in Serum or Plasma by Immunoassay"
 * code.text = "Hepatitis B Surface Antigen"
 * subject = Reference(Patient/8472931c-fbd0-437b-9ed1-4f66472c78b5)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
-* performer[+].display = "MUDr. Aleš Procházka"
-* hasMember[+] = Reference(Observation/104a5829-565b-46a6-85d6-36751ef79a40)
+* performer[0].display = "MUDr. Aleš Procházka"
+* hasMember[0] = Reference(Observation/104a5829-565b-46a6-85d6-36751ef79a40)
 * hasMember[+] = Reference(Observation/01b8ec35-9b20-45a4-bd41-42eeae2fd521)
 * hasMember[+] = Reference(Observation/096e27da-0768-47e4-b33c-9f1be93e1f88)
 * hasMember[+] = Reference(Observation/861e7b48-5497-410a-bed8-2cde814e09fc)
