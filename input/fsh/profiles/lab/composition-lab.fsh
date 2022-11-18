@@ -23,6 +23,8 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
 - ComponentOf.encounter define details in Enouncter profile
 */
 
+* extension[diagnostic-report].valueReference only Reference(DiagnosticReportLabXeh)
+* extension[basedOn-order-or-requisition].valueReference only Reference(ServiceRequestLabXeh)
 * text ^short = "Narrative text"
 * identifier ^short = "Business identifier of the Laboratory Report (setID)"
 * status ^short = "Status of the Report"
@@ -44,22 +46,23 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
 * title ^short = "Laboratory Report"
 * title ^definition = "Official human-readable label for the composition.\r\n\r\nFor this document should be \"Laboratory Report\" or any equivalent translation"
 
-
-
 // ServiceRequest and/or RequestGroup
 
 // add attester
 // RH - attester is already being included above?
 
-// 
 
 /*  IS THE SLICE NEEDED IN THIS CASE ?
 // check with the XDlab structure */
 
 * section ^slicing.discriminator[0].type = #exists
 * section ^slicing.discriminator[0].path = "$this.section"
+* section ^slicing.discriminator[+].type = #type
+* section ^slicing.discriminator[=].path = "$this.entry.resolve()"
+* section ^slicing.discriminator[+].type = #pattern
+* section ^slicing.discriminator[=].path = "$this.code"
 * section ^slicing.ordered = false
-* section ^slicing.rules = #closed
+* section ^slicing.rules = #open
 
 
 /* TO DO
@@ -69,6 +72,14 @@ How to manage the annotation section ? should it be a separate section ?
 
 */
 
+// --------------------------------------
+// Common rules for all the section
+// ---------------------------------
+
+* section.title 1..
+* section.code 1..
+* section.code only http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
+* section.text only Narrative
 
 // -------------------------------------
 // Single section  0 .. 1
@@ -77,46 +88,79 @@ How to manage the annotation section ? should it be a separate section ?
 * section contains no-subsections ..* // check if ..1 or ..*
 * section[no-subsections] ^short = "Variant 1: section with text and entry"
 // * section ^definition = "This section contains data describing an interest or worry about a health state or process that could possibly require attention, intervention, or management. A Health Concern is a health related matter that is of interest, importance or worry to someone, who may be the patient, patient's family or patient's health care provider. Health concerns are derived from a variety of sources within an EHR (such as Problem List, Family History, Social History, Social Worker Note, etc.). Health concerns can be medical, surgical, nursing, allied health or patient-reported concerns. Problem Concerns are a subset of Health Concerns that have risen to the level of importance that they typically would belong on a classic “Problem List”, such as “Diabetes Mellitus” or “Family History of Melanoma” or “Tobacco abuse”. These are of broad interest to multiple members of the care team. Examples of other Health Concerns that might not typically be considered a Problem Concern include “Risk of Hyperkalemia” for a patient taking an ACE-inhibitor medication, or “Transportation difficulties” for someone who doesn't drive and has trouble getting to appointments, or “Under-insured” for someone who doesn't have sufficient insurance to properly cover their medical needs such as medications. These are typically most important to just a limited number of care team members."
-* section[no-subsections].title 1..
-* section[no-subsections].code 1..
-* section[no-subsections].code only http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
+
 * section[no-subsections].code from LabStudyTypesXeh (preferred)
 // * section.code = http://loinc.org#75310-3 (exactly) // add binding
 * section[no-subsections].text 1..
-* section[no-subsections].text only Narrative
+
 // add slices check the needed resources
 // check structure of XD-LAB
 // RH - allow a choice of both DiagnosticReport (optional) and Observation Results Lab (can be a single observation, or a grouper of nested observations)
-* section[no-subsections].entry only Reference (DiagnosticReportLabXeh or ObservationResultsLaboratoryXeh)
+// * section[no-subsections].entry only Reference (DiagnosticReportLabXeh or ObservationResultsLaboratoryXeh)
+ // GC - deciced to move diagnostic Report to an extension
+* section[no-subsections].entry only Reference (ObservationResultsLaboratoryXeh)
 * section[no-subsections].section ..0
 
 // -------------------------------------
-// Structured section  0 .. 1
+// Structured sections  0 .. 1
 // -------------------------------------
 
 * section contains subsections ..* // check if ..1 or ..*
 * section[subsections] ^short = "Variant 2: section with one to many subsections Laboratory Report Item"
 // * section ^definition = "This section contains data describing an interest or worry about a health state or process that could possibly require attention, intervention, or management. A Health Concern is a health related matter that is of interest, importance or worry to someone, who may be the patient, patient's family or patient's health care provider. Health concerns are derived from a variety of sources within an EHR (such as Problem List, Family History, Social History, Social Worker Note, etc.). Health concerns can be medical, surgical, nursing, allied health or patient-reported concerns. Problem Concerns are a subset of Health Concerns that have risen to the level of importance that they typically would belong on a classic “Problem List”, such as “Diabetes Mellitus” or “Family History of Melanoma” or “Tobacco abuse”. These are of broad interest to multiple members of the care team. Examples of other Health Concerns that might not typically be considered a Problem Concern include “Risk of Hyperkalemia” for a patient taking an ACE-inhibitor medication, or “Transportation difficulties” for someone who doesn't drive and has trouble getting to appointments, or “Under-insured” for someone who doesn't have sufficient insurance to properly cover their medical needs such as medications. These are typically most important to just a limited number of care team members."
-* section[subsections].title 1..
-* section[subsections].code 1..
+/* * section[subsections].title 1..
+* section[subsections].code 1.. */
 * section[subsections].code only http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
 // Should we also include the LabStudyTypesXeh (preferred) binding here?
 * section[subsections].code from LabStudyTypesXeh (preferred)
 // * section.code = http://loinc.org#75310-3 (exactly) // add binding
 * section[subsections].text 0..0
 * section[subsections].entry 0..0
-* section[subsections].text only Narrative
+// * section[subsections].text only Narrative
 // add slices check the needed resoucres
 * section[subsections].section 1..
-  * section.code 1..
-  * section.code only http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
+  * code 1..
+  * code only http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
   // And include the LabStudyTypesXeh (preferred) binding for the subsection here?
-  * section.code from LabStudyTypesXeh (preferred)
+  * code from LabStudyTypesXeh (preferred)
   // * section.code = http://loinc.org#75310-3 (exactly) // add binding
-  * section.text 1..
-  * section.entry 1..
-  * section.text only Narrative
+  * text 1..
+  * entry 1..
+  * text only Narrative
   // add slices check the needed resoucres
   // check structure od XD-LAB
   // RH - allow a choice of both DiagnosticReport (optional) and Observation Results Lab (can be a single observation, or a grouper of nested observations)
-  * section.entry only Reference (DiagnosticReportLabXeh or ObservationResultsLaboratoryXeh)
+  // GC - deciced to move diagnostic Report to an extension
+  * entry only Reference (ObservationResultsLaboratoryXeh)
+  // * section.entry only Reference (DiagnosticReportLabXeh or ObservationResultsLaboratoryXeh)
+
+// -------------------------------------
+// Payer section  0 .. 1
+// -------------------------------------
+
+* section contains payers ..* // check if ..1 or ..*
+* section[payers]
+  * ^short = "Payer section"
+  * ^definition = "	Optional information on sources of reimbursement of the performed laboratory tests."
+// * section[no-subsections].code from LabStudyTypesXeh (preferred)
+  * code = http://loinc.org#48768-6 (exactly) // add binding
+  * text 1..
+  * entry only Reference (Coverage)
+  * section ..0
+
+// -------------------------------------
+// Annotation section  0 .. 1
+// -------------------------------------
+
+* section contains annotations ..* // check if ..1 or ..*
+* section[annotations]
+  * ^short = "ANNOTATION COMMENT"
+  * ^definition = """Narrative expression of comments accompanying the report, such as suggestions for evaluation, technical notes from the laboratory, etc.
+
+Examples:
+Suggestion: This result should be evaluated in relation to the patient's medical history and clinical condition.
+Technical note: A list of accredited examination(s) is available at www.laboratory.com. """
+
+  * code = http://loinc.org#48767-8 (exactly) // add binding
+  * text 1.. 
+  * section ..0
