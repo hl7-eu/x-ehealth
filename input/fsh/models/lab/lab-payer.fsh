@@ -36,13 +36,14 @@ Title: "eHN Lab Payer model to FHIR R4 Map"
 Source: Payer				
 Target: "hl7.org/fhir/r4"				
 				
-* -> "to be mapped"				
-* insurance -> "to be mapped"				
-* insurance.identifier -> "to be mapped"				
-* insurance.name -> "to be mapped"				
-* insurance.subjectIdentifier -> "to be mapped"				
+* -> "Coverage"				
+* insurance -> "Coverage"				
+* insurance.identifier -> "Coverage.payor.ofType(Organization).resolve().identifier"				
+* insurance.name -> "Coverage.payor.ofType(Organization).resolve().name"				
+* insurance.subjectIdentifier -> "Coverage.policyHolder.resolve().identifier"				
+* insurance.subjectIdentifier -> "Coverage.beneficiary.resolve().identifier"				
+* insurance.subjectIdentifier -> "Coverage.subscriberId"				
+* insurance.subjectIdentifier -> "Coverage.subscriber.resolve().identifier"				
 // --END				
 // --END				
 // --END				
-				
-				

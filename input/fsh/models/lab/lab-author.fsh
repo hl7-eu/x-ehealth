@@ -36,13 +36,16 @@ Title: "eHN Lab Author model to FHIR R4 Map"
 Source: Author				
 Target: "hl7.org/fhir/r4"				
 				
-* -> "to be mapped"				
-* identifier -> "to be mapped"				
-* name -> "to be mapped"				
-* organization -> "to be mapped"				
+* -> "Composition.author.resolve()"				
+* identifier -> "Composition.author.resolve().ofType(PractictionerRole).practictioner.resolve().identifier"				
+* identifier -> "Composition.author.resolve().ofType(PractictionerRole).identifier"				
+* name -> "Composition.author.resolve().ofType(PractictionerRole).practictioner.resolve().name"				
+* organization -> "Composition.author.resolve().ofType(PractictionerRole).organization.resolve()"				
 // --END				
 // --END				
 // --END				
 // --END				
+				
+				
 				
 				
