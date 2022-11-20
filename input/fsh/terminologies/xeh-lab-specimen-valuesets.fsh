@@ -185,6 +185,8 @@ ValueSet:      LabSpecimenAdditiveXeh
 Id:	       lab-specimenAdditive-xeh
 Title:	       "Lab Specimen Additive (X-eHealth)"
 Description:   "Laboratory specimen additives."
+* ^status = #draft
+* ^experimental = false
 * $sct#1259913003   "Heparin ammonium (substance)"
 * $sct#386961008    "Aprotinin (substance)"
 * $sct#29725000 "Heparin calcium (substance)"
