@@ -22,7 +22,7 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
 * signature ^short = "Digital Signature of this report"
 
 * entry ^slicing.discriminator[0].type = #type
-* entry ^slicing.discriminator[0].path = "$this.resolve()"
+* entry ^slicing.discriminator[0].path = "resource"
 * entry ^slicing.ordered = false
 * entry ^slicing.rules = #open
 
