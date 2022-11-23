@@ -1,5 +1,5 @@
 Instance: BundleMicroCultureSuscLabResult
-InstanceOf: Bundle
+InstanceOf: BundleLabReportXeh
 Title: "Bundle Microbiology Culture + Susceptibility Lab Result"
 Description: "Microbiology Culture + Susceptibility Lab Result"
 Usage: #example
