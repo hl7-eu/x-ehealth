@@ -14,9 +14,11 @@ Description: "X-eHealth Specimen profile."
 * processing.additive only Reference(Substance or SpecimenAdditiveSubstanceXeh)
 * container.type from LabSpecimenContainerXeh (preferred)
 
+// ----------------------------------------
+
 Profile: SpecimenAdditiveSubstanceXeh
 Parent: Substance
 Id: specimen-additive-substance-xeh
 Title: "Specimen Additive Substance Xeh"
-Description: ""
+Description: """Specimen Additive Substance Xeh"""
 * code from LabSpecimenAdditiveXeh
