@@ -123,6 +123,8 @@ Instance: Inline-Diag-Report-micro
 InstanceOf: DiagnosticReport-lab-xeh
 Usage: #inline
 * id = "b864303b-91ab-4e29-ad74-31a7d6566875"
+* extension[+].url = $diagnostic-report-composition-r5
+* extension[=].valueReference = Reference(Composition/4789a3ee-92b1-41b2-9b97-83daacf2a239)
 * status = #final
 * category = $diagnostic-service-sections#LAB
 * code.text = "Bacterial Aerobic & Anaerobic Culture & Susceptibility"

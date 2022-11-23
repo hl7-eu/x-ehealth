@@ -7,6 +7,7 @@ Description: "CDiagnosticReport used to represent an entry of a Laboratory Repor
 * ^copyright = "X-eHealth Project"
 * . ^short = "Laboratory Report DiagnosticReport"
 * . ^definition = "Laboratory Report DiagnosticReport"
+* extension contains $diagnostic-report-composition-r5 named DiagnosticReportCompositionR5 1..1
 
 /*
 content to be referred...
