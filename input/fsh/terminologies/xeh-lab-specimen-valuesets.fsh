@@ -174,12 +174,8 @@ Description:   "Laboratory specimen containers."
 * $sct#702232008	"Sweat specimen container"
 * $sct#702294007	"Syringe-blood collection tube transfer"
 * $sct#706054001    "Urine specimen container"
-* $sct#706053007    "General specimen container"
 * $sct#767385003	"Aerobic blood culture bottle"
 * $sct#767383005	"Anaerobic blood culture bottle"
-* $sct#706047007	"Fecal specimen container"
-* $sct#702223006	"Sputum specimen container"
-* $sct#702269006	"General specimen container, no additive, sterile"
 
 ValueSet:      LabSpecimenAdditiveXeh
 Id:	       lab-specimenAdditive-xeh
