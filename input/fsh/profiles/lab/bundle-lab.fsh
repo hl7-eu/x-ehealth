@@ -29,7 +29,7 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
 * entry contains composition 1..1
 * entry[composition].resource only CompositionLabReportXeh
 
-* entry contains diagnosticReport 0..1
+* entry contains diagnosticReport 1..1
 * entry[diagnosticReport].resource only DiagnosticReportLabXeh
 
 * entry contains patient 0..1
@@ -43,6 +43,3 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
 
 * entry contains serviceRequest 0..*
 * entry[serviceRequest].resource only ServiceRequestLabXeh // Add profiles
-
-//* entry contains requestGroup 0..1
-//* entry[requestGroup].resource only RequestGroupLabXeh // Add profiles
