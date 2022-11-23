@@ -12,7 +12,7 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
 // should we make it 0.. ?
 // or have text repeated here and in the sections ?
 * extension contains CompositionBasedOnOrderOrRequisition named basedOn-order-or-requisition 0..*
-* extension contains DiagnosticReportReference named diagnostic-report 0..1
+* extension contains DiagnosticReportReference named diagnostic-report 1..1
 
 /*  TO DO Header
 - add optional data enterer
