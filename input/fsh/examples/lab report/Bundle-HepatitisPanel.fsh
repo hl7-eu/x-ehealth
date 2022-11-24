@@ -42,15 +42,14 @@ Usage: #inline
 * type = $loinc#11502-2 "Laboratory report"
 * subject = Reference(Patient/8472931c-fbd0-437b-9ed1-4f66472c78b5)
 * date = "2022-10-25T14:30:00+01:00"
-* author[0].display = "MUDr. Aleš Procházka"
+* author[+].display = "MUDr. Aleš Procházka"
 * title = "Laboratory Report Hepatitis Panel - 27 Dec, 2020 14:30"
 * confidentiality = #N
-* attester[0].mode = #legal
-* attester[0].time = "2020-12-27T14:30:00+01:00"
-* attester[0].party = Reference(Organization/608b5309-2609-4d03-b6da-c758bfa1de70)
+* attester[+].mode = #legal
+* attester[=].time = "2020-12-27T14:30:00+01:00"
+* attester[=].party = Reference(Organization/608b5309-2609-4d03-b6da-c758bfa1de70)
 * custodian = Reference(Organization/608b5309-2609-4d03-b6da-c758bfa1de70)
 * section[+].title = "Hepatitis screening panel"
-* section[=].code = #3002989 "Hepatitis Panel, Acute with Reflex to HBsAg Confirmation and Reflex to HCV by Quantitative NAAT"
 * section[=].entry[+] = Reference(Observation/2c72163e-b741-44a3-aff7-c52f17f7a1ba)
 
 Instance: Inline-Patient-hepatitis-panel
@@ -65,8 +64,8 @@ Usage: #inline
 * identifier[+].type = $v2-0203#PPN
 * identifier[=].system = "urn:oid:2.16.840.1.113883.4.330.203"
 * identifier[=].value = "5484136"
-* name[0].family = "Očkovaný"
-* name[0].given[0] = "František"
+* name[+].family = "Očkovaný"
+* name[=].given[+] = "František"
 * gender = #male
 * birthDate = "2000-03-21"
 
@@ -75,7 +74,7 @@ InstanceOf: Organization
 Usage: #inline
 * id = "608b5309-2609-4d03-b6da-c758bfa1de70"
 // * identifier[+].system = "urn:oid:1.2.203" // this is a valid OID representing the Czech Republic, though it is not being recognized as valid by the IG Publisher
-* identifier[0].system = "http://example.org/czech-orgs"
+* identifier[+].system = "http://example.org/czech-orgs"
 * identifier[=].value = "24341"
 * name = "Ministry of Health of the Czech Republic"
 
@@ -110,13 +109,13 @@ Usage: #inline
 * status = #final
 * category[+] = $observation-category#laboratory
 * category[+] = $diagnostic-service-sections#MB "Microbiology"
-* code.coding[0] = #0020089 "Hepatitis B Surface Antigen"
+* code.coding[+] = #0020089 "Hepatitis B Surface Antigen"
 * code.coding[+] = $loinc#5196-1 "Hepatitis B virus surface Ag [Presence] in Serum or Plasma by Immunoassay"
 * code.text = "Hepatitis B Surface Antigen"
 * subject = Reference(Patient/8472931c-fbd0-437b-9ed1-4f66472c78b5)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
-* performer[0].display = "MUDr. Aleš Procházka"
-* hasMember[0] = Reference(Observation/104a5829-565b-46a6-85d6-36751ef79a40)
+* performer[+].display = "MUDr. Aleš Procházka"
+* hasMember[+] = Reference(Observation/104a5829-565b-46a6-85d6-36751ef79a40)
 * hasMember[+] = Reference(Observation/01b8ec35-9b20-45a4-bd41-42eeae2fd521)
 * hasMember[+] = Reference(Observation/096e27da-0768-47e4-b33c-9f1be93e1f88)
 * hasMember[+] = Reference(Observation/861e7b48-5497-410a-bed8-2cde814e09fc)

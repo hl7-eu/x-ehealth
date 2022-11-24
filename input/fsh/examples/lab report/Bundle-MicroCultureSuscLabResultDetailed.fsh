@@ -74,12 +74,12 @@ Usage: #inline
 * type = $loinc#11502-2 "Laboratory report"
 * subject = Reference(Patient/5bb42c3f-56fb-4bbc-b939-73910a6cce3b)
 * date = "2022-10-25T14:30:00+01:00"
-* author[0].display = "MUDr. Aleš Procházka"
+* author[+].display = "MUDr. Aleš Procházka"
 * title = "Laboratory Report Bacterial Aerobic & Anaerobic Culture and Susceptibility - 27 Dec, 2020 14:30"
 * confidentiality = #N
-* attester[0].mode = #legal
-* attester[0].time = "2020-12-27T14:30:00+01:00"
-* attester[0].party = Reference(Organization/1e139f41-4d0f-43dd-ad5a-98003c520349)
+* attester[+].mode = #legal
+* attester[=].time = "2020-12-27T14:30:00+01:00"
+* attester[=].party = Reference(Organization/1e139f41-4d0f-43dd-ad5a-98003c520349)
 * custodian = Reference(Organization/1e139f41-4d0f-43dd-ad5a-98003c520349)
 * section[+].title = "Bacterial Aerobic & Anaerobic Culture & Susceptibility"
 * section[=].code.text = "Bacterial Aerobic & Anaerobic Culture & Susceptibility"
@@ -94,16 +94,16 @@ Instance: Inline-Patient-micro
 InstanceOf: Patient
 Usage: #inline
 * id = "5bb42c3f-56fb-4bbc-b939-73910a6cce3b"
-* identifier[0].type = $v2-0203#NIIP
-* identifier[0].system = "urn:oid:1.2.203.24341.1.20.2"
-* identifier[0].value = "740512852"
-* identifier[1].system = "urn:oid:1.2.203.24341.1.20.9.1"
-* identifier[1].value = "A225961454"
-* identifier[2].type = $v2-0203#PPN
-* identifier[2].system = "urn:oid:2.16.840.1.113883.4.330.203"
-* identifier[2].value = "5484136"
-* name[0].family = "Očkovaný"
-* name[0].given[0] = "František"
+* identifier[+].type = $v2-0203#NIIP
+* identifier[=].system = "urn:oid:1.2.203.24341.1.20.2"
+* identifier[=].value = "740512852"
+* identifier[+].system = "urn:oid:1.2.203.24341.1.20.9.1"
+* identifier[=].value = "A225961454"
+* identifier[+].type = $v2-0203#PPN
+* identifier[=].system = "urn:oid:2.16.840.1.113883.4.330.203"
+* identifier[=].value = "5484136"
+* name[+].family = "Očkovaný"
+* name[=].given[+] = "František"
 * gender = #male
 * birthDate = "2000-03-21"
 
@@ -111,9 +111,9 @@ Instance: Inline-Organization-micro
 InstanceOf: Organization
 Usage: #inline
 * id = "1e139f41-4d0f-43dd-ad5a-98003c520349"
-// * identifier[0].system = "urn:oid:1.2.203" // this is a valid OID representing the Czech Republic, though it is not being recognized as valid by the IG Publisher
-* identifier[0].system = "http://example.org/czech-orgs"
-* identifier[0].value = "24341"
+// * identifier[+].system = "urn:oid:1.2.203" // this is a valid OID representing the Czech Republic, though it is not being recognized as valid by the IG Publisher
+* identifier[+].system = "http://example.org/czech-orgs"
+* identifier[=].value = "24341"
 * name = "Ministry of Health of the Czech Republic"
 
 Instance: Inline-Diag-Report-micro
@@ -146,13 +146,13 @@ InstanceOf: Observation-results-laboratory-eu-xeh
 Usage: #inline
 * id = "40278a69-87aa-470f-a38f-bff1e8aee175"
 * status = #final
-* category[0] = $observation-category#laboratory
+* category[+] = $observation-category#laboratory
 * category[+] = $diagnostic-service-sections#MB "Microbiology"
 * code.text = "Gram Stain"
 * subject = Reference(Patient/5bb42c3f-56fb-4bbc-b939-73910a6cce3b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
-* performer[0].display = "MUDr. Aleš Procházka"
-* hasMember[0] = Reference(Observation/1097929f-890e-4e27-a31d-58599f3e2479) // Inline-Observation-wbc
+* performer[+].display = "MUDr. Aleš Procházka"
+* hasMember[+] = Reference(Observation/1097929f-890e-4e27-a31d-58599f3e2479) // Inline-Observation-wbc
 * hasMember[+] = Reference(Observation/fcf220c3-7f3e-44f8-b669-48552a20fa0a) // Inline-Observation-gs-org1
 * hasMember[+] = Reference(Observation/331d513e-a57f-4464-9eec-25533aeb6d06) // Inline-Observation-gs-org2
 

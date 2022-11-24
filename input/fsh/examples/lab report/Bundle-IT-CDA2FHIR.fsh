@@ -8,7 +8,7 @@ Usage: #example
 * identifier.assigner.display = "Regione Lazio"
 * type = #document
 * timestamp = "2022-03-30T11:24:26+01:00"
-* entry[0].fullUrl = "urn:uuid:26032a57-083a-4ddf-b019-e566ae02f740"
+* entry[+].fullUrl = "urn:uuid:26032a57-083a-4ddf-b019-e566ae02f740"
 * entry[=].resource = Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-1
 * entry[+].fullUrl = "urn:uuid:dc2b606f-3cf7-4711-a2ff-52da04b89e04"
 * entry[=].resource = dc2b606f-3cf7-4711-a2ff-52da04b89e04
@@ -84,11 +84,11 @@ Usage: #inline
 * subject = Reference(urn:uuid:dc2b606f-3cf7-4711-a2ff-52da04b89e04)
 * encounter = Reference(urn:uuid:195a7abc-d109-404a-9dc7-ad2e80bafc8a)
 * date = "2022-03-30T11:24:26+01:00"
-* author[0] = Reference(urn:uuid:88868d3e-7ab1-4ee5-983e-b979c4971f5c)
+* author[+] = Reference(urn:uuid:88868d3e-7ab1-4ee5-983e-b979c4971f5c)
 * author[+] = Reference(urn:uuid:84b2e517-abc2-4268-975d-b12fa8174d30)
 * title = "REFERTO DI LABORATORIO"
 * confidentiality = #N
-* attester[0].mode = #professional
+* attester[+].mode = #professional
 * attester[=].party = Reference(urn:uuid:0bbabe57-7c43-4211-9e19-81fcec65686d)
 * attester[+].mode = #legal
 * attester[=].time = "2022-03-25T11:00:00+01:00"
@@ -102,7 +102,7 @@ Usage: #inline
 * section.title = "Esami delle Urine"
 * section.code = http://loinc.org#18729-4 "ESAMI DELLE URINE"
 * section.section.title = "Albumina nelle Urine"
-* section.section.code.coding[0] = http://loinc.org#14957-5 "Microalbumin Massa/Volume in Urine"
+* section.section.code.coding[+] = http://loinc.org#14957-5 "Microalbumin Massa/Volume in Urine"
 * section.section.code.coding[+] = urn:oid:2.16.840.1.113883.2.9.2.30.6.11#0090334.02 "XXX"
 * section.section.text.status = #generated
 * section.section.text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li><table id=\"nota1\"><thead><tr><th>Esame</th><th>Metodo utilizzato per l'esame</th><th>Materiale utilizzato per l'esame</th><th>Risultato dell'esame</th><th>Commenti e note</th><th>Unità di Misura</th><th>Range di Riferimento</th><th>Criteri per il range di riferimento</th><th>Interpretazione</th><th>Allegati multimediali</th></tr></thead><tbody><tr><td>Microalbumina massa/volume in urine</td><td/><td>Urine</td><td>20</td><td/><td>mg/L</td><td> 0 - 20 </td><td/><td>N</td><td/></tr></tbody></table></li></ul></div>"
@@ -124,7 +124,7 @@ Usage: #inline
 * identifier.assigner.display = "MEF"
 * name.family = "Verdi"
 * name.given = "Giuseppe"
-* telecom[0].system = #email
+* telecom[+].system = #email
 * telecom[=].value = "giuseppe.verdi@gmail.com"
 * telecom[=].use = #home
 * telecom[+].system = #phone
@@ -132,7 +132,7 @@ Usage: #inline
 * telecom[=].use = #mobile
 * gender = #male
 * birthDate = "1993-06-19"
-* address[0].use = #home
+* address[+].use = #home
 * address[=].line = "Via Aurora 12"
 * address[=].line.extension.url = "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-censusTract"
 * address[=].line.extension.valueString = "058091"
@@ -159,7 +159,7 @@ Usage: #inline
 * class = http://terminology.hl7.org/CodeSystem/v3-ActCode#AMB "ambulatory"
 * subject = Reference(urn:uuid:dc2b606f-3cf7-4711-a2ff-52da04b89e04)
 * basedOn = Reference(urn:uuid:1d4cbcd1-e0d3-49b6-92d8-1893da8d08e1)
-* participant[0].type = http://terminology.hl7.org/CodeSystem/v3-ParticipationType#REF
+* participant[+].type = http://terminology.hl7.org/CodeSystem/v3-ParticipationType#REF
 * participant[=].period.start = "2022-03-20T11:00:00+01:00"
 * participant[=].individual = Reference(urn:uuid:c20acec2-5d67-4c05-b35e-d528c35f9ed1)
 * participant[+].individual = Reference(urn:uuid:83ef1c55-566b-4547-affd-f6d7b993a094)
@@ -198,7 +198,7 @@ Usage: #inline
 * name.family = "Cervone"
 * name.given = "Matteo"
 * name.prefix = "Dr"
-* telecom[0].system = #email
+* telecom[+].system = #email
 * telecom[=].value = "matteo.cervone@gmail.it"
 * telecom[=].use = #home
 * telecom[+].system = #email
@@ -278,7 +278,7 @@ Usage: #inline
 * name.family = "Righi"
 * name.given = "Federico"
 * name.prefix = "Dttr."
-* telecom[0].system = #email
+* telecom[+].system = #email
 * telecom[=].value = "righi.federico@gmail.com"
 * telecom[=].use = #home
 * telecom[+].system = #phone
@@ -308,7 +308,7 @@ Usage: #inline
 * identifier.assigner.display = "MEF"
 * name.family = "Rossi"
 * name.given = "Roberta"
-* telecom[0].system = #email
+* telecom[+].system = #email
 * telecom[=].value = "maggi.roberta@gmail.com"
 * telecom[=].use = #home
 * telecom[+].system = #phone
@@ -479,7 +479,7 @@ InstanceOf: Observation
 Usage: #inline
 * id = "763f7902-8103-4d10-8bd1-546a726d43ee"
 * status = #final
-* code.coding[0] = http://loinc.org#14957-5 "Microalbumin Massa/Volume in Urine"
+* code.coding[+] = http://loinc.org#14957-5 "Microalbumin Massa/Volume in Urine"
 * code.coding[+] = urn:oid:2.16.840.1.113883.2.9.2.30.6.11#0090334.02 "Albumina nelle urine"
 * subject = Reference(urn:uuid:dc2b606f-3cf7-4711-a2ff-52da04b89e04)
 * encounter = Reference(urn:uuid:195a7abc-d109-404a-9dc7-ad2e80bafc8a)
