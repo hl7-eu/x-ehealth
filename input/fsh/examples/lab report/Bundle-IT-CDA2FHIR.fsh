@@ -1,5 +1,5 @@
-Instance: 17e2cad1-c3e3-4901-adb1-c35a0b82b883
-InstanceOf: Bundle
+Instance: IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883
+InstanceOf: BundleLabReportXeh
 Title: "Bundle Converted from CDA"
 Description: "Example of FHIR bundle converted from a CDA Lab report"
 Usage: #example
@@ -8,36 +8,36 @@ Usage: #example
 * identifier.assigner.display = "Regione Lazio"
 * type = #document
 * timestamp = "2022-03-30T11:24:26+01:00"
-* entry[0].fullUrl = "urn:uuid:26032a57-083a-4ddf-b019-e566ae02f740"
-* entry[=].resource = Inline-Instance-for-17e2cad1-c3e3-4901-adb1-c35a0b82b883-1
+* entry[+].fullUrl = "urn:uuid:26032a57-083a-4ddf-b019-e566ae02f740"
+* entry[=].resource = Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-1
 * entry[+].fullUrl = "urn:uuid:dc2b606f-3cf7-4711-a2ff-52da04b89e04"
 * entry[=].resource = dc2b606f-3cf7-4711-a2ff-52da04b89e04
 * entry[+].fullUrl = "urn:uuid:195a7abc-d109-404a-9dc7-ad2e80bafc8a"
-* entry[=].resource = Inline-Instance-for-17e2cad1-c3e3-4901-adb1-c35a0b82b883-2
+* entry[=].resource = Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-2
 * entry[+].fullUrl = "urn:uuid:5837e9bf-8a2b-43c3-bec8-d68dbd7fa7fb"
-* entry[=].resource = Inline-Instance-for-17e2cad1-c3e3-4901-adb1-c35a0b82b883-3
+* entry[=].resource = Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-3
 * entry[+].fullUrl = "urn:uuid:c92e7441-a6ac-4a4e-9a0b-1c2ee6bfe7dd"
 * entry[=].resource = c92e7441-a6ac-4a4e-9a0b-1c2ee6bfe7dd
 * entry[+].fullUrl = "urn:uuid:88868d3e-7ab1-4ee5-983e-b979c4971f5c"
-* entry[=].resource = Inline-Instance-for-17e2cad1-c3e3-4901-adb1-c35a0b82b883-4
+* entry[=].resource = Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-4
 * entry[+].fullUrl = "urn:uuid:ab279a0b-320f-483b-9a5d-f1f7e8ceacb2"
 * entry[=].resource = ab279a0b-320f-483b-9a5d-f1f7e8ceacb2
 * entry[+].fullUrl = "urn:uuid:84b2e517-abc2-4268-975d-b12fa8174d30"
-* entry[=].resource = Inline-Instance-for-17e2cad1-c3e3-4901-adb1-c35a0b82b883-5
+* entry[=].resource = Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-5
 * entry[+].fullUrl = "urn:uuid:68740937-f732-4ff9-a2e4-bf502d2d125f"
-* entry[=].resource = Inline-Instance-for-17e2cad1-c3e3-4901-adb1-c35a0b82b883-6
+* entry[=].resource = Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-6
 * entry[+].fullUrl = "urn:uuid:a59d2bf2-7d6c-49a5-9ceb-c3f165ebd20d"
 * entry[=].resource = a59d2bf2-7d6c-49a5-9ceb-c3f165ebd20d
 * entry[+].fullUrl = "urn:uuid:0bbabe57-7c43-4211-9e19-81fcec65686d"
-* entry[=].resource = Inline-Instance-for-17e2cad1-c3e3-4901-adb1-c35a0b82b883-7
+* entry[=].resource = Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-7
 * entry[+].fullUrl = "urn:uuid:a199dc05-af73-44a0-a218-bda5dec557ce"
 * entry[=].resource = a199dc05-af73-44a0-a218-bda5dec557ce
 * entry[+].fullUrl = "urn:uuid:b2ba9ea7-8098-4f7a-a2a5-c6a51a35c61c"
 * entry[=].resource = b2ba9ea7-8098-4f7a-a2a5-c6a51a35c61c
 * entry[+].fullUrl = "urn:uuid:13792187-4721-4309-a8a4-4a57ffb4e6a1"
-* entry[=].resource = Inline-Instance-for-17e2cad1-c3e3-4901-adb1-c35a0b82b883-8
+* entry[=].resource = Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-8
 * entry[+].fullUrl = "urn:uuid:852cec21-4ff9-4cea-b86d-00de92b46894"
-* entry[=].resource = Inline-Instance-for-17e2cad1-c3e3-4901-adb1-c35a0b82b883-9
+* entry[=].resource = Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-9
 * entry[+].fullUrl = "urn:uuid:c20acec2-5d67-4c05-b35e-d528c35f9ed1"
 * entry[=].resource = c20acec2-5d67-4c05-b35e-d528c35f9ed1
 * entry[+].fullUrl = "urn:uuid:f7fa317a-66ac-4adf-9199-9bfe1e2eaa21"
@@ -45,34 +45,36 @@ Usage: #example
 * entry[+].fullUrl = "urn:uuid:c1f46c0d-a0f9-41d7-8a33-15ffcf954354"
 * entry[=].resource = c1f46c0d-a0f9-41d7-8a33-15ffcf954354
 * entry[+].fullUrl = "urn:uuid:1d4cbcd1-e0d3-49b6-92d8-1893da8d08e1"
-* entry[=].resource = Inline-Instance-for-17e2cad1-c3e3-4901-adb1-c35a0b82b883-10
+* entry[=].resource = Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-10
 * entry[+].fullUrl = "urn:uuid:1b4b120e-0371-4878-b4c9-b69434e84c72"
-* entry[=].resource = Inline-Instance-for-17e2cad1-c3e3-4901-adb1-c35a0b82b883-11
+* entry[=].resource = Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-11
 * entry[+].fullUrl = "urn:uuid:c1bb11b3-87e6-4682-a214-10975487b643"
 * entry[=].resource = c1bb11b3-87e6-4682-a214-10975487b643
 * entry[+].fullUrl = "urn:uuid:508f4b29-09ca-4c94-8343-657f1923303a"
-* entry[=].resource = Inline-Instance-for-17e2cad1-c3e3-4901-adb1-c35a0b82b883-12
+* entry[=].resource = Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-12
 * entry[+].fullUrl = "urn:uuid:206fa15d-51ae-4f3d-b8d0-71ee6290ff52"
-* entry[=].resource = Inline-Instance-for-17e2cad1-c3e3-4901-adb1-c35a0b82b883-13
+* entry[=].resource = Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-13
 * entry[+].fullUrl = "urn:uuid:83ef1c55-566b-4547-affd-f6d7b993a094"
-* entry[=].resource = Inline-Instance-for-17e2cad1-c3e3-4901-adb1-c35a0b82b883-14
+* entry[=].resource = Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-14
 * entry[+].fullUrl = "urn:uuid:1a3064fd-9658-47f1-98f3-3f368761a9da"
-* entry[=].resource = Inline-Instance-for-17e2cad1-c3e3-4901-adb1-c35a0b82b883-15
+* entry[=].resource = Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-15
 * entry[+].fullUrl = "urn:uuid:6373bbff-d136-4cfe-a7bc-fab4bff2fc21"
-* entry[=].resource = Inline-Instance-for-17e2cad1-c3e3-4901-adb1-c35a0b82b883-16
+* entry[=].resource = Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-16
 * entry[+].fullUrl = "urn:uuid:0a0cfca8-f1d3-4ed5-8b04-0d6cdcee3a17"
-* entry[=].resource = Inline-Instance-for-17e2cad1-c3e3-4901-adb1-c35a0b82b883-17
+* entry[=].resource = Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-17
 * entry[+].fullUrl = "urn:uuid:d5f71fc0-6075-4fed-ad99-b3c609d27f6b"
 * entry[=].resource = d5f71fc0-6075-4fed-ad99-b3c609d27f6b
 * entry[+].fullUrl = "urn:uuid:5679723c-4fae-4ba7-9f09-5438a827bfda"
-* entry[=].resource = Inline-Instance-for-17e2cad1-c3e3-4901-adb1-c35a0b82b883-18
+* entry[=].resource = Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-18
 * entry[+].fullUrl = "urn:uuid:763f7902-8103-4d10-8bd1-546a726d43ee"
-* entry[=].resource = Inline-Instance-for-17e2cad1-c3e3-4901-adb1-c35a0b82b883-19
+* entry[=].resource = Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-19
 
-Instance: Inline-Instance-for-17e2cad1-c3e3-4901-adb1-c35a0b82b883-1
+Instance: Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-1
 InstanceOf: Composition
 Usage: #inline
 * id = "26032a57-083a-4ddf-b019-e566ae02f740"
+* extension[+].url = $composition-diagnostic-report-reference
+* extension[=].valueReference = Reference(DiagnosticReport/5679723c-4fae-4ba7-9f09-5438a827bfda)
 * language = #it-IT
 * identifier.system = "urn:oid:2.16.840.1.113883.2.9.2.120.4.4"
 * identifier.value = "c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju"
@@ -82,11 +84,11 @@ Usage: #inline
 * subject = Reference(urn:uuid:dc2b606f-3cf7-4711-a2ff-52da04b89e04)
 * encounter = Reference(urn:uuid:195a7abc-d109-404a-9dc7-ad2e80bafc8a)
 * date = "2022-03-30T11:24:26+01:00"
-* author[0] = Reference(urn:uuid:88868d3e-7ab1-4ee5-983e-b979c4971f5c)
+* author[+] = Reference(urn:uuid:88868d3e-7ab1-4ee5-983e-b979c4971f5c)
 * author[+] = Reference(urn:uuid:84b2e517-abc2-4268-975d-b12fa8174d30)
 * title = "REFERTO DI LABORATORIO"
 * confidentiality = #N
-* attester[0].mode = #professional
+* attester[+].mode = #professional
 * attester[=].party = Reference(urn:uuid:0bbabe57-7c43-4211-9e19-81fcec65686d)
 * attester[+].mode = #legal
 * attester[=].time = "2022-03-25T11:00:00+01:00"
@@ -100,7 +102,7 @@ Usage: #inline
 * section.title = "Esami delle Urine"
 * section.code = http://loinc.org#18729-4 "ESAMI DELLE URINE"
 * section.section.title = "Albumina nelle Urine"
-* section.section.code.coding[0] = http://loinc.org#14957-5 "Microalbumin Massa/Volume in Urine"
+* section.section.code.coding[+] = http://loinc.org#14957-5 "Microalbumin Massa/Volume in Urine"
 * section.section.code.coding[+] = urn:oid:2.16.840.1.113883.2.9.2.30.6.11#0090334.02 "XXX"
 * section.section.text.status = #generated
 * section.section.text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li><table id=\"nota1\"><thead><tr><th>Esame</th><th>Metodo utilizzato per l'esame</th><th>Materiale utilizzato per l'esame</th><th>Risultato dell'esame</th><th>Commenti e note</th><th>Unità di Misura</th><th>Range di Riferimento</th><th>Criteri per il range di riferimento</th><th>Interpretazione</th><th>Allegati multimediali</th></tr></thead><tbody><tr><td>Microalbumina massa/volume in urine</td><td/><td>Urine</td><td>20</td><td/><td>mg/L</td><td> 0 - 20 </td><td/><td>N</td><td/></tr></tbody></table></li></ul></div>"
@@ -122,7 +124,7 @@ Usage: #inline
 * identifier.assigner.display = "MEF"
 * name.family = "Verdi"
 * name.given = "Giuseppe"
-* telecom[0].system = #email
+* telecom[+].system = #email
 * telecom[=].value = "giuseppe.verdi@gmail.com"
 * telecom[=].use = #home
 * telecom[+].system = #phone
@@ -130,7 +132,7 @@ Usage: #inline
 * telecom[=].use = #mobile
 * gender = #male
 * birthDate = "1993-06-19"
-* address[0].use = #home
+* address[+].use = #home
 * address[=].line = "Via Aurora 12"
 * address[=].line.extension.url = "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-censusTract"
 * address[=].line.extension.valueString = "058091"
@@ -149,7 +151,7 @@ Usage: #inline
 * address[=].postalCode = "00138"
 * address[=].country = "100"
 
-Instance: Inline-Instance-for-17e2cad1-c3e3-4901-adb1-c35a0b82b883-2
+Instance: Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-2
 InstanceOf: Encounter
 Usage: #inline
 * id = "195a7abc-d109-404a-9dc7-ad2e80bafc8a"
@@ -157,14 +159,14 @@ Usage: #inline
 * class = http://terminology.hl7.org/CodeSystem/v3-ActCode#AMB "ambulatory"
 * subject = Reference(urn:uuid:dc2b606f-3cf7-4711-a2ff-52da04b89e04)
 * basedOn = Reference(urn:uuid:1d4cbcd1-e0d3-49b6-92d8-1893da8d08e1)
-* participant[0].type = http://terminology.hl7.org/CodeSystem/v3-ParticipationType#REF
+* participant[+].type = http://terminology.hl7.org/CodeSystem/v3-ParticipationType#REF
 * participant[=].period.start = "2022-03-20T11:00:00+01:00"
 * participant[=].individual = Reference(urn:uuid:c20acec2-5d67-4c05-b35e-d528c35f9ed1)
 * participant[+].individual = Reference(urn:uuid:83ef1c55-566b-4547-affd-f6d7b993a094)
 * period.start = "2022-03-30T11:24:26+01:00"
 * location.location = Reference(urn:uuid:6373bbff-d136-4cfe-a7bc-fab4bff2fc21)
 
-Instance: Inline-Instance-for-17e2cad1-c3e3-4901-adb1-c35a0b82b883-3
+Instance: Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-3
 InstanceOf: Specimen
 Usage: #inline
 * id = "5837e9bf-8a2b-43c3-bec8-d68dbd7fa7fb"
@@ -181,7 +183,7 @@ Usage: #inline
 * content.attachment.title = "string"
 * context.related = Reference(urn:uuid:26032a57-083a-4ddf-b019-e566ae02f740)
 
-Instance: Inline-Instance-for-17e2cad1-c3e3-4901-adb1-c35a0b82b883-4
+Instance: Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-4
 InstanceOf: PractitionerRole
 Usage: #inline
 * id = "88868d3e-7ab1-4ee5-983e-b979c4971f5c"
@@ -196,7 +198,7 @@ Usage: #inline
 * name.family = "Cervone"
 * name.given = "Matteo"
 * name.prefix = "Dr"
-* telecom[0].system = #email
+* telecom[+].system = #email
 * telecom[=].value = "matteo.cervone@gmail.it"
 * telecom[=].use = #home
 * telecom[+].system = #email
@@ -214,13 +216,13 @@ Usage: #inline
 * address.postalCode = "00184"
 * address.country = "100"
 
-Instance: Inline-Instance-for-17e2cad1-c3e3-4901-adb1-c35a0b82b883-5
+Instance: Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-5
 InstanceOf: PractitionerRole
 Usage: #inline
 * id = "84b2e517-abc2-4268-975d-b12fa8174d30"
 * practitioner = Reference(urn:uuid:68740937-f732-4ff9-a2e4-bf502d2d125f)
 
-Instance: Inline-Instance-for-17e2cad1-c3e3-4901-adb1-c35a0b82b883-6
+Instance: Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-6
 InstanceOf: Practitioner
 Usage: #inline
 * id = "68740937-f732-4ff9-a2e4-bf502d2d125f"
@@ -249,7 +251,7 @@ Usage: #inline
 * address.postalCode = "00137"
 * address.country = "100"
 
-Instance: Inline-Instance-for-17e2cad1-c3e3-4901-adb1-c35a0b82b883-7
+Instance: Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-7
 InstanceOf: Practitioner
 Usage: #inline
 * id = "0bbabe57-7c43-4211-9e19-81fcec65686d"
@@ -276,7 +278,7 @@ Usage: #inline
 * name.family = "Righi"
 * name.given = "Federico"
 * name.prefix = "Dttr."
-* telecom[0].system = #email
+* telecom[+].system = #email
 * telecom[=].value = "righi.federico@gmail.com"
 * telecom[=].use = #home
 * telecom[+].system = #phone
@@ -291,13 +293,13 @@ Usage: #inline
 * address.postalCode = "00164"
 * address.country = "100"
 
-Instance: Inline-Instance-for-17e2cad1-c3e3-4901-adb1-c35a0b82b883-8
+Instance: Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-8
 InstanceOf: PractitionerRole
 Usage: #inline
 * id = "13792187-4721-4309-a8a4-4a57ffb4e6a1"
 * practitioner = Reference(urn:uuid:852cec21-4ff9-4cea-b86d-00de92b46894)
 
-Instance: Inline-Instance-for-17e2cad1-c3e3-4901-adb1-c35a0b82b883-9
+Instance: Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-9
 InstanceOf: Practitioner
 Usage: #inline
 * id = "852cec21-4ff9-4cea-b86d-00de92b46894"
@@ -306,7 +308,7 @@ Usage: #inline
 * identifier.assigner.display = "MEF"
 * name.family = "Rossi"
 * name.given = "Roberta"
-* telecom[0].system = #email
+* telecom[+].system = #email
 * telecom[=].value = "maggi.roberta@gmail.com"
 * telecom[=].use = #home
 * telecom[+].system = #phone
@@ -367,7 +369,7 @@ Usage: #inline
 * address.postalCode = "00137"
 * address.country = "100"
 
-Instance: Inline-Instance-for-17e2cad1-c3e3-4901-adb1-c35a0b82b883-10
+Instance: Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-10
 InstanceOf: ServiceRequest
 Usage: #inline
 * id = "1d4cbcd1-e0d3-49b6-92d8-1893da8d08e1"
@@ -380,7 +382,7 @@ Usage: #inline
 * subject = Reference(urn:uuid:dc2b606f-3cf7-4711-a2ff-52da04b89e04)
 * encounter = Reference(urn:uuid:195a7abc-d109-404a-9dc7-ad2e80bafc8a)
 
-Instance: Inline-Instance-for-17e2cad1-c3e3-4901-adb1-c35a0b82b883-11
+Instance: Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-11
 InstanceOf: PractitionerRole
 Usage: #inline
 * id = "1b4b120e-0371-4878-b4c9-b69434e84c72"
@@ -396,7 +398,7 @@ Usage: #inline
 * name.family = "Rossi"
 * name.given = "Mario"
 
-Instance: Inline-Instance-for-17e2cad1-c3e3-4901-adb1-c35a0b82b883-12
+Instance: Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-12
 InstanceOf: Organization
 Usage: #inline
 * id = "508f4b29-09ca-4c94-8343-657f1923303a"
@@ -406,7 +408,7 @@ Usage: #inline
 * name = "Nuovo Ospedale S.Agostino (MO)"
 * partOf = Reference(urn:uuid:206fa15d-51ae-4f3d-b8d0-71ee6290ff52)
 
-Instance: Inline-Instance-for-17e2cad1-c3e3-4901-adb1-c35a0b82b883-13
+Instance: Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-13
 InstanceOf: Organization
 Usage: #inline
 * id = "206fa15d-51ae-4f3d-b8d0-71ee6290ff52"
@@ -414,13 +416,13 @@ Usage: #inline
 * identifier.value = "080105"
 * identifier.assigner.display = "Ministero della Salute"
 
-Instance: Inline-Instance-for-17e2cad1-c3e3-4901-adb1-c35a0b82b883-14
+Instance: Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-14
 InstanceOf: PractitionerRole
 Usage: #inline
 * id = "83ef1c55-566b-4547-affd-f6d7b993a094"
 * practitioner = Reference(urn:uuid:1a3064fd-9658-47f1-98f3-3f368761a9da)
 
-Instance: Inline-Instance-for-17e2cad1-c3e3-4901-adb1-c35a0b82b883-15
+Instance: Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-15
 InstanceOf: Practitioner
 Usage: #inline
 * id = "1a3064fd-9658-47f1-98f3-3f368761a9da"
@@ -430,7 +432,7 @@ Usage: #inline
 * name.family = "Turri"
 * name.given = "Silvia"
 
-Instance: Inline-Instance-for-17e2cad1-c3e3-4901-adb1-c35a0b82b883-16
+Instance: Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-16
 InstanceOf: Location
 Usage: #inline
 * id = "6373bbff-d136-4cfe-a7bc-fab4bff2fc21"
@@ -439,7 +441,7 @@ Usage: #inline
 * identifier.assigner.display = "Ministero della Salute"
 * managingOrganization = Reference(urn:uuid:0a0cfca8-f1d3-4ed5-8b04-0d6cdcee3a17)
 
-Instance: Inline-Instance-for-17e2cad1-c3e3-4901-adb1-c35a0b82b883-17
+Instance: Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-17
 InstanceOf: Organization
 Usage: #inline
 * id = "0a0cfca8-f1d3-4ed5-8b04-0d6cdcee3a17"
@@ -459,10 +461,12 @@ Usage: #inline
 * identifier.value = "XXX"
 * identifier.assigner.display = "Ministero della Salute"
 
-Instance: Inline-Instance-for-17e2cad1-c3e3-4901-adb1-c35a0b82b883-18
+Instance: Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-18
 InstanceOf: DiagnosticReport
 Usage: #inline
 * id = "5679723c-4fae-4ba7-9f09-5438a827bfda"
+* extension[+].url = $diagnostic-report-composition-r5
+* extension[=].valueReference = Reference(Composition/26032a57-083a-4ddf-b019-e566ae02f740)
 * status = #registered
 * code = http://loinc.org#14957-5 "Microalbumin Massa/Volume in Urine"
 * subject = Reference(urn:uuid:dc2b606f-3cf7-4711-a2ff-52da04b89e04)
@@ -470,12 +474,12 @@ Usage: #inline
 * specimen = Reference(urn:uuid:5837e9bf-8a2b-43c3-bec8-d68dbd7fa7fb)
 * result = Reference(urn:uuid:763f7902-8103-4d10-8bd1-546a726d43ee)
 
-Instance: Inline-Instance-for-17e2cad1-c3e3-4901-adb1-c35a0b82b883-19
+Instance: Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-19
 InstanceOf: Observation
 Usage: #inline
 * id = "763f7902-8103-4d10-8bd1-546a726d43ee"
 * status = #final
-* code.coding[0] = http://loinc.org#14957-5 "Microalbumin Massa/Volume in Urine"
+* code.coding[+] = http://loinc.org#14957-5 "Microalbumin Massa/Volume in Urine"
 * code.coding[+] = urn:oid:2.16.840.1.113883.2.9.2.30.6.11#0090334.02 "Albumina nelle urine"
 * subject = Reference(urn:uuid:dc2b606f-3cf7-4711-a2ff-52da04b89e04)
 * encounter = Reference(urn:uuid:195a7abc-d109-404a-9dc7-ad2e80bafc8a)

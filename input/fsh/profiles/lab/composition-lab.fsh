@@ -73,52 +73,55 @@ How to manage the annotation section ? should it be a separate section ?
 */
 
 // --------------------------------------
-// Common rules for all the section
+// Common rules for all the sections
 // ---------------------------------
 
 * section.title 1..
 * section.code 1..
 * section.code only http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
-* section.text only Narrative
+// RH - this constraint to only Narrative is already in the base Composition resource
+//* section.text only Narrative
 
 // -------------------------------------
 // Single section  0 .. 1
 // -------------------------------------
 
-* section contains no-subsections ..* // check if ..1 or ..*
-* section[no-subsections] ^short = "Variant 1: section with text and entry"
+// RH - Add 'xeh-' to the slice name, to clarify that there are potentially other "non-xeh" sections that do not meet the "xeh" sets of constraints
+* section contains xeh-no-subsections ..* // check if ..1 or ..*
+* section[xeh-no-subsections] ^short = "Variant 1: XeH section with text and entry"
 // * section ^definition = "This section contains data describing an interest or worry about a health state or process that could possibly require attention, intervention, or management. A Health Concern is a health related matter that is of interest, importance or worry to someone, who may be the patient, patient's family or patient's health care provider. Health concerns are derived from a variety of sources within an EHR (such as Problem List, Family History, Social History, Social Worker Note, etc.). Health concerns can be medical, surgical, nursing, allied health or patient-reported concerns. Problem Concerns are a subset of Health Concerns that have risen to the level of importance that they typically would belong on a classic “Problem List”, such as “Diabetes Mellitus” or “Family History of Melanoma” or “Tobacco abuse”. These are of broad interest to multiple members of the care team. Examples of other Health Concerns that might not typically be considered a Problem Concern include “Risk of Hyperkalemia” for a patient taking an ACE-inhibitor medication, or “Transportation difficulties” for someone who doesn't drive and has trouble getting to appointments, or “Under-insured” for someone who doesn't have sufficient insurance to properly cover their medical needs such as medications. These are typically most important to just a limited number of care team members."
 
-* section[no-subsections].code from LabStudyTypesXeh (preferred)
+* section[xeh-no-subsections].code from LabStudyTypesXeh (preferred)
 // * section.code = http://loinc.org#75310-3 (exactly) // add binding
-* section[no-subsections].text 1..
+* section[xeh-no-subsections].text 1..
 
 // add slices check the needed resources
 // check structure of XD-LAB
 // RH - allow a choice of both DiagnosticReport (optional) and Observation Results Lab (can be a single observation, or a grouper of nested observations)
-// * section[no-subsections].entry only Reference (DiagnosticReportLabXeh or ObservationResultsLaboratoryXeh)
- // GC - deciced to move diagnostic Report to an extension
-* section[no-subsections].entry only Reference (ObservationResultsLaboratoryXeh)
-* section[no-subsections].section ..0
+// * section[xeh-no-subsections].entry only Reference (DiagnosticReportLabXeh or ObservationResultsLaboratoryXeh)
+ // GC - decided to move the DiagnosticReport reference to an extension, instead
+* section[xeh-no-subsections].entry only Reference (ObservationResultsLaboratoryXeh)
+* section[xeh-no-subsections].section ..0
 
 // -------------------------------------
 // Structured sections  0 .. 1
 // -------------------------------------
 
-* section contains subsections ..* // check if ..1 or ..*
-* section[subsections] ^short = "Variant 2: section with one to many subsections Laboratory Report Item"
+// RH - Add 'xeh-' to the slice name, to clarify that there are potentially other "non-xeh" sections that do not meet the "xeh" sets of constraints
+* section contains xeh-subsections ..* // check if ..1 or ..*
+* section[xeh-subsections] ^short = "Variant 2: XeH section with one to many subsections Laboratory Report Item"
 // * section ^definition = "This section contains data describing an interest or worry about a health state or process that could possibly require attention, intervention, or management. A Health Concern is a health related matter that is of interest, importance or worry to someone, who may be the patient, patient's family or patient's health care provider. Health concerns are derived from a variety of sources within an EHR (such as Problem List, Family History, Social History, Social Worker Note, etc.). Health concerns can be medical, surgical, nursing, allied health or patient-reported concerns. Problem Concerns are a subset of Health Concerns that have risen to the level of importance that they typically would belong on a classic “Problem List”, such as “Diabetes Mellitus” or “Family History of Melanoma” or “Tobacco abuse”. These are of broad interest to multiple members of the care team. Examples of other Health Concerns that might not typically be considered a Problem Concern include “Risk of Hyperkalemia” for a patient taking an ACE-inhibitor medication, or “Transportation difficulties” for someone who doesn't drive and has trouble getting to appointments, or “Under-insured” for someone who doesn't have sufficient insurance to properly cover their medical needs such as medications. These are typically most important to just a limited number of care team members."
-/* * section[subsections].title 1..
-* section[subsections].code 1.. */
-* section[subsections].code only http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
+/* * section[xeh-subsections].title 1..
+* section[xeh-subsections].code 1.. */
+* section[xeh-subsections].code only http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
 // Should we also include the LabStudyTypesXeh (preferred) binding here?
-* section[subsections].code from LabStudyTypesXeh (preferred)
+* section[xeh-subsections].code from LabStudyTypesXeh (preferred)
 // * section.code = http://loinc.org#75310-3 (exactly) // add binding
-* section[subsections].text 0..0
-* section[subsections].entry 0..0
-// * section[subsections].text only Narrative
+* section[xeh-subsections].text 0..0
+* section[xeh-subsections].entry 0..0
+// * section[xeh-subsections].text only Narrative
 // add slices check the needed resoucres
-* section[subsections].section 1..
+* section[xeh-subsections].section 1..
   * code 1..
   * code only http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
   // And include the LabStudyTypesXeh (preferred) binding for the subsection here?
@@ -126,11 +129,12 @@ How to manage the annotation section ? should it be a separate section ?
   // * section.code = http://loinc.org#75310-3 (exactly) // add binding
   * text 1..
   * entry 1..
-  * text only Narrative
+  // RH - this constraint to only Narrative is already in the base Composition resource  
+  //* text only Narrative
   // add slices check the needed resoucres
   // check structure od XD-LAB
   // RH - allow a choice of both DiagnosticReport (optional) and Observation Results Lab (can be a single observation, or a grouper of nested observations)
-  // GC - deciced to move diagnostic Report to an extension
+  // GC - decided to move the DiagnosticReport reference to an extension, instead
   * entry only Reference (ObservationResultsLaboratoryXeh)
   // * section.entry only Reference (DiagnosticReportLabXeh or ObservationResultsLaboratoryXeh)
 
