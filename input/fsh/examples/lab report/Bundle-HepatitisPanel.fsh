@@ -50,6 +50,8 @@ Usage: #inline
 * attester[=].party = Reference(Organization/608b5309-2609-4d03-b6da-c758bfa1de70)
 * custodian = Reference(Organization/608b5309-2609-4d03-b6da-c758bfa1de70)
 * section[+].title = "Hepatitis screening panel"
+* section[=].code = #3002989 "Hepatitis Panel, Acute with Reflex to HBsAg Confirmation and Reflex to HCV by Quantitative NAAT"
+* section[=].code.text = "Acute Hepatitis Panel, reflex to confirmation"
 * section[=].entry[+] = Reference(Observation/2c72163e-b741-44a3-aff7-c52f17f7a1ba)
 
 Instance: Inline-Patient-hepatitis-panel
@@ -109,9 +111,8 @@ Usage: #inline
 * status = #final
 * category[+] = $observation-category#laboratory
 * category[+] = $diagnostic-service-sections#MB "Microbiology"
-* code.coding[+] = #0020089 "Hepatitis B Surface Antigen"
-* code.coding[+] = $loinc#5196-1 "Hepatitis B virus surface Ag [Presence] in Serum or Plasma by Immunoassay"
-* code.text = "Hepatitis B Surface Antigen"
+* code = #3002989 "Hepatitis Panel, Acute with Reflex to HBsAg Confirmation and Reflex to HCV by Quantitative NAAT"
+* code.text = "Acute Hepatitis Panel, reflex to confirmation"
 * subject = Reference(Patient/8472931c-fbd0-437b-9ed1-4f66472c78b5)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer[+].display = "MUDr. Aleš Procházka"
