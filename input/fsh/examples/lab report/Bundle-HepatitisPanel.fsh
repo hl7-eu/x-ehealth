@@ -1,5 +1,5 @@
 Instance: BundleHepatitisPanel
-InstanceOf: Bundle
+InstanceOf: BundleLabReportXeh
 Title: "Bundle Hepatitis Panel"
 Description: "Hepatitis Panel"
 Usage: #example
@@ -49,7 +49,8 @@ Usage: #inline
 * attester[0].time = "2020-12-27T14:30:00+01:00"
 * attester[0].party = Reference(Organization/608b5309-2609-4d03-b6da-c758bfa1de70)
 * custodian = Reference(Organization/608b5309-2609-4d03-b6da-c758bfa1de70)
-* section[+].code = $diagnostic-service-sections#MB "Microbiology"
+* section[+].title = "Hepatitis screening panel"
+* section[=].code = #3002989 "Hepatitis Panel, Acute with Reflex to HBsAg Confirmation and Reflex to HCV by Quantitative NAAT"
 * section[=].entry[+] = Reference(Observation/2c72163e-b741-44a3-aff7-c52f17f7a1ba)
 
 Instance: Inline-Patient-hepatitis-panel

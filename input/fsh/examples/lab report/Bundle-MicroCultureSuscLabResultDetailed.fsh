@@ -83,14 +83,11 @@ Usage: #inline
 * custodian = Reference(Organization/1e139f41-4d0f-43dd-ad5a-98003c520349)
 * section[+].title = "Bacterial Aerobic & Anaerobic Culture & Susceptibility"
 * section[=].code.text = "Bacterial Aerobic & Anaerobic Culture & Susceptibility"
-* section.section[+].title = "Gram Stain"
-* section.section[=].code.text = "Gram Stain"
+* section.section[+].code.text = "Gram Stain"
 * section.section[=].entry = Reference(Observation/40278a69-87aa-470f-a38f-bff1e8aee175) // Inline-Observation-gram-stain
-* section.section[+].title = "Aerobic Culture"
-* section.section[=].code.text = "Aerobic Culture"
+* section.section[+].code.text = "Aerobic Culture"
 * section.section[=].entry = Reference(Observation/8754019d-256b-4df9-94f2-f80c07e08d47) // Inline-Observation-aerobic-culture
-* section.section[+].title = "Anaerobic Culture"
-* section.section[=].code.text = "Anaerobic Culture"
+* section.section[+].code.text = "Anaerobic Culture"
 * section.section[=].entry = Reference(Observation/5408f7d9-e6a2-492c-8ae3-dbf96b40bf6e) // Inline-Observation-anaerobic-culture
 
 Instance: Inline-Patient-micro
