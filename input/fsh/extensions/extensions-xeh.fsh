@@ -39,10 +39,10 @@ Description: "This attribute captures the level of requirement (mandatory, requi
 * value[x] from http://hl7.eu/fhir/ig/xeh/ValueSet/conformance-cen-ips (required)
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Extension: DiagnosticReportReference
+/* Extension: DiagnosticReportReference
 Id:   composition-DiagnosticReportReference
 Title:  "Document DiagnosticReport Reference"
 Description: "This extension provides a reference to the DiagnosticReport instance that is associated with this document."
 // publisher, contact, and other metadata here using caret (^) syntax (omitted)
 * value[x] only Reference (DiagnosticReport)
-* valueReference 1..1
+* valueReference 1..1 */
