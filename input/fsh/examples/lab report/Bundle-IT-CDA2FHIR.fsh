@@ -73,14 +73,15 @@ Instance: Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-1
 InstanceOf: Composition
 Usage: #inline
 * id = "26032a57-083a-4ddf-b019-e566ae02f740"
-* extension[+].url = $composition-diagnostic-report-reference
-* extension[=].valueReference = Reference(DiagnosticReport/5679723c-4fae-4ba7-9f09-5438a827bfda)
+//* extension[+].url = $composition-diagnostic-report-reference
+//* extension[=].valueReference = Reference(DiagnosticReport/5679723c-4fae-4ba7-9f09-5438a827bfda)
 * language = #it-IT
 * identifier.system = "urn:oid:2.16.840.1.113883.2.9.2.120.4.4"
 * identifier.value = "c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju"
 * identifier.assigner.display = "Regione Lazio"
 * status = #final
-* type = http://loinc.org#11502-2 "Referto di laboratorio"
+* type = http://loinc.org#11502-2 "Laboratory report"
+* type.text = "Referto di laboratorio"
 * subject = Reference(urn:uuid:dc2b606f-3cf7-4711-a2ff-52da04b89e04)
 * encounter = Reference(urn:uuid:195a7abc-d109-404a-9dc7-ad2e80bafc8a)
 * date = "2022-03-30T11:24:26+01:00"
@@ -100,13 +101,15 @@ Usage: #inline
 * event.period.start = "2022-03-24T11:24:26+01:00"
 * event.detail = Reference(urn:uuid:1b4b120e-0371-4878-b4c9-b69434e84c72)
 * section.title = "Esami delle Urine"
-* section.code = http://loinc.org#18729-4 "ESAMI DELLE URINE"
+* section.code = http://loinc.org#18729-4 "Urinalysis studies (set)"
+* section.code.text = "ESAMI DELLE URINE"
 * section.section.title = "Albumina nelle Urine"
-* section.section.code.coding[+] = http://loinc.org#14957-5 "Microalbumin Massa/Volume in Urine"
+* section.section.code.coding[+] = http://loinc.org#14957-5 "Microalbumin [Mass/volume] in Urine"
 * section.section.code.coding[+] = urn:oid:2.16.840.1.113883.2.9.2.30.6.11#0090334.02 "XXX"
+* section.section.code.text = "Microalbumin Massa/Volume in Urine"
 * section.section.text.status = #generated
 * section.section.text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li><table id=\"nota1\"><thead><tr><th>Esame</th><th>Metodo utilizzato per l'esame</th><th>Materiale utilizzato per l'esame</th><th>Risultato dell'esame</th><th>Commenti e note</th><th>Unità di Misura</th><th>Range di Riferimento</th><th>Criteri per il range di riferimento</th><th>Interpretazione</th><th>Allegati multimediali</th></tr></thead><tbody><tr><td>Microalbumina massa/volume in urine</td><td/><td>Urine</td><td>20</td><td/><td>mg/L</td><td> 0 - 20 </td><td/><td>N</td><td/></tr></tbody></table></li></ul></div>"
-* section.section.entry = Reference(urn:uuid:5679723c-4fae-4ba7-9f09-5438a827bfda)
+* section.section.entry = Reference(urn:uuid:763f7902-8103-4d10-8bd1-546a726d43ee)
 
 Instance: dc2b606f-3cf7-4711-a2ff-52da04b89e04
 InstanceOf: Patient
@@ -180,8 +183,9 @@ Usage: #inline
 * subject = Reference(urn:uuid:dc2b606f-3cf7-4711-a2ff-52da04b89e04)
 * author = Reference(urn:uuid:ab279a0b-320f-483b-9a5d-f1f7e8ceacb2)
 * custodian = Reference(urn:uuid:a59d2bf2-7d6c-49a5-9ceb-c3f165ebd20d)
+* content.attachment.contentType = urn:ietf:bcp:13#text/plain
 * content.attachment.title = "string"
-* context.related = Reference(urn:uuid:26032a57-083a-4ddf-b019-e566ae02f740)
+* context.related = Reference(Composition/26032a57-083a-4ddf-b019-e566ae02f740)
 
 Instance: Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-4
 InstanceOf: PractitionerRole
@@ -240,7 +244,7 @@ Usage: #inline
 * identifier.assigner.display = "Ministero della Salute"
 * name = "SAN RAFFAELE NOMENTANA"
 * telecom.system = #phone
-* telecom.value = " 390 666 0581"
+* telecom.value = "390 666 0581"
 * telecom.use = #work
 * address.line = "Via Emilio Praga 39"
 * address.line.extension.url = "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-censusTract"
@@ -358,7 +362,7 @@ Usage: #inline
 * identifier.assigner.display = "Ministero della Salute"
 * name = "SAN RAFFAELE NOMENTANA"
 * telecom.system = #phone
-* telecom.value = " 390 666 0581"
+* telecom.value = "390 666 0581"
 * telecom.use = #work
 * address.line = "Via Emilio Praga 39"
 * address.line.extension.url = "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-censusTract"
@@ -378,7 +382,10 @@ Usage: #inline
 * identifier.assigner.display = "Ministero delle Finanze"
 * status = #active
 * intent = #order
+* category = $sct#108252007 "Laboratory procedure"
 * priority = #asap
+* code = http://loinc.org#14957-5 "Microalbumin [Mass/volume] in Urine"
+* code.text = "Microalbumin Massa/Volume in Urine"
 * subject = Reference(urn:uuid:dc2b606f-3cf7-4711-a2ff-52da04b89e04)
 * encounter = Reference(urn:uuid:195a7abc-d109-404a-9dc7-ad2e80bafc8a)
 
@@ -468,7 +475,9 @@ Usage: #inline
 * extension[+].url = $diagnostic-report-composition-r5
 * extension[=].valueReference = Reference(Composition/26032a57-083a-4ddf-b019-e566ae02f740)
 * status = #registered
-* code = http://loinc.org#14957-5 "Microalbumin Massa/Volume in Urine"
+* category = $diagnostic-service-sections#LAB "Laboratory"
+* code = http://loinc.org#14957-5 "Microalbumin [Mass/volume] in Urine"
+* code.text = "Microalbumin Massa/Volume in Urine"
 * subject = Reference(urn:uuid:dc2b606f-3cf7-4711-a2ff-52da04b89e04)
 * encounter = Reference(urn:uuid:195a7abc-d109-404a-9dc7-ad2e80bafc8a)
 * specimen = Reference(urn:uuid:5837e9bf-8a2b-43c3-bec8-d68dbd7fa7fb)
@@ -479,8 +488,9 @@ InstanceOf: Observation
 Usage: #inline
 * id = "763f7902-8103-4d10-8bd1-546a726d43ee"
 * status = #final
-* code.coding[+] = http://loinc.org#14957-5 "Microalbumin Massa/Volume in Urine"
+* code.coding[+] = http://loinc.org#14957-5 "Microalbumin [Mass/volume] in Urine"
 * code.coding[+] = urn:oid:2.16.840.1.113883.2.9.2.30.6.11#0090334.02 "Albumina nelle urine"
+* code.text = "Microalbumin Massa/Volume in Urine"
 * subject = Reference(urn:uuid:dc2b606f-3cf7-4711-a2ff-52da04b89e04)
 * encounter = Reference(urn:uuid:195a7abc-d109-404a-9dc7-ad2e80bafc8a)
 * effectiveDateTime = "2022-03-30T11:24:26+01:00"
