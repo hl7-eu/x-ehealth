@@ -34,8 +34,8 @@ Instance: Inline-Composition-hepatitis-panel
 InstanceOf: Composition
 Usage: #inline
 * id = "4028a0b8-37fc-4491-a8e7-0f28e6fc59b4"
-//* extension[+].url = $composition-diagnostic-report-reference
-//* extension[=].valueReference = Reference(DiagnosticReport/3a743273-237a-446a-a8da-9e7521cce614)
+* extension[+].url = $composition-diagnostic-report-reference
+* extension[=].valueReference = Reference(DiagnosticReport/3a743273-237a-446a-a8da-9e7521cce614)
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:3f69e0a5-2177-4540-baab-7a5d0877428f"
 * status = #final
