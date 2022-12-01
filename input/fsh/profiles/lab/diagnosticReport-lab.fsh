@@ -8,6 +8,8 @@ Description: "CDiagnosticReport used to represent an entry of a Laboratory Repor
 * . ^short = "Laboratory Report DiagnosticReport"
 * . ^definition = "Laboratory Report DiagnosticReport"
 * extension contains $diagnostic-report-composition-r5 named DiagnosticReportCompositionR5 1..1
+* extension[DiagnosticReportCompositionR5].valueReference only Reference(CompositionLabReportXeh)
+* extension[DiagnosticReportCompositionR5].valueReference 1..1
 
 /*
 content to be referred...

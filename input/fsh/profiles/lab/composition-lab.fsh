@@ -12,7 +12,10 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
 // should we make it 0.. ?
 // or have text repeated here and in the sections ?
 * extension contains CompositionBasedOnOrderOrRequisition named basedOn-order-or-requisition 0..*
+* extension[basedOn-order-or-requisition].valueReference only Reference(ServiceRequestLabXeh)
 * extension contains DiagnosticReportReference named diagnostic-report 1..1
+* extension[diagnostic-report].valueReference only Reference(DiagnosticReportLabXeh)
+* extension[diagnostic-report].valueReference 1..1
 
 /*  TO DO Header
 - add optional data enterer
@@ -20,11 +23,9 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
 - defiend rules for attester to distiguish  Authenticators and Legal Auth 
 - ordering provider mapped into the order details 
 - addc Lab DocumentationOf.serviceEvent details
-- ComponentOf.encounter define details in Enouncter profile
+- ComponentOf.encounter define details in Encounter profile
 */
 
-* extension[diagnostic-report].valueReference only Reference(DiagnosticReportLabXeh)
-* extension[basedOn-order-or-requisition].valueReference only Reference(ServiceRequestLabXeh)
 * text ^short = "Narrative text"
 * identifier ^short = "Business identifier of the Laboratory Report (setID)"
 * status ^short = "Status of the Report"
