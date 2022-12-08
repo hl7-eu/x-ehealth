@@ -7,7 +7,6 @@ Description: "This extension provides a link to the order [(Reference(ServiceReq
 * ^context[+].type = #element
 * ^context[=].expression = "Composition"
 * value[x] only Reference (ServiceRequest) or Identifier
-//* valueReference 1..1
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Extension: DiagnosticReportBasedOnRequisition
@@ -19,7 +18,6 @@ Description: "This extension provides a link to the requisition (ServiceRequest.
 * ^context[+].type = #element
 * ^context[=].expression = "DiagnosticReport.basedOn"
 * value[x] only Identifier
-//* valueReference 1..1
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Extension: Conformance
@@ -39,10 +37,11 @@ Description: "This attribute captures the level of requirement (mandatory, requi
 * value[x] from http://hl7.eu/fhir/ig/xeh/ValueSet/conformance-cen-ips (required)
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-/* Extension: DiagnosticReportReference
+Extension: DiagnosticReportReference
 Id:   composition-DiagnosticReportReference
 Title:  "Document DiagnosticReport Reference"
 Description: "This extension provides a reference to the DiagnosticReport instance that is associated with this document."
 // publisher, contact, and other metadata here using caret (^) syntax (omitted)
+* ^context[+].type = #element
+* ^context[=].expression = "Composition"
 * value[x] only Reference (DiagnosticReport)
-* valueReference 1..1 */
