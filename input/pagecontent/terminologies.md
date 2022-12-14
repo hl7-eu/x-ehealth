@@ -2,9 +2,9 @@
 
 This page lists all the terminology assets that have been specificed for the purpose of this guide
 
-### Code Systems
+<!-- ### Code Systems
 
-{% include table-codesystems.xhtml %}
+{% include table-codesystems.xhtml %} -->
 
 ### Value Sets
 
