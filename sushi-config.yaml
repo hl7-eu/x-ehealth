@@ -48,7 +48,7 @@ menu:
   Models:
     Logical Models: models.html
   Specifications:
-    FHIR Profiles</a>: profiles.html
+    FHIR Profiles: profiles.html
     Terminologies: terminologies.html
   #  Laboratory: laboratory.html
   Artifact Index: artifacts.html

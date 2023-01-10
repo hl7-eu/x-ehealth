@@ -38,7 +38,7 @@ Title: "eHN Lab Specimen model to FHIR R4 Map"
 Source: SpecimenLab				
 Target: "hl7.org/fhir/r4"				
 				
-* -> "Observation.conformsTo('http://hl7.eu/fhir/ig/xeh/StructureDefinition/Observation-results-laboratory-eu-xeh').specimen.resolve()"				
+* -> "Observation.conformsTo('http://hl7.eu/fhir/ig/xeh/StructureDefinition/Observation-results-lab-xeh').specimen.resolve()"				
 * identifier -> "Specimen.identifier"				
 * speciesType -> "Specimen.type"				
 * material -> "to be mapped"				

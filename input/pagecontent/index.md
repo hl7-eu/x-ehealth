@@ -1,8 +1,14 @@
+<blockquote class="stu-note">
+  <strong>Work in progress</strong>
+  <p>Please be aware that not all the content of this implementation guide has the same level of maturity.</p>
+  <p>The Laboratory Report and Order are for trial usage; other parts, as the Hospital Discharge Report and the Patient Summary for rare diseases, are proof of concepts used to show the possible structure of these documents using HL7 FHIR.</p>
+  <p>Further refinements are expected to be done after the end of the project, including the creation of distinct Implementation Guides better reflecting the different cases (e.g. Laboratory Report, HDR, PS,, Base profiles,..)</p>  
+</blockquote>
+
+
 ### Scope
 
-Specify **HL7 FHIR logical models** and **profiles** to be used within
-the European project X-eHealth for supporting the **European EHR
-eXchange Format.**
+Specify **HL7 FHIR logical models** and **profiles** as part of the European project X-eHealth for supporting the development of the **European EHR eXchange Format.**
 
 ### The X-eHealth Project
 
@@ -57,9 +63,9 @@ developers of EEHRxF in member states and across the world.
 </tbody>
 </table>
 
-### Authors and Contributors
+<!-- ### Authors and Contributors -->
 
-<table>
+<!-- <table>
 <thead>
 <tr class="header">
 <th>Roles</th>
@@ -94,4 +100,4 @@ developers of EEHRxF in member states and across the world.
 <td></td>
 </tr>
 </tbody>
-</table>
+</table> -->

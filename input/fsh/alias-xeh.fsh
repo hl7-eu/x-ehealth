@@ -20,13 +20,17 @@ Alias: $v2-0131 = http://terminology.hl7.org/CodeSystem/v2-0131
 Alias: $v3-ActCode = http://terminology.hl7.org/CodeSystem/v3-ActCode
 Alias: $v3-NullFlavor = http://terminology.hl7.org/CodeSystem/v3-NullFlavor
 Alias: $v3-RoleCode = http://terminology.hl7.org/CodeSystem/v3-RoleCode
-Alias: $data-absent-reason = http://terminology.hl7.org/CodeSystem/data-absent-reason
+/* Alias: $data-absent-reason-CS = http://terminology.hl7.org/CodeSystem/data-absent-reason */
 Alias: $diagnostic-service-sections = http://terminology.hl7.org/CodeSystem/v2-0074
 Alias: $obs-interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation
 Alias: $reference-range-meaning = http://terminology.hl7.org/CodeSystem/referencerange-meaning
 
 // --- Value Sets
 Alias: $v3-ClassNullFlavor = http://terminology.hl7.org/ValueSet/v3-ClassNullFlavor
+
+Alias: $results-laboratory-observations-uv-ips = http://hl7.org/fhir/uv/ips/ValueSet/results-laboratory-observations-uv-ips
+Alias: $results-coded-values-laboratory-uv-ips = http://hl7.org/fhir/uv/ips/ValueSet/results-coded-values-laboratory-uv-ips
+
 
 // ---- Extensions
 Alias: $condition-related = http://hl7.org/fhir/StructureDefinition/condition-related
@@ -71,5 +75,14 @@ Alias: $Observation-results-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinit
 Alias: $Specimen-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Specimen-uv-ips
 Alias: $Bundle-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Bundle-uv-ips
 Alias: $vitalsigns = http://hl7.org/fhir/StructureDefinition/vitalsigns
+
+Alias: $CodeableConcept-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
+Alias: $data-absent-reason = http://hl7.org/fhir/StructureDefinition/data-absent-reason
+
+Alias: $Range-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Range-uv-ips
+Alias: $Ratio-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Ratio-uv-ips
+Alias: $Quantity-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Quantity-uv-ips
+
+Alias: $Observation-results-laboratory-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-uv-ips
 
 //=========================
