@@ -9,3 +9,73 @@ _*.*
 _bak
 gofsh
 input/fsh/json-models/*.txt
+__dcc/testResult-LM.fsh
+__dcc/vaccinationCertificate-bc.fsh
+__dcc/vaccinationCertificate-md.fsh
+__dcc/vaccinationCertificate-pv.fsh
+__dcc/vaccinationCertificate.fsh
+_cda/examples/example-ips-martha-v2.xml
+_cda/examples/example-ips-RD.xml
+_cda/schema/CDA_XeH.xsd
+_cda/schema/POCD_MT000040_XeH.xsd
+_cda/schema/readme.txt
+_cda/schema/XeH-CDA-schema.zip
+_cda/schema/coreschemas/datatypes-base.xsd
+_cda/schema/coreschemas/datatypes.xsd
+_cda/schema/coreschemas/narrative-block.xsd
+_cda/schema/coreschemas/voc.xsd
+_cda/schema/extDICOMPS320/hl7v3_extDICOMPS320.xsd
+_cda/schema/extIPS/hl7v3_extIPS.xsd
+_cda/schema/extPHARM/COCT_MT230100UV01_extPHARM.xsd
+_cda/schema/extPHARM/hl7v3_extPHARM.xsd
+_cda/schema/extXDLAB/hl7v3_extXDLAB.xsd
+_cda/schema/extXeH/hl7v3_extXeH.xsd
+input/fsh/alias-pcsp.fsh
+input/fsh/examples/cancer summary/Bundle-RareCancer-2.fsh
+input/fsh/examples/cancer summary/Bundle-RareCancer-text.fsh
+input/fsh/examples/cancer summary/Bundle-RareCancer.fsh
+input/fsh/examples/cancer summary/Bundle-RareCancerasPS.fsh
+input/fsh/examples/cancer summary/Composition-RareCancer-wEntries.fsh
+input/fsh/examples/cancer summary/diagnosis-rareCancer-1.fsh
+input/fsh/examples/cancer summary/surgicalProcedure.fsh
+input/fsh/examples/dcc/Bundle-01-Imm-TwoDoses.fsh
+input/fsh/examples/dcc/Bundle-02-Imm-SingleDose.fsh
+input/fsh/examples/dcc/Bundle-03-Imm-noSecondDose.fsh
+input/fsh/examples/dcc/Bundle-04-ImmRec-NoSecondDose.fsh
+input/fsh/examples/dcc/Bundle-05-ImmRec-OnlyPlannedDoses.fsh
+input/fsh/examples/dcc/Bundle-06-Imm-No2ndDueToReaction.fsh
+input/fsh/examples/dcc/Bundle-07-Imm-SingleDose-QRcode.fsh
+input/fsh/examples/dcc/Bundle-08-Imm-TwoDoses.fsh
+input/fsh/extensions/extensions-pcsp.fsh
+input/fsh/models/dcc/testResult-LM.fsh
+input/fsh/models/dcc/vaccinationCertificate-bc.fsh
+input/fsh/models/dcc/vaccinationCertificate-md.fsh
+input/fsh/models/dcc/vaccinationCertificate-pv.fsh
+input/fsh/models/dcc/vaccinationCertificate.fsh
+input/fsh/models/json-dcc-models/base-model.txt
+input/fsh/models/json-dcc-models/base.fsh
+input/fsh/models/json-dcc-models/personName-model.txt
+input/fsh/models/json-dcc-models/personName.fsh
+input/fsh/models/json-dcc-models/recovery-model.txt
+input/fsh/models/json-dcc-models/recovery.fsh
+input/fsh/models/json-dcc-models/test-model.txt
+input/fsh/models/json-dcc-models/test.fsh
+input/fsh/models/json-dcc-models/vacc-model.txt
+input/fsh/models/json-dcc-models/vacc.fsh
+input/fsh/other-examples/Immunization-example-it-1-1.fsh
+input/fsh/other-examples/Immunization-example-it-1-2.fsh
+input/fsh/other-examples/Organization-example-it-1-1.fsh
+input/fsh/other-examples/Patient-example-it-1.fsh
+input/fsh/profiles/cancer summary/BundlePcsp.fsh
+input/fsh/profiles/cancer summary/CompositionSurPassPcsp.fsh
+input/fsh/profiles/cancer summary/conditionCancer.fsh
+input/fsh/profiles/cancer summary/MedicationAdministrationPcsp.fsh
+input/fsh/profiles/cancer summary/ProcedureFltPcsp.fsh
+input/fsh/profiles/cancer summary/ProcedureRadiotherapyPcsp.fsh
+input/fsh/profiles/cancer summary/ProcedureSctPcsp.fsh
+input/fsh/profiles/cancer summary/profilesPcsp.fsh
+input/fsh/profiles/dcc/profiles-DCC.fsh
+input/fsh/profiles/hdr/bundle-hdr.fsh
+input/fsh/profiles/hdr/composition-hdr.fsh
+/src-models/*.xlk
+/input/fsh/models/lab/*.xlk

@@ -93,49 +93,16 @@ Description: "This profile defines how to represent Condition in FHIR for the pu
 * note ^definition = "Comment by the one who determined or updated the Problem." 
 * bodySite  ^definition = "Anatomical location which is the focus of the problem."
 
-
-
-
-
-
+/* 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Profile:  PatientXeh
 Parent:   $Patient-uv-ips
 Id:       Patient-eu-xeh
 Title:    "Patient (X-eHealth)"
-Description: "This profile defines how to represent Patient in FHIR for the purpose of the X-eHealth project."
+Description: "This profile defines how to represent Patient in FHIR for the purpose of the X-eHealth project." */
 
 //-------------------------------------------------------------------------------------------
 * ^description = "Information about an individual receiving health care services"
-
-/* //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Profile:  DiagnosticReportXeh
-Parent:   $DiagnosticReport-uv-ips
-Id:       DiagnosticReport-eu-xeh
-Title:    "DiagnosticReport (X-eHealth)"
-Description: "This profile defines how to represent Patients in FHIR for the purpose of the X-eHealth project."
-
-//-------------------------------------------------------------------------------------------
-* ^description = "This profile constrains the DiagnosticReport resource to represent diagnostic test and procedure reports in a X-eHealth Project"
-* subject only Reference(PatientXeh or Group) 
-* performer only Reference(PractitionerXeh or PractitionerRoleXeh or OrganizationCareProviderXeh or CareTeamXeh)
-* result[observation-results] only Reference(ObservationResultsLaboratoryXeh or ObservationResultsPathologyXeh or ObservationResultsRadiologyXeh or ObservationResultsXeh) */
-
-//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Profile:  ObservationResultsXeh
-Parent:   http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-uv-ips
-Id:       Observation-results-eu-xeh
-Title:    "Observation Results: laboratory (X-eHealth)"
-Description: "This profile constrains the Observation resource to represent various types of results and associated observations in a patient summary. This is the base profile from which the other results profiles are derived."
-//-------------------------------------------------------------------------------------------
-
-//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Profile:  ObservationResultsLaboratoryXeh
-Parent:   http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-uv-ips
-Id:       Observation-results-laboratory-eu-xeh
-Title:    "Observation Results: laboratory (X-eHealth)"
-Description: "This profile constrains the Observation resource to represent results produced by laboratory tests or panels/studies for the X-eHealth project."
-//-------------------------------------------------------------------------------------------
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Profile:  ObservationResultsPathologyXeh
