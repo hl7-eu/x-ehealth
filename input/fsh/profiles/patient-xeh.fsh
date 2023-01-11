@@ -1,5 +1,5 @@
 Profile: PatientXeh
-Parent: $Patient-uv-ips
+Parent: $Patient-uv-ips 
 Id: Patient-eu-xeh
 Title:    "Patient (X-eHealth)"
 Description: "This profile defines how to represent Patient in FHIR for the purpose of the X-eHealth project."
