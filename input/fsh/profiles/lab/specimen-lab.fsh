@@ -21,4 +21,4 @@ Parent: Substance
 Id: specimen-additive-substance-xeh
 Title: "Specimen Additive Substance Xeh"
 Description: """Specimen Additive Substance Xeh"""
-* code from LabSpecimenAdditiveXeh
+* code from LabSpecimenAdditiveXeh (preferred)
