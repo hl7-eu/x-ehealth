@@ -1,5 +1,4 @@
 <blockquote class="stu-note">
-  <strong>Work in progress</strong>
   <p>Please be aware that not all the content of this implementation guide has the same level of maturity.</p>
   <p>The Laboratory Report and Order are for trial usage; other parts, as the Hospital Discharge Report and the Patient Summary for rare diseases, are proof of concepts used to show the possible structure of these documents using HL7 FHIR.</p>
   <p>Further refinements are expected to be done after the end of the project, including the creation of distinct Implementation Guides better reflecting the different cases (e.g. Laboratory Report, HDR, PS,, Base profiles,..)</p>  
@@ -62,6 +61,18 @@ developers of EEHRxF in member states and across the world.
 </tr>
 </tbody>
 </table>
+
+### Dependencies
+
+{% include dependency-table.xhtml %}
+
+### Cross Version Analysis
+
+{% include cross-version-analysis.xhtml %}
+
+### Global Profiles
+
+{% include globals-table.xhtml %}
 
 <!-- ### Authors and Contributors -->
 
