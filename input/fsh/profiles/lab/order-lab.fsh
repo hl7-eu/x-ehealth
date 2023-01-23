@@ -22,12 +22,12 @@ Description: "ServiceRequest used to represent a Laboratory Order for the scope 
 * . ^definition = "Laboratory Order composition."
 // add binding for category and code
 * identifier 1..
-* category 1.. 
+/* * category 1..  */
 * code 1..
 * subject 1..
 * subject only Reference (PatientXeh or Patient or Group or Location or Device)
 * requisition ^short = "Composite Request ID." 
-* specimen	only Reference (Specimen)
+* specimen	only Reference (SpecimenXeh)
   * ^short = "Must be present, if order is request for test" // Check....
   // add invariant ?
 * insurance only Reference (Coverage)

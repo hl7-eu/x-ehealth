@@ -54,9 +54,14 @@ Target: "hl7.org/fhir/r4"
 * header.metadata.custodian -> "Composition.custodian"				
 * order -> "Composition.extension('http://hl7.eu/fhir/ig/xeh/StructureDefinition/composition-basedOn-order-or-requisition').valueReference.resolve()"				
 * order -> "Composition.extension('http://hl7.eu/fhir/ig/xeh/StructureDefinition/composition-basedOn-order-or-requisition').valueIdentifier"				
-* specimen -> "Observation.conformsTo('http://hl7.eu/fhir/ig/xeh/StructureDefinition/Observation-results-lab-xeh').specimen.resolve()"				
+* order -> "DiagnosticReport.conformsTo('http://hl7.eu/fhir/ig/xeh/StructureDefinition/DiagnosticReport-lab-xeh').basedOn.extension('http://hl7.eu/fhir/ig/xeh/StructureDefinition/diagnostic-report-basedOn-requisition').valueIdentifier"				
+* order -> "DiagnosticReport.conformsTo('http://hl7.eu/fhir/ig/xeh/StructureDefinition/DiagnosticReport-lab-xeh').basedOn.resolve()"				
+* specimen -> "Observation.conformsTo('http://hl7.eu/fhir/ig/xeh/StructureDefinition/Observation-results-laboratory-eu-xeh').specimen.resolve()"				
+* specimen -> "DiagnosticReport.conformsTo('http://hl7.eu/fhir/ig/xeh/StructureDefinition/DiagnosticReport-lab-xeh').specimen.resolve()"				
 * result -> "Composition.section:no-subsections.entry.resolve()"				
 * result -> "Composition.section:subsections.section.entry.resolve()"				
+* result -> "DiagnosticReport.conformsTo('http://hl7.eu/fhir/ig/xeh/StructureDefinition/DiagnosticReport-lab-xeh').result.resolve()"				
+// --END				
 // --END				
 // --END				
 // --END				

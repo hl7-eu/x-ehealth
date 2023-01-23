@@ -14,8 +14,8 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
 * extension contains CompositionBasedOnOrderOrRequisition named basedOn-order-or-requisition 0..*
 * extension[basedOn-order-or-requisition].valueReference only Reference(ServiceRequestLabXeh)
 * extension contains DiagnosticReportReference named diagnostic-report 1..1
-* extension[diagnostic-report].valueReference only Reference(DiagnosticReportLabXeh)
-* extension[diagnostic-report].valueReference 1..1
+/* * extension[diagnostic-report].valueReference only Reference(DiagnosticReportLabXeh)
+* extension[diagnostic-report].valueReference 1..1 */
 
 /*  TO DO Header
 - add optional data enterer
@@ -94,7 +94,7 @@ How to manage the annotation section ? should it be a separate section ?
 
 * section[xeh-no-subsections].code from LabStudyTypesXeh (preferred)
 // * section.code = http://loinc.org#75310-3 (exactly) // add binding
-* section[xeh-no-subsections].text 1..
+* section[xeh-no-subsections].text ^short = "Text summary of the section, for human interpretation."
 
 // add slices check the needed resources
 // check structure of XD-LAB
@@ -128,7 +128,7 @@ How to manage the annotation section ? should it be a separate section ?
   // And include the LabStudyTypesXeh (preferred) binding for the subsection here?
   * code from LabStudyTypesXeh (preferred)
   // * section.code = http://loinc.org#75310-3 (exactly) // add binding
-  * text 1..
+  * text ^short = "Text summary of the section, for human interpretation."
   * entry 1..
   // RH - this constraint to only Narrative is already in the base Composition resource  
   //* text only Narrative

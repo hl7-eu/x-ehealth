@@ -38,6 +38,8 @@ Annotation Comment
 * encounter only Reference (Encounter) // profile defined for other scopes to be checked
 * effective[x] ^short = "Clinically relevant time/time-period for report."
 * performer ^short = "Responsible Diagnostic Service." // add reference to the used profiles
-* specimen ^short = "Specimens this report is based on." // add reference to the used profile
-* result ^short = "results" // add reference to the used profiles
+* specimen only Reference ( SpecimenXeh )
+* specimen ^short = "Specimens this report is based on."
+* result only Reference (ObservationResultsLaboratoryXeh)
+* result ^short = "results" 
 * imagingStudy 0..0
