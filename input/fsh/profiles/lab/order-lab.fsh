@@ -15,8 +15,6 @@ Parent: ServiceRequest
 Id: ServiceRequest-lab-xeh
 Title: "ServiceRequest: Laboratory Order"
 Description: "ServiceRequest used to represent a Laboratory Order for the scope of the Xehealth project."
-
-
 // Clarify when to use ServiceRequest and RequestGroup
 * . ^short = "Laboratory Order"
 * . ^definition = "Laboratory Order composition."
@@ -24,6 +22,7 @@ Description: "ServiceRequest used to represent a Laboratory Order for the scope 
 * identifier 1..
 /* * category 1..  */
 * code 1..
+* code from LabOrderCodesXeH (preferred)
 * subject 1..
 * subject only Reference (PatientXeh or Patient or Group or Location or Device)
 * requisition ^short = "Composite Request ID." 
