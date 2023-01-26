@@ -28,3 +28,10 @@ Note 4:Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 1
 * $loinc#26436-6 "LABORATORY STUDIES"
 * $loinc#26437-4 "CHEMISTRY CHALLENGE STUDIES"
 * $loinc#26438-2 "CYTOLOGY STUDIES"
+
+ValueSet: LabOrderCodesXeH
+Id: lab-order-codes-xeh
+Title: "Lab Order Codes (X-eHealth)"
+Description: "Laboratory Order Codes for use in X-eHealth."
+* include codes from system $loinc and valueset $results-laboratory-observations-uv-ips where ORDER_OBS = "Order"
+* include codes from system $loinc and valueset $results-laboratory-observations-uv-ips where ORDER_OBS = "Both"
