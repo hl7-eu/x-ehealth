@@ -133,9 +133,7 @@ How to manage the annotation section ? should it be a separate section ?
   // RH - this constraint to only Narrative is already in the base Composition resource  
   //* text only Narrative
   // add slices check the needed resoucres
-  // check structure od XD-LAB
-  // RH - allow a choice of both DiagnosticReport (optional) and Observation Results Lab (can be a single observation, or a grouper of nested observations)
-  // GC - decided to move the DiagnosticReport reference to an extension, instead
+  // check structure of XD-LAB
   * entry only Reference (ObservationResultsLaboratoryXeh)
   // * section.entry only Reference (DiagnosticReportLabXeh or ObservationResultsLaboratoryXeh)
 
